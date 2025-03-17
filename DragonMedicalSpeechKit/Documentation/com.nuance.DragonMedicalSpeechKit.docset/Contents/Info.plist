@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<plist version="1.0">
+  <dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.nuance.DragonMedicalSpeechKit.docset</string>
+    <key>CFBundleName</key>
+    <string>Dragon Medical SpeechKit</string>
+    <key>DocSetFeedName</key>
+    <string>Dragon Medical SpeechKit</string>
+    <key>DocSetPublisherName</key>
+    <string>Nuance</string>
+    <key>DocSetPublisherIdentifier</key>
+    <string>com.nuance.DragonMedicalSpeechKit.documentation</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>Copyright 2025 Nuance Communications Inc. All rights reserved.</string>
+  </dict>
+</plist>
+	
+	
+		
+			../../documentation/index.html.resources
+		
+			
+				
+					
+					
+					
+				
+				
+					
+				
+			
+		
+	
+		
+			Documentation
+			iOSIntroduction/DANUBE_WELCOME_IOS.htm
+			/Users/runner/work/1/s/Dragon-MobileSDK-iOS//build/docloc/DanubeClientSDK/Project/TOCs/DanubeiOS.fltoc
+			/Users/runner/work/1/s/Dragon-MobileSDK-iOS//build/docloc/DanubeClientSDK
+		
+			
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+			
+		
+		
+		
+			API
+			index.html
+			../../documentation/DoxygenOutput/xml/index.xml
+			../../documentation/DoxygenOutput/xml
+			
+			
+				
+					
+                    
+				
+			
+		
+	
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Concepts" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Modes</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor23"></a><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> modes</h1>
+        <p>The following modes are available:</p>
+        <ul>
+            <li><a href="#Standby">Standby mode</a>
+            </li>
+            <li><a href="#Dictation">Dictation mode</a>
+            </li>
+            <li><a href="#Assistant">Assistant mode</a>
+            </li>
+            <li><a href="#MicOff">Microphone off</a>
+            </li>
+        </ul>
+        <h2><a name="Standby"></a>Standby mode</h2>
+        <p class="note"><b>Note:</b> This feature is only available for US English.</p>
+        <p>Standby mode enables the user to work with speech recognition hands-free; the user can start and stop recording using voice commands alone. The record button on the GUI is also available and can be used to start and stop recording but it's not mandatory.</p>
+        <p>When the language is set to US English, this is the default state when the app starts. The microphone is on and <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> is recording audio, but recorded audio isn't sent to the <span class="mc-variable DocLoc.DM variable">Dragon Medical</span> system. <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> processes the audio internally to recognize the <span class="command">wake up</span> command, which resumes dictation.</p>
+        <h3>Wake words</h3>
+        <p>When the app is in standby mode, the following voice commands start recording again:</p>
+        <ul>
+            <li>
+                <p><span class="command">wake up</span> - <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> switches to dictation mode and the user can start recording hands-free.</p>
+            </li>
+            <li>
+                <p><a href="#Assistant">Virtual assistant trigger phrases</a> (if available) - <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> switches to assistant mode.</p>
+            </li>
+        </ul>
+        <h3>Starting standby mode</h3>
+        <p>The following events will switch <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> to standby mode if it's available:</p>
+        <ul>
+            <li>From dictation mode or assistant mode: The user says the corresponding command; for example, <span class="command">go to sleep</span>, <span class="command">stop recording</span>, <span class="command">stop listening</span>.</li>
+            <li>From dictation mode or assistant mode: Your integration calls <code>stopRecording</code>.</li>
+            <li>From dictation mode: The recording times out.</li>
+            <li>From assistant mode: When a virtual assistant intent is completed or times out, the app returns to the mode it was in when the user activated assistant mode:&#160;either standby mode or dictation mode.</li>
+        </ul>
+        <h3>Disabling standby mode</h3>
+        <p>Standby mode is enabled by default for US English and unavailable for other languages.</p>
+        <p>The user can disable and enable standby mode via the personalization &amp; help screen, <span class="userInterface">Options</span> tab, <span class="userInterface">Wake Word</span> pane. This setting is saved in the <span class="mc-variable DocLoc.DM variable">Dragon Medical</span> system and will be applied when the user logs on again.</p>
+        <p>You can also disable standby mode programmatically; for more information, see: <a href="../iOSUseCases/DANUBE_STANDBY_DISABLE_IOS.htm">Disabling standby mode</a>.</p>
+        <p>When standby mode is disabled, events that would normally start standby mode turn the microphone off instead. For example, the <span class="command">stop recording</span> and <span class="command">go to sleep</span> voice commands turn off the microphone instead of starting standby mode.</p>
+        <h2><a name="Dictation"></a>Dictation mode</h2>
+        <p>The microphone is on and <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> is recording audio. Recorded audio is sent to the <span class="mc-variable DocLoc.DM variable">Dragon Medical</span> system for speech recognition. Voice commands are executed and recognized text is inserted at the cursor.</p>
+        <h3>Starting dictation mode</h3>
+        <p>The following events will switch <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> to dictation mode:</p>
+        <ul>
+            <li>From standby mode: The user says <span class="command">wake up</span> or taps the microphone icon: <img src="../Resources/Icon_StandbyMode.png" class="iconMedium" alt="" /></li>
+            <li>From microphone off: The user taps the microphone icon: <img src="../Resources/SpeechBarMicrophoneIcon_RecOff.png" class="iconMedium" alt="" /></li>
+            <li>From assistant mode: When a virtual assistant intent is completed or times out, the app returns to the mode it was in when the user activated assistant mode: either standby mode or dictation mode.</li>
+        </ul>
+        <h3>Disabling dictation mode</h3>
+        <p>You can exclude all text controls from speech recognition when you speech-enable your app. For more information, see <a href="../iOSUseCases/DANUBE_GUI_VIEW_IOS.htm#ExcludeAllControls">Defining  the set of speech-enabled text controls</a>.</p>
+        <h2><a name="Assistant"></a>Assistant mode</h2>
+        <p class="note"><b>Note:</b> This feature is only available on US Nuance-hosted systems and requires a <span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span> license.</p>
+        <p>The microphone is on and <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> is recording audio. Recorded audio is sent to the <span class="mc-variable DocLoc.DM variable">Dragon Medical</span> system to process the user's intents. Recognized intents are returned to the app for further handling.</p>
+        <h3>Enabling assistant mode</h3>
+        <p>Assistant mode isn't enabled by default; to enable it you must integrate <span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span> with your app. For more information, see: <a href="../iOSVirtualAssistant/DANUBE_VA_OVERVIEW_IOS.htm">Setting up <span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span></a>.</p>
+        <h3>Trigger phrases</h3>
+        <p>The following voice commands switch <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> from dictation or standby to assistant mode:</p>
+        <p><b>Development organization:</b>&#160;The default trigger phrases are <span class="command">hey Florence</span> and <span class="command">OK Florence</span>. These defaults are for testing and development purposes only during your evaluation phase; they aren't intended for end users in your production organizations.</p>
+        <p><b>Production system:</b> You need to define app-specific trigger phrases for your end users in production organizations. This can't be done programmatically; to define trigger phrases, contact Nuance product management. Once your custom trigger phrases are configured, the development defaults no longer work.</p>
+        <h2><a name="MicOff"></a>Microphone off</h2>
+        <p><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> isn't recording audio. When the wake word is unavailable or disabled, this is the default state when the app starts.</p>
+        <h3>Turning off the microphone</h3>
+        <p>The following events will turn off the microphone:</p>
+        <ul>
+            <li>The user says <span class="command">microphone off</span> or long-presses the microphone icon: <img src="../Resources/SpeechBarMicrophoneIcon_RecOn.png" class="iconMedium" alt="" /></li>
+            <li>The user locks the screen or switches to a different app.</li>
+            <li>An audio error occurs.</li>
+            <li>When standby mode is unavailable or disabled: The user says <span class="command">stop recording</span> or <span class="command">stop listening</span> from dictation mode.</li>
+            <li>When standby mode is unavailable or disabled: Your integration calls <code>stopRecording</code> from dictation mode.</li>
+        </ul>
+    </body>
+</html>

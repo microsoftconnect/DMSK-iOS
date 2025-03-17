@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Defining  the set of speech-enabled text controls</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Defining the set of speech-enabled text controls</h1>
+        <h2><a name="SupportedTextControls"></a>Supported text controls</h2>
+        <p>The following text controls are natively supported by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span>:</p>
+        <ul>
+            <li><code>UITextField</code>
+            </li>
+            <li><code>UITextView</code>
+            </li>
+            <li><code>UISearchBar</code>
+            </li>
+        </ul>
+        <h2><a name="kanchor47"></a>Dynamically changing text controls on GUI views</h2>
+        <p>If you dynamically change the set of controls on a GUI view (for example, your app adds/removes or enables/disables specific text fields depending on the user’s actions), the VUI form must be synchronized to recognize these changes.</p>
+        <h3>Procedure</h3>
+        <p>Send the <code>synchronizeWithView</code> message to the GUI view’s <code>NUSAVuiController</code>; the VUI bundle available to the user is adjusted.</p>
+        <h3>Remarks</h3>
+        <ul>
+            <li>If you create an entire GUI view dynamically (instead of using NIB deserialization) you must also create the <code>NUSAVuiController</code> instance and initialize it using its <code>initWithView</code> initializer.</li>
+        </ul>
+        <h2><a name="Exclude"></a><a name="kanchor48"></a>Excluding specific text controls from speech recognition</h2>
+        <h3>Prerequisites</h3>
+        <p>You've created and speech-enabled a GUI view (see: <a href="DANUBE_SPEECH_ENABLE_IOS.htm">Speech-enabling your iOS app</a>). Text controls whose <code>editable</code> and <code>userInteractionEnabled</code> properties are set to <code>YES</code> and for which speech recognition is supported are speech-enabled by default.</p>
+        <h3>Procedure</h3>
+        <p>If a GUI view in your app displays GUI text controls that you want to exclude from speech recognition, do the following:</p>
+        <ol>
+            <li value="1">Import the <code>UIView+NUSAEnabled.h</code> header file.</li>
+            <li value="2">Create a new outlet in your <code>UIViewController</code> and bind it to the UI text control.</li>
+            <li value="3">Set the <code>vuiEnabled</code> property of the UI text control to <code>NO</code>.</li>
+        </ol>
+        <p>Call <code>synchronizeWithView</code> on the VuiController to apply the changes.</p>
+        <p>The UI text control is excluded from speech recognition; this means that users of your app can't record into this UI text control and the UI control can't be reached via voice navigation.</p>
+        <h3>Remarks</h3>
+        <ul>
+            <li>Text controls that are hidden, disabled, read-only or password fields aren't speech-enabled by default.</li>
+        </ul>
+        <h2><a name="ExcludeAllControls"></a>Excluding all text controls from speech recognition</h2>
+        <h3>Prerequisites</h3>
+        <p>You've created a GUI view but you haven't yet <a href="DANUBE_SPEECH_ENABLE_IOS.htm">speech-enabled</a> your view.</p>
+        <h3>Procedure</h3>
+        <p>To exclude all text controls from speech recognition at the time you speech-enable the view, use the <code>initWithView</code> method with the <code>andDisableSpeechViews</code> parameter set to <code>YES</code>:</p>
+        <p class="indent2"><code>NUSAVuiController* vuiController = [[NUSAVuiController alloc] initWithView:view andDisableSpeechViews:YES];</code>
+        </p>
+        <p>The speech bar is displayed.&#160;The user can't dictate text but can say voice commands and can work with the virtual assistant (if enabled).</p>
+        <h2><a name="Speech-enable"></a><a name="kanchor49"></a>Speech-enabling hidden, read-only and password text controls</h2>
+        <h3>Prerequisites</h3>
+        <p>You've created and speech-enabled a GUI view (see: <a href="DANUBE_SPEECH_ENABLE_IOS.htm">Speech-enabling your iOS application</a>). Text controls that are hidden, disabled, read-only or password fields or whose <code>editable</code> or <code>userInteractionEnabled</code> properties are set to <code>NO</code> aren't speech-enabled by default.</p>
+        <h3>Procedure</h3>
+        <p>If a GUI view in your app displays text controls that are hidden, read-only or password fields, and you want to speech-enable those GUI text controls, do the following:</p>
+        <ol>
+            <li value="1">Import the <code>UIView+NUSAEnabled.h</code> header file.</li>
+            <li value="2">Create a new outlet in your <code>UIViewController</code> and bind it to the UI text control.</li>
+            <li value="3">Set the <code>vuiEnabled</code> property of the UI text control to <code>YES</code>.</li>
+        </ol>
+        <p>Call <code>synchronizeWithView</code> on the VuiController to apply the changes.</p>
+        <p>The UI text control is now speech-enabled. This means that users of your app can record into this UI text control and the UI control can be reached via voice navigation.</p>
+    </body>
+</html>

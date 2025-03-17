@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Dragon Medical Virtual Assistant|Dragon Medical Vistual Assistant - protocol 1" data-mc-conditions="Danube.Florence">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Setting up Dragon Medical Virtual Assistant using protocol 1</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor43"></a>Setting up <span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span> using protocol 1</h1>
+        <h2>Procedure</h2>
+        <p>To set up <span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span>, do the following:</p>
+        <ol>
+            <li value="1">Set up and open a <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> session via <code>[[NUSASession sharedSession] openForApplication: ...]</code> in <code>application:didFinishLaunchingWithOptions:</code>. For more information, see: <a href="../iOSIntroduction/DANUBE_SETUP_IOS.htm">Setting up Dragon Medical SpeechKit</a> and <a href="../iOSUseCases/DANUBE_INITIALIZE_SESSION_IOS.htm">Initializing a speech recognition session</a>.</li>
+            <li value="2">Import <code>NUSAVirtualAssistantController.h</code> and use <code>[NUSAVirtualAssistantController sharedController]</code> to access the singleton <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> instance.</li>
+            <li value="3">Set the <code>delegate</code> property on <code>[NUSAVirtualAssistantController sharedController]</code> to an instance of an object that instantiates <code>NUSAVirtualAssistantControllerDelegate</code> in <code>viewDidAppear:</code>.</li>
+            <li value="4">Call <code>[NUSAVirtualAssistantControllerController sharedController] openWithModel: ...]</code> to start the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> session in <code>viewDidAppear:</code>.</li>
+            <li value="5">Create a NUSAVuiController via <code>[[NUSAVuiController alloc] initWithView: ...</code> when you receive the <code>NUSAVirtualAssistantControllerDelegate</code>, <code>stateChanged:</code> method with state <code>Open</code>. There are two variants of <code>initWithView</code>:</li>
+            <ul>
+                <li>
+                    <p>If the view has text fields that need to be speech-enabled, use:</p>
+                    <p class="example"><code>- (id) initWithView: (UIView*)aView</code>
+                    </p>
+                    <p>The view that is passed for initialization must be an input text field like <code>UITextField</code> or <code>UITextView</code> or contain <code>UITextField</code> or <code>UITextView</code> as a subview. The speech bar will be shown after the first click in the input text field.</p>
+                </li>
+                <li>
+                    <p>If the view has no text fields that need to be speech-enabled, use:</p>
+                    <p class="example"><code>- (id) initWithView: (UIView*)aView andDisableSpeechViews: (BOOL)disableSpeechViews</code>
+                    </p>
+                    <p>and set <code>disableSpeechViews</code> to <code>YES</code>. See: <a href="../iOSUseCases/DANUBE_GUI_VIEW_IOS.htm">Defining the set of speech-enabled text controls</a>.</p>
+                </li>
+            </ul>
+            <li value="6">Optionally, upload dynamic concept values via <code>[[NUSAVirtualAssistantController sharedController] uploadValuesForConcept: ...]</code> after the <code>NUSAVirtualAssistantControllerDelegate</code>, <code>stateChanged</code> method has been called with the state <code>Opened</code>.</li>
+        </ol>
+        <p><span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> will now be in standby mode, waiting for the user to start a dialog by saying the <a href="../Concepts/DANUBE_MODES.htm#Assistant">VA trigger phrase</a>.</p>
+    </body>
+</html>

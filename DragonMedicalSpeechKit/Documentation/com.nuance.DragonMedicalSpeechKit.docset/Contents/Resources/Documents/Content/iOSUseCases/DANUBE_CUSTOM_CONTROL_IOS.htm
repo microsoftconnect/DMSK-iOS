@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>
+			Custom controls
+		</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor53"></a>Custom controls</h1>
+        <p>With the <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> custom control interface, you can speech-enable controls which aren't natively supported. Your custom control implementation is responsible for the following:</p>
+        <ul>
+            <li>Emulating a natively-supported text control to enable speech recognition.</li>
+            <li>Manipulating the text inside the unsupported control as instructed by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span>.</li>
+        </ul>
+        <p class="note"><b>Note:</b> This is a complex use case and is recommended for special cases only. If your control isn't supported, please contact Nuance support for information on when it will be supported. Be aware that the integration effort is significant.</p>
+        <h2>Overview</h2>
+        <p>A custom control is an object in your app which implements the <code>NUSATextControl</code> protocol.</p>
+        <p>Custom controls are speech enabled by the custom VuiController (an instance of the <code>NUSACustomVuiController</code> class).</p>
+        <p>The <code>NUSATextControl</code> protocol specifies how a supported text control appears and behaves; you must implement the necessary functionality in your custom control class. <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> interacts with custom controls via this protocol: it retrieves and alters their text, selection and user input focus state. Your custom control implementation then performs the <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> requests by manipulating the unsupported text control.</p>
+        <p>
+            <img src="../Resources/iOS_CustomControlDiagram.png" class="pageWidth" alt="" />
+        </p>
+        <p>For example, when recognition results arrive for the control, the <code>vuiReplaceRange:withText:</code> method is called in the <code>NUSATextControl</code> interface, instructing your custom control implementation to insert text into the text control.</p>
+        <h2>Model behind the NUSATextControl protocol</h2>
+        <p>The <code>NUSATextControl</code> interface is the specification of the behavior of a text control as seen by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span>.</p>
+        <p><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> assumes the following model for any text control.</p>
+        <h3>Text contents</h3>
+        <p>The control contains unstructured plain text, indexed by 0-based character positions. If your control has a different concept of contents (formatted or structured text), you must represent it as described (perform the conversion between plain text and the actual contents of the control in both directions).</p>
+        <h3>Text selection</h3>
+        <p>Exactly one section of text can be selected at any one time. The selection is defined by its start character position and length in characters. The selection is the section of text that will be affected by the next user action and must be restricted to character positions within the boundaries of the text contents. </p>
+        <p>For dictation, when an utterance is dictated, the results will overwrite the selected text. A zero character selection means that nothing will be overwritten; text will be inserted at the cursor position (the start of the zero length selection). A zero length selection might have a start position equal to the length of the entire text; in this case new text is appended at the end of the current text contents.</p>
+        <h3>Control focus</h3>
+        <p>A maximum of one control can have the focus at any one time. If a control has the focus, the next user action will affect its contents. </p>
+        <p>For dictation, when an utterance is dictated, the results will be inserted in the focused control. If no control has the focus, dictation results will be inserted to the most-recently focused control.</p>
+        <h3>Format strings</h3>
+        <p>Line and paragraph breaks are represented as special character sequences (by default, <code>\r\n</code> for new line and <code>\r\n\r\n</code> for new paragraph). When a user dictates a line or paragraph break, <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> inserts these special characters in the text of your control. Voice commands whose behavior is affected by line and paragraph breaks look for these special characters in the control's text contents.</p>
+        <p>If line and paragraph breaks are represented by your text control in a different way, you need to do the conversion to and from a format string. For example, if your underlying text control uses HTML, convert the newline format string to/from the <code>&lt;br/&gt;</code> HTML markup, and the new paragraph format string to/from the <code>&lt;p&gt;...&lt;/p&gt;</code> HTML markup.</p>
+        <h2>Implementing the NUSATextControl protocol</h2>
+        <p><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> expects your custom control to be able to perform these operations. Your class must implement all methods exactly as specified. Poor implementation could lead to erroneous behavior or destroy text in the text control, even if it wasn't inserted by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span>.</p>
+        <h3>Manipulating text contents</h3>
+        <ul>
+            <li>
+                <p>Report the total length of the text in the control:</p>
+                <p class="indent2"><code>@property(readonly) NSUInteger vuiTextLength</code>
+                </p>
+            </li>
+            <li>
+                <p>Extract a range of the text contents:</p>
+                <p class="indent2"><code>(NSString*) vuiTextInRange:(NSRange)range)</code>
+                </p>
+            </li>
+            <li>
+                <p>Replace a range of the text contents with a string of characters:</p>
+                <p class="indent2"><code>(void) vuiReplaceRange:(NSRange)range withText:(NSString *)text</code>
+                </p>
+                <p>This operation must leave the selection intact. The same characters in the text which are selected before the operation must remain selected after it. This doesn't mean that the same positions are selected; when insertion affects text contents in lower character positions than the current selection (i.e. to the left of it), the selection start (interpreted in absolute character positions) must be adjusted to the change in the number of characters to the left. If the replaced range intersects the current selection, the selection start after the operation is undefined.</p>
+                <p><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> maintains a history of the text and selection state of the control. Any changes between the current state reported by your control and previous states are interpreted as manual editing performed by the user.</p>
+                <p>If your implementation needs to manipulate the text (for example, to convert between plain text and Rich Text or HTML), make sure that bi-directional text conversions are symmetric. For example, text inserted via the <code>vuiReplaceRange:withText</code> method must appear unchanged when subsequently queried via the <code>vuiTextInRange:</code> method, unless the user has edited it.</p>
+                <p>If your implementation fails to fulfill these requirements and the text and/or selection contents returned by your control don't match the state expected by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span>, it will be assumed that the user has performed manual editing in the control. As a result, <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> could assume that the user has changed the selection and therefore the cursor isn't moved to the end of newly inserted dictation results, pending cursor navigation/selection commands might be ignored or text might be inserted in an unexpected location.</p>
+                <p>In addition, text changes by the user might be interpreted as corrections and might affect the learning algorithms that adjust the user's speech profile to the user's way of speaking. Unintended text changes therefore might cause the system to adapt incorrectly, resulting in higher recognition error rates.</p>
+            </li>
+        </ul>
+        <h3>Manipulating text selection</h3>
+        <ul>
+            <li>
+                <p>Return the current selection start and length in the control:</p>
+                <p class="indent2"><code>@property(readwrite) NSRange vuiSelectedTextRange</code>
+                </p>
+            </li>
+            <li>
+                <p>Set the current selection start and length in the control:</p>
+                <p class="indent2"><code>@property(readwrite) NSRange vuiSelectedTextRange</code>
+                </p>
+            </li>
+        </ul>
+        <h3>Manipulating focus</h3>
+        <ul>
+            <li>
+                <p>Report if the control has the focus or not:</p>
+                <p class="compact2"><code>(BOOL) isFirstResponder</code>
+                </p>
+                <p>A maximum of one control should report being focused. The state reported by your custom control implementation can be tied to the iOS GUI first responder state of the underlying text control, as long as it corresponds to the control in which the user's typed input will be entered.</p>
+                <p>If your GUI is designed for the user to edit text in a control even if it doesn't have the iOS GUI first responder state (for example, your custom control is a button on the GUI), your custom control implementation also needs to reflect this more advanced focus concept and report the corresponding focused state.</p>
+            </li>
+            <li>
+                <p>Set the control to be focused:</p>
+                <p class="indent2"><code>(BOOL) becomeFirstResponder</code>
+                </p>
+                <p>It's assumed that setting the focused state of the control implicitly clears that of the other controls. This method must not return <code>NO</code>.</p>
+            </li>
+            <li>
+                <p>Proactively notify <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> about having received the focus:</p>
+                <p class="indent2"><code>NUSATextControlDidBeginEditingNotification</code>
+                </p>
+                <p>Sending this notification is optional but strongly recommended; if not implemented, user-initiated changes to the focus might not be detected by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> in time and some text might be inserted into the wrong control. The notification must be posted to the process' default notification center. The notification object must be the custom control that has just become first responder.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Note:</b> All methods and properties specified must be implemented and it's strongly recommended to send the <code>NUSATextControlDidBeginEditingNotification</code> notification.</p>
+        <p>For more information, see the <a href="../iOSIntroduction/DANUBE_API_IOS.htm">API Reference</a>.</p>
+        <h2>The custom VuiController</h2>
+        <p>The custom VuiController (<code>NUSACustomVuiController</code>) can interact with your custom control implementations. Its interface resembles that of the <a href="DANUBE_SPEECH_ENABLE_IOS.htm">native VuiController</a> (<code>NUSAVuiController</code>).</p>
+        <p>Native VuiControllers automatically detect the controls which are speech-enabled by examining the UI of your app. This isn't possible in the custom control use case; the controls as seen by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> (your <code>NUSATextControl</code> implementations) aren't necessarily contained by any UI object. Therefore, you must pass to the custom VuiController all the <code>NUSATextControl</code> instances you want to be speech-enabled.</p>
+        <ul>
+            <li>
+                <p>Initializing the custom VuiController.</p>
+                <p>Whenever you initialize the custom VuiController, you must pass in the array of <code>NUSATextControl</code> instances you would like to have speech enabled.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Synchronizing the custom VuiController.</p>
+                <p>As with native VuiControllers, the <code>synchronize:</code> method is used to notify the custom VuiController about changes in the voice user interface. Changes in the set of speech-enabled controls is communicated by passing the updated array of controls to <code>synchronize:</code>. You must pass in this array even if your set of speech-enabled controls hasn't changed.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Enabling/disabling speech recognition for a control.</p>
+                <p>It follows from the above that the <code>NUSAEnabled</code> property is missing, and all controls you pass in to <code>initWithView:controls:</code> and <code>synchronize:</code> will be speech-enabled. To disable speech recognition for a custom control, omit it from the array and call <code>synchronize:</code>.</p>
+            </li>
+        </ul>
+        <h3>VuiController focus</h3>
+        <p>As with native VuiControllers, custom VuiController instances have an implicit mechanism for controlling which one is active. By default, the most recently created VuiController is active. If the active VuiController is destroyed, the previous one becomes active again.</p>
+        <h2>Custom control example</h2>
+        <p><code>// interface declaration</code>
+        </p>
+        <p class="compact"><code>@interface MyCustomControl : NSObject &lt;NUSATextControl&gt; {</code>
+        </p>
+        <p class="compact2"><code>NSString*   text;</code>
+        </p>
+        <p class="compact2"><code>NSRange     selectedTextRange;</code>
+        </p>
+        <p class="compact2"><code>BOOL isFirstResponder;</code>
+        </p>
+        <p><code>}</code>
+        </p>
+        <p>&#160;</p>
+        <p><code>// implementation</code>
+        </p>
+        <p class="indent2"><code>@synthesize vuiConceptName;</code>
+        </p>
+        <p>&#160;</p>
+        <p class="compact"><code>// return the text in range</code>
+        </p>
+        <p class="compact"><code>- (NSString *) vuiTextInRange:(NSRange)range {</code>
+        </p>
+        <p class="compact2"><code>return [text substringWithRange:range];</code>
+        </p>
+        <p><code>}</code>
+        </p>
+        <p>&#160;</p>
+        <p class="compact"><code>// replace the text in range</code>
+        </p>
+        <p class="compact"><code>// or do with the replacement text whatever is required in your custom control</code>
+        </p>
+        <p class="compact"><code>- (void) vuiReplaceRange:(NSRange)range withText:(NSString *)aText {</code>
+        </p>
+        <p class="compact2"><code>NSString* t1 = [text substringWithRange:NSMakeRange(0, range.location)];</code>
+        </p>
+        <p class="compact2"><code>NSString* t2 = [text substringFromIndex:range.location+range.length];</code>
+        </p>
+        <p class="compact2">&#160;</p>
+        <p class="compact2"><code>text = [NSString stringWithFormat:@"%@%@%@", t1==nil?@"":t1, aText, t2==nil?@"":t2];</code>
+        </p>
+        <p class="compact"><code>}</code>
+        </p>
+        <p class="compact">&#160;</p>
+        <p class="compact"><code>- (NSRange) vuiSelectedTextRange {</code>
+        </p>
+        <p class="compact2"><code>return selectedTextRange;</code>
+        </p>
+        <p class="compact"><code>}</code>
+        </p>
+        <p class="compact">&#160;</p>
+        <p class="compact"><code>- (void) setVuiSelectedTextRange:(NSRange)newRange {</code>
+        </p>
+        <p class="compact2"><code>selectedTextRange = newRange;</code>
+        </p>
+        <p class="compact"><code>}</code>
+        </p>
+        <p class="compact">&#160;</p>
+        <p class="compact"><code>- (NSUInteger) vuiTextLength {</code>
+        </p>
+        <p class="compact2"><code>return text.length;</code>
+        </p>
+        <p><code>}</code>
+        </p>
+        <p>&#160;</p>
+        <p><code>- (BOOL) isFirstResponder {</code>
+        </p>
+        <p class="compact2"><code>return isFirstResponder;</code>
+        </p>
+        <p><code>}</code>
+        </p>
+        <p>&#160;</p>
+        <p class="compact"><code>- (BOOL) becomeFirstResponder {</code>
+        </p>
+        <p class="compact"><code>// TODO: remove first responder state from other custom controls</code>
+        </p>
+        <p class="compact"><code>// TODO: do whatever is needed to visualize the first responder state of the custom control</code>
+        </p>
+        <p class="compact2"><code>isFirstResponder = YES;</code>
+        </p>
+        <p class="compact2"><code>return YES;</code>
+        </p>
+        <p><code>}</code>
+        </p>
+        <h2>Remarks</h2>
+        <ul>
+            <li>If objects that don't conform to the <code>NUSATextControl</code> protocol are passed to the VUIController, they're ignored and won't be speech-enabled.</li>
+            <li>If no speech-enabled object is passed to the VUIController, no recognition results will be delivered and only voice commands will be recognized.</li>
+            <li>	For <code>readwrite</code> properties both read and write functionality must be implemented.</li>
+            <li>
+                <p>The custom VuiController integration can be notified when the speech bar is shown or hidden via the <code>NUSACustomVuiControllerDelegate </code>methods:</p>
+                <p class="indent2" style="margin-bottom: 0.20em;"><code>speechBarDidShow</code>
+                </p>
+                <p class="indent2" style="margin-bottom: 0.40em;"><code>speechBarDidHide</code>
+                </p>
+                <p>Information on the size and position of the speech bar is also returned.</p>
+            </li>
+            <li>The <a href="../iOSIntroduction/DANUBE_API_IOS.htm">API Reference documentation</a> for the <code>NUSATextControl</code> protocol specifies the exact semantics of the parameters and the return values of the methods.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Dragon Medical Virtual Assistant|Dragon Medical Virtual Assistant - protocol 2" data-mc-conditions="Danube.Florence">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>DMVA event types</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span> event types</h1>
+        <p><span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> works as a state machine; certain actions can be performed based on the current <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> state of the session. <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> events are used to send information about the change in the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> state to the app. The app can update their local <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> state and take the next appropriate actions.</p>
+        <p>The following states are supported:</p>
+        <ul>
+            <li>VA inactive</li>
+            <p>This state indicates that <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> isn't active.</p>
+            <li>VA active</li>
+            <p>This state indicates that the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> SDK is actively listening for <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> requests; for example, when a user says the trigger word, the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> state changes from VA inactive to VA active.</p>
+            <li>VA processing</li>
+            <p>Once user has finished speaking their VA command, the DMVA state transitions from VA active to VA processing, indicating that the complete audio has been received and the NLU engine is processing it.</p>
+            <p>After NLU has finished processing and results are available, DMVA transitions back to the VA inactive state.</p>
+        </ul>
+        <h2>States and state transitions</h2>
+        <p>
+            <img src="DMVA States_EventTypes.png" class="sidebyside" alt="" />
+        </p>
+        <h2>Events</h2>
+        <p>The <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> events are sent via the <code>vaEventGenerated</code> callback from the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> SDK; you can change the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> state correspondingly.</p>
+        <p>
+            <table>
+                <col style="width: 185px;">
+                </col>
+                <col>
+                </col>
+                <col style="width: 43px;">
+                </col>
+                <thead>
+                    <tr>
+                        <th>VAEventType</th>
+                        <th>Scenario</th>
+                        <th>New state</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>VAEventTypeActive</code>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <p>When the trigger word is uttered and the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> SDK enters assistant mode, the <code>vaActive</code> event is received.</p>
+                                </li>
+                                <li>
+                                    <p>On receiving the <code>PromptForX</code> response.</p>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>VA active</td>
+                    </tr>
+                    <tr>
+                        <td><code>VAEventTypeProcessing</code>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>When the utterance is finished and NLU processing is started.</li>
+                                <li>The <code>SendText</code> request is sent.</li>
+                            </ul>
+                        </td>
+                        <td>VA processing</td>
+                    </tr>
+                    <tr>
+                        <td><code>VAEventTypeComplete</code>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>On receiving the <code>vaComplete</code> event with <code>NO_ERROR</code> and the NLU result from the server.</li>
+                                <li>On receiving the <code>vaComplete</code> event with an NLU timeout error.</li>
+                            </ul>
+                        </td>
+                        <td>VA inactive</td>
+                    </tr>
+                    <tr>
+                        <td><code>VAEventTypeTimeout</code>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>The <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> SDK is listening and no utterance is spoken by the user.</li>
+                                <li>Unable to communicate with the server; the transaction is terminated.</li>
+                            </ul>
+                        </td>
+                        <td>VA inactive</td>
+                    </tr>
+                    <tr>
+                        <td><code>VAEventTypeBadRequest</code>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>The request input was malformed and was rejected by the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> SDK.</li>
+                                <li>The <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> SDK didn't allow the request to be processed because of the current transaction state.</li>
+                            </ul>
+                        </td>
+                        <td>No change</td>
+                    </tr>
+                    <tr>
+                        <td><code>VAEventTypeCanceled</code>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <p>The app canceled the current action via the <code>stopVA</code> request.</p>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>VA inactive</td>
+                    </tr>
+                    <tr>
+                        <td><code>VAEventTypePartialASR</code>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <p>The <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> SDK raises this event to send the partial speech recognition result.</p>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>No change</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

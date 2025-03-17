@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSAVirtualAssistantController Class Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Properties">Properties</a></li></ul></li><li><a href="#">Properties</a><ul><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1aa5c858e10afbf39236fd03e2bbb9cae2">delegate</a></li></ul></li><li><a href="#">Class methods</a><ul><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1a77fe874b7759ca522d9739bce8618990">sharedController</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1a8e3ffd609dc7e6c390e669d3acbbf1f9">openWithModel:options:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1ad73c8695a548d609e09b83a8ee0b758b">close</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1affcf4db8479714c0c216c147ead96ff4">stopDialog</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1aa877b2132d8eb51c18919802cad56ba5">sendText:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1a30c18a1a18c1dfd54c3be82a21e74cbe">uploadValuesForConcept:conceptValues:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1aeb3d7c6908693aecbd5b805c13abb7ad">uploadValuesForConcept:conceptValues:withCompletionHandler:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1a74f4df57a1a67c17aca2a3ebd68ab737">clearUploadedValuesForConcept:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1a9e3017980bbb2468f2dfa4295107fbe5">clearUploadedValuesForConcept:withCompletionHandler:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1aa8f46003832e4f699b5737f9841ecc53">clearAllUploadedConceptValues</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1a654281f4b54be24749b6851f2cdf9cb2">setInlineValuesForConcept:conceptValues:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1a66a9b01c68c1c7011efa9f9206fb7bab">clearInlineValuesForConcept:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1a57e4d057f9d1eaa5444078a147ee3876">promptForConfirmation</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1af3763987c55fa71dd1e8d0d928df7e37">promptForFreeText</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_1af0fabe4361349e5ad19a83901fd776a5">promptForChoice:</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSAVirtualAssistantController Class Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/NSObject.html">NSObject</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSAVirtualAssistantController.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns="">The primary object for Dragon Medical Virtual Assistant (DMVA). </p>
+    
+    <a xmlns="" name="Tasks"><h2 id="pageHeader">Tasks</h2></a><a xmlns="" name="Properties"><h3 id="taskHeader">Properties</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1aa5c858e10afbf39236fd03e2bbb9cae2">  <code>delegate</code></a><span class="specialType"> property</span><span class="tooltip">
+NUSAVirtualAssistantController delegate. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1a77fe874b7759ca522d9739bce8618990">+ <code>sharedController</code></a><span class="tooltip">
+Returns a single instance of NUSAVirtualAssistantController. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1a8e3ffd609dc7e6c390e669d3acbbf1f9">- <code>openWithModel:options:</code></a><span class="tooltip">
+Opens DMVA for the specified grammar model. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1ad73c8695a548d609e09b83a8ee0b758b">- <code>close</code></a><span class="tooltip">
+Closes DMVA. Closes DMVA and frees up resources. Aborts all active dialogs and removes any transactions that were scheduled. DMVA will continue the closing process asynchronously and will transition to the Closed state when it has finished closing. If DMVA is already in the Closing state, the request won't be processed and NUSAVirtualAssistantErrorCodeApplicationStateError is returned. Once close is called, you'll need to call open again to use DMVA. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1affcf4db8479714c0c216c147ead96ff4">- <code>stopDialog</code></a><span class="tooltip">
+Stops an active dialog. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1aa877b2132d8eb51c18919802cad56ba5">- <code>sendText:</code></a><span class="tooltip">
+Sends dialog text to DMVA. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1a30c18a1a18c1dfd54c3be82a21e74cbe">- <code>uploadValuesForConcept:conceptValues:</code></a><span class="tooltip">
+Uploads concept values for a dynamic concept. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1aeb3d7c6908693aecbd5b805c13abb7ad">- <code>uploadValuesForConcept:conceptValues:withCompletionHandler:</code></a><span class="tooltip">
+Uploads concept values for a dynamic concept. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1a74f4df57a1a67c17aca2a3ebd68ab737">- <code>clearUploadedValuesForConcept:</code></a><span class="tooltip">
+Clears uploaded concept values for a dynamic concept. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1a9e3017980bbb2468f2dfa4295107fbe5">- <code>clearUploadedValuesForConcept:withCompletionHandler:</code></a><span class="tooltip">
+Clears uploaded concept values asynchronously for a dynamic concept. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1aa8f46003832e4f699b5737f9841ecc53">- <code>clearAllUploadedConceptValues</code></a><span class="tooltip">
+Clears uploaded concept values for a dynamic concept. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1a654281f4b54be24749b6851f2cdf9cb2">- <code>setInlineValuesForConcept:conceptValues:</code></a><span class="tooltip">
+Sets inline concept values for dynamic concepts. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1a66a9b01c68c1c7011efa9f9206fb7bab">- <code>clearInlineValuesForConcept:</code></a><span class="tooltip">
+Clears inline concept values for a dynamic concept. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1a57e4d057f9d1eaa5444078a147ee3876">- <code>promptForConfirmation</code></a><span class="tooltip">
+Starts a confirmation prompt. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1af3763987c55fa71dd1e8d0d928df7e37">- <code>promptForFreeText</code></a><span class="tooltip">
+Starts a prompt for a free text virtual assistant request. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_1af0fabe4361349e5ad19a83901fd776a5">- <code>promptForChoice:</code></a><span class="tooltip">
+Starts a prompt to make a choice. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Properties"><h2 id="pageHeader">Properties</h2></a><a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1aa5c858e10afbf39236fd03e2bbb9cae2"><h3 id="methodHeader">delegate</h3></a><div xmlns="" class="methodBrief">
+NUSAVirtualAssistantController delegate. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	id&lt; NUSAVirtualAssistantControllerDelegate &gt;delegate</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">This delegate receives messages from the DMVA instance. Delegates must conform to the <code>NUSAVirtualAssistantController</code> protocol. The delegate won't be retained. </p>
+        <a xmlns="" name="ClassMethods"><h2 id="pageHeader">Class methods</h2></a><a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1a77fe874b7759ca522d9739bce8618990"><h3 id="methodHeader">sharedController</h3></a><div xmlns="" class="methodBrief">
+Returns a single instance of NUSAVirtualAssistantController. 
+        </div>
+<code xmlns="" class="methodDeclaration">+	
+		(NUSAVirtualAssistantController *)
+		sharedController</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">The pointer to the controller. </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1a8e3ffd609dc7e6c390e669d3acbbf1f9"><h3 id="methodHeader">openWithModel:options:</h3></a><div xmlns="" class="methodBrief">
+Opens DMVA for the specified grammar model. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		openWithModel:
+	(NSString *)<span class="parameter">model 
+	</span>options:
+	(nullable NSDictionary&lt; NSString *, NSObject * &gt; *)<span class="parameter">options 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>model</dt>
+<dd><p>
+The name of the grammar model to load. 
+</p></dd>
+<dt>options</dt>
+<dd><p>
+A dictionary of objects containing optional parameters.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Opens DMVA for the specified grammar model. If the SpeechKit session isn't open, the application type isn't correct, the DMVA state is invalid, or the parameter value is invalid, the request won't be processed and VAResultCode value is returned. Otherwise, DMVA will continue to asynchronously validate the user license and initialize for the specified grammar model. The state will be set to Opening and VAResultCodeSuccess is returned. DMVA will transition to the Opened state when it has successfully completed license and grammar checks.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - openWithModel has been initiated successfully and DMVA is in the Opening state.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow an Open process to commence (either Opening or Closing).</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeParameterError - model is null or an empty string, or doesn't start with one of "Administrator", "Physician", or "Nurse".</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeUnknownError - The process threw an unexpected exception.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1ad73c8695a548d609e09b83a8ee0b758b"><h3 id="methodHeader">close</h3></a><div xmlns="" class="methodBrief">
+Closes DMVA. Closes DMVA and frees up resources. Aborts all active dialogs and removes any transactions that were scheduled. DMVA will continue the closing process asynchronously and will transition to the Closed state when it has finished closing. If DMVA is already in the Closing state, the request won't be processed and NUSAVirtualAssistantErrorCodeApplicationStateError is returned. Once close is called, you'll need to call open again to use DMVA. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		close</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - close has completed successfully and DMVA has transitioned into the Closed state.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - Attempt to close while in the Closing state.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1affcf4db8479714c0c216c147ead96ff4"><h3 id="methodHeader">stopDialog</h3></a><div xmlns="" class="methodBrief">
+Stops an active dialog. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		stopDialog</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode: </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">If there is an active dialog, the dialog is canceled and the dialogResult method of the registered <code>NUSAVirtualAssistantController</code> delegate will be called. The SDK exits out of DMVA mode and returns to its previous mode. Audio that was recorded while in DMVA mode is discarded.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow a dialog to be aborted.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1aa877b2132d8eb51c18919802cad56ba5"><h3 id="methodHeader">sendText:</h3></a><div xmlns="" class="methodBrief">
+Sends dialog text to DMVA. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		sendText:
+	(NSString *)<span class="parameter">text 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>text</dt>
+<dd><p>
+The text to send to DMVA for processing.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Sends text to DMVA to start or continue a dialog.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request. DMVA will continue to process the request asynchronously.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError- The application is in a state which doesn't allow text to be sent.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeParameterError - The text parameter is invalid.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1a30c18a1a18c1dfd54c3be82a21e74cbe"><h3 id="methodHeader">uploadValuesForConcept:conceptValues:</h3></a><div xmlns="" class="methodBrief">
+Uploads concept values for a dynamic concept. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		uploadValuesForConcept:
+	(NSString *)<span class="parameter">conceptName 
+	</span>conceptValues:
+	(NSString *)<span class="parameter">conceptValuesJSON 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>conceptName</dt>
+<dd><p>
+The name of the concept.
+</p></dd>
+<dt>conceptValuesJSON</dt>
+<dd><p>
+A string representation of an array of JSON objects, where each JSON object contains a single key-value pair of a literal and its corresponding value.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Asynchronously sets the list of literal-value pairs for a dynamic concept. The specified concept will be overwritten with the contents of the new list for the current user. This is meant to be used right after the Virtual Assistant has opened so that the items in the concept are available for all the transactions. Note: The command call returns a status synchronously, but the upload and processing by the DMVA server is asynchronous. The registered <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s uploadConceptResult method will be called when the upload has occurred. Items will persist in DMVA after it has closed and will be available for the current user in subsequent sessions until clearUploadedValuesForConcept is called. Therefore, if it isn't expected that the items will be valid beyond the current session, we recommend you call clearUploadedValuesForConcept before closing the DMVA session. If you need to update a concept for immediate use, use setInlineValuesForConcept instead. If DMVA isn't open, the request isn't processed and false is returned.</p>
+<p xmlns="">
+Here's an example value: [
+{"literal":"Susan","value":"SusanWalker"},
+{"literal":"Timothy","value":"TimothyWalker"},
+{"literal":"Tim","value":"TimothyWalker"},
+{"literal":"Jonathan","value":"JonathanWalker"},
+]
+</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request. DMVA will continue to process the request asynchronously and will call the registered <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s conceptResult method when it has finished.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow concept values to be uploaded.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeParameterError - The conceptName or conceptValuesJSON parameter is invalid.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1aeb3d7c6908693aecbd5b805c13abb7ad"><h3 id="methodHeader">uploadValuesForConcept:conceptValues:withCompletionHandler:</h3></a><div xmlns="" class="methodBrief">
+Uploads concept values for a dynamic concept. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		uploadValuesForConcept:
+	(NSString *)<span class="parameter">conceptName 
+	</span>conceptValues:
+	(NSString *)<span class="parameter">conceptValuesJSON 
+	</span>withCompletionHandler:
+	(void(^)(NSError *_Nullable error))<span class="parameter">completionHandler 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request. DMVA will continue to process the request asynchronously and will call the registered <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s conceptResult method when it has finished. NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow concept values to be uploaded. NUSAVirtualAssistantErrorCodeParameterError - The conceptName or conceptValuesJSON parameter is invalid. </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>conceptName</dt>
+<dd><p>
+The name of the concept. 
+</p></dd>
+<dt>conceptValuesJSON</dt>
+<dd><p>
+A string representation of an array of JSON objects, where each JSON object contains a single key-value pair of a literal and its corresponding value. 
+</p></dd>
+<dt>completionHandler</dt>
+<dd><p>
+The completionHandler block invoked when the response is returned. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1a74f4df57a1a67c17aca2a3ebd68ab737"><h3 id="methodHeader">clearUploadedValuesForConcept:</h3></a><div xmlns="" class="methodBrief">
+Clears uploaded concept values for a dynamic concept. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		clearUploadedValuesForConcept:
+	(NSString *)<span class="parameter">conceptName 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>conceptName</dt>
+<dd><p>
+The name of the concept.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Asynchronously clears the specified concept where the items had been set by uploadValuesForConcept. The command call returns a status synchronously, but the processing of the request by DMVA is asynchronous. The registered <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s conceptResult method will be called when the request has been uploaded.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request. DMVA will continue to process the request asynchronously and call the registered <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s conceptResult method when it has finished.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow concept values to be uploaded.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeParameterError - The conceptName or conceptValues parameter is invalid.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1a9e3017980bbb2468f2dfa4295107fbe5"><h3 id="methodHeader">clearUploadedValuesForConcept:withCompletionHandler:</h3></a><div xmlns="" class="methodBrief">
+Clears uploaded concept values asynchronously for a dynamic concept. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		clearUploadedValuesForConcept:
+	(NSString *)<span class="parameter">conceptName 
+	</span>withCompletionHandler:
+	(void(^)(NSError *_Nullable error))<span class="parameter">completionHandler 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request. DMVA will continue to process the request asynchronously and call the registered <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s conceptResult method when it has finished. NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow concept values to be uploaded. NUSAVirtualAssistantErrorCodeParameterError - The conceptName or conceptValues parameter is invalid. </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>conceptName</dt>
+<dd><p>
+The name of the concept. 
+</p></dd>
+<dt>completionHandler</dt>
+<dd><p>
+The completionHandler block invoked when the response is returned. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1aa8f46003832e4f699b5737f9841ecc53"><h3 id="methodHeader">clearAllUploadedConceptValues</h3></a><div xmlns="" class="methodBrief">
+Clears uploaded concept values for a dynamic concept. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		clearAllUploadedConceptValues</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Asynchronously clears all of a user's dynamic concepts that were set with the uploadValuesForConcept method. The command call returns a status synchronously, but the processing of the request by DMVA is asynchronous. The registered <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s conceptResult method will be called when the request has been uploaded. <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s conceptResult method will be called when the request has been uploaded.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request. DMVA will continue to process the request asynchronously and call the registered <code><a href="../Protocols/NUSAVirtualAssistantControllerDelegate-p.html">NUSAVirtualAssistantControllerDelegate</a></code>'s conceptResult method when it has finished.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow concept values to be cleared.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1a654281f4b54be24749b6851f2cdf9cb2"><h3 id="methodHeader">setInlineValuesForConcept:conceptValues:</h3></a><div xmlns="" class="methodBrief">
+Sets inline concept values for dynamic concepts. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		setInlineValuesForConcept:
+	(NSString *)<span class="parameter">conceptName 
+	</span>conceptValues:
+	(NSString *)<span class="parameter">conceptValuesJSON 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>conceptName</dt>
+<dd><p>
+The name of the concept.
+</p></dd>
+<dt>conceptValuesJSON</dt>
+<dd><p>
+An array of JSON objects, where each JSON object contains a single key-value pair of a literal and its corresponding value.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Adds a list of literal-value pairs to a dynamic concept for immediate use. This is meant to be used for a small number of items (50 or fewer) right before they are needed for a particular dialog. The items in the concept will be available for recognition immediately following this call. Use clearInlineValuesForConcept to clear the concept when the items are no longer needed, or the items will continue to be available until DMVA closes. Uploading a large number of items with this call will result in degraded performance. If a concept needs to be overwritten with a large number of items, use uploadValuesForConcept instead. If DMVA isn't open, the request isn't processed and NUSAVirtualAssistantErrorCodeApplicationStateError is returned.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow concept values to be cleared.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeParameterError - The conceptName or conceptValues parameter is invalid.</p>
+<p xmlns="">
+Here's an example value: [
+{"literal":"Susan","value":"SusanWalker"},
+{"literal":"Timothy","value":"TimothyWalker"},
+{"literal":"Tim","value":"TimothyWalker"},
+{"literal":"Jonathan","value":"JonathanWalker"},
+]
+ 
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1a66a9b01c68c1c7011efa9f9206fb7bab"><h3 id="methodHeader">clearInlineValuesForConcept:</h3></a><div xmlns="" class="methodBrief">
+Clears inline concept values for a dynamic concept. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		clearInlineValuesForConcept:
+	(NSString *)<span class="parameter">conceptName 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>conceptName</dt>
+<dd><p>
+The name of the concept.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Clears one immediate concept. The concept is fully cleared once the call returns. If DMVA isn't open, the request is ignored and NUSAVirtualAssistantErrorCodeApplicationStateError is returned.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - The concept was cleared of inline values.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow inline concept values to be cleared.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeParameterError - The conceptName parameter is invalid.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1a57e4d057f9d1eaa5444078a147ee3876"><h3 id="methodHeader">promptForConfirmation</h3></a><div xmlns="" class="methodBrief">
+Starts a confirmation prompt. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		promptForConfirmation</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Starts a prompt for the user to provide confirmation. The microphone enters VA Active mode. The user will be expected to reply either 'yes' or 'no'. If the user responds 'yes', the dialogResult method will be called again with the task state set to "confirmed". Otherwise the task state will be "aborted". DMVA won't provide text-to-speech or text prompts for this dialog, so the integrator needs to generate the prompts, call startSpeaking, and wait for didStopSpeaking to be called before calling promptForConfirmation.</p>
+<p xmlns="">Note: Calling PromptForConfirmation() causes any active dialog to be aborted.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow PromptForConfirmation to be called.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1af3763987c55fa71dd1e8d0d928df7e37"><h3 id="methodHeader">promptForFreeText</h3></a><div xmlns="" class="methodBrief">
+Starts a prompt for a free text virtual assistant request. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		promptForFreeText</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Starts a dialog where the user is prompted for free text.</p>
+<p xmlns="">The microphone enters VA Active mode. After the user speaks, the dialogResult method will be called and the JSON result for the intent dmvaPromptForFreeText will have a FREE_TEXT concept populated with the text of the recognized speech from the user. DMVA doesn't provide text-to-speech or text prompts for this dialog, so the integrator needs to generate the prompts, call startSpeaking, and wait for didStopSpeaking to be called before calling promptForFreeText.</p>
+<p xmlns="">The return value is one the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow PromptForFreeText to be called.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_1af0fabe4361349e5ad19a83901fd776a5"><h3 id="methodHeader">promptForChoice:</h3></a><div xmlns="" class="methodBrief">
+Starts a prompt to make a choice. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVirtualAssistantErrorCode)
+		promptForChoice:
+	(NSString *)<span class="parameter">items 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">NUSAVirtualAssistantErrorCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>items</dt>
+<dd><p>
+- A string representing an array of JSON objects, where each JSON object contains a single key-value pair of a literal and its corresponding value.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Starts a dialog where the user is prompted to make a choice. The microphone enters VA Active mode. The items parameter holds a JSON string containing key-value pairs of literals and their corresponding values. DMVA waits for the speaker to say one of the literals from the items parameter. When the speaker says one of the choices, the dialogResult method will be called and the JSON result for dmvaPromptForChoice will have a CHOICE concept populated with the value that corresponds to the literal that the speaker provided. DMVA doesn't provide text-to-speech or text prompts for this dialog, so it will be up to the integrator to generate the prompts, call startSpeaking, and wait for didStopSpeaking to be called before calling promptForChoice.</p>
+<p xmlns="">The return value is one the following:</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeNoError - DMVA accepted the request.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeApplicationStateError - The application is in a state which doesn't allow text transactions.</p>
+<p xmlns="">NUSAVirtualAssistantErrorCodeParameterError - The text parameter is invalid.</p>
+<p xmlns="">Here's an example value for items: [
+{"literal":"save","value":"save"},
+{"literal":"delete","value":"delete"},
+]
+ 
+
+</p>
+        
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

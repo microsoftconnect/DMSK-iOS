@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSAVirtualAssistantControllerV2Delegate Protocol Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#protocol_n_u_s_a_virtual_assistant_controller_v2_delegate-p_1aa58e10604cfae54c1b85145f9a2ae832">vaEventGenerated:</a></li><li><a href="#protocol_n_u_s_a_virtual_assistant_controller_v2_delegate-p_1a71723d059bb921c66df4d4320e8d22a7">vaSessionStateChanged:resultCode:message:</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSAVirtualAssistantControllerV2Delegate Protocol Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/&lt;NSObject&gt;.html">&lt;NSObject&gt;</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSAVirtualAssistantControllerV2Delegate.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns="">DMVA controller delegate. </p>
+    
+<p xmlns="">This delegate is used for all callbacks to the Dragon Medical Virtual Assistant (DMVA) client. It is registered with the <code><a href="../Classes/NUSAVirtualAssistantControllerV2.html">NUSAVirtualAssistantControllerV2</a></code> instance. All the methods in the delegate are optional. </p>
+    <a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="protocol_n_u_s_a_virtual_assistant_controller_v2_delegate-p_1aa58e10604cfae54c1b85145f9a2ae832"><h3 id="methodHeader">vaEventGenerated:</h3></a><div xmlns="" class="methodBrief">
+Handles DMVA events. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		vaEventGenerated:
+	(VAEvent *_Nonnull)<span class="parameter">event 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>event</dt>
+<dd><p>
+An object describing the event, including the event type and a result message. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Notifies the integrator of different events received from DMVA after a request has been processed. For example, the user says "Hey Dragon, show me CBC". On recognizing the wake word, the SDK sends the begin speech audio to its response and gets the vaActive event from DMVA, which it passes to the integrator. When the DMVA command is processed on the DMVA server, vaComplete along with a JSON response is received from DMVA, which is passed to the integrator using this delegate method.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="protocol_n_u_s_a_virtual_assistant_controller_v2_delegate-p_1a71723d059bb921c66df4d4320e8d22a7"><h3 id="methodHeader">vaSessionStateChanged:resultCode:message:</h3></a><div xmlns="" class="methodBrief">
+Receives the DMVA state. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		vaSessionStateChanged:
+	(VAState)<span class="parameter">state 
+	</span>resultCode:
+	(VAResultCode)<span class="parameter">resultCode 
+	</span>message:
+	(nullable NSString *)<span class="parameter">message 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>state</dt>
+<dd><p>
+The state of the VA Controller: initialized or closed.
+</p></dd>
+<dt>resultCode</dt>
+<dd><p>
+The result code received when opening or closing the VA Controller
+
+</p></dd>
+<dt>message</dt>
+<dd><p>
+Additional information on the result code and state. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Whenever the VA Controller state changes, this method is called to notify the integrator of the state change. This method is called on the delegate provided by the integrator, using the set delegate call.</p>
+<p xmlns="">
+VAResultCode Values:
+</p>
+<p xmlns="">VAResultCodeSuccess - The request completed successfully.
+</p>
+<p xmlns="">VAResultCodeBadRequestError - Invalid parameters were provided to server
+</p>
+<p xmlns="">VAResultCodeInternalServerError - The server encountered a problem. 
+</p>
+<p xmlns="">VAResultCodeNetworkError - There was a problem with the network or the server is unavailable.
+</p>
+<p xmlns="">
+</p>
+        
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

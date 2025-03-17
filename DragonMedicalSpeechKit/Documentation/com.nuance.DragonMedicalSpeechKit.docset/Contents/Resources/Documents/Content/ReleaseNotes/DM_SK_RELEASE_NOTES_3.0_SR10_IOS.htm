@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Release History" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Dragon Medical SpeechKit 3.0 Service Release 10 (iOS edition)</title>
+        <style>*
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body
+{
+	background-color: #fff;
+	font-family: 'Microsoft Sans Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 80%;
+	line-height: 1.3;
+	margin: 1.5em;
+	mc-hyphenate: never;
+}
+
+@media print
+{
+	body
+	{
+		margin: 0;
+	}
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+table,
+pre,
+img.pageWidth
+{
+	margin-bottom: 0.8em;
+}
+
+a,
+a:link,
+a code,
+a span.path
+{
+	text-decoration: none;
+	color: #3366d0;
+}
+
+a:visited
+{
+	color: #3366d0;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+h1
+{
+	font-size: 2em;
+	color: #1A7CB6;
+	font-weight: normal;
+	page-break-before: always;
+	column-break-after: avoid;
+	mc-heading-level: 1;
+}
+
+h2
+{
+	margin-top: 1em;
+	border-bottom: 1px solid #1A7CB6;
+	font-size: 1.5em;
+	font-weight: normal;
+	color: #1A7CB6;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 2;
+}
+
+h3,
+p.TOC
+{
+	margin-top: 1em;
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #1A7CB6;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 0;
+}
+
+h4
+{
+	margin-top: 1em;
+	font-size: 1em;
+	font-weight: bold;
+	color: #1A7CB6;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 0;
+}
+
+h5
+{
+	margin-top: 1em;
+	font-size: 1em;
+	font-weight: bold;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 0;
+}
+
+h6
+{
+	margin-top: 0.5em;
+	font-size: 1em;
+	font-weight: bold;
+	border-bottom: 1px solid #289728;
+	color: #1A7CB6;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 0;
+}
+
+ul
+{
+	list-style-type: square;
+}
+
+ol,
+ul
+{
+	list-style-position: outside;
+	margin-left: 2.3em;
+}
+
+p.indent2
+{
+	margin-left: 2.3em;
+}
+
+p.indent3
+{
+	margin-left: 4.6em;
+}
+
+p.indent4
+{
+	margin-left: 6.9em;
+}
+
+p.compact,
+li.compact
+{
+	margin-bottom: 0.2em;
+}
+
+p.compact2
+{
+	margin-bottom: 0.2em;
+	margin-left: 2.3em;
+}
+
+p.compact3
+{
+	margin-bottom: 0.2em;
+	margin-left: 4.6em;
+}
+
+p.compact4
+{
+	margin-bottom: 0.2em;
+	margin-left: 6.9em;
+}
+
+.example p
+{
+	margin-bottom: 0.2em;
+}
+
+.example p.indent2,
+.example p.compact2
+{
+	margin-left: 0;
+	text-indent: 2.3em;
+}
+
+.example p.indent3,
+.example p.compact3
+{
+	margin-left: 0;
+	text-indent: 4.6em;
+}
+
+.example p.indent4,
+.example p.compact4
+{
+	margin-left: 0;
+	text-indent: 6.9em;
+}
+
+p.backToTop
+{
+	text-align: right;
+	font-weight: normal;
+}
+
+pre,
+code,
+code *
+{
+	font-family: Consolas, 'Andale Mono', monospace;
+	color: #444;
+}
+
+pre
+{
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+span.command
+{
+	font-weight: bold;
+	color: #289728;
+}
+
+span.important
+{
+	font-weight: bold;
+	color: #ff0000;
+}
+
+span.userInterface
+{
+	font-weight: bold;
+}
+
+span.path
+{
+	font-family: Verdana, sans-serif;
+	font-size: 0.9em;
+	color: #444;
+}
+
+span.selectedText
+{
+	background-color: #87cefa;
+}
+
+span.cursor
+{
+	color: #dc143c;
+	font-weight: bold;
+}
+
+.note
+{
+	border: 1px solid #289728;
+	padding: 0.5em 1em;
+}
+
+.example
+{
+	border: 1px solid #c9d1d7;
+	background-color: #f1f5f9;
+	padding: 0.5em 1em;
+}
+
+.warning
+{
+	border: 1px solid #289728;
+	background-color: #f0f3f7;
+	padding: 0.5em 1em;
+}
+
+.wide
+{
+	margin-bottom: 1.5em;
+}
+
+.columnBreak
+{
+	column-break-before: always;
+}
+
+table
+{
+	border-collapse: collapse;
+	page-break-inside: avoid;
+	font-size: 1em;
+}
+
+td,
+th
+{
+	border: 1px solid #c9d1d7;
+	text-align: left;
+	vertical-align: top;
+	padding: 0.4em;
+	page-break-inside: avoid;
+}
+
+th
+{
+	background-color: #f0f3f7;
+	color: #1A7CB6;
+	font-weight: bold;
+}
+
+hr
+{
+	color: #289728;
+	background-color: #289728;
+	height: 1px;
+	margin-bottom: 1.3em;
+	margin-top: 1.3em;
+}
+
+hr.alternative
+{
+	color: #e9e9e9;
+	background-color: #e9e9e9;
+}
+
+img.pageWidth
+{
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+@media print
+{
+	img.pageWidth
+	{
+		max-width: 15cm;
+	}
+}
+
+img.iconLarge
+{
+	max-height: 48px;
+	width: auto;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: text-bottom;
+}
+
+img.iconMedium
+{
+	max-height: 24px;
+	width: auto;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: text-bottom;
+}
+
+img.iconSmall
+{
+	max-height: 16px;
+	width: auto;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: text-bottom;
+}
+
+</style>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Release Notes for Dragon Medical SpeechKit 3.0 Service Release 10 (iOS edition)</h1>
+        <p>Dragon Medical SpeechKit is a component of the Nuance Healthcare Development Platform. Rebranding the components is currently an ongoing activity. Dragon Medical SpeechKit was previously called 360 | SpeechAnywhere Services; please be aware that references to 360 | SpeechAnywhere Services 3.0 apply to this release.</p>
+        <h2>Solved issues in service release 10</h2>
+        <ul style="list-style-type: square;">
+            <li>The volume is now correctly indicated on the GUI when users change how loudly they are speaking or change their position in relation to the microphone. [DNB-7313]</li>
+        </ul>
+        <h2>Solved issues in service release 6</h2>
+        <ul>
+            <li>Error recovery and support for load balancing have been improved. [DNB-6889]</li>
+            <li>The application no longer stops unexpectedly when using the Address Sanitizer. [DNB-6539]</li>
+            <li>Building an application for an older iOS SDK version no longer results in linker warnings. [DNB-6787]</li>
+        </ul>
+        <h2>New in service release 6</h2>
+        <ul>
+            <li>360 | SpeechAnywhere Services client editions are now called Dragon Medical SpeechKit. [DNB-5670]</li>
+            <li>Dragon Medical SpeechKit now supports applications using bitcode. [DNB-4190]</li>
+        </ul>
+        <h2>Important information</h2>
+        <ul>
+            <li>Dragon Medical SpeechKit 3.0 (iOS edition) is compatible with server versions 2.0, 2.1 and 3.0.</li>
+            <li>
+                <p>Dragon Medical Server 3.0 is compatible with client versions 2.0, 2.1 and 3.0.</p>
+            </li>
+            <li>
+                <p>For on-premises deployments of Dragon Medical Server with iOS 9, the connection to Dragon Medical Server will only work if the <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html">App Transport Security</a> requirements are met. Unencrypted HTTP connections to servers will no longer work.</p>
+            </li>
+            <li>
+                <p>Information on the voice commands changed with each version of Dragon Medical SpeechKit is now available in the end user help.</p>
+            </li>
+            <li>
+                <p>On the speech control/speech bar the colors for recording on/off have changed from red (on) - gray (off) to green (on) - red (off).</p>
+            </li>
+        </ul>
+        <h2>New in version 3.0</h2>
+        <h3>Manage Vocabulary (server version 3.0 required)</h3>
+        <h5>Dragon-based systems</h5>
+        <ul>
+            <li>Users can now search for words on the <span class="userInterface">Manage Vocabulary</span> page.</li>
+            <li>Users can now filter words on the <span class="userInterface">Manage Vocabulary</span> page based on the level (user/group/site) for which they were added.</li>
+            <li>New <span class="userInterface">Modify Word</span> screen: Users can now edit the spelling and pronunciation of words in their personal lexicon.</li>
+            <li>Users can now record how a word is pronounced.</li>
+            <li>New voice command to record how a word is pronounced: <span class="command">train word</span>.</li>
+        </ul>
+        <h3>Personal auto-texts (server version 3.0 required)</h3>
+        <h5>All systems</h5>
+        <ul>
+            <li>Users can now create auto-texts via the personalization and help window, <span class="userInterface">Manage Auto-texts</span> page. This new functionality is available to desktop users and mobile device users with a Dragon Medical One license.</li>
+            <li>New voice command: <span class="command">make that an auto-text</span>.</li>
+        </ul>
+        <h3>Speech recognition (server version 3.0 required)</h3>
+        <h5>Dragon-based systems</h5>
+        <ul>
+            <li>New English, Dutch, Flemish and German voice commands to form compound words. English examples: <span class="command">compound</span>, <span class="command">compound that</span>, <span class="command">compound selection</span>.</li>
+            <li>New German voice commands to separate compound words: <span class="command">trenne das</span>, <span class="command">Auswahl trennen</span>, <span class="command">trenne Auswahl</span>.</li>
+            <li>Improved correction alternatives for Dutch, French and German in the correction menu.</li>
+            <li>Dragon Medical now intelligently identifies sentence separators; this means voice commands for selecting sentences and navigating to sentences work more reliably.</li>
+        </ul>
+        <h5>All systems</h5>
+        <ul>
+            <li>New voice commands to navigate text: <span class="command">go to beginning of sentence</span>, <span class="command">go to end of sentence</span>, <span class="command">go to beginning of paragraph</span>, <span class="command">go to end of paragraph</span>.</li>
+        </ul>
+        <h3>On-premises systems (server version 3.0 required)</h3>
+        <ul>
+            <li> Dragon Medical systems now remove speech recognition data from the Dragon Medical File Share when the data is no longer needed for improving the recognition quality.</li>
+        </ul>
+        <h3>iOS edition</h3>
+        <ul>
+            <li>The iOS edition can now query if the  Nuance Healthcare ID is enabled for the user.</li>
+        </ul>
+        <ul>
+            <li>The iOS edition can now open the personalization and help screen, showing specific tabs, via the integration.</li>
+        </ul>
+        <h2>Known issues</h2>
+        <ul style="list-style-type: square;">
+            <li>
+                <p>On iOS 9 devices, the application’s own online help is not displayed. [DNB-6213].</p>
+            </li>
+            <li>The <code>SpokenText</code> parameter in the <code>CommandRecognized</code> event is empty in command mode. [PSP00062085]</li>
+            <li>The speech bar is only displayed on the Xcode 6 Simulator if the soft keyboard is shown. Make sure the simulator is configured so that either the <b>Simulator</b>, <b>Hardware</b>, <b>Keyboard</b>, <b>Connect Hardware Keyboard</b> option is not selected, or the <b>Toggle Software Keyboard</b> option is also set. [PSP00077597]</li>
+            <li>
+                <p>A 16-byte memory leak occurs in the SDK each time a session is closed. [DNB-4846]</p>
+            </li>
+        </ul>
+        <h2>Infrastructure</h2>
+        <h3>Infrastructure no longer supported</h3>
+        <ul style="list-style-type: square;">
+            <li>Dragon Medical SpeechKit 3.0 applications do not work with version 1.5 servers.</li>
+            <li>In Dragon Medical Server 3.0 all version 1.4 client-based applications stop working.</li>
+        </ul>
+        <h3>Infrastructure changes planned for the next release</h3>
+        <ul style="list-style-type: square;">
+            <li>Dragon Medical SpeechKit 3.1 client applications will not work with version 1.6 servers.</li>
+            <li>In Dragon Medical Server 3.1 all version 1.5 and 1.6 client-based applications will stop working.</li>
+            <li>Dragon Medical SpeechKit 3.1 will stop support for iOS 7.</li>
+            <li>
+                <p>Dragon Medical SpeechKit 3.1 will stop support for Xcode 6 as a development environment.</p>
+            </li>
+        </ul>
+        <h2>System requirements*</h2>
+        <table>
+            <col />
+            <col />
+            <col />
+            <tr>
+                <th>&#160;</th>
+                <th>Recommended</th>
+                <th>Supported</th>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <td>iOS 9</td>
+                <td>iOS 7.x - 9</td>
+            </tr>
+            <tr>
+                <th>Architecture</th>
+                <td>&#160;</td>
+                <td>
+                    <p>armv7, armv7s, arm64</p>
+                    <p>i368, x86_64 (simulator)</p>
+                    <p>bitcode
+</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Development environment</th>
+                <td>Xcode 7.3</td>
+                <td>Xcode 6 -7.3</td>
+            </tr>
+        </table>
+        <h3>*End-of-life: third party environments</h3>
+        <p>Support for third party environments is only valid as long as they are supported by the corresponding vendor and might be subject to other restrictions. Please contact Nuance Technical Support for details. For more information, see the documentation delivered with the third party product and supporting Nuance documentation.</p>
+        <p>When support by the vendor has stopped, Nuance will continue support if an issue is specific to the Nuance solution, within the limitations of the vendor’s end-of-life and Nuance's policy. This means that issues that are a combination of the vendor’s component and the Nuance solution cannot be supported.</p>
+        <h2>Dragon Medical product life cycle</h2>
+        <p>Nuance provides support throughout the life cycle of one version and point release. Please note that Nuance will not perform problem analysis after the end-of-life date stated here. If a Nuance-hosted system is used, Nuance cannot guarantee that an older version will continue working after the date stated here.</p>
+        <table>
+            <col style="width: 105px;" />
+            <col style="width: 120px;" />
+            <col style="width: 108px;" />
+            <col style="width: 101px;" />
+            <col style="width: 96px;" />
+            <col style="width: 100px;" />
+            <col style="width: 101px;" />
+            <tr>
+                <th>End-of-life</th>
+                <th>1.4</th>
+                <th>1.5</th>
+                <th>1.6</th>
+                <th>2.0</th>
+                <th>2.1</th>
+                <th>3.0</th>
+            </tr>
+            <tr>
+                <th>Server</th>
+                <td>2014-06-14</td>
+                <td>2015-02-14</td>
+                <td>2015-07-10</td>
+                <td>2016-06-30</td>
+                <td>2016-12-15</td>
+                <td>2017-05-06</td>
+            </tr>
+            <tr>
+                <th>iOS edition</th>
+                <td>2014-06-14</td>
+                <td>2015-02-14</td>
+                <td>2015-07-10</td>
+                <td>2016-06-30</td>
+                <td>2016-11-26</td>
+                <td>2017-04-15</td>
+            </tr>
+        </table>
+    </body>
+</html>

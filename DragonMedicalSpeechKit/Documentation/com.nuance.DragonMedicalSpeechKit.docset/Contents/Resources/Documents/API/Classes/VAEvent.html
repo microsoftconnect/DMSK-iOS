@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>VAEvent Class Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"></ul></li><li><a href="#">Properties</a><ul><li><a href="#interface_v_a_event_1aca26dbee4504bd3d040959cf2bb7a421">eventType</a></li><li><a href="#interface_v_a_event_1ae9bd0df3ea200658ca4f6b5c59ba7d49">details</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">VAEvent Class Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/NSObject.html">NSObject</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSAVirtualAssistantTypesV2.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns="">Virtual Assistant v2 event. </p>
+    
+    <a xmlns="" name="Properties"><h2 id="pageHeader">Properties</h2></a><a xmlns="" name="interface_v_a_event_1aca26dbee4504bd3d040959cf2bb7a421"><h3 id="methodHeader">eventType</h3></a><div xmlns="" class="methodBrief">
+Virtual Assistant v2 event types. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	VAEventTypeeventType</code><h5 xmlns="">Discussion</h5>
+        <a xmlns="" name="interface_v_a_event_1ae9bd0df3ea200658ca4f6b5c59ba7d49"><h3 id="methodHeader">details</h3></a><div xmlns="" class="methodBrief">
+Virtual Assistant v2 event details string. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSString *details</code><h5 xmlns="">Discussion</h5>
+        <h2 xmlns="" id="pageHeader">Data types</h2>
+<a xmlns="" name="_n_u_s_a_virtual_assistant_types_v2_8h_1ad6464264ce13d569985d630ea023d9f0"><h3 id="methodHeader">VAResultCode</h3></a><div xmlns="" class="methodBrief">
+Virtual Assistant v2 error codes. 
+        </div>
+<code xmlns="">
+			typedef enum  {
+			<ul>
+<li>VAResultCodeSuccess</li>
+<li>VAResultCodeBadRequestError</li>
+<li>VAResultCodeNetworkError</li>
+<li>VAResultCodeInternalServerError</li>
+<li>VAResultCodeApplicationStateError</li>
+<li>VAResultCodeInternalSDKError</li>
+<li>VAResultCodeNoSessionError</li>
+<li>VAResultCodeAutoReconnecting</li>
+</ul>
+			} VAResultCode;
+		</code><h5 xmlns="">Constants</h5>
+<dl xmlns="" class="parameterList">
+<dt>VAResultCodeSuccess</dt>
+<dd><p>
+The request has been processed successfully. 
+          </p></dd>
+<dt>VAResultCodeBadRequestError</dt>
+<dd><p>
+Failed to configure the DMVA. [ConfigurationError+ParameterError]. 
+          </p></dd>
+<dt>VAResultCodeNetworkError</dt>
+<dd><p>
+General network error. 
+          </p></dd>
+<dt>VAResultCodeInternalServerError</dt>
+<dd><p>
+There was a problem communicating with the DMVA server. The DMVA server is unresponsive or it is sending badly formed data. [ServerError]. 
+          </p></dd>
+<dt>VAResultCodeApplicationStateError</dt>
+<dd><p>
+The application state is not valid for this operation. 
+          </p></dd>
+<dt>VAResultCodeInternalSDKError</dt>
+<dd><p>
+An unknown error has occurred. [Unknown error+VANotAllowedWithWebViewIntegration error]. 
+          </p></dd>
+<dt>VAResultCodeNoSessionError</dt>
+<dd><p>
+No session error. 
+          </p></dd>
+<dt>VAResultCodeAutoReconnecting</dt>
+<dd><p>
+Attempts auto reconnecting to VA when the server becomes unreachable. 
+          </p></dd>
+</dl>
+<a xmlns="" name="_n_u_s_a_virtual_assistant_types_v2_8h_1a2f9bfb11cd7f1df57419e5cff3c533e4"><h3 id="methodHeader">VAState</h3></a><div xmlns="" class="methodBrief">
+Virtual Assistant v2 states. 
+        </div>
+<code xmlns="">
+			typedef enum  {
+			<ul>
+<li>VAStateOpened</li>
+<li>VAStateClosed</li>
+</ul>
+			} VAState;
+		</code><h5 xmlns="">Constants</h5>
+<dl xmlns="" class="parameterList">
+<dt>VAStateOpened</dt>
+<dd><p>
+The DMVA has initialized and is ready to process virtual assistant requests. 
+          </p></dd>
+<dt>VAStateClosed</dt>
+<dd><p>
+The DMVA is not initialized. All virtual assistant requests will be rejected in this state. 
+          </p></dd>
+</dl>
+<a xmlns="" name="_n_u_s_a_virtual_assistant_types_v2_8h_1a8b418f0c78cdaa89fe422dcf07061a48"><h3 id="methodHeader">VAEventType</h3></a><div xmlns="" class="methodBrief">
+Virtual Assistant v2 event types. 
+        </div>
+<code xmlns="">
+			typedef enum  {
+			<ul>
+<li>VAEventTypeInactive</li>
+<li>VAEventTypeActive</li>
+<li>VAEventTypeProcessing</li>
+<li>VAEventTypeComplete</li>
+<li>VAEventTypeCanceled</li>
+<li>VAEventTypeBadRequest</li>
+<li>VAEventTypeTimeout</li>
+<li>VAEventTypePartialASR</li>
+</ul>
+			} VAEventType;
+		</code><h5 xmlns="">Constants</h5>
+<dl xmlns="" class="parameterList">
+<dt>VAEventTypeInactive</dt>
+<dd><p>
+VA Inactive event. 
+          </p></dd>
+<dt>VAEventTypeActive</dt>
+<dd><p>
+VA Active event. 
+          </p></dd>
+<dt>VAEventTypeProcessing</dt>
+<dd><p>
+VA processing event. 
+          </p></dd>
+<dt>VAEventTypeComplete</dt>
+<dd><p>
+VA complete event. 
+          </p></dd>
+<dt>VAEventTypeCanceled</dt>
+<dd><p>
+          </p></dd>
+<dt>VAEventTypeBadRequest</dt>
+<dd><p>
+          </p></dd>
+<dt>VAEventTypeTimeout</dt>
+<dd><p>
+          </p></dd>
+<dt>VAEventTypePartialASR</dt>
+<dd><p>
+          </p></dd>
+</dl>
+<a xmlns="" name="_n_u_s_a_virtual_assistant_types_v2_8h_1aed9e865a650dffab52e56676da3cd3b1"><h3 id="methodHeader">VAFeedbackType</h3></a><div xmlns="" class="methodBrief">
+VA Partner Feedback types. 
+        </div>
+<code xmlns="">
+			typedef enum  {
+			<ul>
+<li>VAFeedbackTypeSupported</li>
+<li>VAFeedbackTypeUnsupported</li>
+<li>VAFeedbackTypeProcessingError</li>
+</ul>
+			} VAFeedbackType;
+		</code><h5 xmlns="">Constants</h5>
+<dl xmlns="" class="parameterList">
+<dt>VAFeedbackTypeSupported</dt>
+<dd><p>
+On getting desired result. 
+          </p></dd>
+<dt>VAFeedbackTypeUnsupported</dt>
+<dd><p>
+In case of received intent is not supported by the partner application. 
+          </p></dd>
+<dt>VAFeedbackTypeProcessingError</dt>
+<dd><p>
+When any error or time out is received in vaComplete event. 
+          </p></dd>
+</dl>
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

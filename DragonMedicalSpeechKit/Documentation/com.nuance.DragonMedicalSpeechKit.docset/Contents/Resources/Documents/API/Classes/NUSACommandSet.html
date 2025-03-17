@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSACommandSet Class Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"></ul></li><li><a href="#">Properties</a><ul><li><a href="#interface_n_u_s_a_command_set_1acddfdbb760fe0234b06fa2dd2aa2850c">isEnabled</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#interface_n_u_s_a_command_set_1a90f5f8de739186dbf063430d42e21eb9">initWithName:description:</a></li><li><a href="#interface_n_u_s_a_command_set_1aa2b655f8395422cf2edbffd02279b9b2">createCommand:phrase:displayString:description:</a></li><li><a href="#interface_n_u_s_a_command_set_1ae45443846448fdeb9f51a4d6bfc0e843">setCommand:enabled:</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSACommandSet Class Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/NSObject.html">NSObject</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Framework</label></td>
+<td>DragonMedicalSpeechKit</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Availability</label></td>
+<td>Available in version 1.3 and later</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSACommandSet.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns="">Representation of an application-defined command set. </p>
+    
+<p xmlns="">  
+A command set is a group of application commands that logically belong together. It is characterized by a human-readable name and a description that will appear in the "What You Can Say" page.</p>
+<p xmlns="">Command sets contain a set of application commands. Each command must have a unique ID that identifies the recognized command in the vuiControllerDidRecognizeCommand() delegate message. Commands should have a human-readable description and a spoken form. CommandPlaceholders can be used in spoken forms.</p>
+<p xmlns="">A command set can be enabled (default) or disabled, in which case all the commands it contains are disabled. </p>
+    <a xmlns="" name="Properties"><h2 id="pageHeader">Properties</h2></a><a xmlns="" name="interface_n_u_s_a_command_set_1acddfdbb760fe0234b06fa2dd2aa2850c"><h3 id="methodHeader">isEnabled</h3></a><div xmlns="" class="methodBrief">
+A Boolean value that determines whether a command set is enabled. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	BOOLisEnabled</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+When set to YES, the command set is enabled, else disabled. The default value of this property is YES. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="interface_n_u_s_a_command_set_1a90f5f8de739186dbf063430d42e21eb9"><h3 id="methodHeader">initWithName:description:</h3></a><div xmlns="" class="methodBrief">
+Initializes a command set. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(id)
+		initWithName:
+	(NSString *)<span class="parameter">name 
+	</span>description:
+	(NSString *)<span class="parameter">description 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>name</dt>
+<dd><p>
+The human-readable name of the command set. 
+</p></dd>
+<dt>description</dt>
+<dd><p>
+The description of the command set. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Use this method to create a set of application commands.</p>
+<p xmlns="" class="importantBox"><b>Important: </b>Raises an NSInvalidArgumentException if the command set name is nil or empty.
+
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_command_set_1aa2b655f8395422cf2edbffd02279b9b2"><h3 id="methodHeader">createCommand:phrase:displayString:description:</h3></a><div xmlns="" class="methodBrief">
+Adds a new application command to the command set. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		createCommand:
+	(NSString *)<span class="parameter">id 
+	</span>phrase:
+	(NSString *)<span class="parameter">phrase 
+	</span>displayString:
+	(NSString *_Nullable)<span class="parameter">displayString 
+	</span>description:
+	(NSString *)<span class="parameter">description 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>id</dt>
+<dd><p>
+The unique identifier of the command. Make sure the application command ID does not contain spaces and does not start with a number. 
+</p></dd>
+<dt>phrase</dt>
+<dd><p>
+The application command phrase. 
+</p></dd>
+<dt>displayString</dt>
+<dd><p>
+The application command display string (optional). 
+</p></dd>
+<dt>description</dt>
+<dd><p>
+The human-readable description of the command. Can contain Placeholder identifiers: in this case, the corresponding placeholder objects must be created and supplied to the VuiController in a assignCommandPlaceholders() method call.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+The application must provide a unique id, a description and the command phrase. To create alternative phrases for a command call this method multiple times for the same id.</p>
+<p xmlns="" class="importantBox"><b>Important: </b>Raises an NSInvalidArgumentException if the command id or phrase is nil or empty.
+
+
+Placeholder identifiers must be enclosed in &lt; and &gt; in the spoken form. For example, if the ID of the referenced placeholder is "patient", a correct spoken form can be "select patient &lt;patient&gt;"</p>
+<p xmlns="">Alternative spoken forms are created by calling this method multiple times for the same ID. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_command_set_1ae45443846448fdeb9f51a4d6bfc0e843"><h3 id="methodHeader">setCommand:enabled:</h3></a><div xmlns="" class="methodBrief">
+Enables or disables the command with the corresponding ID. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		setCommand:
+	(NSString *)<span class="parameter">id 
+	</span>enabled:
+	(BOOL)<span class="parameter">enabled 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>id</dt>
+<dd><p>
+The unique identifier of the command. 
+</p></dd>
+<dt>enabled</dt>
+<dd><p>
+Whether the command set is enabled or disabled. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+When enabled is set to YES, the command is enabled, else disabled. The default enabled state of a command is YES.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

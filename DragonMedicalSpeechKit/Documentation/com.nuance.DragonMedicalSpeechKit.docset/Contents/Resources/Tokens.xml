@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+  <File path="API/Classes/NUSACommandPlaceholder.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/NUSACommandPlaceholder</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACommandPlaceholder/initWithID:label:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_command_placeholder_1a66ab3520043007fae58beb452499ea29</Anchor>
+      <Declaration>-(id)initWithID:(NSString *)id label:(NSString *)label </Declaration>
+      <Abstract>Initializes a placeholder object. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACommandPlaceholder/setValues:withSpokenForms:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_command_placeholder_1ad75cb11c23f63f6ee91148b9cbc678fc</Anchor>
+      <Declaration>-(void)setValues:(NSArray *)values withSpokenForms:(NSArray *)spokenForms </Declaration>
+      <Abstract>Adds a new set of values to the placeholder. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACommandPlaceholder/clearValues</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_command_placeholder_1a3e20384e7c86bf162a291dcd7d50a13c</Anchor>
+      <Declaration>-(void)clearValues</Declaration>
+      <Abstract>Clears all values and associated spoken forms. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/NUSACommandSet.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/NUSACommandSet</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACommandSet/isEnabled</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_command_set_1acddfdbb760fe0234b06fa2dd2aa2850c</Anchor>
+      <Declaration>-(BOOL)isEnabled</Declaration>
+      <Abstract>A Boolean value that determines whether a command set is enabled. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACommandSet/initWithName:description:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_command_set_1a90f5f8de739186dbf063430d42e21eb9</Anchor>
+      <Declaration>-(id)initWithName:(NSString *)name description:(NSString *)description </Declaration>
+      <Abstract>Initializes a command set. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACommandSet/createCommand:phrase:displayString:description:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_command_set_1aa2b655f8395422cf2edbffd02279b9b2</Anchor>
+      <Declaration>-(void)createCommand:(NSString *)id phrase:(NSString *)phrase displayString:(NSString *_Nullable)displayString description:(NSString *)description </Declaration>
+      <Abstract>Adds a new application command to the command set. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACommandSet/setCommand:enabled:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_command_set_1ae45443846448fdeb9f51a4d6bfc0e843</Anchor>
+      <Declaration>-(void)setCommand:(NSString *)id enabled:(BOOL)enabled </Declaration>
+      <Abstract>Enables or disables the command with the corresponding ID. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/NUSACustomVuiController.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/NUSACustomVuiController</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/view</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a2004544b1028b735d88a9019171267a6</Anchor>
+      <Declaration>-(IBOutlet UIView *)view</Declaration>
+      <Abstract>GUI view this controller is bound to. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/language</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1acae12ceea0e3b6fe3a82e12311dfb096</Anchor>
+      <Declaration>-(NSString *)language</Declaration>
+      <Abstract>The language to be used by the VUI form. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/topic</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a61224bed119f1a1282fc0ffc2e5d50bf</Anchor>
+      <Declaration>-(NSString *)topic</Declaration>
+      <Abstract>The topic (medical specialty) of the speech recognition vocabulary used by the VUI form. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/delegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a87ed8aa7bb38ae8eb09ee28947c98007</Anchor>
+      <Declaration>-(id&lt; NUSAVuiControllerDelegate &gt;)delegate</Declaration>
+      <Abstract>NUSAVuiController delegate. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/customDelegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a4f5c0212a6242988311a355c4734813f</Anchor>
+      <Declaration>-(id&lt; NUSACustomVuiControllerDelegate &gt;)customDelegate</Declaration>
+      <Abstract>NUSACustomVuiController delegate. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/__attribute__</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1af395e438536c76ae0baefed7ae3fcc43</Anchor>
+      <Declaration>-(NUSAVolumeMeterLocation volumeMeterLocation)__attribute__((deprecated)) </Declaration>
+      <Abstract>Deprecated The location of the volume meter. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/__attribute__</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a8f658279c6551b17c5f7f03c745eeb55</Anchor>
+      <Declaration>-(UIColor *volumeMeterColor)__attribute__((deprecated)) </Declaration>
+      <Abstract>Deprecated The color of the volume meter for good sound quality. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/__attribute__</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a71b5c6a2f376be721de780c13a036bc8</Anchor>
+      <Declaration>-(UIColor *volumeMeterBadQualityColor)__attribute__((deprecated)) </Declaration>
+      <Abstract>Deprecated The color of the volume meter for good sound quality. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/keyboardVisibleByDefault</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1ad7c2fe83209cf783e593eeba9c278405</Anchor>
+      <Declaration>-(BOOL)keyboardVisibleByDefault</Declaration>
+      <Abstract>A Boolean value that determines whether the system keyboard should be shown by default. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/setDocumentMetadata:forKey:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a2d5f097cac33468ca1caa4dc59648b04</Anchor>
+      <Declaration>-(void)setDocumentMetadata:(NSString *)value forKey:(NSString *)key </Declaration>
+      <Abstract>Sets document metadata. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/getDocumentMetadata:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a7dfb12d41cc0eb95516a35dabb9e9938</Anchor>
+      <Declaration>-(NSString *)getDocumentMetadata:(NSString *)key </Declaration>
+      <Abstract>Gets document metadata. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/open</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a7115741ebfa3db140d2f3597b1129fe6</Anchor>
+      <Declaration>-(void)open</Declaration>
+      <Abstract>Open VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/openWithDocumentId:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a15e04d42f24ac69dbe044697fb26cac1</Anchor>
+      <Declaration>-(void)openWithDocumentId:(NSString *)documentId </Declaration>
+      <Abstract>Open VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/close</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a1ce817c921ad211abcb4806735a5e17d</Anchor>
+      <Declaration>-(void)close</Declaration>
+      <Abstract>Close VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/closeWithDocumentId:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a389f5009759a466f76686baf28a9c4b0</Anchor>
+      <Declaration>-(void)closeWithDocumentId:(NSString *_Nullable)documentId </Declaration>
+      <Abstract>Close VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/closeWithDocumentId:andState:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a39b1c42276c1dc1b055fe6c42fd6cc22</Anchor>
+      <Declaration>-(void)closeWithDocumentId:(NSString *)documentId andState:(NSInteger)documentState </Declaration>
+      <Abstract>Close VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/initWithView:controls:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1acac74fc38c162cbcc466f28c5a70b9b9</Anchor>
+      <Declaration>-(id)initWithView:(UIView *_Nullable)aView controls:(NSArray *_Nullable)speechEnabledControls </Declaration>
+      <Abstract>Initializes the VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/initWithView:controls:andOpen:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1af40880be6ec0d2679caa2eac833fd4c3</Anchor>
+      <Declaration>-(id)initWithView:(UIView *_Nullable)aView controls:(NSArray *)speechEnabledControls andOpen:(BOOL)open </Declaration>
+      <Abstract>Initializes the VUI controller and optionally opens it. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/synchronize:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1a3fcf1f8992be15249f1699deb062d640</Anchor>
+      <Declaration>-(void)synchronize:(NSArray *)speechEnabledControls </Declaration>
+      <Abstract>Synchronizes the VUI form with a set of text controls. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/assignCommandSets:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1aa8768621adc6fb1ceda0e5eb60d81768</Anchor>
+      <Declaration>-(void)assignCommandSets:(NSArray *)commandSets </Declaration>
+      <Abstract>Sets the application-defined command set placeholders available for application commands. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/assignCommandPlaceholders:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1aab39ea02466e6bdec5cc765358e8bb7f</Anchor>
+      <Declaration>-(void)assignCommandPlaceholders:(NSArray *)commandPlaceholders </Declaration>
+      <Abstract>Sets the application-defined command set placeholders available for application commands. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSACustomVuiController/view</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_custom_vui_controller_1adfb4f5cac10d7f028a3581273e22a1d8</Anchor>
+      <Declaration>-(UIView *)view</Declaration>
+      <Abstract/>
+    </Token>
+  </File>
+  <File path="API/Protocols/NUSACustomVuiControllerDelegate-p.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intf/NUSACustomVuiControllerDelegate</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSACustomVuiControllerDelegate/speechBarDidShow:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_custom_vui_controller_delegate-p_1ab57a72bcb5ea9515a0fb7ad7850a67e8</Anchor>
+      <Declaration>-(void)speechBarDidShow:(CGRect)frame </Declaration>
+      <Abstract>Sent when the speech bar is shown for a control. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSACustomVuiControllerDelegate/speechBarDidHide</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_custom_vui_controller_delegate-p_1aa472da063e6063ba0878b5f4c7a21caa</Anchor>
+      <Declaration>-(void)speechBarDidHide</Declaration>
+      <Abstract>Sent when the speech bar is hidden. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/NUSASession.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/NUSASession</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/delegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a519fde937e2dee33ef703a11f788c24b</Anchor>
+      <Declaration>-(id&lt; NUSASessionDelegate &gt;)delegate</Declaration>
+      <Abstract>NUSASession delegate. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/serverURL</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a9154b8865dae476c5503a91e09d260fe</Anchor>
+      <Declaration>-(NSString *)serverURL</Declaration>
+      <Abstract>Dragon Medical Server URL. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/onlineHelpURL</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1ae224da38494719af84bd7f472465d34b</Anchor>
+      <Declaration>-(NSString *)onlineHelpURL</Declaration>
+      <Abstract>Dragon Medical SpeechKit application help URL. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/sharedSession</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a437b2f1ce2596cf03266d865ffdefaef</Anchor>
+      <Declaration>+(NUSASession *)sharedSession</Declaration>
+      <Abstract>Returns the shared client session instance. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/openForApplication:partnerGuid:licenseGuid:userId:authenticationToken:tokenExpiryTime:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1abcab52e2462eeb74c2b4f7e1d4dd290c</Anchor>
+      <Declaration>-(void)openForApplication:(NSString *)applicationName partnerGuid:(NSString *)partnerGuid licenseGuid:(NSString *)licenseGuid userId:(NSString *)userId authenticationToken:(NSString *_Nonnull)authenticationToken tokenExpiryTime:(NSDate *_Nonnull)expiryTime </Declaration>
+      <Abstract>Authenticates a user with the Dragon Medical Server using authentication token. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/openForApplication:partnerGuid:environmentId:authenticationToken:tokenExpiryTime:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a51a2131c3ca3678b8ecdeba2f44056e7</Anchor>
+      <Declaration>-(void)openForApplication:(NSString *_Nonnull)applicationName partnerGuid:(NSString *_Nonnull)partnerGuid environmentId:(NSString *_Nullable)environmentId authenticationToken:(NSString *_Nonnull)authenticationToken tokenExpiryTime:(NSDate *_Nonnull)expiryTime </Declaration>
+      <Abstract>Authenticates a user with the Dragon Medical Server using authentication token. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/openForApplication:partnerGuid:licenseGuid:userId:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1ab903dc8eceef3dffa5de3b58c5758bcf</Anchor>
+      <Declaration>-(void)openForApplication:(NSString *)applicationName partnerGuid:(NSString *)partnerGuid licenseGuid:(NSString *)licenseGuid userId:(NSString *)userId </Declaration>
+      <Abstract>Authenticates a user with the Dragon Medical Server. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/close</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a262d965fca8ae2129303ec201a8916aa</Anchor>
+      <Declaration>-(void)close</Declaration>
+      <Abstract>Frees web service resources and licenses on the Dragon Medical Server. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/startRecording:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a1c4ced0a96856a723563fb59c41d8394</Anchor>
+      <Declaration>-(BOOL)startRecording:(NSError *_Nullable *_Nullable)error </Declaration>
+      <Abstract>Starts recording audio data and audio processing on the Dragon Medical Server. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/stopRecording</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a468df6dd098fe0a2e17335246d078335</Anchor>
+      <Declaration>-(void)stopRecording</Declaration>
+      <Abstract>Stops recording audio data. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/abortRecording</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a45ea4bcbf08d26835392bb5aed330f6d</Anchor>
+      <Declaration>-(void)abortRecording</Declaration>
+      <Abstract>Aborts recording audio data. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/startSpeaking:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a7d005a24a12b9b0f15adac845703955b</Anchor>
+      <Declaration>-(void)startSpeaking:(NSString *)text </Declaration>
+      <Abstract>Starts speaking. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/stopSpeaking</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a212d7542538484fa9cec57930e1efc8e</Anchor>
+      <Declaration>-(void)stopSpeaking</Declaration>
+      <Abstract>Stops speaking. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/showFormWithContent:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a24c9c6cd26597399ebb9cd1720f2d804</Anchor>
+      <Declaration>-(void)showFormWithContent:(NUSAContentType)contentType </Declaration>
+      <Abstract>Displays the specified content in a separate window. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/setStandbyMode:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a13802a02ae3e7c9e2fcf1a724b9bf2e5</Anchor>
+      <Declaration>-(void)setStandbyMode:(BOOL)enabled </Declaration>
+      <Abstract>Enable / Disable Standby Mode in SDK. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/updateAuthenticationToken:tokenExpiryTime:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1a002f7fdd280bbf18a0756ea183bb6290</Anchor>
+      <Declaration>-(void)updateAuthenticationToken:(NSString *)token tokenExpiryTime:(NSDate *)expiryTime </Declaration>
+      <Abstract>Update authentication token. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASession/delegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_session_1ab21ec85efeefd4359eaf2961f5abc44c</Anchor>
+      <Declaration>-(__weak id&lt; NUSASessionDelegate &gt;)delegate</Declaration>
+      <Abstract/>
+    </Token>
+  </File>
+  <File path="API/Protocols/NUSASessionDelegate-p.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intf/NUSASessionDelegate</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionDidStartRecording</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1a36b1fda7b76b540648b184d6656bcfd1</Anchor>
+      <Declaration>-(void)sessionDidStartRecording</Declaration>
+      <Abstract>Sent after audio data recording has started. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionDidStopRecording</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1a951847e1d5d202c97b951e1eac8916bc</Anchor>
+      <Declaration>-(void)sessionDidStopRecording</Declaration>
+      <Abstract>Sent after audio data recording has stopped and standby mode disabled. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionDidStartSpeaking</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1a8ad4d082c96151ea716fc81da2a830e7</Anchor>
+      <Declaration>-(void)sessionDidStartSpeaking</Declaration>
+      <Abstract>Sent after speaking has started. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionDidStopSpeaking</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1af982e28fec673d2c084d19bcfde27a8f</Anchor>
+      <Declaration>-(void)sessionDidStopSpeaking</Declaration>
+      <Abstract>Sent after speaking has stopped. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionDidStartStandby</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1af38190477e6c8a279f235c628eb4efdd</Anchor>
+      <Declaration>-(void)sessionDidStartStandby</Declaration>
+      <Abstract>Sent after standby mode has started. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionDidReceiveInvalidAuthenticationToken</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1ad2cdb1f593e0972c554d54ed3a05a2d2</Anchor>
+      <Declaration>-(void)sessionDidReceiveInvalidAuthenticationToken</Declaration>
+      <Abstract>Sent after authentication token is invalid. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionDidNotifyAuthenticationTokenIsAboutToExpire</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1aff532818565d0dfbfcac7ff7ebb3eaa0</Anchor>
+      <Declaration>-(void)sessionDidNotifyAuthenticationTokenIsAboutToExpire</Declaration>
+      <Abstract>Called when authentication token is about to expire. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionDidReceiveAudioInterruptionState:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1ad53a0d5a801d5ec8ab290a3817e8bd19</Anchor>
+      <Declaration>-(void)sessionDidReceiveAudioInterruptionState:(NUSAAudioInterruptionState)state </Declaration>
+      <Abstract>Called whenever audio interruption is received and its state changes. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSASessionDelegate/sessionShouldContinueRecordingDuringCallBanners</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_session_delegate-p_1a137109c8921475fc0914737d526a712f</Anchor>
+      <Declaration>-(BOOL)sessionShouldContinueRecordingDuringCallBanners</Declaration>
+      <Abstract>Configures interrupt handling behavior when system displays incoming calls using a banner. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/NUSASpeechView.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/NUSASpeechView</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASpeechView/buttonBackgroundColor</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_speech_view_1aa5c29bf517986a702ef3404dfa8d7962</Anchor>
+      <Declaration>-(UIColor *)buttonBackgroundColor</Declaration>
+      <Abstract>The background color of the speech view. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASpeechView/buttonBackgroundImage</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_speech_view_1a9040ce7c3a7f1d8f38aa082b0316b731</Anchor>
+      <Declaration>-(UIImage *)buttonBackgroundImage</Declaration>
+      <Abstract>The background image of the speech view. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSASpeechView/buttonBackgroundImageHighlighted</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_speech_view_1a361bf24890e9dc8220ec7a278658e44f</Anchor>
+      <Declaration>-(UIImage *)buttonBackgroundImageHighlighted</Declaration>
+      <Abstract>The background image of the speech view for highlighted state. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Protocols/NUSATextControl-p.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intf/NUSATextControl</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/vuiSelectedTextRange</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1a17b8b7884335c7c5b522d46d59af2ece</Anchor>
+      <Declaration>-(NSRange)vuiSelectedTextRange</Declaration>
+      <Abstract>The range of selected text in a control. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/vuiTextLength</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1a90b60ec734c4bb710e174ced21260892</Anchor>
+      <Declaration>-(NSUInteger)vuiTextLength</Declaration>
+      <Abstract>The length of the text in a control. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/vuiConceptName</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1affdef71744c698407a24eb8a8fe5dfc3</Anchor>
+      <Declaration>-(NSString *)vuiConceptName</Declaration>
+      <Abstract>The VUI concept for the control. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/vuiDocumentFieldId</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1a39e00536a4bcd5b68329da045bf51dfc</Anchor>
+      <Declaration>-(NSString *)vuiDocumentFieldId</Declaration>
+      <Abstract>The VUI document field id for the control. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/vuiDisableAutomaticSpeechFocusHandling</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1a7aae7b24e4b04c239db9d7026d3d9488</Anchor>
+      <Declaration>-(BOOL)vuiDisableAutomaticSpeechFocusHandling</Declaration>
+      <Abstract>A Boolean value that determines whether automatic speech focus handling is disabled in this control. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/isFirstResponder</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1a9bb15c3ceea66f3db4a24001750e568c</Anchor>
+      <Declaration>-(BOOL)isFirstResponder</Declaration>
+      <Abstract>Returns a Boolean value indicating whether the receiver is the first responder for recognition results. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/becomeFirstResponder</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1afaa70acd9f22c68bfc27a29b066c73d9</Anchor>
+      <Declaration>-(BOOL)becomeFirstResponder</Declaration>
+      <Abstract>Notifies the receiver that it is about to become first responder for recognition results. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/vuiTextInRange:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1a5a1416fea185fb3dcbc7edfaf1fc7bc9</Anchor>
+      <Declaration>-(NSString *)vuiTextInRange:(NSRange)range </Declaration>
+      <Abstract>Return text. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSATextControl/vuiReplaceRange:withText:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_text_control-p_1a8ac092f37e48613abb35879130106216</Anchor>
+      <Declaration>-(void)vuiReplaceRange:(NSRange)range withText:(NSString *)text </Declaration>
+      <Abstract>Replace text. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/NUSAVirtualAssistantController.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/NUSAVirtualAssistantController</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/delegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1aa5c858e10afbf39236fd03e2bbb9cae2</Anchor>
+      <Declaration>-(id&lt; NUSAVirtualAssistantControllerDelegate &gt;)delegate</Declaration>
+      <Abstract>NUSAVirtualAssistantController delegate. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/sharedController</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a77fe874b7759ca522d9739bce8618990</Anchor>
+      <Declaration>+(NUSAVirtualAssistantController *)sharedController</Declaration>
+      <Abstract>Returns a single instance of NUSAVirtualAssistantController. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/openWithModel:options:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a8e3ffd609dc7e6c390e669d3acbbf1f9</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)openWithModel:(NSString *)model options:(nullable NSDictionary&lt; NSString *, NSObject * &gt; *)options </Declaration>
+      <Abstract>Opens DMVA for the specified grammar model. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/close</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1ad73c8695a548d609e09b83a8ee0b758b</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)close</Declaration>
+      <Abstract>Closes DMVA. Closes DMVA and frees up resources. Aborts all active dialogs and removes any transactions that were scheduled. DMVA will continue the closing process asynchronously and will transition to the Closed state when it has finished closing. If DMVA is already in the Closing state, the request won't be processed and NUSAVirtualAssistantErrorCodeApplicationStateError is returned. Once close is called, you'll need to call open again to use DMVA. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/stopDialog</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1affcf4db8479714c0c216c147ead96ff4</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)stopDialog</Declaration>
+      <Abstract>Stops an active dialog. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/sendText:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1aa877b2132d8eb51c18919802cad56ba5</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)sendText:(NSString *)text </Declaration>
+      <Abstract>Sends dialog text to DMVA. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/uploadValuesForConcept:conceptValues:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a30c18a1a18c1dfd54c3be82a21e74cbe</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)uploadValuesForConcept:(NSString *)conceptName conceptValues:(NSString *)conceptValuesJSON </Declaration>
+      <Abstract>Uploads concept values for a dynamic concept. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/uploadValuesForConcept:conceptValues:withCompletionHandler:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1aeb3d7c6908693aecbd5b805c13abb7ad</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)uploadValuesForConcept:(NSString *)conceptName conceptValues:(NSString *)conceptValuesJSON withCompletionHandler:(void(^)(NSError *_Nullable error))completionHandler </Declaration>
+      <Abstract>Uploads concept values for a dynamic concept. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/clearUploadedValuesForConcept:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a74f4df57a1a67c17aca2a3ebd68ab737</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)clearUploadedValuesForConcept:(NSString *)conceptName </Declaration>
+      <Abstract>Clears uploaded concept values for a dynamic concept. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/clearUploadedValuesForConcept:withCompletionHandler:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a9e3017980bbb2468f2dfa4295107fbe5</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)clearUploadedValuesForConcept:(NSString *)conceptName withCompletionHandler:(void(^)(NSError *_Nullable error))completionHandler </Declaration>
+      <Abstract>Clears uploaded concept values asynchronously for a dynamic concept. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/clearAllUploadedConceptValues</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1aa8f46003832e4f699b5737f9841ecc53</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)clearAllUploadedConceptValues</Declaration>
+      <Abstract>Clears uploaded concept values for a dynamic concept. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/setInlineValuesForConcept:conceptValues:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a654281f4b54be24749b6851f2cdf9cb2</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)setInlineValuesForConcept:(NSString *)conceptName conceptValues:(NSString *)conceptValuesJSON </Declaration>
+      <Abstract>Sets inline concept values for dynamic concepts. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/clearInlineValuesForConcept:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a66a9b01c68c1c7011efa9f9206fb7bab</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)clearInlineValuesForConcept:(NSString *)conceptName </Declaration>
+      <Abstract>Clears inline concept values for a dynamic concept. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/promptForConfirmation</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a57e4d057f9d1eaa5444078a147ee3876</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)promptForConfirmation</Declaration>
+      <Abstract>Starts a confirmation prompt. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/promptForFreeText</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1af3763987c55fa71dd1e8d0d928df7e37</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)promptForFreeText</Declaration>
+      <Abstract>Starts a prompt for a free text virtual assistant request. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/promptForChoice:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1af0fabe4361349e5ad19a83901fd776a5</Anchor>
+      <Declaration>-(NUSAVirtualAssistantErrorCode)promptForChoice:(NSString *)items </Declaration>
+      <Abstract>Starts a prompt to make a choice. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantController/delegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_1a4c1374a658efd94e674d5810176da185</Anchor>
+      <Declaration>-(__weak id&lt; NUSAVirtualAssistantControllerDelegate &gt;)delegate</Declaration>
+      <Abstract/>
+    </Token>
+  </File>
+  <File path="API/Protocols/NUSAVirtualAssistantControllerDelegate-p.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intf/NUSAVirtualAssistantControllerDelegate</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVirtualAssistantControllerDelegate/dialogResult:errorCode:message:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_virtual_assistant_controller_delegate-p_1aa379302fbec0109a7b8b08850590d499</Anchor>
+      <Declaration>-(void)dialogResult:(NSString *)result errorCode:(NUSAVirtualAssistantErrorCode)errorCode message:(NSString *)message </Declaration>
+      <Abstract>Handles dialog results. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVirtualAssistantControllerDelegate/stateChanged:errorCode:message:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_virtual_assistant_controller_delegate-p_1ad61abe2ff2264342b82207353c478848</Anchor>
+      <Declaration>-(void)stateChanged:(NUSAVirtualAssistantState)state errorCode:(NUSAVirtualAssistantErrorCode)errorCode message:(NSString *)message </Declaration>
+      <Abstract>Receives the DMVA state. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVirtualAssistantControllerDelegate/conceptResult:message:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_virtual_assistant_controller_delegate-p_1a5a48d212c8fe3dbc5e8a2707ea1f8f15</Anchor>
+      <Declaration>-(void)conceptResult:(NUSAVirtualAssistantErrorCode)errorCode message:(NSString *)message </Declaration>
+      <Abstract>Receives concept upload results. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVirtualAssistantControllerDelegate/didStartDialog</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_virtual_assistant_controller_delegate-p_1ad8f8690f6f8d11c35fde4b09cbef3690</Anchor>
+      <Declaration>-(void)didStartDialog</Declaration>
+      <Abstract>Received when DMVA has started a speech interaction. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVirtualAssistantControllerDelegate/didStopDialog</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_virtual_assistant_controller_delegate-p_1a9c3252b840576dfafb960263047511e5</Anchor>
+      <Declaration>-(void)didStopDialog</Declaration>
+      <Abstract>Received when DMVA has stopped a speech interaction. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/NUSAVirtualAssistantControllerV2.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/NUSAVirtualAssistantControllerV2</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/delegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a6449337222a7506804a20f36ddff7499</Anchor>
+      <Declaration>-(id&lt; NUSAVirtualAssistantControllerV2Delegate &gt;)delegate</Declaration>
+      <Abstract>NUSAVirtualAssistantControllerV2 delegate. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/sharedController</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a3fc2781114728e55dbbd07bfc5b80595</Anchor>
+      <Declaration>+(NUSAVirtualAssistantControllerV2 *)sharedController</Declaration>
+      <Abstract>Returns a single instance of NUSAVirtualAssistantControllerV2. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/openVA:options:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a9aaaca7815fd391ad0c36324cb3ac1d4</Anchor>
+      <Declaration>-(VAResultCode)openVA:(nonnull NSString *)model options:(nullable NSDictionary&lt; NSString *, NSObject * &gt; *)options </Declaration>
+      <Abstract>Opens DMVA for the specified grammar model. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/closeVA</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a35caa47ca3b417b76bef341b75d6a3e4</Anchor>
+      <Declaration>-(VAResultCode)closeVA</Declaration>
+      <Abstract>Closes DMVA. Closes DMVA and frees up resources. DMVA will continue the closing process asynchronously and will transition to the Closed state when it has finished closing. If DMVA is already in the Closing state, the request won't be processed and VAResultCodeApplicationStateError is returned. Once closeVA is called, you'll need to call openVA again to use DMVA. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/stopVA</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a64310e694cde43b1764faf96563b0491</Anchor>
+      <Declaration>-(VAResultCode)stopVA</Declaration>
+      <Abstract>Stops an active DMVA state. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/sendText:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a4e664c617b29530657d77b58bfb1741d</Anchor>
+      <Declaration>-(VAResultCode)sendText:(nonnull NSString *)text </Declaration>
+      <Abstract>Send text to DMVA. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/uploadEntityValues:entityValues:withCompletionHandler:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a11dcb16fc6e82c580b8009a9f2b570e1</Anchor>
+      <Declaration>-(VAResultCode)uploadEntityValues:(nonnull NSString *)entityName entityValues:(nonnull NSString *)entityValuesJSON withCompletionHandler:(void(^)(NSError *_Nullable error))completionHandler </Declaration>
+      <Abstract>Uploads entity values for a dynamic entity. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/clearUploadedEntityValues:withCompletionHandler:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a68bf2b35e8e82a778635bfe0fd0419e8</Anchor>
+      <Declaration>-(VAResultCode)clearUploadedEntityValues:(nonnull NSString *)entityName withCompletionHandler:(void(^)(NSError *_Nullable error))completionHandler </Declaration>
+      <Abstract>Clears uploaded entity values asynchronously for a dynamic entity. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/clearAllUploadedEntityValues:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a2ee3023d63a9ff9dd65efd8cc61f2b1a</Anchor>
+      <Declaration>-(VAResultCode)clearAllUploadedEntityValues:(void(^)(NSError *_Nullable error))completionHandler </Declaration>
+      <Abstract>Clears all uploaded entity values. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/promptForConfirmation:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1ac68ff05ba336eef7a2042652f9ba78cf</Anchor>
+      <Declaration>-(VAResultCode)promptForConfirmation:(nullable NSString *)prompt </Declaration>
+      <Abstract>Starts a confirmation prompt. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/promptForFreeText:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a5942b4759f5ca7426ce1369a70d6dca2</Anchor>
+      <Declaration>-(VAResultCode)promptForFreeText:(nullable NSString *)prompt </Declaration>
+      <Abstract>Starts a prompt for a free text virtual assistant request. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/promptForChoice:withPrompt:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a12c5d6fa2cde9a49b0626751e2a5987b</Anchor>
+      <Declaration>-(VAResultCode)promptForChoice:(nonnull NSString *)choices withPrompt:(nullable NSString *)prompt </Declaration>
+      <Abstract>Starts a prompt to choose from a list. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/promptForEntities:withPrompt:allowNewIntent:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a61cf65f6ee0e3d3f8037f9bc2b3f02e2</Anchor>
+      <Declaration>-(VAResultCode)promptForEntities:(nonnull NSArray *)entities withPrompt:(nullable NSString *)prompt allowNewIntent:(BOOL)allow </Declaration>
+      <Abstract>Starts a prompt for specified entities. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/userFeedback:feedbackText:nluId:withCompletionHandler:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1aa8484c38643a52f0d79b00d957b4e257</Anchor>
+      <Declaration>-(VAResultCode)userFeedback:(nonnull NSNumber *)rating feedbackText:(nullable NSString *)feedbackText nluId:(nullable NSString *)nluId withCompletionHandler:(void(^)(NSError *_Nullable error))completionHandler </Declaration>
+      <Abstract>Submits user feedback to the DMVA server. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/partnerFeedback:intentName:nluId:feedbackInfo:withCompletionHandler:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1a3db8024cab552996e93b887948971844</Anchor>
+      <Declaration>-(VAResultCode)partnerFeedback:(VAFeedbackType)feedbackType intentName:(nonnull NSString *)intentName nluId:(nonnull NSString *)nluId feedbackInfo:(nullable NSString *)feedbackInfo withCompletionHandler:(void(^)(NSError *_Nullable error))completionHandler </Declaration>
+      <Abstract>Submits partner application generated feedback to the DMVA server based. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVirtualAssistantControllerV2/delegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_virtual_assistant_controller_v2_1af09f0722022a4285e964c881f357ef1c</Anchor>
+      <Declaration>-(__weak id&lt; NUSAVirtualAssistantControllerV2Delegate &gt;)delegate</Declaration>
+      <Abstract/>
+    </Token>
+  </File>
+  <File path="API/Protocols/NUSAVirtualAssistantControllerV2Delegate-p.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intf/NUSAVirtualAssistantControllerV2Delegate</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVirtualAssistantControllerV2Delegate/vaEventGenerated:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_virtual_assistant_controller_v2_delegate-p_1aa58e10604cfae54c1b85145f9a2ae832</Anchor>
+      <Declaration>-(void)vaEventGenerated:(VAEvent *_Nonnull)event </Declaration>
+      <Abstract>Handles DMVA events. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVirtualAssistantControllerV2Delegate/vaSessionStateChanged:resultCode:message:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_virtual_assistant_controller_v2_delegate-p_1a71723d059bb921c66df4d4320e8d22a7</Anchor>
+      <Declaration>-(void)vaSessionStateChanged:(VAState)state resultCode:(VAResultCode)resultCode message:(nullable NSString *)message </Declaration>
+      <Abstract>Receives the DMVA state. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/NUSAVuiController.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/NUSAVuiController</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicGeneralMedicine</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1ad5afdd31788d1abe651773c83d718a46</Anchor>
+      <Declaration>-(NS_ASSUME_NONNULL_BEGIN NSString *const)kNUSAVuiTopicGeneralMedicine</Declaration>
+      <Abstract>VUI topic for a General Medicine-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicInternalMedicine</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a29b940246c460523d5854e427cbff62e</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicInternalMedicine</Declaration>
+      <Abstract>VUI topic for an Internal Medicine-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicSurgery</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a0716c67af080b74159536a4c860bf98e</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicSurgery</Declaration>
+      <Abstract>VUI topic for a Surgery-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicMentalHealth</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1ae659aad9cfa3c5689b3e978d92b0d7f5</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicMentalHealth</Declaration>
+      <Abstract>VUI topic for a Mental Health-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicNeurology</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a3f3bf14a5038639ab52784218021fe5f</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicNeurology</Declaration>
+      <Abstract>VUI topic for a Neurology-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicCardiology</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a11e17aa13cc6135b7492327f60283f98</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicCardiology</Declaration>
+      <Abstract>VUI topic for a Cardiology-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicClinicalAdministration</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a2197e5f5b4465b6921ddc72fa64744c4</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicClinicalAdministration</Declaration>
+      <Abstract>VUI topic for a Clinical Administration-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicEmergency</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a02dc1b408493b4d4129d9470bc63fadb</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicEmergency</Declaration>
+      <Abstract>VUI topic for a Emergency-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicOrthopaedics</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1ac338ecbfb94c4c7274ffa613b30922fe</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicOrthopaedics</Declaration>
+      <Abstract>VUI topic for a Orthopaedics-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicObstetricsAndGynecology</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a331bf13c4d29816b8480e906917a2325</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicObstetricsAndGynecology</Declaration>
+      <Abstract>VUI topic for a Obstetrics and Gynecology-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicOncology</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a3ac99025a7a9fc5a1dcc7a473aca9c94</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicOncology</Declaration>
+      <Abstract>VUI topic for a Oncology-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicPathology</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a7792135e7f21c8f88f7bd5bad9438cde</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicPathology</Declaration>
+      <Abstract>VUI topic for a Pathology-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSAVuiTopicPediatrics</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a62fae90a16ff507d5d2b197838ca685f</Anchor>
+      <Declaration>-(NSString *const)kNUSAVuiTopicPediatrics</Declaration>
+      <Abstract>VUI topic for a Pediatrics-specific vocabulary. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSADocumentStateUndefined</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a595006ff72133fde092e24b784a9a141</Anchor>
+      <Declaration>-(const NSInteger)kNUSADocumentStateUndefined</Declaration>
+      <Abstract>Default value. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSADocumentStateCorrected</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1abe50c9150210d272c6054c0fc7871c50</Anchor>
+      <Declaration>-(const NSInteger)kNUSADocumentStateCorrected</Declaration>
+      <Abstract>Use this state if you can guarantee with very high probability that your users have corrected any possible misrecognitions in the text. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/kNUSADocumentStateUncorrected</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a7c73365d5614e2220bf06c39875caf13</Anchor>
+      <Declaration>-(const NSInteger)kNUSADocumentStateUncorrected</Declaration>
+      <Abstract>Use this state if you can guarantee with very high probability that your users have not corrected misrecognitions in the text. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/view</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1aeb850f07f669f618d7edbb4f94e07e84</Anchor>
+      <Declaration>-(IBOutlet UIView *)view</Declaration>
+      <Abstract>GUI view this controller is bound to. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/language</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1aba96370015941c4c35ddff72daf507b0</Anchor>
+      <Declaration>-(NSString *)language</Declaration>
+      <Abstract>The language to be used by the VUI form. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/topic</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1ad2618c287d118d137c45397a4ecef724</Anchor>
+      <Declaration>-(NSString *)topic</Declaration>
+      <Abstract>The topic (medical specialty) of the speech recognition vocabulary used by the VUI form. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/delegate</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1ad47076d8f7af082c2289dbf95edb0e07</Anchor>
+      <Declaration>-(id&lt; NUSAVuiControllerDelegate &gt;)delegate</Declaration>
+      <Abstract>NUSAVuiController delegate. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/keyboardVisibleByDefault</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a43bc56a5267f33a75b1b6044129115c9</Anchor>
+      <Declaration>-(BOOL)keyboardVisibleByDefault</Declaration>
+      <Abstract>A Boolean value that determines whether the system keyboard should be shown by default. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/__attribute__</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a0748331724c3c0433ef39e524a37e218</Anchor>
+      <Declaration>-(NUSAVolumeMeterLocation volumeMeterLocation)__attribute__((deprecated)) </Declaration>
+      <Abstract>Deprecated The location of the volume meter. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/__attribute__</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1aead62234c44fb7f8d71be40e0f0a5e87</Anchor>
+      <Declaration>-(UIColor *volumeMeterColor)__attribute__((deprecated)) </Declaration>
+      <Abstract>Deprecated The color of the volume meter for good sound quality. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/__attribute__</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1ad443f3944d2271acd0758a56c6f4df5e</Anchor>
+      <Declaration>-(UIColor *volumeMeterBadQualityColor)__attribute__((deprecated)) </Declaration>
+      <Abstract>Deprecated The color of the volume meter for good sound quality. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/initWithView:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a7d3930bb0c27cc81a70a430fb748ec86</Anchor>
+      <Declaration>-(id)initWithView:(UIView *_Nullable)aView </Declaration>
+      <Abstract>Initializes and opens the VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/initWithView:andOpen:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a9d8fbf0abd4b700d450ff5dd07a355d7</Anchor>
+      <Declaration>-(id)initWithView:(UIView *)aView andOpen:(BOOL)open </Declaration>
+      <Abstract>Initializes the VUI controller and optionally opens it. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/initWithView:andDisableSpeechViews:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a027692c3d599d25c7ae81d3918015c96</Anchor>
+      <Declaration>-(id)initWithView:(UIView *)aView andDisableSpeechViews:(BOOL)disableSpeechViews </Declaration>
+      <Abstract>Initializes and opens the VUI controller and disables all speech controls. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/synchronizeWithView</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1aaf765d7e3575c5f8306e10acce067cd4</Anchor>
+      <Declaration>-(void)synchronizeWithView</Declaration>
+      <Abstract>Synchronizes the VUI form with the GUI view. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/assignCommandSets:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1ac5b906fd38877f5062aae34eaa1943ec</Anchor>
+      <Declaration>-(void)assignCommandSets:(NSArray *)commandSets </Declaration>
+      <Abstract>Sets the application-defined command set placeholders available for application commands. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/assignCommandPlaceholders:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a7500453874dc31ec626279457bb85419</Anchor>
+      <Declaration>-(void)assignCommandPlaceholders:(NSArray *)commandPlaceholders </Declaration>
+      <Abstract>Sets the application-defined command set placeholders available for application commands. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/setDocumentMetadata:forKey:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a9f43135333f66642cb58fb8b654ab858</Anchor>
+      <Declaration>-(void)setDocumentMetadata:(NSString *)value forKey:(NSString *)key </Declaration>
+      <Abstract>Sets document metadata. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/getDocumentMetadata:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a7e323d383cd5cc26a2d9ec427d64c87d</Anchor>
+      <Declaration>-(NSString *)getDocumentMetadata:(NSString *)key </Declaration>
+      <Abstract>Gets document metadata. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/open</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1acd6e54b5a6558d659d3af2ea317f20a2</Anchor>
+      <Declaration>-(void)open</Declaration>
+      <Abstract>Open VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/openWithDocumentId:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a7cc1cff52843b9ff32bffc23728185dd</Anchor>
+      <Declaration>-(void)openWithDocumentId:(NSString *_Nullable)documentId </Declaration>
+      <Abstract>Open VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/close</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1aade18c0e1e96dd0e056e0429d3fd967e</Anchor>
+      <Declaration>-(void)close</Declaration>
+      <Abstract>Close VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/closeWithDocumentId:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a114b6235d7f2caf2351244bbbc3f8904</Anchor>
+      <Declaration>-(void)closeWithDocumentId:(NSString *_Nullable)documentId </Declaration>
+      <Abstract>Close VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/closeWithDocumentId:andState:</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1a45a288ea7be7ca63aa571a047770a54d</Anchor>
+      <Declaration>-(void)closeWithDocumentId:(NSString *_Nullable)documentId andState:(NSInteger)documentState </Declaration>
+      <Abstract>Close VUI controller. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/NUSAVuiController/view</TokenIdentifier>
+      <Anchor>interface_n_u_s_a_vui_controller_1ace0af3bccc5a39a85b25f25cda8aab1d</Anchor>
+      <Declaration>-(UIView *)view</Declaration>
+      <Abstract/>
+    </Token>
+  </File>
+  <File path="API/Protocols/NUSAVuiControllerDelegate-p.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intf/NUSAVuiControllerDelegate</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVuiControllerDelegate/vuiControllerDidStartProcessing</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_vui_controller_delegate-p_1aca3f79b1d4430fef2422016b71febbb3</Anchor>
+      <Declaration>-(void)vuiControllerDidStartProcessing</Declaration>
+      <Abstract>Sent after the end user has started to speak. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVuiControllerDelegate/vuiControllerDidFinishProcessing</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_vui_controller_delegate-p_1a4a3a20a3c8a974ff22a3dcefceef8a61</Anchor>
+      <Declaration>-(void)vuiControllerDidFinishProcessing</Declaration>
+      <Abstract>Sent after Dragon Medical SpeechKit has finished processing all audio data. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVuiControllerDelegate/vuiControllerDidStartProcessingForView:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_vui_controller_delegate-p_1aa4bb880ab28d19c178a10b747c145085</Anchor>
+      <Declaration>-(void)vuiControllerDidStartProcessingForView:(UIView *)view </Declaration>
+      <Abstract>Sent after the end user has started a new utterance in a speech-enabled text control￼. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVuiControllerDelegate/vuiControllerDidFinishProcessingForView:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_vui_controller_delegate-p_1ac95c19e2097ae93e0ab9b6245c33612c</Anchor>
+      <Declaration>-(void)vuiControllerDidFinishProcessingForView:(UIView *)view </Declaration>
+      <Abstract>Sent after Nuance SpeechAnyhwere has recognized all utterances started by the end user in a specific text control.￼ </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/intfm/NUSAVuiControllerDelegate/vuiControllerDidRecognizeCommand:spokenPhrase:placeholderValues:</TokenIdentifier>
+      <Anchor>protocol_n_u_s_a_vui_controller_delegate-p_1a3b0818cf87b6edd9ed21d0ca1a991394</Anchor>
+      <Declaration>-(void)vuiControllerDidRecognizeCommand:(NSString *)id spokenPhrase:(NSString *)spokenPhrase placeholderValues:(NSDictionary *)placeholderValues </Declaration>
+      <Abstract>Sent when an application command is recognized.￼ </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/UIView(NUSAConceptName).html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/UIView(NUSAConceptName)</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier/>
+      <Anchor>category_u_i_view_07_n_u_s_a_concept_name_08_1afcb2f65de87bfe81ecb6953cfb1b0d8a</Anchor>
+      <Declaration>-(void)setVuiConceptName:(NSString *)vuiConceptName </Declaration>
+      <Abstract>Associates the UIView instance with a VUI concept. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier/>
+      <Anchor>category_u_i_view_07_n_u_s_a_concept_name_08_1aaa7bc990c60c90cb5d8fb067edba3ba7</Anchor>
+      <Declaration>-(NSString *)vuiConceptName</Declaration>
+      <Abstract>Gets the VUI concept associated with the UIView instance. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/UIView(NUSADocumentFieldId).html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/UIView(NUSADocumentFieldId)</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier/>
+      <Anchor>category_u_i_view_07_n_u_s_a_document_field_id_08_1a624cfa6364efa7b9acf8c75cc12464e8</Anchor>
+      <Declaration>-(void)setVuiDocumentFieldId:(NSString *)vuiDocumentFieldId </Declaration>
+      <Abstract>Associates the UIView instance with a VUI document field id. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier/>
+      <Anchor>category_u_i_view_07_n_u_s_a_document_field_id_08_1a9358fff0e6dbaf0f64643e05e6c8285c</Anchor>
+      <Declaration>-(NSString *)vuiDocumentFieldId</Declaration>
+      <Abstract>Gets the VUI document field id associated with the UIView instance. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/UIView(NUSAEnabled).html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/UIView(NUSAEnabled)</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier/>
+      <Anchor>category_u_i_view_07_n_u_s_a_enabled_08_1a4ff91334e49d6cb2b901074496b13921</Anchor>
+      <Declaration>-(void)setVuiEnabled:(BOOL)enabled </Declaration>
+      <Abstract>Enables or disables speech recognition support for UIViews. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier/>
+      <Anchor>category_u_i_view_07_n_u_s_a_enabled_08_1a3ef4a28eb5be831a067837631916dd91</Anchor>
+      <Declaration>-(BOOL)vuiEnabled</Declaration>
+      <Abstract>Returns whether the view is speech-enabled or not. </Abstract>
+    </Token>
+  </File>
+  <File path="API/Classes/VAEvent.html">
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/cl/VAEvent</TokenIdentifier>
+      <DeclaredIn/>
+      <Abstract/>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/VAEvent/eventType</TokenIdentifier>
+      <Anchor>interface_v_a_event_1aca26dbee4504bd3d040959cf2bb7a421</Anchor>
+      <Declaration>-(VAEventType)eventType</Declaration>
+      <Abstract>Virtual Assistant v2 event types. </Abstract>
+    </Token>
+    <Token>
+      <TokenIdentifier>//apple_ref/occ/instm/VAEvent/details</TokenIdentifier>
+      <Anchor>interface_v_a_event_1ae9bd0df3ea200658ca4f6b5c59ba7d49</Anchor>
+      <Declaration>-(NSString *)details</Declaration>
+      <Abstract>Virtual Assistant v2 event details string. </Abstract>
+    </Token>
+  </File>
+</Tokens>

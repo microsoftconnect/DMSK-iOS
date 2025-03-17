@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Release History" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>360 | SpeechAnywhere Services 1.6 Service Release 12 (iOS edition)</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Release Notes for 360 | SpeechAnywhere Services 1.6 Service Release 12 (iOS edition)</h1>
+        <h2>Solved issues in service release 12</h2>
+        <p>360 | SpeechAnywhere Services occasionally shut down unexpectedly; this no longer occurs. [PSP00078461, PSP00078578]</p>
+        <p>The volume meter and sound quality indicators are now correctly displayed after rotating the device. [PSP00078701, PSP00078233]</p>
+        <p>The <b>What You Can Say</b> page is now correctly displayed in portrait and landscape modes. [PSP00078200]</p>
+        <p>You can now rotate the device while recording is on with no adverse effects. [PSP00078500]</p>
+        <p>Text can now be added to a speech-enabled control programatically, before it has the focus, without the Nuance flame covering the close icon. [PSP00078668]</p>
+        <p>Architecture armv7s is supported again. [PSP00078938]</p>
+        <p class="note"><b>Note:</b> For information on previous  service releases, see <a href="#SR_History">below</a>.</p>
+        <h2>Important information in version 1.6</h2>
+        <ul style="list-style-type: square;">
+            <li>360 | SpeechAnywhere Services 1.6 Server is compatible with client versions 1.4, 1.5 and 1.6.</li>
+            <li>360 | SpeechAnywhere Services 1.6 (iOS edition) is compatible with server versions 1.4, 1.5 and 1.6.</li>
+            <li>In iOS 7 applications microphone access must be permitted. If a user unintentionally disallows microphone access for an SAS-enabled application, this can be re-enabled; to enable microphone access, go to <b>Settings</b>, <b>Privacy</b>, <b>Microphone</b>. Note: The application is restarted automatically when this setting is changed.</li>
+            <li>
+                <p>From 360 | SpeechAnywhere Services 1.6 Service Release 7, applications integrating this SDK also have to link against libc++.dylib.</p>
+            </li>
+        </ul>
+        <h2>New in version 1.6</h2>
+        <ul>
+            <li>Voice editing functionality has been extended with select &amp; say voice commands (Dragon-based systems only).</li>
+            <li>Text formatting has been improved. When text is inserted, the spacing is correctly updated and surrounding text is correctly capitalized (Dragon-based systems only).</li>
+            <li>SAS clients can now use Dragon customization packs (.dat files) containing Text-and-Graphics/auto-texts without lists. You can import and share .dat files via the Nuance Management Console.</li>
+            <li>The iOS edition now fully supports single line text fields.</li>
+            <li>The iOS edition now supports speech-enabled <code>UISearchBar</code> views.</li>
+            <li>The iOS edition has a new volume meter and audio quality indicator.</li>
+            <li>Improvements have been made to iOS edition applications when the network connection is unreliable or when switching between networks.</li>
+            <li>The iOS edition now supports 64-bit iOS-based applications.</li>
+        </ul>
+        <h2>Known issues</h2>
+        <ul style="list-style-type: square;">
+            <li>The <code>SpokenText</code> parameter in the <code>CommandRecognized</code> event is empty in command mode. [PSP00062085]</li>
+            <li>If you upgrade your Mac OS X workstation from a version earlier than 10.7 to version 10.7 (or higher) dictation will not work on iOS 6 in the Simulator. <b>Workaround:</b> Install the workstation cleanly with MacOS X 10.7 (or higher). [PSP00063580]</li>
+            <li>If <code>startSpeaking</code> is called again before the previous utterance is finished playing back, the new utterance will interrupt the playback of the previous one. Intended behavior is for the second call to be queued and started as soon as the first one has finished playing. [PSP00077479]</li>
+            <li>If a word is selected and the voice command <span class="command">add that to vocabulary</span> is said, the <b>Manage Vocabulary</b> page is only partially displayed. <b>Workaround:</b> Do not select a word before opening the <b>Manage Vocabulary</b> page. [PSP00076910]</li>
+            <li>The speech bar is only displayed on the XCode 6 Simulator if the soft keyboard is allowed to be shown. Make sure the simulator is configured so that either the Simulator → Hardware → Keyboard → Connect Hardware Keyboard option is unchecked, or the Toggle Software Keyboard option is also set. [PSP00077597]</li>
+        </ul>
+        <h2>Infrastructure</h2>
+        <h3>Infrastructure no longer supported</h3>
+        <ul style="list-style-type: square;">
+            <li>Version 1.2 client applications will stop working with version 1.6 servers.</li>
+            <li>iOS 5.x is no longer supported.</li>
+        </ul>
+        <h3>Infrastructure changes planned for the next releases</h3>
+        <ul style="list-style-type: square;">
+            <li>In 360 | SpeechAnywhere Services 1.7 all version 1.3 client-based applications will stop working.</li>
+            <li>In 360 | SpeechAnywhere Services 1.8 support for iOS 6.x will be removed.</li>
+        </ul>
+        <h2>System requirements*</h2>
+        <table id="systemRequirements">
+            <col class="col1" />
+            <col class="col2" />
+            <col class="col2" />
+            <tr>
+                <th>&#160;</th>
+                <th>Recommended</th>
+                <th>Supported</th>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <td>iOS 7.1.1</td>
+                <td>iOS 6.x - 8.x</td>
+            </tr>
+        </table>
+        <h3>*End-of-life: third party environments</h3>
+        <p>Support for third party environments is only valid as long as they are supported by the corresponding vendor and might be subject to other restrictions. Please contact Nuance Technical Support for details. For more information, see the documentation delivered with the third party product and supporting Nuance documentation.</p>
+        <p>When support by the vendor has stopped, Nuance will continue support if an issue is specific to the Nuance solution, within the limitations of the vendor’s end-of-life and Nuance's policy. This means that issues that are a combination of the vendor’s component and the Nuance solution cannot be supported.</p>
+        <h2><a name="SR_History"></a>Service release history</h2>
+        <h3>Solved issues in service release 9</h3>
+        <p>It no longer takes a long time for the speech bar to be displayed after the <code>VUIForm</code> is initialized if custom sound quality images are used. [PSP00078310]</p>
+        <h3>Solved issues in service release 7</h3>
+        <p>Poor sound quality indicators are displayed even after dynamic UI changes and after the <b>What You Can Say</b> page has been displayed. [PSP00076134, PSP00076138]</p>
+        <p>The <code>NUSAVuiController</code> and <code>NUSACustomVuiController</code> properties: <code>volumeMeterColor</code> and <code>volumeMeterBadQualityColor</code> are now properly applied in the <b>What You Can Say</b> page. [PSP00076139]</p>
+        <p>A custom keyboard accessory view no longer pops up when the <b>What You Can Say</b> page is displayed. [PSP00076713]</p>
+        <p> 360 | SpeechAnywhere Services no longer exports symbols from third-party libraries. [PSP00075815, PSP00076407]</p>
+        <p> 360 | SpeechAnywhere Services no longer stops working when <code>Synchronize()</code> is called under certain circumstances. [PSP00076717]</p>
+        <p>Text-To-Speech has been significantly improved: The feature is more reliable and the available voices are more naturalistic. [PSP00076856, PSP00076669, PSP00076911]</p>
+        <p>iOS 8 is now supported. [PSP00077420, PSP00077080, PSP00077403]</p>
+        <h3>New in version 1.6 service release 7</h3>
+        <p> 360 | SpeechAnywhere Services now enables you to override the default sound quality indicators with custom images. To do this, set the <code>volumeMeterTooLoudImage</code>, <code>volumeMeterTooSoftImage</code> and <code>volumeMeterTooNoisyImage</code> properties of the <code>NUSAVuiController</code> and <code>NUSACustomVuiController</code> classes to the custom images. The images must be different for all three conditions, must not be blank and a minimum size of 40 by 40 pixels is required. It is recommended to use 150 by 150 pixel images on an iPad and 40 by 40 pixel images on an iPhone.</p>
+        <p class="note"><b>Note:</b> Clear user feedback on sound quality is vital for the correct operation of 360 | SpeechAnywhere Services; use images that are clear to the user.</p>
+        <p>By default, when you tap into a speech-enabled field the keyboard stays hidden and only the speech bar is shown. A new property has been added so that you can change the behavior, and the keyboard is shown when you tap into a speech-enabled field. To change the default behavior, set the property: <code>KeyboardVisibleByDefault</code> in the <code>NUSAVuiController</code> class. [PSP00077404]</p>
+    </body>
+</html>

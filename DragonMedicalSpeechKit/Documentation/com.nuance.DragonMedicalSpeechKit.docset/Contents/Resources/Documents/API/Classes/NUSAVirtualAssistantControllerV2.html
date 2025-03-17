@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSAVirtualAssistantControllerV2 Class Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Properties">Properties</a></li></ul></li><li><a href="#">Properties</a><ul><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a6449337222a7506804a20f36ddff7499">delegate</a></li></ul></li><li><a href="#">Class methods</a><ul><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a3fc2781114728e55dbbd07bfc5b80595">sharedController</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a9aaaca7815fd391ad0c36324cb3ac1d4">openVA:options:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a35caa47ca3b417b76bef341b75d6a3e4">closeVA</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a64310e694cde43b1764faf96563b0491">stopVA</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a4e664c617b29530657d77b58bfb1741d">sendText:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a11dcb16fc6e82c580b8009a9f2b570e1">uploadEntityValues:entityValues:withCompletionHandler:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a68bf2b35e8e82a778635bfe0fd0419e8">clearUploadedEntityValues:withCompletionHandler:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a2ee3023d63a9ff9dd65efd8cc61f2b1a">clearAllUploadedEntityValues:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1ac68ff05ba336eef7a2042652f9ba78cf">promptForConfirmation:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a5942b4759f5ca7426ce1369a70d6dca2">promptForFreeText:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a12c5d6fa2cde9a49b0626751e2a5987b">promptForChoice:withPrompt:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a61cf65f6ee0e3d3f8037f9bc2b3f02e2">promptForEntities:withPrompt:allowNewIntent:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1aa8484c38643a52f0d79b00d957b4e257">userFeedback:feedbackText:nluId:withCompletionHandler:</a></li><li><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a3db8024cab552996e93b887948971844">partnerFeedback:intentName:nluId:feedbackInfo:withCompletionHandler:</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSAVirtualAssistantControllerV2 Class Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/NSObject.html">NSObject</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSAVirtualAssistantControllerV2.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns="">The primary object for Dragon Medical Virtual Assistant (DMVA). </p>
+    
+    <a xmlns="" name="Tasks"><h2 id="pageHeader">Tasks</h2></a><a xmlns="" name="Properties"><h3 id="taskHeader">Properties</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a6449337222a7506804a20f36ddff7499">  <code>delegate</code></a><span class="specialType"> property</span><span class="tooltip">
+NUSAVirtualAssistantControllerV2 delegate. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a3fc2781114728e55dbbd07bfc5b80595">+ <code>sharedController</code></a><span class="tooltip">
+Returns a single instance of NUSAVirtualAssistantControllerV2. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a9aaaca7815fd391ad0c36324cb3ac1d4">- <code>openVA:options:</code></a><span class="tooltip">
+Opens DMVA for the specified grammar model. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a35caa47ca3b417b76bef341b75d6a3e4">- <code>closeVA</code></a><span class="tooltip">
+Closes DMVA. Closes DMVA and frees up resources. DMVA will continue the closing process asynchronously and will transition to the Closed state when it has finished closing. If DMVA is already in the Closing state, the request won't be processed and VAResultCodeApplicationStateError is returned. Once closeVA is called, you'll need to call openVA again to use DMVA. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a64310e694cde43b1764faf96563b0491">- <code>stopVA</code></a><span class="tooltip">
+Stops an active DMVA state. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a4e664c617b29530657d77b58bfb1741d">- <code>sendText:</code></a><span class="tooltip">
+Send text to DMVA. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a11dcb16fc6e82c580b8009a9f2b570e1">- <code>uploadEntityValues:entityValues:withCompletionHandler:</code></a><span class="tooltip">
+Uploads entity values for a dynamic entity. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a68bf2b35e8e82a778635bfe0fd0419e8">- <code>clearUploadedEntityValues:withCompletionHandler:</code></a><span class="tooltip">
+Clears uploaded entity values asynchronously for a dynamic entity. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a2ee3023d63a9ff9dd65efd8cc61f2b1a">- <code>clearAllUploadedEntityValues:</code></a><span class="tooltip">
+Clears all uploaded entity values. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1ac68ff05ba336eef7a2042652f9ba78cf">- <code>promptForConfirmation:</code></a><span class="tooltip">
+Starts a confirmation prompt. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a5942b4759f5ca7426ce1369a70d6dca2">- <code>promptForFreeText:</code></a><span class="tooltip">
+Starts a prompt for a free text virtual assistant request. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a12c5d6fa2cde9a49b0626751e2a5987b">- <code>promptForChoice:withPrompt:</code></a><span class="tooltip">
+Starts a prompt to choose from a list. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a61cf65f6ee0e3d3f8037f9bc2b3f02e2">- <code>promptForEntities:withPrompt:allowNewIntent:</code></a><span class="tooltip">
+Starts a prompt for specified entities. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1aa8484c38643a52f0d79b00d957b4e257">- <code>userFeedback:feedbackText:nluId:withCompletionHandler:</code></a><span class="tooltip">
+Submits user feedback to the DMVA server. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_virtual_assistant_controller_v2_1a3db8024cab552996e93b887948971844">- <code>partnerFeedback:intentName:nluId:feedbackInfo:withCompletionHandler:</code></a><span class="tooltip">
+Submits partner application generated feedback to the DMVA server based. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Properties"><h2 id="pageHeader">Properties</h2></a><a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a6449337222a7506804a20f36ddff7499"><h3 id="methodHeader">delegate</h3></a><div xmlns="" class="methodBrief">
+NUSAVirtualAssistantControllerV2 delegate. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	id&lt; NUSAVirtualAssistantControllerV2Delegate &gt;delegate</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">This delegate receives messages from the DMVA instance. Delegates must conform to the <code>NUSAVirtualAssistantControllerV2</code> protocol. The delegate won't be retained. </p>
+        <a xmlns="" name="ClassMethods"><h2 id="pageHeader">Class methods</h2></a><a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a3fc2781114728e55dbbd07bfc5b80595"><h3 id="methodHeader">sharedController</h3></a><div xmlns="" class="methodBrief">
+Returns a single instance of NUSAVirtualAssistantControllerV2. 
+        </div>
+<code xmlns="" class="methodDeclaration">+	
+		(NUSAVirtualAssistantControllerV2 *)
+		sharedController</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">The pointer to the controller. </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a9aaaca7815fd391ad0c36324cb3ac1d4"><h3 id="methodHeader">openVA:options:</h3></a><div xmlns="" class="methodBrief">
+Opens DMVA for the specified grammar model. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		openVA:
+	(nonnull NSString *)<span class="parameter">model 
+	</span>options:
+	(nullable NSDictionary&lt; NSString *, NSObject * &gt; *)<span class="parameter">options 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>model</dt>
+<dd><p>
+The name of the grammar model to load.
+</p></dd>
+<dt>options</dt>
+<dd><p>
+A dictionary of objects containing optional parameters.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Opens DMVA for the specified grammar model. If the SpeechKit session isn't open, the application type isn't correct, the DMVA state is invalid, or the parameter value is invalid, the request will not be processed and VAResultCode value is returned. Otherwise, DMVA will continue to asynchronously validate the user license and initialize for the specified grammar model. The state will be set to Opening and VAResultCodeSuccess is returned. DMVA will transition to the Opened state when it has successfully completed license and grammar checks.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - openVA has been initiated successfully and DMVA is in the Opening state.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">VAResultCodeApplicationStateError - The application is in a state which doesn't allow an Open process to commence (either Opening or Closing).</p>
+<p xmlns="">VAResultCodeBadRequestError - A bad request to the server. For example, model is null or an empty string, or doesn't start with one of "Administrator", "Physician", or "Nurse".</p>
+<p xmlns="">VAResultCodeInternalSDKError - The process threw an unexpected exception.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a35caa47ca3b417b76bef341b75d6a3e4"><h3 id="methodHeader">closeVA</h3></a><div xmlns="" class="methodBrief">
+Closes DMVA. Closes DMVA and frees up resources. DMVA will continue the closing process asynchronously and will transition to the Closed state when it has finished closing. If DMVA is already in the Closing state, the request won't be processed and VAResultCodeApplicationStateError is returned. Once closeVA is called, you'll need to call openVA again to use DMVA. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		closeVA</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - closeVA has completed successfully and DMVA has transitioned into the Closed state.</p>
+<p xmlns="">VAResultCodeApplicationStateError - Attempt to close while in the Closing state.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a64310e694cde43b1764faf96563b0491"><h3 id="methodHeader">stopVA</h3></a><div xmlns="" class="methodBrief">
+Stops an active DMVA state. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		stopVA</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode: </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Aborts ongoing virtual assistant requests (for example, prompt) and returns the microphone to the previous mode. Any audio that was recorded while in DMVA mode is discarded.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request.</p>
+<p xmlns="">VAResultCodeApplicationStateError - The application is in a state which doesn't allow a DMVA Active state to be aborted.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a4e664c617b29530657d77b58bfb1741d"><h3 id="methodHeader">sendText:</h3></a><div xmlns="" class="methodBrief">
+Send text to DMVA. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		sendText:
+	(nonnull NSString *)<span class="parameter">text 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>text</dt>
+<dd><p>
+The text to send to DMVA for processing.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Sends text to DMVA to start a virtual assistant request.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request. DMVA will continue to process the request asynchronously.</p>
+<p xmlns="">VAResultCodeApplicationStateError - The application is in a state which doesn't allow text to be sent.</p>
+<p xmlns="">VAResultCodeBadRequestError - The text parameter is invalid.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a11dcb16fc6e82c580b8009a9f2b570e1"><h3 id="methodHeader">uploadEntityValues:entityValues:withCompletionHandler:</h3></a><div xmlns="" class="methodBrief">
+Uploads entity values for a dynamic entity. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		uploadEntityValues:
+	(nonnull NSString *)<span class="parameter">entityName 
+	</span>entityValues:
+	(nonnull NSString *)<span class="parameter">entityValuesJSON 
+	</span>withCompletionHandler:
+	(void(^)(NSError *_Nullable error))<span class="parameter">completionHandler 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>entityName</dt>
+<dd><p>
+The name of the entity.
+</p></dd>
+<dt>entityValuesJSON</dt>
+<dd><p>
+A string representation of an array of JSON objects, where each JSON object contains a single key-value pair of a literal and its corresponding value.
+</p></dd>
+<dt>completionHandler</dt>
+<dd><p>
+The block to be invoked once the dynamic data for the given entity is uploaded. This parameter can be null if the integrator doesn't require a response to the upload request. No other delegate method will be invoked.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Uploads dynamic entity values to the DMVA server. These values are used as part of DMVA commands. For example, "Call Dr. Jones." In this example, "Dr. Jones" isn't part of the grammar but a dynamic entity value uploaded using this API. A call to this method returns immediately and the values are uploaded asynchronously. Once the upload completes, the completion handler passed to the completionHandler parameter is called.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request. DMVA will continue to process the request asynchronously.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">VAResultCodeBadRequestError - The entityName or entityValuesJSON parameter is invalid.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a68bf2b35e8e82a778635bfe0fd0419e8"><h3 id="methodHeader">clearUploadedEntityValues:withCompletionHandler:</h3></a><div xmlns="" class="methodBrief">
+Clears uploaded entity values asynchronously for a dynamic entity. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		clearUploadedEntityValues:
+	(nonnull NSString *)<span class="parameter">entityName 
+	</span>withCompletionHandler:
+	(void(^)(NSError *_Nullable error))<span class="parameter">completionHandler 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>entityName</dt>
+<dd><p>
+The name of the entity.
+</p></dd>
+<dt>completionHandler</dt>
+<dd><p>
+The block to be invoked once the dynamic data for the given entity is cleared. This parameter can be null if the integrator doesn't require a response to the clear request. No other delegate method will be invoked.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Clears the uploaded dynamic entity values. A call to this method returns immediately and the clear request is sent asynchronously. Once the response is received, the completion handler passed to the completionHandler parameter is called.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request. DMVA will continue to process the request asynchronously.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">VAResultCodeBadRequestError - The entityName parameter is invalid.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a2ee3023d63a9ff9dd65efd8cc61f2b1a"><h3 id="methodHeader">clearAllUploadedEntityValues:</h3></a><div xmlns="" class="methodBrief">
+Clears all uploaded entity values. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		clearAllUploadedEntityValues:
+	(void(^)(NSError *_Nullable error))<span class="parameter">completionHandler 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>completionHandler</dt>
+<dd><p>
+The block to be invoked once all the dynamic data uploaded earlier is cleared. This parameter can be null if the integrator doesn't require a response to the clear request. No other delegate method will be invoked.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Clears all uploaded dynamic entity values for the current user. A call to this method returns immediately and the clear request is sent asynchronously. Once the response is received, the completion handler passed to the completionHandler parameter is called.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request. DMVA will continue to process the request asynchronously.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1ac68ff05ba336eef7a2042652f9ba78cf"><h3 id="methodHeader">promptForConfirmation:</h3></a><div xmlns="" class="methodBrief">
+Starts a confirmation prompt. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		promptForConfirmation:
+	(nullable NSString *)<span class="parameter">prompt 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>prompt</dt>
+<dd><p>
+A prompt message to be played before the microphone turns to VA Active. The message is optional; this parameter can be set to empty or null if not required.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Starts a prompt for the user to provide confirmation, i.e. YES or NO and their common synonyms. A call to this method returns immediately and a request is sent to DMVA asynchronously. On receiving a successful response, the microphone is put in the VA Active mode.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">VAResultCodeApplicationStateError - The application is in a state which doesn't allow PromptForConfirmation to be called.</p>
+<p xmlns="">VAResultCodeBadRequestError - Parameters aren't properly provided.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a5942b4759f5ca7426ce1369a70d6dca2"><h3 id="methodHeader">promptForFreeText:</h3></a><div xmlns="" class="methodBrief">
+Starts a prompt for a free text virtual assistant request. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		promptForFreeText:
+	(nullable NSString *)<span class="parameter">prompt 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>prompt</dt>
+<dd><p>
+A prompt message to be played before the microphone turns to VA Active. The message is optional; this parameter can be set to empty or null if not required.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Starts a prompt for the user to provide free-form text; for example, "to review CBC". A call to this method returns immediately and a request is sent to DMVA asynchronously. On receiving a successful response, the microphone is put in the VA Active mode.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">VAResultCodeApplicationStateError - The application is in a state which doesn't allow PromptForFreeText to be called.</p>
+<p xmlns="">VAResultCodeBadRequestError - Parameters aren't properly provided.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a12c5d6fa2cde9a49b0626751e2a5987b"><h3 id="methodHeader">promptForChoice:withPrompt:</h3></a><div xmlns="" class="methodBrief">
+Starts a prompt to choose from a list. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		promptForChoice:
+	(nonnull NSString *)<span class="parameter">choices 
+	</span>withPrompt:
+	(nullable NSString *)<span class="parameter">prompt 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>choices</dt>
+<dd><p>
+A string representing a json array of objects containing "literal" and "value" properties.
+</p></dd>
+<dt>prompt</dt>
+<dd><p>
+A prompt message to be played before the microphone turns to VA Active. The message is optional; this parameter can be set to empty or null if not required.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Starts a prompt for the user's choice. The user chooses from the specified list of choices, provided in JSON format to the choices parameter. A call to this method returns immediately and a request is sent to DMVA asynchronously. On receiving a successful response, the microphone is put in the VA Active mode.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">VAResultCodeApplicationStateError - The application is in a state which doesn't allow text transactions.</p>
+<p xmlns="">VAResultCodeBadRequestError - Parameters aren't properly provided; for example, the JSON is incorrectly formatted.</p>
+<p xmlns="">Here is an example value for items:</p>
+<p xmlns="">[
+{"literal":"save","value":"save"},
+{"literal":"delete","value":"delete"},
+]
+</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a61cf65f6ee0e3d3f8037f9bc2b3f02e2"><h3 id="methodHeader">promptForEntities:withPrompt:allowNewIntent:</h3></a><div xmlns="" class="methodBrief">
+Starts a prompt for specified entities. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		promptForEntities:
+	(nonnull NSArray *)<span class="parameter">entities 
+	</span>withPrompt:
+	(nullable NSString *)<span class="parameter">prompt 
+	</span>allowNewIntent:
+	(BOOL)<span class="parameter">allow 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>entities</dt>
+<dd><p>
+The list of entities for which the integrator needs to provide the data. For example, with [ "TASK_DATE" ] passed as the parameter, the SDK expects the user to provide a date/time input.
+</p></dd>
+<dt>prompt</dt>
+<dd><p>
+A prompt message to be played before the microphone turns to VA Active. The message is optional; this parameter can be set to empty or null if not required.
+</p></dd>
+<dt>allow</dt>
+<dd><p>
+Allows starting new intent when a prompt is already in progress.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Starts a prompt for specified entities. A call to this method returns immediately and a request is sent to the DMVA asynchronously. On receiving a successful response, the microphone is put in the VA Active mode.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">VAResultCodeApplicationStateError - The application is in a state which doesn't allow a prompt for an entity.</p>
+<p xmlns="">VAResultCodeBadRequestError - The text parameter is invalid.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1aa8484c38643a52f0d79b00d957b4e257"><h3 id="methodHeader">userFeedback:feedbackText:nluId:withCompletionHandler:</h3></a><div xmlns="" class="methodBrief">
+Submits user feedback to the DMVA server. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		userFeedback:
+	(nonnull NSNumber *)<span class="parameter">rating 
+	</span>feedbackText:
+	(nullable NSString *)<span class="parameter">feedbackText 
+	</span>nluId:
+	(nullable NSString *)<span class="parameter">nluId 
+	</span>withCompletionHandler:
+	(void(^)(NSError *_Nullable error))<span class="parameter">completionHandler 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>rating</dt>
+<dd><p>
+The user can rate their experience on a scale of 1 (bad) - 5 (excellent).
+</p></dd>
+<dt>feedbackText</dt>
+<dd><p>
+The user can provide a custom message based on their experience, up to 300 characters.
+</p></dd>
+<dt>nluId</dt>
+<dd><p>
+The Nlu Id received as part of the nlu result in the VAComplete event
+</p></dd>
+<dt>completionHandler</dt>
+<dd><p>
+The block to be invoked once the user feedback is submitted. This parameter can be null if the integrator doesn't require a response to their submitted feedback request. No other delegate method will be invoked.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Submits user feedback to the DMVA server. This API isn't intended for PHI; it's expected that data received via this API doesn't include PHI. A call to this method returns immediately and the feedback sends asynchronously. Once the feedback is submitted, the completion handler passed to the completionHandler parameter is called.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request. DMVA will continue to process the request asynchronously.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because session isn't initialised.</p>
+<p xmlns="">VAResultCodeBadRequestError - The parameters aren't properly provided.</p>
+<p xmlns="">
+
+</p>
+        <a xmlns="" name="interface_n_u_s_a_virtual_assistant_controller_v2_1a3db8024cab552996e93b887948971844"><h3 id="methodHeader">partnerFeedback:intentName:nluId:feedbackInfo:withCompletionHandler:</h3></a><div xmlns="" class="methodBrief">
+Submits partner application generated feedback to the DMVA server based. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(VAResultCode)
+		partnerFeedback:
+	(VAFeedbackType)<span class="parameter">feedbackType 
+	</span>intentName:
+	(nonnull NSString *)<span class="parameter">intentName 
+	</span>nluId:
+	(nonnull NSString *)<span class="parameter">nluId 
+	</span>feedbackInfo:
+	(nullable NSString *)<span class="parameter">feedbackInfo 
+	</span>withCompletionHandler:
+	(void(^)(NSError *_Nullable error))<span class="parameter">completionHandler 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">VAResultCode </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>feedbackType</dt>
+<dd><p>
+One of the types from the VAFeedbackType enum.
+</p></dd>
+<dt>intentName</dt>
+<dd><p>
+The intent received from the DMVA server.
+</p></dd>
+<dt>nluId</dt>
+<dd><p>
+The Nlu Id received as part of the nlu result in the VAComplete event.
+</p></dd>
+<dt>feedbackInfo</dt>
+<dd><p>
+The feedback message generated by the partner application.
+</p></dd>
+<dt>completionHandler</dt>
+<dd><p>
+The block to be invoked once the parter feedback is submitted. This parameter can be null if the integrator doesn't require a response to their submitted feedback request. No other delegate method will be invoked.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">Submits partner feedback to the DMVA server. A call to this method returns immediately and the feedback sends asynchronously. Once the feedback is submitted, the completion handler passed to the completionHandler parameter is called.</p>
+<p xmlns="">The return value is one of the following:</p>
+<p xmlns="">VAResultCodeSuccess - DMVA accepted the request. DMVA will continue to process the request asynchronously.</p>
+<p xmlns="">VAResultCodeNoSessionError - The request can't be processed because the session isn't initialised.</p>
+<p xmlns="">VAResultCodeBadRequestError - The parameters aren't properly provided.</p>
+<p xmlns="">
+
+</p>
+        
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

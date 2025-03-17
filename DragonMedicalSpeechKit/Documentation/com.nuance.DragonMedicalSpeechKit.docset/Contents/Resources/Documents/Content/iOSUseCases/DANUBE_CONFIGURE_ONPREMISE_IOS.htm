@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>On-premises deployment</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor15"></a>Configuring <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> for on-premises deployment</h1>
+        <p>To configure <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> to connect to <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span>, set up within your organization’s network, you must pass the server URL to the client before opening a client session. You can use the <code>NUSASession</code> property <code>serverURL</code> to do this. Make sure that you know the URL of the <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span>. For more information about configuring a <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span>, see the <i><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> Administration Guide.</i></p>
+        <p>The URL you pass to <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> is the <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span> URL. For example: https://your.server.com:1234</p>
+        <h2>Prerequisites</h2>
+        <p>The <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span> is installed and configured.</p>
+        <h2>Procedure</h2>
+        <p>To connect your clients to the <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span>, do the following:</p>
+        <ol>
+            <li value="1">Set the <code>NUSASession serverURL</code> property to the <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span> URL.</li>
+            <p class="indent1">For example: <code>[[NUSASession sharedSession] setServerURL: @"https://your.server.com:1234"]</code></p>
+            <li value="2"><a href="DANUBE_INITIALIZE_SESSION_IOS.htm">Initialize the speech recognition session</a>.</li>
+        </ol>
+    </body>
+</html>

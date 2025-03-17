@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSASessionDelegate Protocol Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Recording sessions">Recording sessions</a></li><li><a href="#TTS">TTS</a></li><li><a href="#Standby mode">Standby mode</a></li><li><a href="#Authentication Token">Authentication Token</a></li><li><a href="#Audio Interruption">Audio Interruption</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#protocol_n_u_s_a_session_delegate-p_1a36b1fda7b76b540648b184d6656bcfd1">sessionDidStartRecording</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a951847e1d5d202c97b951e1eac8916bc">sessionDidStopRecording</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a8ad4d082c96151ea716fc81da2a830e7">sessionDidStartSpeaking</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1af982e28fec673d2c084d19bcfde27a8f">sessionDidStopSpeaking</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1af38190477e6c8a279f235c628eb4efdd">sessionDidStartStandby</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1ad2cdb1f593e0972c554d54ed3a05a2d2">sessionDidReceiveInvalidAuthenticationToken</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1aff532818565d0dfbfcac7ff7ebb3eaa0">sessionDidNotifyAuthenticationTokenIsAboutToExpire</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1ad53a0d5a801d5ec8ab290a3817e8bd19">sessionDidReceiveAudioInterruptionState:</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a137109c8921475fc0914737d526a712f">sessionShouldContinueRecordingDuringCallBanners</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSASessionDelegate Protocol Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/&lt;NSObject&gt;.html">&lt;NSObject&gt;</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Framework</label></td>
+<td>DragonMedicalSpeechKit</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Availability</label></td>
+<td>Available in version 1.0 and later</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSASessionDelegate.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns=""><code><a href="../Classes/NUSASession.html">NUSASession</a></code> delegate messages. </p>
+    
+<p xmlns="">  
+Delegate messages sent by the <code><a href="../Classes/NUSASession.html">NUSASession</a></code> class to its delegate receiver. All messages provided by the protocol are optional and can be implemented by the receiver. </p>
+    <a xmlns="" name="Tasks"><h2 id="pageHeader">Tasks</h2></a><a xmlns="" name="Recording%20sessions"><h3 id="taskHeader">Recording sessions</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1a36b1fda7b76b540648b184d6656bcfd1">- <code>sessionDidStartRecording</code></a><span class="tooltip">
+Sent after audio data recording has started. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1a951847e1d5d202c97b951e1eac8916bc">- <code>sessionDidStopRecording</code></a><span class="tooltip">
+Sent after audio data recording has stopped and standby mode disabled. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="TTS"><h3 id="taskHeader">TTS</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1a8ad4d082c96151ea716fc81da2a830e7">- <code>sessionDidStartSpeaking</code></a><span class="tooltip">
+Sent after speaking has started. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1af982e28fec673d2c084d19bcfde27a8f">- <code>sessionDidStopSpeaking</code></a><span class="tooltip">
+Sent after speaking has stopped. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Standby%20mode"><h3 id="taskHeader">Standby mode</h3></a><ul xmlns="" class="methods"><li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1af38190477e6c8a279f235c628eb4efdd">- <code>sessionDidStartStandby</code></a><span class="tooltip">
+Sent after standby mode has started. 
+        </span></span></li></ul>
+<a xmlns="" name="Authentication%20Token"><h3 id="taskHeader">Authentication Token</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1ad2cdb1f593e0972c554d54ed3a05a2d2">- <code>sessionDidReceiveInvalidAuthenticationToken</code></a><span class="tooltip">
+Sent after authentication token is invalid. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1aff532818565d0dfbfcac7ff7ebb3eaa0">- <code>sessionDidNotifyAuthenticationTokenIsAboutToExpire</code></a><span class="tooltip">
+Called when authentication token is about to expire. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Audio%20Interruption"><h3 id="taskHeader">Audio Interruption</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1ad53a0d5a801d5ec8ab290a3817e8bd19">- <code>sessionDidReceiveAudioInterruptionState:</code></a><span class="tooltip">
+Called whenever audio interruption is received and its state changes. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1a137109c8921475fc0914737d526a712f">- <code>sessionShouldContinueRecordingDuringCallBanners</code></a><span class="tooltip">
+Configures interrupt handling behavior when system displays incoming calls using a banner. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1a36b1fda7b76b540648b184d6656bcfd1"><h3 id="methodHeader">sessionDidStartRecording</h3></a><div xmlns="" class="methodBrief">
+Sent after audio data recording has started. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidStartRecording</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the delegate whenever a recording session is started. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1a951847e1d5d202c97b951e1eac8916bc"><h3 id="methodHeader">sessionDidStopRecording</h3></a><div xmlns="" class="methodBrief">
+Sent after audio data recording has stopped and standby mode disabled. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidStopRecording</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 3..9 Sent to the delegate in the following conditions:
+Standby mode is disabled and the recording session is stopped.
+An error occurs when starting the recording session.
+An error occurs starting standby mode.
+Long press on the microphone button of the SpeechBar when the microphone is in recording or standby mode. 
+
+ and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1a8ad4d082c96151ea716fc81da2a830e7"><h3 id="methodHeader">sessionDidStartSpeaking</h3></a><div xmlns="" class="methodBrief">
+Sent after speaking has started. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidStartSpeaking</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the delegate whenever speaking is started. If a call to startSpeaking() cancels a previous call to startSpeaking(), this message is not sent again. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1af982e28fec673d2c084d19bcfde27a8f"><h3 id="methodHeader">sessionDidStopSpeaking</h3></a><div xmlns="" class="methodBrief">
+Sent after speaking has stopped. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidStopSpeaking</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the delegate whenever speaking is finished. This message is sent when the session has finished speaking the provided text or stopSpeaking() is called. If speaking is cancelled by another call to startSpeaking(), this message is only sent after the last text has been finished. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1af38190477e6c8a279f235c628eb4efdd"><h3 id="methodHeader">sessionDidStartStandby</h3></a><div xmlns="" class="methodBrief">
+Sent after standby mode has started. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidStartStandby</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 3.9 Sent to the delegate in the following conditions: 1.Standby mode enabled and started. 2.Standby mode is enabled and the recording session is stopped.  and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1ad2cdb1f593e0972c554d54ed3a05a2d2"><h3 id="methodHeader">sessionDidReceiveInvalidAuthenticationToken</h3></a><div xmlns="" class="methodBrief">
+Sent after authentication token is invalid. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidReceiveInvalidAuthenticationToken</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the delegate whenever the authentication token is been considered invalid. Once this message is sent the user must get new token from authentication library and send the new token by calling updateAuthenticationToken API </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 6.0 and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1aff532818565d0dfbfcac7ff7ebb3eaa0"><h3 id="methodHeader">sessionDidNotifyAuthenticationTokenIsAboutToExpire</h3></a><div xmlns="" class="methodBrief">
+Called when authentication token is about to expire. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidNotifyAuthenticationTokenIsAboutToExpire</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 6.0  and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1ad53a0d5a801d5ec8ab290a3817e8bd19"><h3 id="methodHeader">sessionDidReceiveAudioInterruptionState:</h3></a><div xmlns="" class="methodBrief">
+Called whenever audio interruption is received and its state changes. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidReceiveAudioInterruptionState:
+	(NUSAAudioInterruptionState)<span class="parameter">state 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>state</dt>
+<dd><p>
+state of audio interruption being received 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 6.2  and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1a137109c8921475fc0914737d526a712f"><h3 id="methodHeader">sessionShouldContinueRecordingDuringCallBanners</h3></a><div xmlns="" class="methodBrief">
+Configures interrupt handling behavior when system displays incoming calls using a banner. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(BOOL)
+		sessionShouldContinueRecordingDuringCallBanners</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">Return true to continue recording. By default SDK stops recording on receiving incoming call or other audio interrupts </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 6.2  and later.
+	
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>
+			Recording
+		</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor36"></a>Recording</h1>
+        <h2>Prerequisites</h2>
+        <p>You've <a href="DANUBE_SPEECH_ENABLE_IOS.htm">speech-enabled your app</a>.</p>
+        <h2>Procedure</h2>
+        <p>To start recording, call the <code>startRecording</code> method on the shared session instance: <code>[[NUSASession sharedSession] startRecording:&amp;error];</code> </p>
+        <p class="indent2"><code>error</code> – a variable that will receive error information if recording can't be started.</p>
+        <p>To stop recording, call the <code>stopRecording</code> method on the shared session instance: <code>[[NUSASession sharedSession] stopRecording];</code> </p>
+        <p>To abort recording, call the <code>abortRecording</code> method on the shared session instance: <code>[[NUSASession sharedSession] abortRecording];</code></p>
+        <h2>Remarks</h2>
+        <ul>
+            <li> You must connect a button press event (triggered by a button control or a dedicated hardware button) to the <code>startRecording</code> and <code>stopRecording</code> methods on your <code>NUSASession</code> instance to enable the user to start and stop recording.</li>
+            <li>The <code>abortRecording</code> method discards all unprocessed utterances and pending recognition results.</li>
+            <li>When <a href="../Concepts/DANUBE_MODES.htm">standby mode</a> is available, <code>stopRecording</code> returns the app to standby mode.</li>
+            <li>When <a href="../Concepts/DANUBE_MODES.htm">standby mode</a> is unavailable or disabled, <code>stopRecording</code> turns off the microphone completely.</li>
+        </ul>
+        <h2>See also</h2>
+        <p class="indent2"><a href="DANUBE_EVENTS_IOS.htm">Events</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>
+			Events
+		</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor5"></a>Events</h1>
+        <p>Your app can be notified about the following events during a session:</p>
+        <ul>
+            <li>Recording started or stopped</li>
+            <li>Speaking (text-to-speech) started or stopped</li>
+            <li>Standby mode started</li>
+        </ul>
+        <h2>NUSASessionDelegate</h2>
+        <p>In your app, include a class that adopts the  <code>NUSASessionDelegate</code> protocol. Set the delegate property of the <code>NUSASession</code> to your class object. Make sure that you remove your object as a delegate before the end of its life cycle.</p>
+        <h3>Example</h3>
+        <p><pre class="example">
+// interface declaration
+@interface MySpeechEnabledView : UIViewController &lt;NUSASessionDelegate&gt; {
+    // implementation
+    - (void) viewWillAppear:(BOOL)animated {
+        // In order to receive NUSASession delegate messages, set ourselves as the
+        // session delegate
+        [[NUSASession] sharedSession] setDelegate]: self];
+    }
+    - (void) viewWillDisappear:(BOOL)animated {
+        // Remove ourselves as the NUSASessions delegate
+        [[NUSASession sharedSession] setDelegate: nil];
+    }
+    // NUSASessionDelegate messages
+    - (void) sessionDidStartRecording {
+    }
+    sessionDidStopRecording {
+    }
+}</pre>
+        </p>
+        <h3>NUSASessionDelegate messages</h3>
+        <p>The <code>NUSASessionDelegate</code> protocol contains the following messages:</p>
+        <ul>
+            <li><code>sessionDidStartRecording</code> - sent when recording is started.</li>
+            <li><code>sessionDidStopRecording</code> - sent when recording is stopped, either on request or because of an error.</li>
+            <li><code>sessionDidStartSpeaking</code> - sent when speaking is started.</li>
+            <li><code>sessionDidStopSpeaking</code> - sent when speaking is stopped, either on request or because the specified text was completely spoken or on request or because of an error.</li>
+            <li><code>sessionDidStartStandby</code> - sent when standby mode is started.</li>
+        </ul>
+        <p>If your app is notified about session events, you can (among other tasks) implement a record button on your API. The appearance of the button reflects the current recording state (for example, a caption/image to indicate recording is started/stopped). The <code>sessionDidStartRecording</code> and <code>sessionDidStopRecording</code> messages notify your app of changes in the recording state, which can be triggered by the user, an error, an idle timeout or any other cause, and enable you to update the appearance of your record button and your internal representation of the recording state.</p>
+        <h2>VuiController events</h2>
+        <p>Your app can be notified about events related to individual VuiForms.</p>
+        <p>To receive VuiController events, your view controller class must adopt the <code>NUSAVuiControllerDelegate</code> protocol. Set the delegate property of the <code>NUSAVuiController</code> or <code>NUSACustomVuiController</code> instance to your class object. Make sure to remove your class object as the delegate at the end of its live cycle.</p>
+        <h3>Example</h3>
+        <p><pre class="example">
+// interface declaration
+@interface MySpeechEnabledView : UIViewController &lt;NUSAVuiControllerDelegate&gt;
+
+// implementation
+- (void) viewWillAppear:(BOOL)animated {
+    // In order to receive NUSAVuiControllerDelegate delegate messages, set
+    // ourselves as delegate
+    [vuiController setDelegate:self];
+}
+
+// NUSAVuiControllerDelegate messages
+- (void) vuiControllerDidRecognizeCommand: (NSString *) id spokenPhrase: (NSString *) spokenPhrase placeholderValues: (NSDictionary *) placeholderValues {
+    // handle recognized commands here
+}</pre>
+        </p>
+        <p>The <code>NUSAVuiControllerDelegate</code> protocol contains the following messages:</p>
+        <ul>
+            <li><code>vuiControllerDidStartProcessing</code> - sent when the user starts their first utterance in any speech-enabled control and the speech recognition process starts.</li>
+            <li><code>vuiControllerDidFinishProcessing</code> - sent when the last utterance spoken is recognized and the GUI is updated with its results; the speech recognition process is finished, there are no more utterances to be processed.</li>
+            <li><code>vuiControllerDidStartProcessingForView:</code> - sent when the user finishes their first utterance in a speech-enabled control and the speech recognition process starts. A reference to the control is supplied as the message parameter.</li>
+            <li><code>vuiControllerDidFinishProcessingForView:</code> - sent when the last utterance for a speech-enabled control is recognized and the GUI is updated with the recognition results. A reference to the control is supplied as the message parameter.</li>
+            <li>
+                <p><code>vuiControllerDidRecognizeCommand:spokenPhrase:placeholderValues:</code> – sent when an application command has been recognized. The following information is delivered by the event about the recognized voice command:</p>
+                <p class="indent2"><code>id</code> - the identifier of the recognized command. For custom commands the identifier has a prefix.</p>
+                <p class="indent2"><code>spokenPhrase</code> - the actual phrase that was recognized.</p>
+                <p class="indent2"><code>placeholderValues</code> - the placeholder identifier and value pairs that are present in the recognized voice command.</p>
+                <p>For more information, see the <a href="../Concepts/DANUBE_APPLICATION_COMMANDS.htm">application commands concept</a> and the <a href="DANUBE_APPLICATION_COMMANDS_IOS.htm">application commands use case</a>.</p>
+            </li>
+        </ul>
+        <h3>Remarks</h3>
+        <ul>
+            <li>The <code>Processing</code> messages are always sent in pairs; for every <code>vuiControllerDidStartProcessing</code> and <code>vuiControllerDidStartProcessingForView:</code> call there is always a corresponding <code>vuiControllerDidFinishProcessing</code> or <code>vuiControllerDidFinishProcessingForView:</code> call.</li>
+            <li>If your app is notified about VuiController events, you can (among other tasks) change the GUI based on whether the speech recognition process is ongoing or has finished, either globally or for a specific control.</li>
+            <li>Globally: For example, you want to stop the user navigating away from the current speech-enabled form while speech recognition processing is ongoing (to make sure that no recognition results are lost). In this case, the <code>vuiControllerDidStartProcessing</code> and the <code>vuiControllerDidFinishProcessing</code> messages can be used to disable and enable navigation between forms.</li>
+            <li>Specific control: For example, the GUI layout of your app changes based on whether the sound is recorded into a specific control. In this case, wait to change the GUI until all the utterances recorded into that control are completely recognized. By performing the GUI change from the <code>vuiControllerDidFinishProcessingForView:</code> message, you can make sure that all the relevant recognition results are displayed.</li>
+            <li>The <code>vuiControllerDidStartProcessing</code> and <code>vuiControllerDidFinishProcessing</code> messages (global and text control-specific) are reliable only if recording has already been stopped; the user might start speaking again after the <code>vuiControllerDidFinishProcessing</code> message is sent.</li>
+            <li>The <code>vuiControllerDidFinishProcessingForView:</code> message is always sent for the control that has the speech focus (for which the <code>vuiControllerDidStartProcessingForView:</code> message was sent earlier). This guarantees that <code>vuiControllerDidStartProcessingForView:</code> and <code>vuiControllerDidFinishProcessingForView:</code> messages are always sent in pairs for all controls.</li>
+            <li>The <code>vuiControllerDidStartProcessingForView:</code> and <code>vuiControllerDidFinishProcessingForView:</code> messages can't track which controls have received recognized results.</li>
+        </ul>
+        <h3>Scenario</h3>
+        <ul>
+            <li>There are two controls in the form: Field 1 and Field 2. Field 1 has the speech focus when recording is started.</li>
+            <li>The user records three utterances without waiting for the results: <span class="command">this is a test</span>, <span class="command">next field</span> and <span class="command">this is another test</span>. Then recording is stopped.</li>
+            <li>When all speech recognition processing is finished, Field 1 contains "This is a test", Field 2 contains "This is another test" and Field 2 has the speech focus.</li>
+        </ul>
+        <p>How the <code>vuiControllerDidStartProcessingForView:</code> and <code>vuiControllerDidFinishProcessingForView:</code> messages function:</p>
+        <ul>
+            <li>The user says <span class="command">this is a test</span> when Field 1 has the speech focus: A <code>vuiControllerDidStartProcessingForView:</code> message is sent for Field 1.</li>
+            <li>The user says  <span class="command">next field</span> and <span class="command">this is another test</span> when Field 1 has the speech focus: Speech recognition processing is ongoing, therefore no <code>vuiControllerDidStartProcessingForView:</code> messages are sent for these utterances.</li>
+            <li>When the recognition results for <span class="command">this is another test</span> are displayed, speech recognition processing is finished, therefore a <code>vuiControllerDidFinishProcessingForView:</code> message is sent for the control which had the speech focus when the user started to say it, in this case Field 1.</li>
+            <li>The user didn't start saying anything when the speech focus was in Field 2. No <code>vuiControllerDidStartProcessingForView:</code> or <code>vuiControllerDidFinishProcessingForView:</code> messages are sent for this control even though Field 2 contains the recognition results.</li>
+        </ul>
+        <p><b>Conclusion:</b> Don't use <code>vuiControllerDidStartProcessingForView:</code> and <code>vuiControllerDidFinishProcessingForView:</code> messages to detect whether a control has received recognition results.</p>
+    </body>
+</html>

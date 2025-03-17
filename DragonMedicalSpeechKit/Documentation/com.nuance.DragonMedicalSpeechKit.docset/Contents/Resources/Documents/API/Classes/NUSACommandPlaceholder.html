@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSACommandPlaceholder Class Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#interface_n_u_s_a_command_placeholder_1a66ab3520043007fae58beb452499ea29">initWithID:label:</a></li><li><a href="#interface_n_u_s_a_command_placeholder_1ad75cb11c23f63f6ee91148b9cbc678fc">setValues:withSpokenForms:</a></li><li><a href="#interface_n_u_s_a_command_placeholder_1a3e20384e7c86bf162a291dcd7d50a13c">clearValues</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSACommandPlaceholder Class Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/NSObject.html">NSObject</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Framework</label></td>
+<td>DragonMedicalSpeechKit</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Availability</label></td>
+<td>Available in version 1.3  and later</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSACommandPlaceholder.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns="">Representation of a placeholder in an application command of an application-defined command set. </p>
+    
+<p xmlns="">  
+</p>
+    <a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="interface_n_u_s_a_command_placeholder_1a66ab3520043007fae58beb452499ea29"><h3 id="methodHeader">initWithID:label:</h3></a><div xmlns="" class="methodBrief">
+Initializes a placeholder object. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(id)
+		initWithID:
+	(NSString *)<span class="parameter">id 
+	</span>label:
+	(NSString *)<span class="parameter">label 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>id</dt>
+<dd><p>
+The unique identifier of the placeholder. This will be returned in the vuiControllerDidRecognizeCommand() delegate message for identification of the placeholder. 
+</p></dd>
+<dt>label</dt>
+<dd><p>
+The user-readable label for the placeholder. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Use this method to create a command placeholder.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_command_placeholder_1ad75cb11c23f63f6ee91148b9cbc678fc"><h3 id="methodHeader">setValues:withSpokenForms:</h3></a><div xmlns="" class="methodBrief">
+Adds a new set of values to the placeholder. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		setValues:
+	(NSArray *)<span class="parameter">values 
+	</span>withSpokenForms:
+	(NSArray *)<span class="parameter">spokenForms 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>values</dt>
+<dd><p>
+The values that the system will return when it recognizes the associated spoken form. Must have exactly as many members as spokenForms. 
+</p></dd>
+<dt>spokenForms</dt>
+<dd><p>
+The spoken forms that the system attempts to recognize. Must have exactly as many members as values. Multiple spoken forms can be defined for a single value by separting them with '|'. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3  and later.
+	<a xmlns="" name="interface_n_u_s_a_command_placeholder_1a3e20384e7c86bf162a291dcd7d50a13c"><h3 id="methodHeader">clearValues</h3></a><div xmlns="" class="methodBrief">
+Clears all values and associated spoken forms. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		clearValues</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3  and later.
+	
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

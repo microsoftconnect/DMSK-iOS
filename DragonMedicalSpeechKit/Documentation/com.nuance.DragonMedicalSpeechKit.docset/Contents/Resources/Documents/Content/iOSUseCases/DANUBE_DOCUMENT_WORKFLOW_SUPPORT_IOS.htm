@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Support functionality for document workflows</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Support functionality for document workflows</h1>
+        <h2>Overview</h2>
+        <p><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> provides support for apps with a document-oriented workflow. Such an app enables the user to create, save, load and edit persistent entities called <i>documents</i>. <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> can be made aware of such documents; this enables the user to continue using advanced speech recognition features after having stopped and resumed working on a document. Doing so improves <a href="../Concepts/DANUBE_ADAPTATION.htm">adaptation</a>.</p>
+        <h2>The document concept</h2>
+        <p>A document is a persistent entity in your app that defines the context of the user’s work. Documents in a common word processor app are also documents in this sense. In a medical app, for example, a discharge summary or radiology report is usually realized as a document processed in a workflow. It's assumed that the user can create a document, save it under a unique name, continue working on it at a later point in time and then finalize it to indicate that the document is complete.</p>
+        <p>If <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> is aware of this document workflow and notices when a previously saved document is loaded, then <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> can also load the corresponding speech recognition-relevant data unit maintained on the <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span>, called the VUI form. This enables several user-visible features and improves adaptation.</p>
+        <p><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> is designed based on a Model-View-Controller design pattern:</p>
+        <ul>
+            <li>The model consists of the VUI form: Audio data, related text and additional speech-related data (for example, voice commands) managed on the server.</li>
+            <li>The view consists of the GUI and the speech-enabled text controls that are managed by your app and enable your users to edit documents.</li>
+            <li>The controller consists of the VuiController object your app needs to instantiate and connect to the view.</li>
+        </ul>
+        <p>
+            <img src="../Resources/document_workflow_support.png" alt="" />
+        </p>
+        <p>Although <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> works well if a VUI form is only associated with the text controls currently visible in the GUI, for an improved user experience <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> should be made aware of the underlying document's identity and, if the document is structured into fields displayed in different text controls, the identity of the individual fields.</p>
+        <p>In summary, a document is a persistent entity in your app, consisting of editable fields in which speech recognition takes place. You can associate the VuiController with a document and the VUI form’s fields with those of the document, for a better user experience.</p>
+        <h2>States of the VuiController</h2>
+        <p>A VuiController can be in two states: associated with a view and a VUI form (<i>open</i>) or not (<i>closed</i>). Speech recognition is only possible in the open state.</p>
+        <p>As long as the VuiController is closed, it's safe to manipulate the contents of text controls, for example by loading text from a saved document. As soon as your app’s document is initialized or loaded and ready to be edited by the user, you can open the VuiController (which will implicitly create a new VUI form or load an existing, associated one) and let the user start using speech recognition in this consistent state.</p>
+        <p>If the user closes the document in your app, the VuiController must be closed too. This is necessary for <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> to reflect the state change and also enables your app to prevent the user from dictating into a closed document.</p>
+        <p>When the <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> session is closed, all VuiControllers are closed implicitly.</p>
+        <h2>Identifying documents and fields</h2>
+        <p>A document in your app is identified by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> via a document ID. This is an arbitrary string defined by your app.</p>
+        <p class="warning"><span class="important">Important:</span>&#160;The document ID must be unique for each document per customer. Customers are identified by the organization token you provide when the session is opened.</p>
+        <p>It's not necessary to introduce a new data item for the purpose of passing a document ID to <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span>. We recommend using an identifier already defined by your app, as long as it's unique for each document per customer. For example, an HL7 unique document number would fit the purpose, but a patient or provider ID wouldn't.</p>
+        <p>A field within a document is identified via a field ID. Field IDs are arbitrary strings that must be provided by your app and must be unique within the given document. For example, if your app stores document fields in rows of a database table, with one row having the name "medical_history", this name can be used as field ID.</p>
+        <p class="note"><b>Note:</b> Document field identifiers aren't related to VUI concept names. VUI concept names are used to create voice commands the user can say to move directly to a specific text control; for more information, see: <a href="DANUBE_NAMED_FIELD_NAVIGATION_IOS.htm">Enabling named field navigation</a>. They must be localized in apps supporting different languages. Field IDs are unique identifiers similar to database keys. Therefore, concept names must not be used as document field IDs.</p>
+        <h2>Use cases</h2>
+        <p>Opening and closing the VuiController is possible in various combinations, depending on the information available about the edited document. Choose the most appropriate VuiController operation for each state transition.</p>
+        <h4>Speech recognition without document workflow support</h4>
+        <p>Open the VuiController without providing a document ID. Use this when the user should be enabled to use voice commands and/or edit text with their voice, but a document workflow isn't supported or applicable.</p>
+        <p>To perform this operation, call the following method on a closed VuiController:</p>
+        <p class="indent2"><code>(void) open</code>
+        </p>
+        <p>Initializing a VuiController with <code>initWithView:andOpen:</code> or <code>initWithView:controls:andOpen:</code> with parameter <code>andOpen</code> set to <code>YES</code> is equivalent to this operation.</p>
+        <p>You can also perform this operation, if your app only generates a unique document identifier at a later point in time: a document ID can also be provided when closing the VuiController.</p>
+        <p class="warning"><span class="important">Important:</span> The <code>open</code> method should only be used if the text the user is working on can't be associated with a unique document in your app. If your app can associate the text with an ID that identifies it as a persistent document or text field in a database, we recommend opening the VuiController with the unique document ID, as described below.</p>
+        <h4>Open a previously saved document or create a new one, with document workflow support</h4>
+        <p>Open the VuiController with a document ID that identifies the document in your workflow. If no VUI form with the given document ID exists in <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span>, a new one will be created.</p>
+        <p>To perform this operation, call the following method on a closed VuiController:</p>
+        <p class="indent2"><code>(void) openWithDocumentId:(NSString*)documentId</code>
+        </p>
+        <p>Any user can open and edit documents created by other users.</p>
+        <h4>Save and close the document</h4>
+        <p>Close the VuiController. The VUI form will be saved under the document ID that was provided when the VuiController was opened.</p>
+        <p>To perform this operation, call the following method on an open VuiController:</p>
+        <p class="indent2"><code>(void) close</code>
+        </p>
+        <p>If the VuiController was opened without providing a document ID, the VUI form will be saved anonymously so that the system can <a href="../Concepts/DANUBE_ADAPTATION.htm">learn from the user’s corrections</a>. However, it won't be possible to continue dictation using the saved VUI form.</p>
+        <h4>Save the document with a new name and close it</h4>
+        <p>Close the VuiController providing a document ID. The VUI form will be saved under the given identifier, which you can pass to subsequent open calls to let the user continue working from this state.</p>
+        <p>To perform this operation, call the following method on an open VuiController:</p>
+        <p class="indent2"><code>(void) closeWithDocumentId:(NSString*)documentId</code>
+        </p>
+        <p>Providing a document ID when closing the VuiController is only required if the VUI form should be saved with a different ID than the one provided when opening the VuiController.</p>
+        <p>If the string passed for <code>documentId</code> is already associated with a document in your app, that document will be overwritten.</p>
+        <h4>Save the document with a new name, with a given workflow state and close it</h4>
+        <p>This operation extends the previous one by enabling you to provide additional hints to <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> about the state of the document in your app’s workflow. For example, if the user has corrected speech recognition errors in the document, the system will be able to learn more from these corrections if it's aware of the document being in a consistent state.</p>
+        <p>To perform this operation, call the following method on an open VuiController:</p>
+        <p class="indent2"><code>(void) closeWithDocumentId:(NSString*)documentID andState:(NSInteger) documentState</code>
+        </p>
+        <p>The following constants can be used as document state:</p>
+        <ul>
+            <li>
+                <p><code>kNUSADocumentStateUndefined</code>
+                    <br />This is the default value. Use this if you don't know what the correction state of the document is.</p>
+            </li>
+            <li>
+                <p><code>kNUSADocumentStateCorrected</code>
+                    <br />Use this state if there's a high probability that the text has been corrected. For example, when a provider signs a report, it's likely that the text has been reviewed and corrected.</p>
+            </li>
+            <li>
+                <p><code>kNUSADocumentStateUncorrected</code>
+                    <br />Use this state if there's a high probability that the text hasn't been corrected. For example, if you're collecting text in the background and users don't have the possibility to edit it, or if the document is discarded before finalization or sign-off, this state is applicable. </p>
+            </li>
+        </ul>
+        <h4>Discard changes to a document</h4>
+        <p>Close the VuiController while providing an empty document ID. The VUI form associated with this VuiController won't be persisted by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span>; any dictation and editing performed since the VuiController was opened will be discarded. VuiForms saved previously won't be affected.</p>
+        <p>To perform this operation, call the following method on an open VuiController:</p>
+        <p class="indent2"><code>(void) closeWithDocumentId:(NSString*)documentId</code>, where <code>documentId</code> is an empty string.</p>
+        <p>This operation is different from <code>close</code> without providing any parameter, in both its signature and semantics. Passing an empty document ID discards the VUI form; omitting the document ID at VuiController close indicates that the VUI form should be saved with the document ID provided at VuiController open.</p>
+        <p>Saving the document while editing is ongoing isn't reflected in the <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> API. No action is required on your side for this operation.</p>
+        <h3>Field identification</h3>
+        <p>Field IDs must be associated with text controls the same way as concept names are. For the fields speech-enabled when the document is opened, this should be performed in the closed state of the VuiController. After a dynamic UI update, the field IDs for new fields must also be set before <code>synchronizeWithView:</code> or <code>synchronize:</code> is called. For more information, see: <a href="DANUBE_GUI_VIEW_IOS.htm">Dynamic GUI</a>.</p>
+        <p>To set the field ID for a supported text control, import the <span class="path">UIView+NUSADocumentFieldId.h</span> header file. For custom controls implement the <code>vuiDocumentFieldId</code> in you custom control class. Then you must set the <code>vuiDocumentFieldId</code> property of the text control.</p>
+        <h2>Example workflow</h2>
+        <p>The user edits a document, saves it, and opens a new one.</p>
+        <p>The following steps are performed on the <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> API:</p>
+        <ol>
+            <li value="1">The user creates a new document, but its name isn't (yet) known. You perform the appropriate steps in your app workflow (for example, create a text control for editing the document).</li>
+            <li value="2">To enable dictation into the document, open the VuiController with the <code>open()</code> method used for unnamed documents:</li>
+            <p class="indent2"><code>[theVuiController open]</code>
+            </p>
+            <li value="3">After having manipulated the text, the user intends to close the document and save it under the name "FirstReport". You must close the VuiController first, to keep the user from dictating into a document that's being closed:</li>
+            <p class="indent2"><code>[theVuiController close:@"FirstReport"];</code>
+            </p>
+            <li value="4">From this point on, <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> won't manipulate the content of the text control any longer. You can now perform the steps in your app workflow needed to save and close a document (for example, save the document to disk and clear the user interface).</li>
+            <li value="5">The user opens a document that was saved earlier under the name "SecondReport". This document contains two fields. You perform the appropriate steps in your app workflow (for example, create a second text control, load the document from disk and set the initial contents of the speech-enabled text controls).</li>
+            <li value="6">To enable dictation into the document, set up the VuiController in two steps:</li>
+            <p>Set the document field IDs properly. Based on the structure of your app, you know that this document has two editable fields: one for the medical history and one for the reason of admission. Furthermore, you know that the former one will be presented in editControl1 and the latter in editControl2. You set the field IDs of these two text controls accordingly:</p>
+            <p class="compact2"><code>editControl1.vuiDocumentFieldId = @"medHistoryField";</code>
+            </p>
+            <p class="indent2"><code>editControl2.vuiDocumentFieldId = @"admissionField";</code>
+            </p>
+            <p>As the name of the document is already known upon loading, open the VuiController with the <code>openWithDocumentId:</code> method:</p>
+            <p class="indent2"><code>[theVuiController openWithDocumentId:@"SecondReport"];</code>
+            </p>
+            <li value="7">At this point speech recognition is operational in the context of the document called "SecondReport". If the user has edited this document earlier, they can resume working with speech recognition as if the document were never closed.</li>
+        </ol>
+        <p>For more information, see the document API sample app.</p>
+    </body>
+</html>

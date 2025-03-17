@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSACustomVuiController Class Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Properties">Properties</a></li><li><a href="#Document workflow">Document workflow</a></li><li><a href="#Initializing the instance">Initializing the instance</a></li><li><a href="#Updating the voice user interface (VUI)">Updating the voice user interface (VUI)</a></li><li><a href="#Assigning command sets">Assigning command sets</a></li><li><a href="#Assigning command placeholders">Assigning command placeholders</a></li></ul></li><li><a href="#">Properties</a><ul><li><a href="#interface_n_u_s_a_custom_vui_controller_1a2004544b1028b735d88a9019171267a6">view</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1acae12ceea0e3b6fe3a82e12311dfb096">language</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a61224bed119f1a1282fc0ffc2e5d50bf">topic</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a87ed8aa7bb38ae8eb09ee28947c98007">delegate</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a4f5c0212a6242988311a355c4734813f">customDelegate</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1ad7c2fe83209cf783e593eeba9c278405">keyboardVisibleByDefault</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#interface_n_u_s_a_custom_vui_controller_1af395e438536c76ae0baefed7ae3fcc43">__attribute__</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a8f658279c6551b17c5f7f03c745eeb55">__attribute__</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a71b5c6a2f376be721de780c13a036bc8">__attribute__</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a2d5f097cac33468ca1caa4dc59648b04">setDocumentMetadata:forKey:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a7dfb12d41cc0eb95516a35dabb9e9938">getDocumentMetadata:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a7115741ebfa3db140d2f3597b1129fe6">open</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a15e04d42f24ac69dbe044697fb26cac1">openWithDocumentId:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a1ce817c921ad211abcb4806735a5e17d">close</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a389f5009759a466f76686baf28a9c4b0">closeWithDocumentId:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a39b1c42276c1dc1b055fe6c42fd6cc22">closeWithDocumentId:andState:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1acac74fc38c162cbcc466f28c5a70b9b9">initWithView:controls:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1af40880be6ec0d2679caa2eac833fd4c3">initWithView:controls:andOpen:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1a3fcf1f8992be15249f1699deb062d640">synchronize:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1aa8768621adc6fb1ceda0e5eb60d81768">assignCommandSets:</a></li><li><a href="#interface_n_u_s_a_custom_vui_controller_1aab39ea02466e6bdec5cc765358e8bb7f">assignCommandPlaceholders:</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSACustomVuiController Class Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/NSObject.html">NSObject</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Framework</label></td>
+<td>DragonMedicalSpeechKit</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Availability</label></td>
+<td>Available in version 1.3 and later</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSACustomVuiController.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns="">Controller managing the voice user interface (VUI) attached to a graphical user interface (GUI) </p>
+    
+<p xmlns="">  
+This controller manages the VUI aspects of a GUI view and speech-enables controls that are not supported by the web service for speech recognition. The VUI controller will initialize from an array of controls that conform to the <code><a href="../Protocols/NUSATextControl-p.html">NUSATextControl</a></code> protocol. The application is responsible for keeping the VUI in sync with changes to the controls that should be speech-enabled (see synchronize()).</p>
+<p xmlns="">The <code>NUSACustomVuiController</code> must be created programmatically via <code><a href="../Classes/NUSACustomVuiController.html#interface_n_u_s_a_custom_vui_controller_1acac74fc38c162cbcc466f28c5a70b9b9">initWithView:controls: (NUSACustomVuiController)</a></code>.</p>
+<p xmlns="">Usually each GUI view, that is to be speech enabled, should have a corresponding VUI via attaching its own <code><a href="../Classes/NUSAVuiController.html">NUSAVuiController</a></code> instance to it. The application is responsible for attaching the VUI controller. The lifetime of a VUI controller instance is best bound to the lifetime of the GUI view controller. </p>
+    <a xmlns="" name="Tasks"><h2 id="pageHeader">Tasks</h2></a><a xmlns="" name="Properties"><h3 id="taskHeader">Properties</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a2004544b1028b735d88a9019171267a6">  <code>view</code></a><span class="specialType"> property</span><span class="tooltip">
+GUI view this controller is bound to. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1acae12ceea0e3b6fe3a82e12311dfb096">  <code>language</code></a><span class="specialType"> property</span><span class="tooltip">
+The language to be used by the VUI form. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a61224bed119f1a1282fc0ffc2e5d50bf">  <code>topic</code></a><span class="specialType"> property</span><span class="tooltip">
+The topic (medical specialty) of the speech recognition vocabulary used by the VUI form. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a87ed8aa7bb38ae8eb09ee28947c98007">  <code>delegate</code></a><span class="specialType"> property</span><span class="tooltip">
+NUSAVuiController delegate. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a4f5c0212a6242988311a355c4734813f">  <code>customDelegate</code></a><span class="specialType"> property</span><span class="tooltip">
+NUSACustomVuiController delegate. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1af395e438536c76ae0baefed7ae3fcc43">- <code>__attribute__</code></a><span class="tooltip">
+Deprecated The location of the volume meter. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a8f658279c6551b17c5f7f03c745eeb55">- <code>__attribute__</code></a><span class="tooltip">
+Deprecated The color of the volume meter for good sound quality. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a71b5c6a2f376be721de780c13a036bc8">- <code>__attribute__</code></a><span class="tooltip">
+Deprecated The color of the volume meter for good sound quality. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Document%20workflow"><h3 id="taskHeader">Document workflow</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1ad7c2fe83209cf783e593eeba9c278405">  <code>keyboardVisibleByDefault</code></a><span class="specialType"> property</span><span class="tooltip">
+A Boolean value that determines whether the system keyboard should be shown by default. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a2d5f097cac33468ca1caa4dc59648b04">- <code>setDocumentMetadata:forKey:</code></a><span class="tooltip">
+Sets document metadata. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a7dfb12d41cc0eb95516a35dabb9e9938">- <code>getDocumentMetadata:</code></a><span class="tooltip">
+Gets document metadata. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a7115741ebfa3db140d2f3597b1129fe6">- <code>open</code></a><span class="tooltip">
+Open VUI controller. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a15e04d42f24ac69dbe044697fb26cac1">- <code>openWithDocumentId:</code></a><span class="tooltip">
+Open VUI controller. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a1ce817c921ad211abcb4806735a5e17d">- <code>close</code></a><span class="tooltip">
+Close VUI controller. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a389f5009759a466f76686baf28a9c4b0">- <code>closeWithDocumentId:</code></a><span class="tooltip">
+Close VUI controller. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a39b1c42276c1dc1b055fe6c42fd6cc22">- <code>closeWithDocumentId:andState:</code></a><span class="tooltip">
+Close VUI controller. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Initializing%20the%20instance"><h3 id="taskHeader">Initializing the instance</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1acac74fc38c162cbcc466f28c5a70b9b9">- <code>initWithView:controls:</code></a><span class="tooltip">
+Initializes the VUI controller. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1af40880be6ec0d2679caa2eac833fd4c3">- <code>initWithView:controls:andOpen:</code></a><span class="tooltip">
+Initializes the VUI controller and optionally opens it. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Updating%20the%20voice%20user%20interface%20(VUI)"><h3 id="taskHeader">Updating the voice user interface (VUI)</h3></a><ul xmlns="" class="methods"><li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1a3fcf1f8992be15249f1699deb062d640">- <code>synchronize:</code></a><span class="tooltip">
+Synchronizes the VUI form with a set of text controls. 
+        </span></span></li></ul>
+<a xmlns="" name="Assigning%20command%20sets"><h3 id="taskHeader">Assigning command sets</h3></a><ul xmlns="" class="methods"><li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1aa8768621adc6fb1ceda0e5eb60d81768">- <code>assignCommandSets:</code></a><span class="tooltip">
+Sets the application-defined command set placeholders available for application commands. 
+        </span></span></li></ul>
+<a xmlns="" name="Assigning%20command%20placeholders"><h3 id="taskHeader">Assigning command placeholders</h3></a><ul xmlns="" class="methods"><li><span class="tooltipRegion"><a href="#interface_n_u_s_a_custom_vui_controller_1aab39ea02466e6bdec5cc765358e8bb7f">- <code>assignCommandPlaceholders:</code></a><span class="tooltip">
+Sets the application-defined command set placeholders available for application commands. 
+        </span></span></li></ul>
+<a xmlns="" name="Properties"><h2 id="pageHeader">Properties</h2></a><a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a2004544b1028b735d88a9019171267a6"><h3 id="methodHeader">view</h3></a><div xmlns="" class="methodBrief">
+GUI view this controller is bound to. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	IBOutlet UIView *view</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Every VUI controller is connected to a single GUI view (which in turn is bound to a GUI view controller in your application). </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1acae12ceea0e3b6fe3a82e12311dfb096"><h3 id="methodHeader">language</h3></a><div xmlns="" class="methodBrief">
+The language to be used by the VUI form. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSString *language</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Applications can set the language that should be used by the VUI form. The language can only be set prior to the first recording session. The default is the application language or the language set for the session.</p>
+<p xmlns="">The language must be passed in the IETF format (see <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</a>). Currently the SDK expects the IETF language and region subtags to be passed. The language subtag must conform to ISO 639-1 (<a href="http://www.loc.gov/standards/iso639-2/php/English_list.php">http://www.loc.gov/standards/iso639-2/php/English_list.php</a>) and is mandatory if set. The region subtag must conform to ISO 3166-1 alpha-2 (<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</a>) and is optional.</p>
+<p xmlns="">Examples: en-US English (USA) en-GB English (UK) de-DE German (Germany) de-AT German (Austria) </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a61224bed119f1a1282fc0ffc2e5d50bf"><h3 id="methodHeader">topic</h3></a><div xmlns="" class="methodBrief">
+The topic (medical specialty) of the speech recognition vocabulary used by the VUI form. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSString *topic</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Applications can set the topic (specialty) of the speech recognition vocabulary for the VUI form. Setting the topic is optional. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a87ed8aa7bb38ae8eb09ee28947c98007"><h3 id="methodHeader">delegate</h3></a><div xmlns="" class="methodBrief">
+NUSAVuiController delegate. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	id&lt; NUSAVuiControllerDelegate &gt;delegate</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This delegate receives messages from the VUI controller instance. Delegates must conform to the <code><a href="../Protocols/NUSAVuiControllerDelegate-p.html">NUSAVuiControllerDelegate</a></code> protocol. The delegate will not be retained and will send its messages to the thread that set the delegate property. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a4f5c0212a6242988311a355c4734813f"><h3 id="methodHeader">customDelegate</h3></a><div xmlns="" class="methodBrief">
+NUSACustomVuiController delegate. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	id&lt; NUSACustomVuiControllerDelegate &gt;customDelegate</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This delegate receives messages from the VUI controller instance. Delegates must conform to the <code><a href="../Protocols/NUSACustomVuiControllerDelegate-p.html">NUSACustomVuiControllerDelegate</a></code> protocol. The delegate will not be retained and will send its messages to the thread that set the delegate property. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1ad7c2fe83209cf783e593eeba9c278405"><h3 id="methodHeader">keyboardVisibleByDefault</h3></a><div xmlns="" class="methodBrief">
+A Boolean value that determines whether the system keyboard should be shown by default. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	BOOLkeyboardVisibleByDefault</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Setting the value of this property to YES shows the keyboard by default and setting it to NO hides the keyboard. The default value is NO. When using the default speech bar, the keyboard is initially hidden when the speech bar is shown for the first time. This property can be used to change this behavior. This property should be set before a control becomes first responder, after the speech bar is shown, setting this property has no effect. Setting this property has no effect if the speech control is used. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 3.2 and later.
+	<a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1af395e438536c76ae0baefed7ae3fcc43"><h3 id="methodHeader">__attribute__</h3></a><div xmlns="" class="methodBrief">
+Deprecated The location of the volume meter. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NUSAVolumeMeterLocation volumeMeterLocation)
+		__attribute__((deprecated))<span class="parameter"> 
+	</span></code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Deprecated<p>As of release</p>
+
+Applications can set the location of the volume meter. The default value is NUSAVolumeMeterLocationNone when using the speech bar and NUSAVolumeMeterLocationBottom when using the speech control. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.6  and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a8f658279c6551b17c5f7f03c745eeb55"><h3 id="methodHeader">__attribute__</h3></a><div xmlns="" class="methodBrief">
+Deprecated The color of the volume meter for good sound quality. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(UIColor *volumeMeterColor)
+		__attribute__((deprecated))<span class="parameter"> 
+	</span></code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Deprecated<p>As of release</p>
+
+Applications can set the color of the volume meter for good sound quality. If this value is nil, a default blue color is used. The default value is nil. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.6  and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a71b5c6a2f376be721de780c13a036bc8"><h3 id="methodHeader">__attribute__</h3></a><div xmlns="" class="methodBrief">
+Deprecated The color of the volume meter for good sound quality. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(UIColor *volumeMeterBadQualityColor)
+		__attribute__((deprecated))<span class="parameter"> 
+	</span></code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Deprecated<p>As of release</p>
+
+Applications can set the color of the volume meter for bad sound quality. If this value is nil, a default red color is used. The default value is nil. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.6  and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a2d5f097cac33468ca1caa4dc59648b04"><h3 id="methodHeader">setDocumentMetadata:forKey:</h3></a><div xmlns="" class="methodBrief">
+Sets document metadata. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		setDocumentMetadata:
+	(NSString *)<span class="parameter">value 
+	</span>forKey:
+	(NSString *)<span class="parameter">key 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>value</dt>
+<dd><p>
+Metadata value. 
+</p></dd>
+<dt>key</dt>
+<dd><p>
+Metadata key. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Associates metadata with the document currently open or to be opened.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a7dfb12d41cc0eb95516a35dabb9e9938"><h3 id="methodHeader">getDocumentMetadata:</h3></a><div xmlns="" class="methodBrief">
+Gets document metadata. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NSString *)
+		getDocumentMetadata:
+	(NSString *)<span class="parameter">key 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">Returns metadata value for the given key. </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>key</dt>
+<dd><p>
+Metadata key.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Retrieves metadata of the currently open document.</p>
+<p xmlns="">
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a7115741ebfa3db140d2f3597b1129fe6"><h3 id="methodHeader">open</h3></a><div xmlns="" class="methodBrief">
+Open VUI controller. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		open</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Opens the VUI controller and associates it with an unnamed document. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a15e04d42f24ac69dbe044697fb26cac1"><h3 id="methodHeader">openWithDocumentId:</h3></a><div xmlns="" class="methodBrief">
+Open VUI controller. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		openWithDocumentId:
+	(NSString *)<span class="parameter">documentId 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>documentId</dt>
+<dd><p>
+Identifier of the document to be associated with this VUi controller. If a VUI form was previously saved with the given documentId, it will be loaded and SR will be based on the previously saved state. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Opens the VUI controller and associates it with the document ID supplied.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a1ce817c921ad211abcb4806735a5e17d"><h3 id="methodHeader">close</h3></a><div xmlns="" class="methodBrief">
+Close VUI controller. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		close</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Closes the VUI controller and saves the associated VUI form with the document ID passed to open. If no document ID was provided, an unnamed VUI form is saved. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a389f5009759a466f76686baf28a9c4b0"><h3 id="methodHeader">closeWithDocumentId:</h3></a><div xmlns="" class="methodBrief">
+Close VUI controller. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		closeWithDocumentId:
+	(NSString *_Nullable)<span class="parameter">documentId 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>documentId</dt>
+<dd><p>
+Document identifier under which the VUI form associated with this VuiController will be saved. If this is the empty string, an unnamed VUI form will be saved. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Closes the VUI controller and saves the associated VUI form under the identifier supplied.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a39b1c42276c1dc1b055fe6c42fd6cc22"><h3 id="methodHeader">closeWithDocumentId:andState:</h3></a><div xmlns="" class="methodBrief">
+Close VUI controller. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		closeWithDocumentId:
+	(NSString *)<span class="parameter">documentId 
+	</span>andState:
+	(NSInteger)<span class="parameter">documentState 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>documentId</dt>
+<dd><p>
+Document identifier under which the VUI form associated with this VuiController will be saved. If this is the empty string, an unnamed VUI form will be saved. 
+</p></dd>
+<dt>documentState</dt>
+<dd><p>
+State of the document in the application workflow. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Closes the VUI controller and saves the associated VUI form under the identifier supplied.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1acac74fc38c162cbcc466f28c5a70b9b9"><h3 id="methodHeader">initWithView:controls:</h3></a><div xmlns="" class="methodBrief">
+Initializes the VUI controller. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(id)
+		initWithView:
+	(UIView *_Nullable)<span class="parameter">aView 
+	</span>controls:
+	(NSArray *_Nullable)<span class="parameter">speechEnabledControls 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>aView</dt>
+<dd><p>
+GUI view that will be speech-enabled by this VUI controller object. 
+</p></dd>
+<dt>speechEnabledControls</dt>
+<dd><p>
+An array of controls that should be speech-enabled. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message initializes and opens the VUI controller and binds it to the GUI view passed. The VUI controller is associated with an unnamed document. All objects in the specified array are speech-enabled if they conform to the <code><a href="../Protocols/NUSATextControl-p.html">NUSATextControl</a></code> protocol. Objects that do not conform to the <code><a href="../Protocols/NUSATextControl-p.html">NUSATextControl</a></code> protocol will not be speech-enabled. Using this initializer is equivalent to using initWithView:controls:andOpen: with parameter open set to YES.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1af40880be6ec0d2679caa2eac833fd4c3"><h3 id="methodHeader">initWithView:controls:andOpen:</h3></a><div xmlns="" class="methodBrief">
+Initializes the VUI controller and optionally opens it. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(id)
+		initWithView:
+	(UIView *_Nullable)<span class="parameter">aView 
+	</span>controls:
+	(NSArray *)<span class="parameter">speechEnabledControls 
+	</span>andOpen:
+	(BOOL)<span class="parameter">open 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>aView</dt>
+<dd><p>
+GUI view that will be speech enabled by this VUI controller object 
+</p></dd>
+<dt>speechEnabledControls</dt>
+<dd><p>
+An array of controls that should be speech-enabled. 
+</p></dd>
+<dt>open</dt>
+<dd><p>
+Flag indicating if a VUI controller should be initialized as open 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message initializes the VUI controller and binds it to the GUI view passed. All objects in the specified array are speech-enabled if they conform to the <code><a href="../Protocols/NUSATextControl-p.html">NUSATextControl</a></code> protocol. Objects that do not conform to the <code><a href="../Protocols/NUSATextControl-p.html">NUSATextControl</a></code> protocol will not be speech-enabled. If the open flag is set to YES the VUI controller is opened and associated with an unnamed document.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1a3fcf1f8992be15249f1699deb062d640"><h3 id="methodHeader">synchronize:</h3></a><div xmlns="" class="methodBrief">
+Synchronizes the VUI form with a set of text controls. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		synchronize:
+	(NSArray *)<span class="parameter">speechEnabledControls 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>speechEnabledControls</dt>
+<dd><p>
+An array of controls that should be speech-enabled. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This method synchronizes the VUI form, controlled by this VUI controller, with the array of speech-enabled controls. This method must also be called to commit command set and command placeholder assignment changes.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1aa8768621adc6fb1ceda0e5eb60d81768"><h3 id="methodHeader">assignCommandSets:</h3></a><div xmlns="" class="methodBrief">
+Sets the application-defined command set placeholders available for application commands. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		assignCommandSets:
+	(NSArray *)<span class="parameter">commandSets 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>commandSets</dt>
+<dd><p>
+The array of NUSACommandSet objects that describe the application command sets available for this VUI form.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+The command sets supplied for the call overwrite any command sets assigned previously. The command set assignment will not be effective until synchronize() is called.</p>
+<p xmlns="">
+
+
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<h5 xmlns="">See also</h5>
+<code xmlns="" class="methodDeclaration"><a href="#">  NUSACommandSet</a></code><code xmlns="" class="methodDeclaration"><a href="#">  NUSACommandPlaceholder</a></code><a xmlns="" name="interface_n_u_s_a_custom_vui_controller_1aab39ea02466e6bdec5cc765358e8bb7f"><h3 id="methodHeader">assignCommandPlaceholders:</h3></a><div xmlns="" class="methodBrief">
+Sets the application-defined command set placeholders available for application commands. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		assignCommandPlaceholders:
+	(NSArray *)<span class="parameter">commandPlaceholders 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>commandPlaceholders</dt>
+<dd><p>
+The array of NUSACommandPlaceholder objects that describe the placeholders that can be used in application commands.
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+The command placeholders supplied for the call overwrite any command placeholders assigned previously. The command placeholder assignment will not be effective until synchronize() is called.</p>
+<p xmlns="">
+
+
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<h5 xmlns="">See also</h5>
+<code xmlns="" class="methodDeclaration"><a href="#">  NUSACommandPlaceholder</a></code><code xmlns="" class="methodDeclaration"><a href="#">  NUSACommandSet</a></code>
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

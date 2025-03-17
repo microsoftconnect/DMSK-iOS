@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSATextControl Protocol Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Properties">Properties</a></li></ul></li><li><a href="#">Properties</a><ul><li><a href="#protocol_n_u_s_a_text_control-p_1a17b8b7884335c7c5b522d46d59af2ece">vuiSelectedTextRange</a></li><li><a href="#protocol_n_u_s_a_text_control-p_1a90b60ec734c4bb710e174ced21260892">vuiTextLength</a></li><li><a href="#protocol_n_u_s_a_text_control-p_1affdef71744c698407a24eb8a8fe5dfc3">vuiConceptName</a></li><li><a href="#protocol_n_u_s_a_text_control-p_1a39e00536a4bcd5b68329da045bf51dfc">vuiDocumentFieldId</a></li><li><a href="#protocol_n_u_s_a_text_control-p_1a7aae7b24e4b04c239db9d7026d3d9488">vuiDisableAutomaticSpeechFocusHandling</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#protocol_n_u_s_a_text_control-p_1a9bb15c3ceea66f3db4a24001750e568c">isFirstResponder</a></li><li><a href="#protocol_n_u_s_a_text_control-p_1afaa70acd9f22c68bfc27a29b066c73d9">becomeFirstResponder</a></li><li><a href="#protocol_n_u_s_a_text_control-p_1a5a1416fea185fb3dcbc7edfaf1fc7bc9">vuiTextInRange:</a></li><li><a href="#protocol_n_u_s_a_text_control-p_1a8ac092f37e48613abb35879130106216">vuiReplaceRange:withText:</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSATextControl Protocol Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/&lt;NSObject&gt;.html">&lt;NSObject&gt;</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Framework</label></td>
+<td>DragonMedicalSpeechKit</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Availability</label></td>
+<td>Available in version 1.3 and later</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSATextControl.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns=""><code>NUSATextControl-p</code> messages. </p>
+    
+<p xmlns="">  
+This protocol must be implemented for speech-enabling text controls that are not supported by Dragon Medical SpeechKit. </p>
+    <a xmlns="" name="Tasks"><h2 id="pageHeader">Tasks</h2></a><a xmlns="" name="Properties"><h3 id="taskHeader">Properties</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_text_control-p_1a17b8b7884335c7c5b522d46d59af2ece">  <code>vuiSelectedTextRange</code></a><span class="specialType"> property</span><span class="tooltip">
+The range of selected text in a control. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_text_control-p_1a90b60ec734c4bb710e174ced21260892">  <code>vuiTextLength</code></a><span class="specialType"> property</span><span class="tooltip">
+The length of the text in a control. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_text_control-p_1affdef71744c698407a24eb8a8fe5dfc3">  <code>vuiConceptName</code></a><span class="specialType"> property</span><span class="tooltip">
+The VUI concept for the control. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_text_control-p_1a39e00536a4bcd5b68329da045bf51dfc">  <code>vuiDocumentFieldId</code></a><span class="specialType"> property</span><span class="tooltip">
+The VUI document field id for the control. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_text_control-p_1a7aae7b24e4b04c239db9d7026d3d9488">  <code>vuiDisableAutomaticSpeechFocusHandling</code></a><span class="specialType"> property</span><span class="tooltip">
+A Boolean value that determines whether automatic speech focus handling is disabled in this control. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_text_control-p_1a9bb15c3ceea66f3db4a24001750e568c">- <code>isFirstResponder</code></a><span class="tooltip">
+Returns a Boolean value indicating whether the receiver is the first responder for recognition results. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_text_control-p_1afaa70acd9f22c68bfc27a29b066c73d9">- <code>becomeFirstResponder</code></a><span class="tooltip">
+Notifies the receiver that it is about to become first responder for recognition results. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Properties"><h2 id="pageHeader">Properties</h2></a><a xmlns="" name="protocol_n_u_s_a_text_control-p_1a17b8b7884335c7c5b522d46d59af2ece"><h3 id="methodHeader">vuiSelectedTextRange</h3></a><div xmlns="" class="methodBrief">
+The range of selected text in a control. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSRangevuiSelectedTextRange</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+If the text range has a length, it indicates the currently selected text. If it has zero length, it indicates the caret (insertion point). </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="protocol_n_u_s_a_text_control-p_1a90b60ec734c4bb710e174ced21260892"><h3 id="methodHeader">vuiTextLength</h3></a><div xmlns="" class="methodBrief">
+The length of the text in a control. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSUIntegervuiTextLength</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3  and later.
+	<a xmlns="" name="protocol_n_u_s_a_text_control-p_1affdef71744c698407a24eb8a8fe5dfc3"><h3 id="methodHeader">vuiConceptName</h3></a><div xmlns="" class="methodBrief">
+The VUI concept for the control. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSString *vuiConceptName</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3  and later.
+	<a xmlns="" name="protocol_n_u_s_a_text_control-p_1a39e00536a4bcd5b68329da045bf51dfc"><h3 id="methodHeader">vuiDocumentFieldId</h3></a><div xmlns="" class="methodBrief">
+The VUI document field id for the control. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSString *vuiDocumentFieldId</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 2.1  and later.
+	<a xmlns="" name="protocol_n_u_s_a_text_control-p_1a7aae7b24e4b04c239db9d7026d3d9488"><h3 id="methodHeader">vuiDisableAutomaticSpeechFocusHandling</h3></a><div xmlns="" class="methodBrief">
+A Boolean value that determines whether automatic speech focus handling is disabled in this control. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	BOOLvuiDisableAutomaticSpeechFocusHandling</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+When set to YES, the automatic speech focus handling is disabled, if it is enabled gestures are supported. The default value of this property is NO. Automatic speech focus handling is the red border around the speech-enabled controls during recording and the flame inside the speech-enabled controls. You should set this property to YES when your custom control has multiple input fields. In this case the automatic speech focus handling is ambiguous and should be disabled. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="protocol_n_u_s_a_text_control-p_1a9bb15c3ceea66f3db4a24001750e568c"><h3 id="methodHeader">isFirstResponder</h3></a><div xmlns="" class="methodBrief">
+Returns a Boolean value indicating whether the receiver is the first responder for recognition results. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(BOOL)
+		isFirstResponder</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">YES if the receiver is the first responder, otherwise NO. </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This method is called by SpeechKit to determine which control has the first responder status for recognition results, i.e. where the recognized text should be inserted. If the <code>NUSATextControl-p</code> protocol is implemented on a class that derives from a responder class, this method is already available and does not need to be implemented.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="protocol_n_u_s_a_text_control-p_1afaa70acd9f22c68bfc27a29b066c73d9"><h3 id="methodHeader">becomeFirstResponder</h3></a><div xmlns="" class="methodBrief">
+Notifies the receiver that it is about to become first responder for recognition results. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(BOOL)
+		becomeFirstResponder</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">YES if the receiver accepts first-responder status or NO if it refuses this status. </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Classes that adopt the NUSATextProtocol can use this method to perform some action, such as highlighting the active control. This method is called by SpeechKit when the active control is changed in response to a navigation command. The implementation of becomeFirstResponder is responsible for resigning the first responder state from other custom controls if needed. If the <code>NUSATextControl-p</code> protocol is implemented on a class that derives from a responder class and can become the first responder, this method is already available and does not need to be implemented.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="protocol_n_u_s_a_text_control-p_1a5a1416fea185fb3dcbc7edfaf1fc7bc9"><h3 id="methodHeader">vuiTextInRange:</h3></a><div xmlns="" class="methodBrief">
+Return text. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(NSString *)
+		vuiTextInRange:
+	(NSRange)<span class="parameter">range 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">A substring of text that falls within the specified range. </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>range</dt>
+<dd><p>
+A range of text in a control. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Return the text in the specified range.</p>
+<p xmlns="">
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="protocol_n_u_s_a_text_control-p_1a8ac092f37e48613abb35879130106216"><h3 id="methodHeader">vuiReplaceRange:withText:</h3></a><div xmlns="" class="methodBrief">
+Replace text. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		vuiReplaceRange:
+	(NSRange)<span class="parameter">range 
+	</span>withText:
+	(NSString *)<span class="parameter">text 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">A substring of text that falls within the specified range. </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>range</dt>
+<dd><p>
+A range of text in a control. 
+</p></dd>
+<dt>text</dt>
+<dd><p>
+A string to replace the text in range. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Replace the text in a document that is in the specified range. After a vuiReplaceRange() call the insertion point must be located at the same position in the text as before the call. This means that if vuiReplaceRange() inserts or removes characters to the left of the current insertion point or selection, the location of the insertion point must be moved accordingly. If vuiReplaceRange() modifies text to the right of the insertion point, the insertion point must not change. If vuiReplaceRange() modifies characters at the insertion point, the insertion point must be set to the end of the modified region. Ideally, if vuiReplaceRange() is called while the user is typing and modifies text to the left or right of the typing location, this will not interfere with the user's keyboard input. This is to ensure that speech recognition results can be inserted in the text asynchronously while the user is, for example, correcting a misrecognition at another location in the text.</p>
+<p xmlns="">
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

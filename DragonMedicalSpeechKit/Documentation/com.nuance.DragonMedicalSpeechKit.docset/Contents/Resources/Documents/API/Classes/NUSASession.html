@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSASession Class Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Properties">Properties</a></li><li><a href="#Authenticating with the service">Authenticating with the service</a></li><li><a href="#Using speech recognition">Using speech recognition</a></li><li><a href="#Using TTS">Using TTS</a></li><li><a href="#Personalization and help screen">Personalization and help screen</a></li><li><a href="#Update the authentication token">Update the authentication token</a></li></ul></li><li><a href="#">Properties</a><ul><li><a href="#interface_n_u_s_a_session_1a519fde937e2dee33ef703a11f788c24b">delegate</a></li><li><a href="#interface_n_u_s_a_session_1a9154b8865dae476c5503a91e09d260fe">serverURL</a></li><li><a href="#interface_n_u_s_a_session_1ae224da38494719af84bd7f472465d34b">onlineHelpURL</a></li></ul></li><li><a href="#">Class methods</a><ul><li><a href="#interface_n_u_s_a_session_1a437b2f1ce2596cf03266d865ffdefaef">sharedSession</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#interface_n_u_s_a_session_1abcab52e2462eeb74c2b4f7e1d4dd290c">openForApplication:partnerGuid:licenseGuid:userId:authenticationToken:tokenExpiryTime:</a></li><li><a href="#interface_n_u_s_a_session_1a51a2131c3ca3678b8ecdeba2f44056e7">openForApplication:partnerGuid:environmentId:authenticationToken:tokenExpiryTime:</a></li><li><a href="#interface_n_u_s_a_session_1ab903dc8eceef3dffa5de3b58c5758bcf">openForApplication:partnerGuid:licenseGuid:userId:</a></li><li><a href="#interface_n_u_s_a_session_1a262d965fca8ae2129303ec201a8916aa">close</a></li><li><a href="#interface_n_u_s_a_session_1a1c4ced0a96856a723563fb59c41d8394">startRecording:</a></li><li><a href="#interface_n_u_s_a_session_1a468df6dd098fe0a2e17335246d078335">stopRecording</a></li><li><a href="#interface_n_u_s_a_session_1a45ea4bcbf08d26835392bb5aed330f6d">abortRecording</a></li><li><a href="#interface_n_u_s_a_session_1a7d005a24a12b9b0f15adac845703955b">startSpeaking:</a></li><li><a href="#interface_n_u_s_a_session_1a212d7542538484fa9cec57930e1efc8e">stopSpeaking</a></li><li><a href="#interface_n_u_s_a_session_1a24c9c6cd26597399ebb9cd1720f2d804">showFormWithContent:</a></li><li><a href="#interface_n_u_s_a_session_1a13802a02ae3e7c9e2fcf1a724b9bf2e5">setStandbyMode:</a></li><li><a href="#interface_n_u_s_a_session_1a002f7fdd280bbf18a0756ea183bb6290">updateAuthenticationToken:tokenExpiryTime:</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSASession Class Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/NSObject.html">NSObject</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Framework</label></td>
+<td>DragonMedicalSpeechKit</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Availability</label></td>
+<td>Available in version 1.0 and later</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSASession.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns="">Representation of a mobile speech session. </p>
+    
+<p xmlns="">  
+This interface manages the authentication and licensing with the web service provider via the information passed in the <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1ab903dc8eceef3dffa5de3b58c5758bcf">openForApplication:partnerGuid:licenseGuid:userId: (NUSASession)</a></code> message and audio sessions via <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a1c4ced0a96856a723563fb59c41d8394">startRecording: (NUSASession)</a></code> and <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a468df6dd098fe0a2e17335246d078335">stopRecording (NUSASession)</a></code>. Once a session is opened, it will stay open (usable) until explicitly closed via <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a262d965fca8ae2129303ec201a8916aa">close (NUSASession)</a></code>; this frees the web service resources and releases the license, if applicable. The session instance communicates asynchronous messages to its delegate, if set. The delegate methods are not mandatory.</p>
+<p xmlns="">There is exactly one session instance available to an application; it is retrievable via the <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a437b2f1ce2596cf03266d865ffdefaef">sharedSession (NUSASession)</a></code> class method. Usually the application will open the session as soon as user credentials are available and keep it open for the lifetime of the application. </p>
+    <a xmlns="" name="Tasks"><h2 id="pageHeader">Tasks</h2></a><a xmlns="" name="Properties"><h3 id="taskHeader">Properties</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a519fde937e2dee33ef703a11f788c24b">  <code>delegate</code></a><span class="specialType"> property</span><span class="tooltip">
+NUSASession delegate. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a9154b8865dae476c5503a91e09d260fe">  <code>serverURL</code></a><span class="specialType"> property</span><span class="tooltip">
+Dragon Medical Server URL. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1ae224da38494719af84bd7f472465d34b">  <code>onlineHelpURL</code></a><span class="specialType"> property</span><span class="tooltip">
+Dragon Medical SpeechKit application help URL. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a437b2f1ce2596cf03266d865ffdefaef">+ <code>sharedSession</code></a><span class="tooltip">
+Returns the shared client session instance. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Authenticating%20with%20the%20service"><h3 id="taskHeader">Authenticating with the service</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1abcab52e2462eeb74c2b4f7e1d4dd290c">- <code>openForApplication:partnerGuid:licenseGuid:userId:authenticationToken:tokenExpiryTime:</code></a><span class="tooltip">
+Authenticates a user with the Dragon Medical Server using authentication token. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a51a2131c3ca3678b8ecdeba2f44056e7">- <code>openForApplication:partnerGuid:environmentId:authenticationToken:tokenExpiryTime:</code></a><span class="tooltip">
+Authenticates a user with the Dragon Medical Server using authentication token. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1ab903dc8eceef3dffa5de3b58c5758bcf">- <code>openForApplication:partnerGuid:licenseGuid:userId:</code></a><span class="tooltip">
+Authenticates a user with the Dragon Medical Server. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a262d965fca8ae2129303ec201a8916aa">- <code>close</code></a><span class="tooltip">
+Frees web service resources and licenses on the Dragon Medical Server. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Using%20speech%20recognition"><h3 id="taskHeader">Using speech recognition</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a1c4ced0a96856a723563fb59c41d8394">- <code>startRecording:</code></a><span class="tooltip">
+Starts recording audio data and audio processing on the Dragon Medical Server. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a468df6dd098fe0a2e17335246d078335">- <code>stopRecording</code></a><span class="tooltip">
+Stops recording audio data. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a45ea4bcbf08d26835392bb5aed330f6d">- <code>abortRecording</code></a><span class="tooltip">
+Aborts recording audio data. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Using%20TTS"><h3 id="taskHeader">Using TTS</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a7d005a24a12b9b0f15adac845703955b">- <code>startSpeaking:</code></a><span class="tooltip">
+Starts speaking. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a212d7542538484fa9cec57930e1efc8e">- <code>stopSpeaking</code></a><span class="tooltip">
+Stops speaking. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Personalization%20and%20help%20screen"><h3 id="taskHeader">Personalization and help screen</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a24c9c6cd26597399ebb9cd1720f2d804">- <code>showFormWithContent:</code></a><span class="tooltip">
+Displays the specified content in a separate window. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a13802a02ae3e7c9e2fcf1a724b9bf2e5">- <code>setStandbyMode:</code></a><span class="tooltip">
+Enable / Disable Standby Mode in SDK. 
+        </span></span></li>
+</ul>
+<a xmlns="" name="Update%20the%20authentication%20token"><h3 id="taskHeader">Update the authentication token</h3></a><ul xmlns="" class="methods"><li><span class="tooltipRegion"><a href="#interface_n_u_s_a_session_1a002f7fdd280bbf18a0756ea183bb6290">- <code>updateAuthenticationToken:tokenExpiryTime:</code></a><span class="tooltip">
+Update authentication token. 
+        </span></span></li></ul>
+<a xmlns="" name="Properties"><h2 id="pageHeader">Properties</h2></a><a xmlns="" name="interface_n_u_s_a_session_1a519fde937e2dee33ef703a11f788c24b"><h3 id="methodHeader">delegate</h3></a><div xmlns="" class="methodBrief">
+NUSASession delegate. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	id&lt; NUSASessionDelegate &gt;delegate</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This delegate receives messages from the session instance. Delegates must conform to the <code><a href="../Protocols/NUSASessionDelegate-p.html">NUSASessionDelegate</a></code> protocol. The delegate will not be retained. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a9154b8865dae476c5503a91e09d260fe"><h3 id="methodHeader">serverURL</h3></a><div xmlns="" class="methodBrief">
+Dragon Medical Server URL. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSString *serverURL</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+The Dragon Medical Server URL that the SpeechKit will contact and use for speech recognition functionality. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.1 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1ae224da38494719af84bd7f472465d34b"><h3 id="methodHeader">onlineHelpURL</h3></a><div xmlns="" class="methodBrief">
+Dragon Medical SpeechKit application help URL. 
+        </div>
+<code xmlns="" class="methodDeclaration"> 
+	@property 
+	NSString *onlineHelpURL</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+URL where the application help is hosted. If this value is set prior to calling openForApplication, the "What You Can Say" page will contain the application's online help. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="ClassMethods"><h2 id="pageHeader">Class methods</h2></a><a xmlns="" name="interface_n_u_s_a_session_1a437b2f1ce2596cf03266d865ffdefaef"><h3 id="methodHeader">sharedSession</h3></a><div xmlns="" class="methodBrief">
+Returns the shared client session instance. 
+        </div>
+<code xmlns="" class="methodDeclaration">+	
+		(NUSASession *)
+		sharedSession</code><h5 xmlns="">Return Value</h5>
+<p xmlns="">The shared Dragon Medical SpeechKit client session instance. </p>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Returns the shared Dragon Medical SpeechKit client session instance. The shared session instance is guaranteed to be valid throughout the life time of your application.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="interface_n_u_s_a_session_1abcab52e2462eeb74c2b4f7e1d4dd290c"><h3 id="methodHeader">openForApplication:partnerGuid:licenseGuid:userId:authenticationToken:tokenExpiryTime:</h3></a><div xmlns="" class="methodBrief">
+Authenticates a user with the Dragon Medical Server using authentication token. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		openForApplication:
+	(NSString *)<span class="parameter">applicationName 
+	</span>partnerGuid:
+	(NSString *)<span class="parameter">partnerGuid 
+	</span>licenseGuid:
+	(NSString *)<span class="parameter">licenseGuid 
+	</span>userId:
+	(NSString *)<span class="parameter">userId 
+	</span>authenticationToken:
+	(NSString *_Nonnull)<span class="parameter">authenticationToken 
+	</span>tokenExpiryTime:
+	(NSDate *_Nonnull)<span class="parameter">expiryTime 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>userId</dt>
+<dd><p>
+Mandatory user ID of the author. The user ID must be a non-empty string. 
+</p></dd>
+<dt>licenseGuid</dt>
+<dd><p>
+Organization token (due to a terminology change the organization token should be passed to the licenseGuid parameter). Invalid organization tokens will be rejected during runtime and cause an alert message to appear to the end user. 
+ 
+</p></dd>
+<dt>partnerGuid</dt>
+<dd><p>
+Partner GUID. Invalid partner guids will be rejected during runtime and cause an alert message to appear to the end user. 
+</p></dd>
+<dt>applicationName</dt>
+<dd><p>
+Mandatory application name. The application name identifies your application on the web service and can be chosen by your integration. The application name is not part of the licensing information; it can be any string up to 50 characters in length. 
+</p></dd>
+<dt>authenticationToken</dt>
+<dd><p>
+Pass token acquired from the authentication library. 
+</p></dd>
+<dt>expiryTime</dt>
+<dd><p>
+Token expiry time 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message creates a connection to the Dragon Medical Server and authenticates the application, user and account information as passed. Sessions are usually opened as soon as user credentials are available in your application. Licensing errors will be displayed to the end user of your application.</p>
+<p xmlns="">Note that the Dragon Medical Server will automatically free user licenses if there are longer periods of inactivity. In these cases you do not need to explicitly reopen or close the session; the license will be reaquired automatically with the next user activity, e.g. starting a recording session.</p>
+<p xmlns="">If the licenseGuid or partnerGuid parameter were not specified (e.g. a <code>nil</code> object was passed), Dragon Medical SpeechKit will not try to verify the license with the web service and will not offer speech recognition related functionality to the end user or your application - it has the same effect as not calling the method at all. E.g. calling <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a1c4ced0a96856a723563fb59c41d8394">startRecording:</a></code> will not have any effect.</p>
+<p xmlns="">Implement sessionDidReceiveInvalidAuthenticationToken delegate to know whether the token has expired. If expired, then get new token using authentication library and call the updateAuthenticationToken method</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 6.0 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a51a2131c3ca3678b8ecdeba2f44056e7"><h3 id="methodHeader">openForApplication:partnerGuid:environmentId:authenticationToken:tokenExpiryTime:</h3></a><div xmlns="" class="methodBrief">
+Authenticates a user with the Dragon Medical Server using authentication token. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		openForApplication:
+	(NSString *_Nonnull)<span class="parameter">applicationName 
+	</span>partnerGuid:
+	(NSString *_Nonnull)<span class="parameter">partnerGuid 
+	</span>environmentId:
+	(NSString *_Nullable)<span class="parameter">environmentId 
+	</span>authenticationToken:
+	(NSString *_Nonnull)<span class="parameter">authenticationToken 
+	</span>tokenExpiryTime:
+	(NSDate *_Nonnull)<span class="parameter">expiryTime 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>applicationName</dt>
+<dd><p>
+Mandatory application name. The application name identifies your application on the web service and can be chosen by your integration. The application name is not part of the licensing information; it can be any string up to 50 characters in length. 
+</p></dd>
+<dt>partnerGuid</dt>
+<dd><p>
+Partner GUID. Invalid partner guids will be rejected during runtime and cause an alert message to appear to the end user. 
+</p></dd>
+<dt>environmentId</dt>
+<dd><p>
+Enviornment Id for MSFT tenant, it is optional 
+</p></dd>
+<dt>authenticationToken</dt>
+<dd><p>
+Pass token acquired from the authentication library. 
+</p></dd>
+<dt>expiryTime</dt>
+<dd><p>
+Token expiry time 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message creates a connection to the Dragon Medical Server and authenticates the application, user and account information as passed. Sessions are usually opened as soon as user credentials are available in your application. Licensing errors will be displayed to the end user of your application.</p>
+<p xmlns="">Note that the Dragon Medical Server will automatically free user licenses if there are longer periods of inactivity. In these cases you do not need to explicitly reopen or close the session; the license will be reaquired automatically with the next user activity, e.g. starting a recording session.</p>
+<p xmlns="">If the partnerGuid parameter were not specified (e.g. a <code>nil</code> object was passed), Dragon Medical SpeechKit will not try to verify the license with the web service and will not offer speech recognition related functionality to the end user or your application - it has the same effect as not calling the method at all. E.g. calling <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a1c4ced0a96856a723563fb59c41d8394">startRecording:</a></code> will not have any effect.</p>
+<p xmlns="">Implement sessionDidReceiveInvalidAuthenticationToken delegate to know whether the token has expired. If expired, then get new token using authentication library and call the updateAuthenticationToken method</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 6.2 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1ab903dc8eceef3dffa5de3b58c5758bcf"><h3 id="methodHeader">openForApplication:partnerGuid:licenseGuid:userId:</h3></a><div xmlns="" class="methodBrief">
+Authenticates a user with the Dragon Medical Server. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		openForApplication:
+	(NSString *)<span class="parameter">applicationName 
+	</span>partnerGuid:
+	(NSString *)<span class="parameter">partnerGuid 
+	</span>licenseGuid:
+	(NSString *)<span class="parameter">licenseGuid 
+	</span>userId:
+	(NSString *)<span class="parameter">userId 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>userId</dt>
+<dd><p>
+Mandatory user ID of the author. The user ID must be a non-empty string. 
+</p></dd>
+<dt>licenseGuid</dt>
+<dd><p>
+Organization token (due to a terminology change the organization token should be passed to the licenseGuid parameter). Invalid organization tokens will be rejected during runtime and cause an alert message to appear to the end user. 
+</p></dd>
+<dt>partnerGuid</dt>
+<dd><p>
+Partner GUID. Invalid partner guids will be rejected during runtime and cause an alert message to appear to the end user. 
+</p></dd>
+<dt>applicationName</dt>
+<dd><p>
+Mandatory application name. The application name identifies your application on the web service and can be chosen by your integration. The application name is not part of the licensing information; it can be any string up to 50 characters in length. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message creates a connection to the Dragon Medical Server and authenticates the application, user and account information as passed. Sessions are usually opened as soon as user credentials are available in your application. Licensing errors will be displayed to the end user of your application.</p>
+<p xmlns="">Note that the Dragon Medical Server will automatically free user licenses if there are longer periods of inactivity. In these cases you do not need to explicitly reopen or close the session; the license will be reaquired automatically with the next user activity, e.g. starting a recording session.</p>
+<p xmlns="">If the licenseGuid or partnerGuid parameter were not specified (e.g. a <code>nil</code> object was passed), Dragon Medical SpeechKit will not try to verify the license with the web service and will not offer speech recognition related functionality to the end user or your application - it has the same effect as not calling the method at all. E.g. calling <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a1c4ced0a96856a723563fb59c41d8394">startRecording:</a></code> will not have any effect.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a262d965fca8ae2129303ec201a8916aa"><h3 id="methodHeader">close</h3></a><div xmlns="" class="methodBrief">
+Frees web service resources and licenses on the Dragon Medical Server. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		close</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message disconnects and frees any speech recognition resources and user licenses on the Dragon Medical Server. Usually the session should be closed when the application is shut down, or becomes inactive.</p>
+<p xmlns="">Note that the Dragon Medical Server will automatically free user licenses transparently to your application in case of longer periods of inactivity. In these cases you do not need to explicitly reopen or close the session; the license will be reaquired automatically by the next user activity, e.g. starting a recording session. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a1c4ced0a96856a723563fb59c41d8394"><h3 id="methodHeader">startRecording:</h3></a><div xmlns="" class="methodBrief">
+Starts recording audio data and audio processing on the Dragon Medical Server. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(BOOL)
+		startRecording:
+	(NSError *_Nullable *_Nullable)<span class="parameter">error 
+	</span></code><h5 xmlns="">Return Value</h5>
+<p xmlns="">Returns <code>NO</code> if recording could not be started. More information about the failure is passed in the error parameter. </p>
+<h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>error</dt>
+<dd><p>
+If recording could not be started, error information is passed via this parameter, otherwise nil. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message starts recording audio data via the active audio route and starts recognizing recorded and streamed audio data on the Dragon Medical Server. Once started, recording will continue until <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a468df6dd098fe0a2e17335246d078335">stopRecording</a></code> is called explicitly. Note that recording will also be stopped implicitly after a period of inactivity. The session will send the sessionDidStartRecording() message to its delegate.</p>
+<p xmlns="">While audio data recording is active, audio data will be sent to the web service to be recognized. Recognized text is then added to the currently active GUI control.</p>
+<p xmlns="">If audio data is already recorded, this method does not do anything. If the session has not been previously opened, the method does not do anything.</p>
+<p xmlns="">
+
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a468df6dd098fe0a2e17335246d078335"><h3 id="methodHeader">stopRecording</h3></a><div xmlns="" class="methodBrief">
+Stops recording audio data. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		stopRecording</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message stops recording audio data and requests any pending recognition results from the Dragon Medical Server. If recording is not running, this method does not do anything. If the session has not been previously opened, the method does not do anything. The session will send the sessionDidStopRecording message to its delegate. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a45ea4bcbf08d26835392bb5aed330f6d"><h3 id="methodHeader">abortRecording</h3></a><div xmlns="" class="methodBrief">
+Aborts recording audio data. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		abortRecording</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+The message aborts recording audio data and discards any pending recognition results from the Dragon Medical Server. If recording is not running, this method does not do anything. If the session has not been previously opened, the method does not do anything. The session will send the sessionDidStopRecording message to its delegate. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a7d005a24a12b9b0f15adac845703955b"><h3 id="methodHeader">startSpeaking:</h3></a><div xmlns="" class="methodBrief">
+Starts speaking. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		startSpeaking:
+	(NSString *)<span class="parameter">text 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>text</dt>
+<dd><p>
+The string to be spoken. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+This message starts speaking the provided text. Once started, speaking will continue until the text has been read in full or stopSpeaking is called. The session will send the sessionDidStartSpeaking message to its delegate.</p>
+<p xmlns="">If speaking is already active, new request are queued. If the session has not been previously opened, the method does not do anything. If the provided text is nil or empty, the method does not do anything.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a212d7542538484fa9cec57930e1efc8e"><h3 id="methodHeader">stopSpeaking</h3></a><div xmlns="" class="methodBrief">
+Stops speaking. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		stopSpeaking</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Stops speaking. All pending speaking request are cancelled. If speaking is not running, this method does not do anything. If the session has not been previously opened, the method does not do anything. The session will send the sessionDidStopSpeaking message to its delegate. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a24c9c6cd26597399ebb9cd1720f2d804"><h3 id="methodHeader">showFormWithContent:</h3></a><div xmlns="" class="methodBrief">
+Displays the specified content in a separate window. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		showFormWithContent:
+	(NUSAContentType)<span class="parameter">contentType 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>contentType</dt>
+<dd><p>
+Type of the content to be displayed. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+The window is only displayed if an open VuiController exists. If there is no open VuiController or the session was not opened previously, the method does not do anything.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 3.0 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a13802a02ae3e7c9e2fcf1a724b9bf2e5"><h3 id="methodHeader">setStandbyMode:</h3></a><div xmlns="" class="methodBrief">
+Enable / Disable Standby Mode in SDK. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		setStandbyMode:
+	(BOOL)<span class="parameter">enabled 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>enabled</dt>
+<dd><p>
+BOOL to enable/Disable Standby should be passed. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Use this method to Enable / Disable Standby Mode in SDK. Standby Mode will be reset to YES for Session openForApplication API Call. 
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 3.10 and later.
+	<a xmlns="" name="interface_n_u_s_a_session_1a002f7fdd280bbf18a0756ea183bb6290"><h3 id="methodHeader">updateAuthenticationToken:tokenExpiryTime:</h3></a><div xmlns="" class="methodBrief">
+Update authentication token. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		updateAuthenticationToken:
+	(NSString *)<span class="parameter">token 
+	</span>tokenExpiryTime:
+	(NSDate *)<span class="parameter">expiryTime 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>token</dt>
+<dd><p>
+A new authentication token 
+</p></dd>
+<dt>expiryTime</dt>
+<dd><p>
+Token expiry time 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Use this method to update the authentication token used by application session</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 6.0 and later.
+	
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

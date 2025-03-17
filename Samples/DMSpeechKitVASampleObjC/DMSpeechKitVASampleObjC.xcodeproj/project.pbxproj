@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DA168C725C92EDF00C3C47D /* VAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A295DA2249DE9E004CF53A /* VAManager.m */; };
+		1DA168C825C92EDF00C3C47D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E284FDE32247CAF3007FF902 /* HomeViewController.m */; };
+		1DA168C925C92EDF00C3C47D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E284FDEE2247CAF5007FF902 /* main.m */; };
+		1DA168CA25C92EDF00C3C47D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E284FDE02247CAF3007FF902 /* AppDelegate.m */; };
+		1DA168CB25C92EDF00C3C47D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E232921B2333303400FA4256 /* LoginViewController.m */; };
+		1DA168CC25C92EDF00C3C47D /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C5BA4224DF406006DDDC3 /* Logger.m */; };
+		1DA168CD25C92EDF00C3C47D /* IntentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2485A19224B37030095A712 /* IntentManager.m */; };
+		1DA168CF25C92EDF00C3C47D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A295DD2249EA59004CF53A /* SystemConfiguration.framework */; };
+		1DA168D125C92EDF00C3C47D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DC9F6822489F9600E31BEA /* WebKit.framework */; };
+		1DA168D325C92EDF00C3C47D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E284FDEA2247CAF5007FF902 /* LaunchScreen.storyboard */; };
+		1DA168D525C92EDF00C3C47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E284FDE82247CAF5007FF902 /* Assets.xcassets */; };
+		1DA168D625C92EDF00C3C47D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E284FDE52247CAF3007FF902 /* Main.storyboard */; };
+		1DA168D725C92EDF00C3C47D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2A413E622C09CDF00B948EE /* Localizable.strings */; };
+		1FDDDA5B2D00497F00138B41 /* Dragon-Medical-SpeechKit-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 1FDDDA5A2D00497F00138B41 /* Dragon-Medical-SpeechKit-iOS */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1F0EDBD02C22B5E500D30153 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B8C5BA3224DF3F0006DDDC3 /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		1B8C5BA4224DF406006DDDC3 /* Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		1DA168DB25C92EDF00C3C47D /* DMSpeechKitVASampleObjC_XCFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMSpeechKitVASampleObjC_XCFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E232921A2333303400FA4256 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E232921B2333303400FA4256 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E2485A18224B37030095A712 /* IntentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentManager.h; sourceTree = "<group>"; };
+		E2485A19224B37030095A712 /* IntentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentManager.m; sourceTree = "<group>"; };
+		E284FDDF2247CAF3007FF902 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E284FDE02247CAF3007FF902 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E284FDE22247CAF3007FF902 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E284FDE32247CAF3007FF902 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E284FDE62247CAF3007FF902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E284FDE82247CAF5007FF902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E284FDEB2247CAF5007FF902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E284FDED2247CAF5007FF902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E284FDEE2247CAF5007FF902 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2A295D92249DE9E004CF53A /* VAManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAManager.h; sourceTree = "<group>"; };
+		E2A295DA2249DE9E004CF53A /* VAManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAManager.m; sourceTree = "<group>"; };
+		E2A295DC2249E092004CF53A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E2A295DD2249EA59004CF53A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E2A413E522C09CDF00B948EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E2DC9F6822489F9600E31BEA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E2E9FB12256F7A4000A44BBF /* VADelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VADelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DA168CE25C92EDF00C3C47D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA168CF25C92EDF00C3C47D /* SystemConfiguration.framework in Frameworks */,
+				1FDDDA5B2D00497F00138B41 /* Dragon-Medical-SpeechKit-iOS in Frameworks */,
+				1DA168D125C92EDF00C3C47D /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E284FDD32247CAF3007FF902 = {
+			isa = PBXGroup;
+			children = (
+				E284FDDE2247CAF3007FF902 /* DMSpeechKitVASampleObjC */,
+				E284FDDD2247CAF3007FF902 /* Products */,
+				E2DC9F6722489F9600E31BEA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E284FDDD2247CAF3007FF902 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DA168DB25C92EDF00C3C47D /* DMSpeechKitVASampleObjC_XCFramework.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E284FDDE2247CAF3007FF902 /* DMSpeechKitVASampleObjC */ = {
+			isa = PBXGroup;
+			children = (
+				E2CA0E48224E199D0031089B /* Manager */,
+				E2DC9F6C2248A59500E31BEA /* Resources */,
+				E2DC9F6A2248A57500E31BEA /* SupportingFiles */,
+				E2DC9F6B2248A58E00E31BEA /* UI */,
+			);
+			path = DMSpeechKitVASampleObjC;
+			sourceTree = "<group>";
+		};
+		E2CA0E48224E199D0031089B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E2CA0E49224E19AA0031089B /* Logger */,
+				E2A295DC2249E092004CF53A /* Constants.h */,
+				E2485A18224B37030095A712 /* IntentManager.h */,
+				E2485A19224B37030095A712 /* IntentManager.m */,
+				E2A295D92249DE9E004CF53A /* VAManager.h */,
+				E2A295DA2249DE9E004CF53A /* VAManager.m */,
+				E2E9FB12256F7A4000A44BBF /* VADelegate.h */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E2CA0E49224E19AA0031089B /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				1B8C5BA3224DF3F0006DDDC3 /* Logger.h */,
+				1B8C5BA4224DF406006DDDC3 /* Logger.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		E2DC9F6722489F9600E31BEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A295DD2249EA59004CF53A /* SystemConfiguration.framework */,
+				E2DC9F6822489F9600E31BEA /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2DC9F6A2248A57500E31BEA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E284FDDF2247CAF3007FF902 /* AppDelegate.h */,
+				E284FDE02247CAF3007FF902 /* AppDelegate.m */,
+				E284FDED2247CAF5007FF902 /* Info.plist */,
+				E284FDEA2247CAF5007FF902 /* LaunchScreen.storyboard */,
+				E284FDEE2247CAF5007FF902 /* main.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E2DC9F6B2248A58E00E31BEA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E284FDE22247CAF3007FF902 /* HomeViewController.h */,
+				E284FDE32247CAF3007FF902 /* HomeViewController.m */,
+				E284FDE52247CAF3007FF902 /* Main.storyboard */,
+				E232921A2333303400FA4256 /* LoginViewController.h */,
+				E232921B2333303400FA4256 /* LoginViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E2DC9F6C2248A59500E31BEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E284FDE82247CAF5007FF902 /* Assets.xcassets */,
+				E2A413E622C09CDF00B948EE /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DA168C525C92EDF00C3C47D /* DMSpeechKitVASampleObjC_XCFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA168D825C92EDF00C3C47D /* Build configuration list for PBXNativeTarget "DMSpeechKitVASampleObjC_XCFramework" */;
+			buildPhases = (
+				1DA168C625C92EDF00C3C47D /* Sources */,
+				1DA168CE25C92EDF00C3C47D /* Frameworks */,
+				1DA168D225C92EDF00C3C47D /* Resources */,
+				1F0EDBD02C22B5E500D30153 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DMSpeechKitVASampleObjC_XCFramework;
+			productName = DMSpeechKitVASampleObjC;
+			productReference = 1DA168DB25C92EDF00C3C47D /* DMSpeechKitVASampleObjC_XCFramework.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E284FDD42247CAF3007FF902 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Vivek;
+			};
+			buildConfigurationList = E284FDD72247CAF3007FF902 /* Build configuration list for PBXProject "DMSpeechKitVASampleObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E284FDD32247CAF3007FF902;
+			packageReferences = (
+				1FDDDA592D00497F00138B41 /* XCRemoteSwiftPackageReference "Dragon-Medical-SpeechKit-iOS" */,
+			);
+			productRefGroup = E284FDDD2247CAF3007FF902 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DA168C525C92EDF00C3C47D /* DMSpeechKitVASampleObjC_XCFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DA168D225C92EDF00C3C47D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA168D325C92EDF00C3C47D /* LaunchScreen.storyboard in Resources */,
+				1DA168D525C92EDF00C3C47D /* Assets.xcassets in Resources */,
+				1DA168D625C92EDF00C3C47D /* Main.storyboard in Resources */,
+				1DA168D725C92EDF00C3C47D /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DA168C625C92EDF00C3C47D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA168C725C92EDF00C3C47D /* VAManager.m in Sources */,
+				1DA168C825C92EDF00C3C47D /* HomeViewController.m in Sources */,
+				1DA168C925C92EDF00C3C47D /* main.m in Sources */,
+				1DA168CA25C92EDF00C3C47D /* AppDelegate.m in Sources */,
+				1DA168CB25C92EDF00C3C47D /* LoginViewController.m in Sources */,
+				1DA168CC25C92EDF00C3C47D /* Logger.m in Sources */,
+				1DA168CD25C92EDF00C3C47D /* IntentManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E284FDE52247CAF3007FF902 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E284FDE62247CAF3007FF902 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E284FDEA2247CAF5007FF902 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E284FDEB2247CAF5007FF902 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E2A413E622C09CDF00B948EE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2A413E522C09CDF00B948EE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DA168D925C92EDF00C3C47D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ53Q653EJ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../DragonMedicalSpeechKit.xcframework";
+				INFOPLIST_FILE = "DMSpeechKitVASampleObjC_XCFramework-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuance.ObjcDMSpeechKitVASample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DMSpeechKitVASampleObjC/DMSpeechKitVASampleObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DA168DA25C92EDF00C3C47D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CZ53Q653EJ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../DragonMedicalSpeechKit.xcframework";
+				INFOPLIST_FILE = "DMSpeechKitVASampleObjC_XCFramework-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuance.ObjcDMSpeechKitVASample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = DanubeDistribution;
+				SWIFT_OBJC_BRIDGING_HEADER = "DMSpeechKitVASampleObjC/DMSpeechKitVASampleObjC-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E284FE062247CAF5007FF902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E284FE072247CAF5007FF902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DA168D825C92EDF00C3C47D /* Build configuration list for PBXNativeTarget "DMSpeechKitVASampleObjC_XCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA168D925C92EDF00C3C47D /* Debug */,
+				1DA168DA25C92EDF00C3C47D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E284FDD72247CAF3007FF902 /* Build configuration list for PBXProject "DMSpeechKitVASampleObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E284FE062247CAF5007FF902 /* Debug */,
+				E284FE072247CAF5007FF902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1FDDDA592D00497F00138B41 /* XCRemoteSwiftPackageReference "Dragon-Medical-SpeechKit-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nuance-communications/Dragon-Medical-SpeechKit-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FDDDA5A2D00497F00138B41 /* Dragon-Medical-SpeechKit-iOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FDDDA592D00497F00138B41 /* XCRemoteSwiftPackageReference "Dragon-Medical-SpeechKit-iOS" */;
+			productName = "Dragon-Medical-SpeechKit-iOS";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E284FDD42247CAF3007FF902 /* Project object */;
+}

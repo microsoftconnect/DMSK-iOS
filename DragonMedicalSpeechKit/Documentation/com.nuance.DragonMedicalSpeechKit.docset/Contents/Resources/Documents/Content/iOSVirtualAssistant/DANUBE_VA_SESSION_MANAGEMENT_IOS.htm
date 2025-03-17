@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Dragon Medical Virtual Assistant|Dragon Medical Virtual Assistant - protocol 2" data-mc-conditions="Danube.Florence">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>DMVA session management</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span> session management</h1>
+        <p>The <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> session can be in one of the following session states:</p>
+        <ul>
+            <li><code>VAStateOpened</code>
+            </li>
+            <li><code>VAStateClosed</code>
+            </li>
+        </ul>
+        <p>The methods <code>openVA</code> and <code>closeVA</code> are used to change the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> session state. The session state events are delivered to the <code>vaSessionStateChanged</code> callback.</p>
+        <h2>openVA</h2>
+        <p>To transition the session state from <code>VAStateClosed</code> to <code>VAStateOpened</code>, call <code>openVA</code> with the required parameters.</p>
+        <p><span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> performs the required license validation before transitioning to the state <code>VAStateOpened</code>.</p>
+        <p><b>Note:</b> The session state change is returned in the form of an event with the <code>VAStateOpened</code> state and the session ID assigned to that session. The session ID is provided for debugging purposes only; if an issue needs to be reported to Nuance, attach this session ID with other details.</p>
+        <h2>closeVA</h2>
+        <p>Call <code>closeVA</code> to close the active <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> session. All pending transactions will be discarded.</p>
+        <h3>Remarks</h3>
+        <ul>
+            <li>
+                <p>The SDK can also close the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> session because of network connectivity issues.</p>
+            </li>
+            <li>
+                <p>If the session is closed by the SDK, the app will get the event with the session state as <code>VAStateClosed</code>. The app will then be required to send a new <code>openVA</code> request to open a new <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> session.</p>
+            </li>
+        </ul>
+        <h2>Session state transition</h2>
+        <p>
+            <img src="DMVA_SessionStates.png" alt="" />
+        </p>
+        <p><b>Note:</b> The opening state isn't reported.</p>
+    </body>
+</html>

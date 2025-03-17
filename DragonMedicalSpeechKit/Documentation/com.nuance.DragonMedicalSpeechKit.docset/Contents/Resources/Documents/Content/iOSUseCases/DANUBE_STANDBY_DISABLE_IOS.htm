@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Disabling standby mode</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor25"></a>Disabling standby mode</h1>
+        <p class="note"><b>Note:</b> Standby mode is enabled by default for US English and unavailable for other languages.</p>
+        <p>Standby mode enables the user to start and stop recording using voice commands alone. In standby mode the microphone is on and <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> receives audio but doesn't send the audio to the <span class="mc-variable DocLoc.DM variable">Dragon Medical</span> system. <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> processes the audio internally to recognize the <span class="command">wake up</span> command, which resumes dictation.</p>
+        <p>Users can disable/enable it individually via the personalization &amp; help screen, <span class="userInterface">Options</span> tab, <span class="userInterface">Wake Word</span> pane. This setting is saved in the <span class="mc-variable DocLoc.DM variable">Dragon Medical</span> system and will be applied when the user logs on again.</p>
+        <p>For more information, see:&#160;<a href="../Concepts/DANUBE_MODES.htm"><span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> modes</a>.</p>
+        <p>You can also disable standby mode programmatically so that your app no longer listens for the wake word.&#160;Proceed as follows:</p>
+        <h2>Prerequisites</h2>
+        <p>You've initialized a <a href="DANUBE_INITIALIZE_SESSION_IOS.htm">speech recognition session</a>.</p>
+        <h2>Procedure</h2>
+        <p class="wide">To disable standby mode, call the <code>setStandbyMode</code> method on the shared session instance:</p>
+        <p class="example wide"><code>[[NUSASession sharedSession] setStandbyMode:NO];</code>
+        </p>
+        <p>To enable standby mode again, call <code>setStandbyMode</code> with the parameter <code>YES</code>.</p>
+        <p><code>setStandbyMode</code> is reset to <code>YES</code> with each <code>openForApplication</code> call.</p>
+        <h2>Remarks</h2>
+        <ul>
+            <li>
+                <p>By default, standby mode is enabled (<code>setStandbyMode:YES</code>) at the start of each session.</p>
+            </li>
+            <li>
+                <p>Standby mode must be enabled in the user settings and in your integration to be available. If standby mode is disabled in the user settings, calling <code>setStandbyMode:YES</code> doesn't override the user setting. If standby mode is disabled in your app, the user can't enable it in the user settings.</p>
+            </li>
+            <li>
+                <p>When standby mode is disabled, events that would normally start standby mode turn the microphone off instead. For example, the <span class="command">stop recording</span> and <span class="command">go to sleep</span> voice commands turn off the microphone instead of starting standby mode.</p>
+            </li>
+            <li>
+                <p>Depending on the app state when <code>setStandbyMode</code> is called, your app might switch immediately to a different state. This can affect the user experience. The possible state changes are as follows:</p>
+                <table style="width: 100%;">
+                    <col />
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <th>Initial state when <code>setStandbyMode</code> is called</th>
+                            <th>Enable/disable standby mode</th>
+                            <th>New state</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Standby mode</td>
+                            <td>Enable</td>
+                            <td>Standby mode (no change)</td>
+                        </tr>
+                        <tr>
+                            <td>Disable</td>
+                            <td>Microphone off</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Microphone off</td>
+                            <td>Enable</td>
+                            <td>Standby mode</td>
+                        </tr>
+                        <tr>
+                            <td>Disable</td>
+                            <td>Microphone off (no change)</td>
+                        </tr>
+                        <tr>
+                            <td>Dictation, Text-To-Speech, virtual assistant</td>
+                            <td>Enable or disable</td>
+                            <td>No change</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <h2>See also</h2>
+        <p class="indent2"><a href="../Concepts/DANUBE_MODES.htm">Recording modes</a> concept</p>
+    </body>
+</html>

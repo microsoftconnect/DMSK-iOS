@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>
+			End user online help
+		</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor37"></a>End user online help</h1>
+        <p>We provide HTML end user online help deployed with and hosted by the <span class="mc-variable DocLoc.DM variable">Dragon Medical</span> Recognition Service. Our end user online help focuses on how your users can use speech recognition features. End users can access it via the  <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> personalization &amp; help screen.</p>
+        <p>Our end user online help is provided in the following languages:</p>
+        <ul>
+            <li>Danish (da)</li>
+            <li>Dutch (nl)</li>
+            <li>English (en)</li>
+            <li>Finnish (fi)</li>
+            <li>French (fr)</li>
+            <li>German (de)</li>
+            <li>Italian (it)</li>
+            <li>Norwegian (no)</li>
+            <li>Portuguese (pt)</li>
+            <li>Spanish (es)</li>
+            <li>Swedish (sv)</li>
+        </ul>
+        <h2><a name="Your"></a>Your app's end user online help</h2>
+        <p>If your app's online help output is html-based, you can link it to the <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> personalization &amp; help screen. The personalization &amp; help screen can contain your online help or an index page that's branded for your app and that links to your online help.</p>
+        <p class="note"><b>Note: </b>To display your app's end user online help in the personalization &amp; help window, make sure it can be loaded in an <code>iframe</code>.</p>
+        <p>To connect your online help to the personalization &amp; help screen, do the following:</p>
+        <ol>
+            <li value="1">Set the <code>NUSASession onlineHelpURL</code> property to the URL where your online help is hosted.</li>
+            <p class="indent1">For example: <code>[[NUSASession sharedSession] setOnlineHelpURL: @"https://your.server.com/OnlineHelp/index.html"]</code></p>
+            <li value="2"><a href="DANUBE_INITIALIZE_SESSION_IOS.htm">Initialize the speech recognition session</a>.</li>
+        </ol>
+        <p>When the personalization &amp; help screen is opened your online help tab is available.</p>
+        <p class="note"><b>Note:</b> Only HTTPS pages are supported.</p>
+        <h2> See also</h2>
+        <p class="indent2"><a href="DANUBE_CONFIGURE_ONPREMISE_IOS.htm">Configuring <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> for on-premises deployment</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSAVuiControllerDelegate Protocol Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
+					Dragon Medical SpeechKit
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Processing state handling">Processing state handling</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1aca3f79b1d4430fef2422016b71febbb3">vuiControllerDidStartProcessing</a></li><li><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1a4a3a20a3c8a974ff22a3dcefceef8a61">vuiControllerDidFinishProcessing</a></li><li><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1aa4bb880ab28d19c178a10b747c145085">vuiControllerDidStartProcessingForView:</a></li><li><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1ac95c19e2097ae93e0ab9b6245c33612c">vuiControllerDidFinishProcessingForView:</a></li><li><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1a3b0818cf87b6edd9ed21d0ca1a991394">vuiControllerDidRecognizeCommand:spokenPhrase:placeholderValues:</a></li></ul></li></ul></div><div id="mainContainer">
+  <h1 xmlns="" id="pageTitle">NUSAVuiControllerDelegate Protocol Reference</h1>
+<table xmlns="" summary="Basic information" id="classInfo">
+<tr>
+<td><label id="classDeclaration">Inherits from</label></td>
+<td>
+<a href="../Classes/&lt;NSObject&gt;.html">&lt;NSObject&gt;</a> :
+		
+		NSObject
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Conforms to</label></td>
+<td>
+		NSObject (NSObject)
+		</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Framework</label></td>
+<td>DragonMedicalSpeechKit</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Availability</label></td>
+<td>Available in version 1.0 and later</td>
+</tr>
+<tr>
+<td><label id="classDeclaration">Declared in</label></td>
+<td>NUSAVuiControllerDelegate.h</td>
+</tr>
+</table>
+<a xmlns="" name="Overview"><h2 id="pageHeader">Overview</h2></a>
+<p xmlns=""><code><a href="../Classes/NUSAVuiController.html">NUSAVuiController</a></code> delegate messages. </p>
+    
+<p xmlns="">  
+Delegate messages sent by the <code><a href="../Classes/NUSAVuiController.html">NUSAVuiController</a></code> class to its delegate receiver. All messages provided by the protocol are optional and can be implemented by the receiver. Messages will be sent on the thread that registered for the delegate. </p>
+    <a xmlns="" name="Tasks"><h2 id="pageHeader">Tasks</h2></a><a xmlns="" name="Processing%20state%20handling"><h3 id="taskHeader">Processing state handling</h3></a><ul xmlns="" class="methods">
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1aca3f79b1d4430fef2422016b71febbb3">- <code>vuiControllerDidStartProcessing</code></a><span class="tooltip">
+Sent after the end user has started to speak. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1a4a3a20a3c8a974ff22a3dcefceef8a61">- <code>vuiControllerDidFinishProcessing</code></a><span class="tooltip">
+Sent after Dragon Medical SpeechKit has finished processing all audio data. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1aa4bb880ab28d19c178a10b747c145085">- <code>vuiControllerDidStartProcessingForView:</code></a><span class="tooltip">
+Sent after the end user has started a new utterance in a speech-enabled text control￼. 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1ac95c19e2097ae93e0ab9b6245c33612c">- <code>vuiControllerDidFinishProcessingForView:</code></a><span class="tooltip">
+Sent after Nuance SpeechAnyhwere has recognized all utterances started by the end user in a specific text control.￼ 
+        </span></span></li>
+<li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_vui_controller_delegate-p_1a3b0818cf87b6edd9ed21d0ca1a991394">- <code>vuiControllerDidRecognizeCommand:spokenPhrase:placeholderValues:</code></a><span class="tooltip">
+Sent when an application command is recognized.￼ 
+        </span></span></li>
+</ul>
+<a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="protocol_n_u_s_a_vui_controller_delegate-p_1aca3f79b1d4430fef2422016b71febbb3"><h3 id="methodHeader">vuiControllerDidStartProcessing</h3></a><div xmlns="" class="methodBrief">
+Sent after the end user has started to speak. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		vuiControllerDidStartProcessing</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the receiver whenever the user starts speaking in a speech-enabled GUI view. Each <code><a href="../Protocols/NUSAVuiControllerDelegate-p.html#protocol_n_u_s_a_vui_controller_delegate-p_1aca3f79b1d4430fef2422016b71febbb3">vuiControllerDidStartProcessing</a></code> message will be paired with a corresponding <code><a href="../Protocols/NUSAVuiControllerDelegate-p.html#protocol_n_u_s_a_vui_controller_delegate-p_1a4a3a20a3c8a974ff22a3dcefceef8a61">vuiControllerDidFinishProcessing</a></code> message. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="protocol_n_u_s_a_vui_controller_delegate-p_1a4a3a20a3c8a974ff22a3dcefceef8a61"><h3 id="methodHeader">vuiControllerDidFinishProcessing</h3></a><div xmlns="" class="methodBrief">
+Sent after Dragon Medical SpeechKit has finished processing all audio data. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		vuiControllerDidFinishProcessing</code><h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the receiver whenever the user stops speaking and Dragon Medical SpeechKit has finished processing all audio data and added all recognized text to the views' text controls. Note that there might be a delay between when the user stops speaking and this message. The same is true if you send the <code><a href="../Classes/NUSASession.html#interface_n_u_s_a_session_1a468df6dd098fe0a2e17335246d078335">stopRecording (NUSASession)</a></code> message. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="protocol_n_u_s_a_vui_controller_delegate-p_1aa4bb880ab28d19c178a10b747c145085"><h3 id="methodHeader">vuiControllerDidStartProcessingForView:</h3></a><div xmlns="" class="methodBrief">
+Sent after the end user has started a new utterance in a speech-enabled text control￼. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		vuiControllerDidStartProcessingForView:
+	(UIView *)<span class="parameter">view 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>view</dt>
+<dd><p>
+A pointer to the speech enabled UIView (for NUSAVuiController) or a pointer to the object that implements the NUSATextControl protocol (as passed to NUSACustomVuiController’s initWithView or synchronize methods). 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the receiver whenever the user started an utterance in a speech enabled UIView object on your applications user interface. Each <code><a href="../Protocols/NUSAVuiControllerDelegate-p.html#protocol_n_u_s_a_vui_controller_delegate-p_1aa4bb880ab28d19c178a10b747c145085">vuiControllerDidStartProcessingForView:</a></code> message will be paired with a corresponding <code><a href="../Protocols/NUSAVuiControllerDelegate-p.html#protocol_n_u_s_a_vui_controller_delegate-p_1ac95c19e2097ae93e0ab9b6245c33612c">vuiControllerDidFinishProcessingForView:</a></code> message.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="protocol_n_u_s_a_vui_controller_delegate-p_1ac95c19e2097ae93e0ab9b6245c33612c"><h3 id="methodHeader">vuiControllerDidFinishProcessingForView:</h3></a><div xmlns="" class="methodBrief">
+Sent after Nuance SpeechAnyhwere has recognized all utterances started by the end user in a specific text control.￼ 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		vuiControllerDidFinishProcessingForView:
+	(UIView *)<span class="parameter">view 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>view</dt>
+<dd><p>
+A pointer to the speech enabled UIView (for NUSAVuiController) or a pointer to the object that implements the NUSATextControl protocol (as passed to NUSACustomVuiController’s initWithView or synchronize methods). 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the receiver when Dragon Medical SpeechKit has finished working on all utterances started for a speech-enabled text control. Note that this message does not indicate that the user stopped speaking and a new utterance can be started at any point while recording is on. At the time this message is sent, the text contents of the UIView are already updated with the recognized text.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.0 and later.
+	<a xmlns="" name="protocol_n_u_s_a_vui_controller_delegate-p_1a3b0818cf87b6edd9ed21d0ca1a991394"><h3 id="methodHeader">vuiControllerDidRecognizeCommand:spokenPhrase:placeholderValues:</h3></a><div xmlns="" class="methodBrief">
+Sent when an application command is recognized.￼ 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		vuiControllerDidRecognizeCommand:
+	(NSString *)<span class="parameter">id 
+	</span>spokenPhrase:
+	(NSString *)<span class="parameter">spokenPhrase 
+	</span>placeholderValues:
+	(NSDictionary *)<span class="parameter">placeholderValues 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>id</dt>
+<dd><p>
+The unique identifier of the command 
+</p></dd>
+<dt>spokenPhrase</dt>
+<dd><p>
+The spoken phrase of the application command 
+</p></dd>
+<dt>placeholderValues</dt>
+<dd><p>
+A dictionary containing the placeholder identifiers (as keys) and values that were present in the recognized application command. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+Sent to the receiver whenever an application command is recognized.</p>
+<p xmlns="">
+</p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 1.3 and later.
+	
+<hr class="footer"></hr>
+				© 2025 Nuance Communications, Inc. All rights reserved.
+			</div></div></body></html>

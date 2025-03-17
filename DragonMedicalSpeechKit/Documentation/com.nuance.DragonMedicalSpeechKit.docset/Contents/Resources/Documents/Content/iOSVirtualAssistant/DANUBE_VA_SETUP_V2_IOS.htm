@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Dragon Medical Virtual Assistant|Dragon Medical Virtual Assistant - protocol 2" data-mc-conditions="Danube.Florence">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Setting up Dragon Medical Virtual Assistant using protocol 2</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor22"></a>Setting up <span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span> using protocol 2</h1>
+        <h2>Procedure</h2>
+        <p>To set up <span class="mc-variable DocLoc.DMVA_Full variable">Dragon Medical Virtual Assistant</span>, do the following:</p>
+        <ol>
+            <li value="1">Set up and open a <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> session via <code>[[NUSASession sharedSession] openForApplication: ...]</code> in <code>application:didFinishLaunchingWithOptions:</code>. For more information, see:&#160;<a href="../iOSIntroduction/DANUBE_SETUP_IOS.htm">Setting up Dragon Medical SpeechKit</a> and <a href="../iOSUseCases/DANUBE_INITIALIZE_SESSION_IOS.htm">Initializing a speech recognition session</a>.</li>
+            <li value="2">Import <code>NUSAVirtualAssistantControllerV2.h</code> and use <code>[NUSAVirtualAssistantControllerV2 sharedController]</code> to access the singleton <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> instance.</li>
+            <li value="3">Set the <code>delegate</code> property on <code>[NUSAVirtualAssistantControllerV2 sharedController]</code> to an instance of an object that instantiates <code>NUSAVirtualAssistantControllerV2Delegate</code> in <code>viewDidAppear:</code>.</li>
+            <li value="4">Call <code>[NUSAVirtualAssistantControllerV2 sharedController] openVA: ...]</code> to start the <span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> session in <code>viewDidAppear:</code>.</li>
+            <ul>
+                <li>
+                    <p>To enable ISO 8601 date values, pass your IANA time zone value (for example, "America/New_York") to the optional <code>IANATimezone</code> parameter in the <code>openVA</code> method. To disable it, omit the <code>IANATimezone</code> parameter or pass an empty string.</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <p>To enable partial speech recognition results to be sent to your integration, pass the optional <code>EnablePartialASR</code> parameter in the <code>openVA</code> method and set the value to <code>Yes</code>. To disable it, set the value to <code>No</code>. The partial speech recognition result is updated approximately every 500 ms by default (this is configurable in the server), use this event to keep users informed that speech recognition is taking place.</p>
+                </li>
+            </ul>
+            <li value="5">Create a NUSAVuiController via <code>[[NUSAVuiController alloc] initWithView: ...</code> when you receive the <code>NUSAVirtualAssistantControllerV2Delegate</code>, <code>VASessionStateChanged:</code> method with state <code>Open (vaStateOpened)</code>. There are two variants of <code>initWithView</code>:</li>
+            <ul>
+                <li>
+                    <p>If the view has text fields that need to be speech-enabled, use:</p>
+                    <p class="example"><code>- (id) initWithView: (UIView*)aView</code>
+                    </p>
+                    <p>The view that's passed for initialization must be an input text field like <code>UITextField</code> or <code>UITextView</code> or contain <code>UITextField</code> or <code>UITextView</code> as a subview. The speech bar will be shown after the first click in the input text field.</p>
+                </li>
+                <li>
+                    <p>If the view has no text fields that need to be speech-enabled, use:</p>
+                    <p class="example"><code>- (id) initWithView: (UIView*)aView andDisableSpeechViews: (BOOL)disableSpeechViews</code>
+                    </p>
+                    <p>and set <code>disableSpeechViews</code> to <code>YES</code>. See: <a href="../iOSUseCases/DANUBE_GUI_VIEW_IOS.htm">Defining the set of speech-enabled text controls</a>.</p>
+                </li>
+            </ul>
+            <li value="6">Optionally, upload dynamic entity values via <code>[[NUSAVirtualAssistantControllerV2 sharedController] uploadEntityValues: ...]</code> after the <code>NUSAVirtualAssistantControllerV2Delegate</code>, <code>vaSessionStateChanged</code> method has been called with the state <code>Opened (vaStateOpened)</code>.</li>
+        </ol>
+        <p><span class="mc-variable DocLoc.DMVA_Short variable">DMVA</span> will now be in standby mode, waiting for the user to start a VA command by saying the VA trigger phrase followed by the command.  A VA command can also be invoked in dictation mode by saying the VA trigger phrase plus command.</p>
+    </body>
+</html>

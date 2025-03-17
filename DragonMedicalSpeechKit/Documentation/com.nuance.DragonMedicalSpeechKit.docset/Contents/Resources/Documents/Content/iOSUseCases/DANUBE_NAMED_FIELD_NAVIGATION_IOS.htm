@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>
+			Enabling named field navigation
+		</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor51"></a>Enabling named field navigation</h1>
+        <p>You can enable specific text controls for named field navigation; this means a user can say a voice command to move directly to a specific text control.</p>
+        <p>For example, the text control for information on the past medical history of a patient could be associated with the "medical history" concept. Users can then say <span class="command">go to medical history</span> to reach this text control.</p>
+        <h2>Prerequisites</h2>
+        <p>You've speech enabled a GUI view (see: <a href="DANUBE_SPEECH_ENABLE_IOS.htm">Speech enabling your iOS app</a>).</p>
+        <h2>Procedure</h2>
+        <p>Each text control that should have named field navigation enabled must be associated with a VUI concept. The VUI concept is then used by <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> to create a new voice command that can be used for voice navigation.</p>
+        <p>To associate a VUI concept with a UI text control, do the following: </p>
+        <ol>
+            <li value="1">Import the <code>UIView+NUSAConceptName.h</code> header file.</li>
+            <li value="2">
+                <p>Set the <code>vuiConceptName</code> property of the UI text control:</p>
+                <p class="indent2"><code>(NSString *)vuiConceptName</code>
+                </p>
+            </li>
+        </ol>
+        <p>The VUI concept should reflect the intention of the UI text control and it's used as the field name that the user should say as part of the built-in <span class="command">go to</span> commands when navigating to that field.</p>
+        <h2>Remarks</h2>
+        <p>VUI concept names have a significant impact on the recognition of named voice commands; follow these recommendations to ensure successful navigation:</p>
+        <ul style="list-style-type: square;">
+            <li>
+                <p>Do <b>not</b> use:</p>
+                <p class="indent2">Abbreviations or book title capitalization. </p>
+                <p class="indent2">Punctuation marks (for example, ", !, ?, etc.)</p>
+                <p class="indent2">Symbols (for example, +, -, &amp;, $, etc. - use words such as "and" instead of symbols such as "&amp;")</p>
+                <p class="indent2">Digits (use 'twelve' and not '12')</p>
+                <p class="indent2">Full phrases such as <span class="command">move cursor to medical history</span>. Use <span class="command">medical history</span> instead.</p>
+            </li>
+            <li>Use distinct and intuitive VUI concept names; avoid duplicate or similar sounding VUI concept names.</li>
+            <li>Test named field navigation before releasing your integration.</li>
+        </ul>
+    </body>
+</html>

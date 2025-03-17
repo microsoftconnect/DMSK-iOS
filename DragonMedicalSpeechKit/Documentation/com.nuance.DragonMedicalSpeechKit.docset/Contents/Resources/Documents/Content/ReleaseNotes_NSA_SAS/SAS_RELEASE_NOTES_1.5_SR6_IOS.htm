@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Release History" data-mc-conditions="Danube.iOS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>360 | SpeechAnywhere Services 1.5 Service Release 6 (iOS edition)</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Release Notes for 360 | SpeechAnywhere Services 1.5 Service Release 6 (iOS edition)</h1>
+        <h2>Solved issues</h2>
+        <p>Following the recent Apple iOS security issue (<a href="http://support.apple.com/kb/HT6147">http://support.apple.com/kb/HT6147</a>) we conducted a thorough review of the 360 | SpeechAnywhere Services iOS SDK and identified a potential security issue that is not addressed by iOS 7.0.6. This security issue could make an application vulnerable to man-in-the-middle attacks. At this time we have no reason to suspect this vulnerability has been exploited; however, we recommend that all partners upgrade to this new SAS SDK to ensure the highest levels of security. [PSP00073512]</p>
+        <p>Be aware that this issue applies to all iOS editions of 360 | SpeechAnywhere Services (1.2, 1.3 and 1.4). It is Nuance policy to only provide service releases for the most recent major version; if you are using an older version please upgrade to version 1.5 in order to benefit from all fixes and improvements. </p>
+        <p class="note"><span class="important">Important:</span> Make sure to upgrade and recompile your integration and distribute to your customers as soon as possible.</p>
+        <h2>Important information</h2>
+        <ul style="list-style-type: square;">
+            <li>If you plan to build your application specifically for iOS 7, it must be linked against the libstdc++.6.dylib library</li>
+            <li>In iOS 7 applications microphone access must be permitted. If a user unintentionally disallows microphone access for an SAS-enabled application, this can be re-enabled; to enable microphone access, go to <b>Settings</b>, <b>Privacy</b>, <b>Microphone</b>. Note: The application is restarted automatically when this setting is changed.</li>
+            <li>360 | SpeechAnywhere Services 1.5 Server is compatible with client versions 1.3, 1.4 and 1.5.</li>
+        </ul>
+        <h2>Known issues</h2>
+        <ul style="list-style-type: square;">
+            <li>When integrating HTML controls in a webView via the NUSACustomVuiController, focus handling might not work correctly unless you are using iOS 6 or higher. [PSP00064357]</li>
+            <li>The <code>SpokenText</code> parameter in the <code>CommandRecognized</code> event is empty in command mode. [PSP00062085]</li>
+            <li>If you upgrade your MacOS X workstation from a version earlier than 10.7 to version 10.7 (or higher) dictation will not work on iOS 6 in the Simulator. <b>Workaround:</b> Install the workstation cleanly with MacOS X 10.7 (or higher). [PSP00063580]</li>
+        </ul>
+        <h2>Infrastructure no longer supported</h2>
+        <ul style="list-style-type: square;">
+            <li>Version 1.1 client-based applications will stop working</li>
+            <li>iOS 5.x</li>
+        </ul>
+        <h2>Infrastructure changes planned for the next release</h2>
+        <ul style="list-style-type: square;">
+            <li>Support for iOS 6.x will be removed.</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li>In 360 | SpeechAnywhere Services 1.6 all version 1.2 client-based applications will stop working. </li>
+        </ul>
+        <h2>System requirements*</h2>
+        <table id="systemRequirements">
+            <tr>
+                <th>
+                </th>
+                <th>Recommended</th>
+                <th>Supported</th>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <td>iOS 7.0.6</td>
+                <td>iOS 6.x -7.0.6</td>
+            </tr>
+        </table>
+        <h2>*End-of-life: third party environments</h2>
+        <p>Support for third party environments is only valid as long as they are supported by the corresponding vendor and might be subject to other restrictions. Please contact Nuance Technical Support for details. For more information, see the documentation delivered with the third party product and supporting Nuance documentation.</p>
+        <p>When support by the vendor has stopped, Nuance will continue support if an issue is specific to the Nuance solution, within the limitations of the vendor’s end-of-life and Nuance's policy. This means that issues that are a combination of the vendor’s component and the Nuance solution cannot be supported.</p>
+    </body>
+</html>

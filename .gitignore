@@ -398,3 +398,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# repository Xcode specific
+cm/
+project.xcworkspace/
+xcuserdata
+*.DS_Store
+

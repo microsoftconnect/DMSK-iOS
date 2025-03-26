@@ -16,6 +16,7 @@
 		1DBC66A625C2B54400B955D1 /* DictationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD5283013252932009FE0BF /* DictationView.m */; };
 		1DBC66A825C2B54400B955D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B55F2AF1FBAE4F800CB7DF7 /* SystemConfiguration.framework */; };
 		1FDDDA612D00498C00138B41 /* Dragon-Medical-SpeechKit-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 1FDDDA602D00498C00138B41 /* Dragon-Medical-SpeechKit-iOS */; };
+		A6E471442D943574003B66BF /* Dragon-Medical-SpeechKit-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = A6E471432D943574003B66BF /* Dragon-Medical-SpeechKit-iOS */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FDDDA612D00498C00138B41 /* Dragon-Medical-SpeechKit-iOS in Frameworks */,
+				A6E471442D943574003B66BF /* Dragon-Medical-SpeechKit-iOS in Frameworks */,
 				1DBC66A825C2B54400B955D1 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,7 +168,7 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			packageReferences = (
-				A602F69E2D942221004E207E /* XCRemoteSwiftPackageReference "DMSK-iOS" */,
+				A6E471422D943574003B66BF /* XCRemoteSwiftPackageReference "DMSK-iOS" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -337,10 +339,10 @@
 			repositoryURL = "https://github.com/nuance-communications/Dragon-Medical-SpeechKit-iOS.git";
 			requirement = {
 				kind = exactVersion;
-				version = 6.2.2;
+				version = 6.2.11;
 			};
 		};
-		A602F69E2D942221004E207E /* XCRemoteSwiftPackageReference "DMSK-iOS" */ = {
+		A6E471422D943574003B66BF /* XCRemoteSwiftPackageReference "DMSK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/microsoftconnect/DMSK-iOS.git";
 			requirement = {
@@ -354,6 +356,11 @@
 		1FDDDA602D00498C00138B41 /* Dragon-Medical-SpeechKit-iOS */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1FDDDA5F2D00498C00138B41 /* XCRemoteSwiftPackageReference "Dragon-Medical-SpeechKit-iOS" */;
+			productName = "Dragon-Medical-SpeechKit-iOS";
+		};
+		A6E471432D943574003B66BF /* Dragon-Medical-SpeechKit-iOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6E471422D943574003B66BF /* XCRemoteSwiftPackageReference "DMSK-iOS" */;
 			productName = "Dragon-Medical-SpeechKit-iOS";
 		};
 /* End XCSwiftPackageProductDependency section */

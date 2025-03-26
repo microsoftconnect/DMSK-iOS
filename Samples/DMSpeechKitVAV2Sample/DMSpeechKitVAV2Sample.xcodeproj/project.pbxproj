@@ -418,7 +418,7 @@
 			);
 			mainGroup = E2D534BA221EAF2D00EEC8D1;
 			packageReferences = (
-				1FDDDA4D2D00495900138B41 /* XCRemoteSwiftPackageReference "Dragon-Medical-SpeechKit-iOS" */,
+				A602F6A22D942372004E207E /* XCRemoteSwiftPackageReference "DMSK-iOS" */,
 			);
 			productRefGroup = E2D534C4221EAF2D00EEC8D1 /* Products */;
 			projectDirPath = "";
@@ -750,6 +750,14 @@
 		1FDDDA4D2D00495900138B41 /* XCRemoteSwiftPackageReference "Dragon-Medical-SpeechKit-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nuance-communications/Dragon-Medical-SpeechKit-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.2.2;
+			};
+		};
+		A602F6A22D942372004E207E /* XCRemoteSwiftPackageReference "DMSK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/microsoftconnect/DMSK-iOS.git";
 			requirement = {
 				kind = exactVersion;
 				version = 6.2.2;

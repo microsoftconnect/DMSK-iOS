@@ -230,6 +230,11 @@
 				GCC_PREFIX_HEADER = DMSpeechKitSample_Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/NuanceSpeechAnywhere/Headers\"";
 				INFOPLIST_FILE = "DMSpeechKitSample_XCFramework-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST))",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nuance.${PRODUCT_NAME:rfc1034identifier}";
@@ -264,6 +269,11 @@
 				GCC_PREFIX_HEADER = DMSpeechKitSample_Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/NuanceSpeechAnywhere/Headers\"";
 				INFOPLIST_FILE = "DMSpeechKitSample_XCFramework-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST))",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nuance.${PRODUCT_NAME:rfc1034identifier}";

@@ -88,6 +88,13 @@ public:
     uint64_t Offset() const { return m_offset; }
 
     /// <summary>
+    /// Index of the input audio channel where the speech was recognized.
+    /// Numbering starts at zero.
+    /// </summary>
+    /// <returns>Channel index.</returns>
+    uint32_t Channel() const { return m_channel; }
+
+    /// <summary>
     /// Collection of additional RecognitionResult properties.
     /// </summary>
     const PropertyCollection& Properties;
@@ -152,6 +159,7 @@ private:
 
         SPX_THROW_ON_FAIL(hr = result_get_offset(hresult, &m_offset));
         SPX_THROW_ON_FAIL(hr = result_get_duration(hresult, &m_duration));
+        SPX_THROW_ON_FAIL(hr = result_get_channel(hresult, &m_channel));
     }
 
     SPXRESULTHANDLE m_hresult;
@@ -161,6 +169,7 @@ private:
     SPXSTRING m_text;
     uint64_t m_offset;
     uint64_t m_duration;
+    uint32_t m_channel;
 };
 
 

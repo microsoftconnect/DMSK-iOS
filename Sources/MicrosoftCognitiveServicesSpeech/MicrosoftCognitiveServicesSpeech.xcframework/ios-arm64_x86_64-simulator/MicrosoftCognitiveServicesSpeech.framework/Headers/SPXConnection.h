@@ -159,8 +159,6 @@ NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
  * Appends a parameter in a message to service.
  * Added in version 1.9.0.
  *
- * Note: This method doesn't work for the connection of SPXSpeechSynthesizer.
- *
  * @param path The path of the message.
  * @param propertyName The propertyName of the message.
  * @param propertyValue The propertyValue of the message as a json string.
@@ -171,8 +169,6 @@ NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
 /**
  * Appends a parameter in a message to service.
  * Added in version 1.17.0.
- *
- * Note: This method doesn't work for the connection of SPXSpeechSynthesizer.
  *
  * @param path The path of the message.
  * @param propertyName The propertyName of the message.
@@ -185,8 +181,6 @@ NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
  * Send message to service.
  * Added in version 1.9.0.
  *
- * Note: This method doesn't work for the connection of SPXSpeechSynthesizer.
- *
  * @param path The path of the message.
  * @param payload The payload of the message as a json string.
  */
@@ -196,8 +190,6 @@ NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
 /**
  * Send message to service.
  * Added in version 1.9.0.
- *
- * Note: This method doesn't work for the connection of SPXSpeechSynthesizer.
  *
  * @param path The path of the message.
  * @param payload The payload of the message as a json string.

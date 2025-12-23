@@ -7,7 +7,7 @@
 #import "SPXPropertyCollection.h"
 
 /**
- * Defines configurations for speech or intent recognition.
+ * Defines configurations for speech recognition.
  */
 SPX_EXPORT
 @interface SPXSpeechConfiguration : NSObject
@@ -133,8 +133,10 @@ NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
  * This method is intended only for users who use a non-standard service endpoint or parameters.
  *
  * Note: The query parameters specified in the endpoint URI are not changed, even if they are set by any other APIs.
+ * Whether a specific query parameter is supported or not, depends on the endpoint and scenario.
  * For example, if the recognition language is defined in the URI as query parameter "language=de-DE", and is also set to "en-US" via
  * property speechRecognitionLanguage in SPXSpeechConfiguration, the language setting in the URI takes precedence, and the effective language is "de-DE".
+ * The example only applies when the endpoint and scenario combination supports language as a query parameter.
  * Only the parameters that are not specified in the endpoint URI can be set by other APIs.
  *
  * Note: To use an authorization token, use initWithEndpoint, and then set the authorizationToken property on the created SPXSpeechConfiguration instance.

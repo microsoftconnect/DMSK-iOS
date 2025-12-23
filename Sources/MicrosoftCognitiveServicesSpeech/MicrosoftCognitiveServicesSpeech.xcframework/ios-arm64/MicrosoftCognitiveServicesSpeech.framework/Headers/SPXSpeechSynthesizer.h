@@ -9,6 +9,7 @@
 #import "SPXSpeechSynthesisResult.h"
 #import "SPXSpeechSynthesisEventArgs.h"
 #import "SPXSynthesisVoicesResult.h"
+#import "SPXEmbeddedSpeechConfiguration.h"
 
 /**
  * Performs speech synthesis from a text to a specified audio output.
@@ -42,7 +43,7 @@ typedef void (^SPXSpeechSynthesisBookmarkEventHandler)(SPXSpeechSynthesizer * _N
  * This synthesizer will output the audio to default speaker, which will throw an exception if the speaker is not available.
  * Please use initWithSpeechConfiguration(speechConfiguration, nil) if you just need the SPXSynthesisResult or SPXAudioDataStream.
  *
- * @param speechConfiguration speech recognition configuration.
+ * @param speechConfiguration speech configuration.
  * @return an instance of speech synthesizer.
  */
 - (nullable instancetype)init:(nonnull SPXSpeechConfiguration *)speechConfiguration
@@ -53,7 +54,7 @@ NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
  * This synthesizer will output the audio to default speaker, which will throw an exception if the speaker is not available.
  * Please use initWithSpeechConfiguration(speechConfiguration, nil) if you just need the SPXSynthesisResult or SPXAudioDataStream.
  *
- * @param speechConfiguration speech recognition configuration.
+ * @param speechConfiguration speech configuration.
  * @param outError error information.
  * @return an instance of speech synthesizer.
  */
@@ -62,7 +63,7 @@ NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
 /**
  * Initializes a new instance of speech synthesizer using a speech config and audio config.
  *
- * @param speechConfiguration speech recognition configuration.
+ * @param speechConfiguration speech configuration.
  * @param audioConfiguration audio configuration.
  * @return an instance of speech synthesizer.
  */
@@ -72,12 +73,54 @@ NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
 /**
  * Initializes a new instance of speech synthesizer using a speech config and audio config.
  *
- * @param speechConfiguration speech recognition configuration.
+ * @param speechConfiguration speech configuration.
  * @param audioConfiguration audio configuration.
  * @param outError error information.
  * @return an instance of speech synthesizer.
  */
 - (nullable instancetype)initWithSpeechConfiguration:(nonnull SPXSpeechConfiguration *)speechConfiguration audioConfiguration:(nullable SPXAudioConfiguration *)audioConfiguration error:(NSError * _Nullable * _Nullable)outError;
+
+/**
+ * Initializes a new instance of speech synthesizer using a embedded speech config.
+ * This synthesizer will output the audio to default speaker, which will throw an exception if the speaker is not available.
+ * Please use initWithEmbeddedSpeechConfiguration(speechConfiguration, nil) if you just need the SPXSynthesisResult or SPXAudioDataStream.
+ *
+ * @param speechConfiguration embedded speech configuration.
+ * @return an instance of speech synthesizer.
+ */
+- (nullable instancetype)initWithEmbeddedSpeechConfiguration:(nonnull SPXEmbeddedSpeechConfiguration *)speechConfiguration
+NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
+
+/**
+ * Initializes a new instance of speech synthesizer using a embedded speech config.
+ * This synthesizer will output the audio to default speaker, which will throw an exception if the speaker is not available.
+ * Please use initWithEmbeddedSpeechConfiguration(speechConfiguration, nil) if you just need the SPXSynthesisResult or SPXAudioDataStream.
+ *
+ * @param speechConfiguration embedded speech configuration.
+ * @param outError error information.
+ * @return an instance of speech synthesizer.
+ */
+- (nullable instancetype)initWithEmbeddedSpeechConfiguration:(nonnull SPXEmbeddedSpeechConfiguration *)speechConfiguration error:(NSError * _Nullable * _Nullable)outError;
+
+/**
+ * Initializes a new instance of speech synthesizer using a embedded speech config and audio config.
+ *
+ * @param speechConfiguration embedded speech configuration.
+ * @param audioConfiguration audio configuration.
+ * @return an instance of speech synthesizer.
+ */
+- (nullable instancetype)initWithEmbeddedSpeechConfiguration:(nonnull SPXEmbeddedSpeechConfiguration *)speechConfiguration audioConfiguration:(nullable SPXAudioConfiguration *)audioConfiguration
+NS_SWIFT_UNAVAILABLE("Use the method with Swift-compatible error handling.");
+
+/**
+ * Initializes a new instance of speech synthesizer using a embedded speech config and audio config.
+ *
+ * @param speechConfiguration embedded speech configuration.
+ * @param audioConfiguration audio configuration.
+ * @param outError error information.
+ * @return an instance of speech synthesizer.
+ */
+- (nullable instancetype)initWithEmbeddedSpeechConfiguration:(nonnull SPXEmbeddedSpeechConfiguration *)speechConfiguration audioConfiguration:(nullable SPXAudioConfiguration *)audioConfiguration error:(NSError * _Nullable * _Nullable)outError;
 
 /**
  * Initializes a new instance of speech synthesizer using the specified configuration for auto language detection.

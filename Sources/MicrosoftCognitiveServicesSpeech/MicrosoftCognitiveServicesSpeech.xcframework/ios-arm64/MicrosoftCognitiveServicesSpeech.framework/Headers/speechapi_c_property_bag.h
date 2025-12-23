@@ -34,11 +34,11 @@ enum  PropertyId
     SpeechServiceConnection_ProxyUserName = 1102,
     SpeechServiceConnection_ProxyPassword = 1103,
     SpeechServiceConnection_Url = 1104,
+    SpeechServiceConnection_ProxyHostBypass = 1105,
 
     SpeechServiceConnection_TranslationToLanguages = 2000,
     SpeechServiceConnection_TranslationVoice = 2001,
     SpeechServiceConnection_TranslationFeatures = 2002,
-    SpeechServiceConnection_IntentRegion = 2003,
 
     SpeechServiceConnection_RecoMode = 3000,
     SpeechServiceConnection_RecoLanguage = 3001,
@@ -63,6 +63,7 @@ enum  PropertyId
     SpeechServiceConnection_EndSilenceTimeoutMs = 3201,
     SpeechServiceConnection_EnableAudioLogging = 3202,
     SpeechServiceConnection_LanguageIdMode = 3205,
+    SpeechServiceConnection_TranslationCategoryId = 3206,
 
     SpeechServiceConnection_AutoDetectSourceLanguages = 3300,
     SpeechServiceConnection_AutoDetectSourceLanguageResult = 3301,
@@ -94,12 +95,11 @@ enum  PropertyId
     SpeechServiceResponse_SynthesisConnectionLatencyMs = 5013,
     SpeechServiceResponse_SynthesisNetworkLatencyMs = 5014,
     SpeechServiceResponse_SynthesisServiceLatencyMs = 5015,
+    SpeechServiceResponse_DiarizeIntermediateResults = 5025,
 
     CancellationDetails_Reason = 6000,
     CancellationDetails_ReasonText = 6001,
     CancellationDetails_ReasonDetailedText = 6002,
-
-    LanguageUnderstandingServiceResponse_JsonResult = 7000,
 
     AudioConfig_DeviceNameForCapture = 8000,
     AudioConfig_NumberOfChannelsForCapture = 8001,
@@ -111,6 +111,10 @@ enum  PropertyId
 
     Speech_LogFilename = 9001,
     Speech_SegmentationSilenceTimeoutMs = 9002,
+    Speech_SegmentationMaximumTimeMs = 9003,
+    Speech_SegmentationStrategy = 9004,
+
+    Speech_StartEventSensitivity = 9010,
 
     Conversation_ApplicationId = 10000,
     Conversation_DialogType = 10001,
@@ -132,11 +136,17 @@ enum  PropertyId
     PronunciationAssessment_EnableProsodyAssessment = 12008,
     PronunciationAssessment_Json = 12009,
     PronunciationAssessment_Params = 12010,
-    PronunciationAssessment_ContentTopic = 12020,
-    SpeakerRecognition_Api_Version = 13001,
 
     SpeechTranslation_ModelName = 13100,
-    SpeechTranslation_ModelKey = 13101
+    SpeechTranslation_ModelKey = 13101,
+
+    KeywordRecognition_ModelName = 13200,
+    KeywordRecognition_ModelKey = 13201,
+
+    EmbeddedSpeech_EnablePerformanceMetrics = 13300,
+
+    SpeechSynthesis_FrameTimeoutInterval = 14101,
+    SpeechSynthesis_RtfTimeoutThreshold = 14102
 };
 
 typedef enum _ParticipantChangedReason

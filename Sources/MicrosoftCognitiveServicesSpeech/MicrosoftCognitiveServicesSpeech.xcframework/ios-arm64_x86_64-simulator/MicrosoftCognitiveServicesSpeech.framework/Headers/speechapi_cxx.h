@@ -37,15 +37,6 @@
 #include "speechapi_cxx_speech_recognizer.h"
 #include "speechapi_cxx_speech_recognition_model.h"
 
-#include "speechapi_cxx_conversational_language_understanding_model.h"
-#include "speechapi_cxx_intent_recognition_result.h"
-#include "speechapi_cxx_intent_recognition_eventargs.h"
-#include "speechapi_cxx_intent_recognizer.h"
-#include "speechapi_cxx_intent_trigger.h"
-#include "speechapi_cxx_language_understanding_model.h"
-#include "speechapi_cxx_pattern_matching_model.h"
-#include "speechapi_cxx_pattern_matching_intent.h"
-
 #include "speechapi_cxx_translation_result.h"
 #include "speechapi_cxx_translation_eventargs.h"
 #include "speechapi_cxx_speech_translation_config.h"
@@ -72,6 +63,7 @@
 
 #include "speechapi_cxx_audio_data_stream.h"
 
+#include "speechapi_cxx_speech_synthesis_request.h"
 #include "speechapi_cxx_speech_synthesis_result.h"
 #include "speechapi_cxx_speech_synthesis_eventargs.h"
 #include "speechapi_cxx_speech_synthesis_word_boundary_eventargs.h"
@@ -101,15 +93,6 @@
 #include "speechapi_cxx_auto_detect_source_lang_result.h"
 
 #include "speechapi_cxx_source_language_recognizer.h"
-#include "speechapi_cxx_speaker_recognizer.h"
-#include "speechapi_cxx_speaker_verification_model.h"
-#include "speechapi_cxx_speaker_identification_model.h"
-#include "speechapi_cxx_voice_profile_client.h"
-#include "speechapi_cxx_voice_profile.h"
-#include "speechapi_cxx_voice_profile_result.h"
-#include "speechapi_cxx_voice_profile_enrollment_result.h"
-#include "speechapi_cxx_voice_profile_phrase_result.h"
-#include "speechapi_cxx_speaker_recognition_result.h"
 
 #include "speechapi_cxx_file_logger.h"
 #include "speechapi_cxx_event_logger.h"

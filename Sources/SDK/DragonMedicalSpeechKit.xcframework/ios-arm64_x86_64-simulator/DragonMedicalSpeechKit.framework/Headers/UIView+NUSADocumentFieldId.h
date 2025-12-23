@@ -4,7 +4,7 @@
 //
 //  Copyright 2015 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.2.2.1
+//  SDK version: 7.0.16.1
 //
 
 #import <Foundation/Foundation.h>

@@ -204,21 +204,21 @@ extension VAManagerImpl: NUSAVirtualAssistantControllerDelegate {
         processNluResult(result)
     }
     
-    internal func dialogResult(_ result: String!, errorCode: NUSAVirtualAssistantErrorCode, message: String!) {
+    internal func dialogResult(_ result: String, errorCode: NUSAVirtualAssistantErrorCode, message: String) {
         if errorCode == NUSAVirtualAssistantErrorCodeNoError {
-            Logger.log("Event : Dialog Result \nMessage : \(message ?? "EMPTY")\nResult : \(result ?? "EMPTY")\n")
+            Logger.log("Event : Dialog Result \nMessage : \(message)\nResult : \(result)\n")
         } else {
             let errorString = getErrorDescription(errorCode)
-            Logger.log("Event : Dialog Result \nError : \(errorString)\nMessage : \(message ?? "EMPTY")\nResult : \(result ?? "EMPTY")\n")
+            Logger.log("Event : Dialog Result \nError : \(errorString)\nMessage : \(message)\nResult : \(result)\n")
         }
         
         // Diagnotic logs are also provided by the SDK, result = LOG in that case
-        if result != nil && result != "LOG" {
+        if result != "LOG" {
             processResultString(result)
         }
     }
     
-    internal func stateChanged(_ state: NUSAVirtualAssistantState, errorCode: NUSAVirtualAssistantErrorCode, message: String!) {
+    internal func stateChanged(_ state: NUSAVirtualAssistantState, errorCode: NUSAVirtualAssistantErrorCode, message: String) {
         if errorCode == NUSAVirtualAssistantErrorCodeNoError && state == NUSAVirtualAssistantStateOpened {
             Logger.log("\(Constants.STATE_CHANGE_SUCCESS)\n")
             // Upload dynamic concepts when VA is successfully initialized
@@ -227,19 +227,19 @@ extension VAManagerImpl: NUSAVirtualAssistantControllerDelegate {
         } else {
             let stateString = getStateDescription(state)
             let errorString = getErrorDescription(errorCode)
-            Logger.log("Event : State Changed \nError : \(errorString)\nMessage : \(message ?? "EMPTY")\nState : \(stateString)\n")
+            Logger.log("Event : State Changed \nError : \(errorString)\nMessage : \(message)\nState : \(stateString)\n")
             DispatchQueue.main.async {
-                self.delegate?.onVAInitializationFailed(withError: errorString, message: (message ?? "EMPTY"))
+                self.delegate?.onVAInitializationFailed(withError: errorString, message: (message))
             }
         }
     }
     
-    internal func conceptResult(_ errorCode: NUSAVirtualAssistantErrorCode, message: String!) {
+    internal func conceptResult(_ errorCode: NUSAVirtualAssistantErrorCode, message: String) {
         if errorCode == NUSAVirtualAssistantErrorCodeNoError {
             Logger.log("\(Constants.CONCEPT_UPLOAD_SUCCESS)\n")
         } else {
             let errorString = getErrorDescription(errorCode)
-            Logger.log("Event : Concept Result \nError : \(errorString)\nMessage : \(message ?? "EMPTY")\n")
+            Logger.log("Event : Concept Result \nError : \(errorString)\nMessage : \(message)\n")
         }
     }
     

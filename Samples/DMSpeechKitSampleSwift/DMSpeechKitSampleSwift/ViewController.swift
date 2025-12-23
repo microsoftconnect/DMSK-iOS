@@ -32,7 +32,7 @@ class ViewController: UIViewController, LoginViewControllerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         if !userLoggedIn {
-            let loginController: LoginViewController! = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController;
+            let loginController: LoginViewController! = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController;
             loginController.delegate = self;
             
             present(loginController, animated: true, completion: nil);

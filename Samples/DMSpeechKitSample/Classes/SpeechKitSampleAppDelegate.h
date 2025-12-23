@@ -9,7 +9,5 @@
 
 @interface SpeechKitSampleAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-
 @end
 

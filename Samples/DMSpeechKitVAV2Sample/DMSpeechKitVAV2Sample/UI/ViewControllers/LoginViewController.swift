@@ -36,7 +36,7 @@ extension LoginViewController {
     }
     
     private func showHomeScreen() {
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+        if let appDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
             appDelegate.loadHomeScreen()
         }
     }

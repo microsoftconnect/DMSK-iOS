@@ -124,7 +124,7 @@ class DictationViewController: UIViewController, NUSASessionDelegate, NUSAVuiCon
         recordToggleButton.isSelected = false
     }
     
-    func vuiControllerDidRecognizeCommand(_ id: String!, spokenPhrase: String!, placeholderValues: [AnyHashable: Any]!) {
+    func vuiControllerDidRecognizeCommand(_ id: String, spokenPhrase: String, placeholderValues: [AnyHashable: Any]) {
         // This delegate message is sent in case a command was recognized
         // check the command id
         if id == "SHOW_ANIMALS" || id == "SPEAK_ANIMALS"
@@ -143,8 +143,8 @@ class DictationViewController: UIViewController, NUSASessionDelegate, NUSAVuiCon
             // trigger different actions depending on the recognized command
             if id == "SHOW_ANIMALS"
             {
-                let alert = UIAlertView(title: title, message: text, delegate: nil, cancelButtonTitle: "OK")
-                alert.show()
+                let alert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+                self.present(alert, animated: true)
             }
             else
             {

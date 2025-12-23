@@ -77,6 +77,7 @@
 		1DA1688E25C92C0500C3C47D /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = E246987722D468F400704B58 /* help.html */; };
 		1DA1689025C92C0500C3C47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D534CD221EAF2E00EEC8D1 /* Assets.xcassets */; };
 		1DA1689125C92C0500C3C47D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D534CA221EAF2D00EEC8D1 /* Main.storyboard */; };
+		1F2591982E28D08D0095BE47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2591972E28D08D0095BE47 /* SceneDelegate.swift */; };
 		1FDDDA5E2D00498600138B41 /* Dragon-Medical-SpeechKit-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 1FDDDA5D2D00498600138B41 /* Dragon-Medical-SpeechKit-iOS */; };
 /* End PBXBuildFile section */
 
@@ -94,7 +95,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1DA1689525C92C0500C3C47D /* DMSpeechKitVASample_XCFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMSpeechKitVASample_XCFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA1689525C92C0500C3C47D /* DMSpeechKitVASample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMSpeechKitVASample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2591972E28D08D0095BE47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		752766C022CC954600351330 /* VADelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VADelegate.swift; sourceTree = "<group>"; };
 		E200C0EE2225055700BC2105 /* NotesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesItem.swift; sourceTree = "<group>"; };
 		E200C0F02225060400BC2105 /* OtherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherItem.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		E297E6362227A6CE000534DA /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1F2591972E28D08D0095BE47 /* SceneDelegate.swift */,
 				E2D534C6221EAF2D00EEC8D1 /* AppDelegate.swift */,
 				E2C194B92227C5A0004259CA /* DMSpeechKitVASample-Bridging-Header.h */,
 				E2D534D2221EAF2E00EEC8D1 /* Info.plist */,
@@ -328,7 +331,7 @@
 		E2D534C4221EAF2D00EEC8D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DA1689525C92C0500C3C47D /* DMSpeechKitVASample_XCFramework.app */,
+				1DA1689525C92C0500C3C47D /* DMSpeechKitVASample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -378,9 +381,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1DA1684625C92C0500C3C47D /* DMSpeechKitVASample_XCFramework */ = {
+		1DA1684625C92C0500C3C47D /* DMSpeechKitVASample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DA1689225C92C0500C3C47D /* Build configuration list for PBXNativeTarget "DMSpeechKitVASample_XCFramework" */;
+			buildConfigurationList = 1DA1689225C92C0500C3C47D /* Build configuration list for PBXNativeTarget "DMSpeechKitVASample" */;
 			buildPhases = (
 				1DA1684725C92C0500C3C47D /* Sources */,
 				1DA1688825C92C0500C3C47D /* Frameworks */,
@@ -391,9 +394,9 @@
 			);
 			dependencies = (
 			);
-			name = DMSpeechKitVASample_XCFramework;
+			name = DMSpeechKitVASample;
 			productName = DMVASampleApp;
-			productReference = 1DA1689525C92C0500C3C47D /* DMSpeechKitVASample_XCFramework.app */;
+			productReference = 1DA1689525C92C0500C3C47D /* DMSpeechKitVASample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -402,8 +405,9 @@
 		E2D534BB221EAF2D00EEC8D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1640;
 				ORGANIZATIONNAME = "Nuance Communications Inc.";
 			};
 			buildConfigurationList = E2D534BE221EAF2D00EEC8D1 /* Build configuration list for PBXProject "DMSpeechKitVASample" */;
@@ -416,13 +420,13 @@
 			);
 			mainGroup = E2D534BA221EAF2D00EEC8D1;
 			packageReferences = (
-				A602F6A02D9422AC004E207E /* XCRemoteSwiftPackageReference "DMSK-iOS" */,
+				1FDDDA5C2D00498600138B41 /* XCRemoteSwiftPackageReference "DMSK-iOS" */,
 			);
 			productRefGroup = E2D534C4221EAF2D00EEC8D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1DA1684625C92C0500C3C47D /* DMSpeechKitVASample_XCFramework */,
+				1DA1684625C92C0500C3C47D /* DMSpeechKitVASample */,
 			);
 		};
 /* End PBXProject section */
@@ -507,6 +511,7 @@
 				1DA1688125C92C0500C3C47D /* ShowMedicationClassResultsItem.swift in Sources */,
 				1DA1688225C92C0500C3C47D /* OthersListNavigation.swift in Sources */,
 				1DA1688325C92C0500C3C47D /* ShowPatientVitalsItem.swift in Sources */,
+				1F2591982E28D08D0095BE47 /* SceneDelegate.swift in Sources */,
 				1DA1688425C92C0500C3C47D /* OtherItemCell.swift in Sources */,
 				1DA1688525C92C0500C3C47D /* HelpViewController.swift in Sources */,
 				1DA1688625C92C0500C3C47D /* ShowMedicationClassTimeItem.swift in Sources */,
@@ -560,13 +565,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZ53Q653EJ;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../DragonMedicalSpeechKit.xcframework";
-				INFOPLIST_FILE = "DMSpeechKitVASample_XCFramework-Info.plist";
+				FRAMEWORK_SEARCH_PATHS = "";
+				INFOPLIST_FILE = DMSpeechKitVASample/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nuance.DMSpeechKitVASample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -586,13 +590,12 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CZ53Q653EJ;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../DragonMedicalSpeechKit.xcframework";
-				INFOPLIST_FILE = "DMSpeechKitVASample_XCFramework-Info.plist";
+				FRAMEWORK_SEARCH_PATHS = "";
+				INFOPLIST_FILE = DMSpeechKitVASample/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nuance.DMSpeechKitVASample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -640,6 +643,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -654,11 +658,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -702,6 +705,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -710,10 +714,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -724,7 +727,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DA1689225C92C0500C3C47D /* Build configuration list for PBXNativeTarget "DMSpeechKitVASample_XCFramework" */ = {
+		1DA1689225C92C0500C3C47D /* Build configuration list for PBXNativeTarget "DMSpeechKitVASample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DA1689325C92C0500C3C47D /* Debug */,
@@ -745,20 +748,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1FDDDA5C2D00498600138B41 /* XCRemoteSwiftPackageReference "Dragon-Medical-SpeechKit-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nuance-communications/Dragon-Medical-SpeechKit-iOS.git";
-			requirement = {
-				kind = exactVersion;
-				version = 6.2.2;
-			};
-		};
-		A602F6A02D9422AC004E207E /* XCRemoteSwiftPackageReference "DMSK-iOS" */ = {
+		1FDDDA5C2D00498600138B41 /* XCRemoteSwiftPackageReference "DMSK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/microsoftconnect/DMSK-iOS.git";
 			requirement = {
 				kind = exactVersion;
-				version = 6.2.2;
+				version = 7.0.16;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -766,7 +761,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		1FDDDA5D2D00498600138B41 /* Dragon-Medical-SpeechKit-iOS */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1FDDDA5C2D00498600138B41 /* XCRemoteSwiftPackageReference "Dragon-Medical-SpeechKit-iOS" */;
+			package = 1FDDDA5C2D00498600138B41 /* XCRemoteSwiftPackageReference "DMSK-iOS" */;
 			productName = "Dragon-Medical-SpeechKit-iOS";
 		};
 /* End XCSwiftPackageProductDependency section */

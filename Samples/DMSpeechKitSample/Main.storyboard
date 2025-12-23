@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="G2a-pD-OEo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dictation View-->
+        <scene sceneID="5ao-XH-rSO">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="CXB-Ar-eQ9" customClass="DictationView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Pb-2Z-N0D"/>
+                        <viewControllerLayoutGuide type="bottom" id="zUy-Zy-e3S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z85-Zz-rdL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3I-cD-hql">
+                                <rect key="frame" x="20" y="189" width="374" height="464"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwC-ft-IQa">
+                                <rect key="frame" x="322" y="52" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleRecordingAction:" destination="CXB-Ar-eQ9" eventType="touchUpInside" id="dEb-qb-BvM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Press the Record toggle button to start and stop recording. " lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-Yj-ctx">
+                                <rect key="frame" x="20" y="52" width="263" height="83"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEK-6h-IU7">
+                                <rect key="frame" x="20" y="150" width="374" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gW-VP-x0s">
+                                <rect key="frame" x="322" y="677" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneAction:" destination="CXB-Ar-eQ9" eventType="touchUpInside" id="YjM-O3-Del"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="editField" destination="gEK-6h-IU7" id="RWs-ge-XEO"/>
+                        <outlet property="recordToggleButton" destination="OwC-ft-IQa" id="d2B-nI-uLi"/>
+                        <outlet property="textView" destination="Q3I-cD-hql" id="baJ-Tg-2zg"/>
+                        <outlet property="vuiController" destination="8dL-d7-lbz" id="XvW-RB-Qdt"/>
+                    </connections>
+                </viewController>
+                <customObject id="8dL-d7-lbz" customClass="NUSAVuiController">
+                    <connections>
+                        <outlet property="view" destination="z85-Zz-rdL" id="zJw-DJ-eYz"/>
+                    </connections>
+                </customObject>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="695-mn-20K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.21739130434787" y="273.88392857142856"/>
+        </scene>
+        <!--Speech Kit Sample View Controller-->
+        <scene sceneID="yFg-ri-4AB">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="G2a-pD-OEo" customClass="SpeechKitSampleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WNi-Af-r9U"/>
+                        <viewControllerLayoutGuide type="bottom" id="kII-d9-c4V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Pt-Al-VlI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frW-4q-qbv">
+                                <rect key="frame" x="26" y="94" width="362" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Create a report">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CXB-Ar-eQ9" kind="modal" identifier="DictationViewSegue" id="kcI-qo-QnJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75" green="0.75" blue="0.75" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="frW-4q-qbv" firstAttribute="top" secondItem="WNi-Af-r9U" secondAttribute="bottom" constant="50" id="5Nc-u3-kMk"/>
+                            <constraint firstItem="frW-4q-qbv" firstAttribute="leading" secondItem="1Pt-Al-VlI" secondAttribute="leadingMargin" constant="6" id="eJ2-SN-f6x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="frW-4q-qbv" secondAttribute="trailing" constant="6" id="sg3-Qo-YwX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="co8-lg-aeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-438" y="274"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="5eo-7q-anC">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="UAM-th-ZUp" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kWH-yA-Okw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xbq-AC-PGo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nqs-Gq-jSE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SampleUser" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sb6-mB-gmG">
+                                <rect key="frame" x="26" y="89" width="362" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmR-Y3-CNM">
+                                <rect key="frame" x="186.5" y="145" width="41" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Login"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="UAM-th-ZUp" eventType="touchUpInside" id="O2Z-C3-7jb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sb6-mB-gmG" firstAttribute="leading" secondItem="Nqs-Gq-jSE" secondAttribute="leadingMargin" constant="6" id="CYz-AH-fCR"/>
+                            <constraint firstItem="Sb6-mB-gmG" firstAttribute="top" secondItem="kWH-yA-Okw" secondAttribute="bottom" constant="45" id="L5R-rO-KSX"/>
+                            <constraint firstItem="NmR-Y3-CNM" firstAttribute="top" secondItem="Sb6-mB-gmG" secondAttribute="bottom" constant="22" id="QJ6-u6-tMt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sb6-mB-gmG" secondAttribute="trailing" constant="6" id="bGU-kG-dH9"/>
+                            <constraint firstItem="NmR-Y3-CNM" firstAttribute="centerX" secondItem="Nqs-Gq-jSE" secondAttribute="centerX" id="pMa-i4-eoS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userNameField" destination="Sb6-mB-gmG" id="FJj-W5-gTC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxM-7P-4VV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381" y="-345"/>
+        </scene>
+    </scenes>
+</document>

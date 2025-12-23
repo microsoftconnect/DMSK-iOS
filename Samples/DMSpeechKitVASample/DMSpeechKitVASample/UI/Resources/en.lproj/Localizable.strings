@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  DMSpeechKitVASample
+
+  Copyright © 2019 Nuance Communications Inc. All rights reserved.
+*/
+
+// Screen titles
+"dmva"          = "DMVA";
+"medication"    = "Medication";
+"reminders"     = "Reminders";
+"messages"      = "Messages";
+"others"        = "Others";
+"show_me"       = "Show Me";
+"notes"         = "Notes";
+"help"          = "Help";
+"settings"      = "Settings";
+
+// Settings
+"settings_app_name" = "App name";
+"settings_model_id" = "Model ID";
+"settings_version"  = "Version";
+
+// VA Errors
+"va_error_no_error"             = "The request has been processed successfully.";
+"va_error_config_error"         = "Failed to configure the DMVA.";
+"va_error_network_error"        = "General network error.";
+"va_error_server_error"         = "There was a problem communicating with the DMVA server. The DMVA server is unresponsive or it is sending badly formed data.";
+"va_error_app_error"            = "The application state is not valid for this operation.";
+"va_error_parameter_error"      = "The supplied parameters are not valid.";
+"va_error_unknown_error"        = "An unknown error has occurred.";
+"va_error_missing_val_error"    = "Error value missing.";
+
+// VA Event Success Messages
+"dmva_state_open_success"       = "DMVA Opened successfully.";
+"dmva_state_unknown"            = "State value unknown";
+"dmva_concept_upload_success"   = "Concept upload is successful.";
+
+// Dialog errors
+"dialog_aborted" = "Dialog aborted, please try again.";
+
+// Order Message
+"order_complete" = "Your order is complete.";

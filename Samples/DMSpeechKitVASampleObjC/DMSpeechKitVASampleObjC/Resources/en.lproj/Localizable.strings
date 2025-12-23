@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  DMSpeechKitVASampleObjC
+
+  Copyright © 2019 Nuance Communications Inc. All rights reserved.
+*/
+
+"Message_Aborted" = "Dialog aborted";

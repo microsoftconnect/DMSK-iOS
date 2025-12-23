@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="DMSpeechKitSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="umv-Qa-94b"/>
+                        <viewControllerLayoutGuide type="bottom" id="vSC-VR-PVv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuY-Am-Dbn">
+                                <rect key="frame" x="363.5" y="50" width="107" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Create a report">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="24w-WU-orA" kind="presentation" id="L6c-SS-44I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uuY-Am-Dbn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lr5-fA-hJn"/>
+                            <constraint firstItem="uuY-Am-Dbn" firstAttribute="top" secondItem="umv-Qa-94b" secondAttribute="bottom" constant="50" id="qnI-GN-UJL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="136"/>
+        </scene>
+        <!--Dictation View Controller-->
+        <scene sceneID="wpk-7M-BWd">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="24w-WU-orA" customClass="DictationViewController" customModule="DMSpeechKitSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KnC-kA-ZeY"/>
+                        <viewControllerLayoutGuide type="bottom" id="XNc-ju-6Dg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eMU-T6-5ZM">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press the Record toggle button to start and stop recording. " lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KFh-xN-s5b">
+                                <rect key="frame" x="20" y="50" width="300" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="e6i-SZ-soM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3n-xL-6Ay">
+                                <rect key="frame" x="762" y="45" width="52" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleRecordingAction:" destination="24w-WU-orA" eventType="touchUpInside" id="8co-bu-tKr"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eye-ic-84e">
+                                <rect key="frame" x="20" y="224" width="794" height="300"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="uWa-cU-Z6w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kom-rL-w9p">
+                                <rect key="frame" x="20" y="150" width="794" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-an-CbH">
+                                <rect key="frame" x="776" y="572" width="38" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneAction:" destination="24w-WU-orA" eventType="touchUpInside" id="IND-PF-8Pq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C3n-xL-6Ay" firstAttribute="trailing" secondItem="eMU-T6-5ZM" secondAttribute="trailingMargin" id="Fpz-GA-sXL"/>
+                            <constraint firstItem="kom-rL-w9p" firstAttribute="top" secondItem="C3n-xL-6Ay" secondAttribute="bottom" constant="75" id="H3x-j8-hft"/>
+                            <constraint firstItem="eye-ic-84e" firstAttribute="top" secondItem="kom-rL-w9p" secondAttribute="bottom" constant="40" id="H8O-jr-LYa"/>
+                            <constraint firstItem="6Ho-an-CbH" firstAttribute="trailing" secondItem="eMU-T6-5ZM" secondAttribute="trailingMargin" id="HjI-HF-re3"/>
+                            <constraint firstItem="kom-rL-w9p" firstAttribute="leading" secondItem="eMU-T6-5ZM" secondAttribute="leadingMargin" id="L6e-Sj-gbJ"/>
+                            <constraint firstItem="eye-ic-84e" firstAttribute="trailing" secondItem="eMU-T6-5ZM" secondAttribute="trailingMargin" id="PLx-ks-RfZ"/>
+                            <constraint firstItem="KFh-xN-s5b" firstAttribute="top" secondItem="KnC-kA-ZeY" secondAttribute="bottom" constant="50" id="PM7-3H-MTl"/>
+                            <constraint firstItem="C3n-xL-6Ay" firstAttribute="top" secondItem="KnC-kA-ZeY" secondAttribute="bottom" constant="45" id="ReR-Hp-bYf"/>
+                            <constraint firstItem="eye-ic-84e" firstAttribute="leading" secondItem="eMU-T6-5ZM" secondAttribute="leadingMargin" id="SMy-Vp-nQJ"/>
+                            <constraint firstItem="kom-rL-w9p" firstAttribute="trailing" secondItem="eMU-T6-5ZM" secondAttribute="trailingMargin" id="bsA-IF-9mp"/>
+                            <constraint firstItem="KFh-xN-s5b" firstAttribute="leading" secondItem="eMU-T6-5ZM" secondAttribute="leadingMargin" id="pEA-BX-xuE"/>
+                            <constraint firstItem="6Ho-an-CbH" firstAttribute="top" secondItem="eye-ic-84e" secondAttribute="bottom" constant="48" id="xzU-C4-nL3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="editField" destination="kom-rL-w9p" id="ff1-ym-4EV"/>
+                        <outlet property="recordToggleButton" destination="C3n-xL-6Ay" id="aZ0-lL-s8L"/>
+                        <outlet property="textView" destination="eye-ic-84e" id="Lsu-JO-R3F"/>
+                        <outlet property="vuiController" destination="afz-EP-OUO" id="qZr-vO-YvJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tI3-CX-jtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="afz-EP-OUO" customClass="NUSAVuiController">
+                    <connections>
+                        <outlet property="view" destination="eMU-T6-5ZM" id="TX7-ce-7a6"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1060.4316546762591" y="540.64748201438852"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="aDq-BA-Va9">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="g8r-CN-1lb" customClass="LoginViewController" customModule="DMSpeechKitSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BED-Zx-S37"/>
+                        <viewControllerLayoutGuide type="bottom" id="joE-yt-X0Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RsE-7w-hFv">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SampleUser" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-fH-8bw">
+                                <rect key="frame" x="20" y="88" width="794" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34A-NZ-Y49">
+                                <rect key="frame" x="396.5" y="163" width="41" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Login"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="g8r-CN-1lb" eventType="touchUpInside" id="rwc-Fe-HS1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="34A-NZ-Y49" firstAttribute="top" secondItem="EDI-fH-8bw" secondAttribute="bottom" constant="41" id="ITa-z7-Nfj"/>
+                            <constraint firstItem="34A-NZ-Y49" firstAttribute="centerX" secondItem="RsE-7w-hFv" secondAttribute="centerX" id="gjL-fG-ty7"/>
+                            <constraint firstItem="EDI-fH-8bw" firstAttribute="trailing" secondItem="RsE-7w-hFv" secondAttribute="trailingMargin" id="sT1-kj-nWl"/>
+                            <constraint firstItem="EDI-fH-8bw" firstAttribute="top" secondItem="BED-Zx-S37" secondAttribute="bottom" constant="88" id="yoG-r0-OQO"/>
+                            <constraint firstItem="EDI-fH-8bw" firstAttribute="leading" secondItem="RsE-7w-hFv" secondAttribute="leadingMargin" id="zrK-DS-QfG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userNameField" destination="EDI-fH-8bw" id="6ks-Tf-W1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJs-M9-DAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060.4316546762591" y="-108.45323741007195"/>
+        </scene>
+    </scenes>
+</document>

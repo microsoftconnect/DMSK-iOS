@@ -170,9 +170,7 @@ Replace text.
 	(NSRange)<span class="parameter">range 
 	</span>withText:
 	(NSString *)<span class="parameter">text 
-	</span></code><h5 xmlns="">Return Value</h5>
-<p xmlns="">A substring of text that falls within the specified range. </p>
-<h5 xmlns="">Parameters</h5>
+	</span></code><h5 xmlns="">Parameters</h5>
 <dl xmlns="" class="parameterList">
 <dt>range</dt>
 <dd><p>
@@ -187,7 +185,6 @@ A string to replace the text in range.
 <p xmlns="">
 Replace the text in a document that is in the specified range. After a vuiReplaceRange() call the insertion point must be located at the same position in the text as before the call. This means that if vuiReplaceRange() inserts or removes characters to the left of the current insertion point or selection, the location of the insertion point must be moved accordingly. If vuiReplaceRange() modifies text to the right of the insertion point, the insertion point must not change. If vuiReplaceRange() modifies characters at the insertion point, the insertion point must be set to the end of the modified region. Ideally, if vuiReplaceRange() is called while the user is typing and modifies text to the left or right of the typing location, this will not interfere with the user's keyboard input. This is to ensure that speech recognition results can be inserted in the text asynchronously while the user is, for example, correcting a misrecognition at another location in the text.</p>
 <p xmlns="">
-
 </p>
         <h5 xmlns="">Availability</h5> 
 	Available in version 1.3 and later.

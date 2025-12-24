@@ -4,7 +4,7 @@
 //
 //  Copyright (c) 2012 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.2.2.1
+//  SDK version: 7.0.16.1
 //
 
 #import <Foundation/Foundation.h>
@@ -52,7 +52,6 @@ extern NSString *const NUSATextControlDidBeginEditingNotification;
  
  @param range A range of text in a control.
  @param text A string to replace the text in range.
- @return A substring of text that falls within the specified range.
  */
 - (void)vuiReplaceRange:(NSRange)range withText:(NSString *)text;
 

@@ -22,14 +22,6 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)viewDidUnload {
-	// Warning: 
-	// Releasing the vui controller in the viewDidUnload method will not work, as the 
-	// vui controller retains your UI view, preventing it from being unloaded by the 
-	// framework. Release the vui controller at an earlier point in time to allow the 
-	// runtime to unload your view. 
-}
-
 - (void) viewWillAppear:(BOOL)animated {
     // Set up our record button 
     [recordToggleButton setTitle: @"Record" forState: UIControlStateNormal];
@@ -163,23 +155,15 @@
         // trigger different actions depending on the recognized command
         if ([id isEqualToString:@"SHOW_ANIMALS"])
         {
-            UIAlertView *alert;
-            alert = [[UIAlertView alloc] initWithTitle:title
-                                               message:text
-                                              delegate:nil
-                                     cancelButtonTitle:@"OK"
-                                     otherButtonTitles:nil];    
-            [alert show];
+            UIAlertController *alert;
+            alert = [UIAlertController alertControllerWithTitle:title message:text preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
         }
         else
         {
             [[NUSASession sharedSession] startSpeaking:text];
         }
     }
-}
-
-- (BOOL)shouldAutorotate {
-    return NO;
 }
 
 @end

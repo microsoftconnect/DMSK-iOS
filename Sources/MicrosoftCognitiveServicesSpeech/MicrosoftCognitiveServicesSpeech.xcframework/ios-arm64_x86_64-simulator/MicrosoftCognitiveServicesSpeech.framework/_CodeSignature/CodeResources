@@ -6,11 +6,15 @@
 	<dict>
 		<key>Headers/SPXAudioConfiguration.h</key>
 		<data>
-		qfLK5lOLAEheVJPtxBDL88mJfUY=
+		F8ys0m+RtP8Yvg6G/gSNZEHEyrs=
 		</data>
 		<key>Headers/SPXAudioDataStream.h</key>
 		<data>
 		XXKpL3YwFo2JNPVpeZ6RgVY927o=
+		</data>
+		<key>Headers/SPXAudioProcessingOptions.h</key>
+		<data>
+		CMuhuAUX+c0potaD3pcrob22GbE=
 		</data>
 		<key>Headers/SPXAudioStream.h</key>
 		<data>
@@ -22,15 +26,15 @@
 		</data>
 		<key>Headers/SPXAutoDetectSourceLanguageConfiguration.h</key>
 		<data>
-		ddh1dG8NKQrU0gvlCcwREG4+Yq8=
+		wcNY/SlSTQgph7aqUfQSuy6+P4g=
 		</data>
 		<key>Headers/SPXAutoDetectSourceLanguageResult.h</key>
 		<data>
-		7HOJZYrn7ReP03pGAsxKhn31p0o=
+		y0CNwgZu0V8e5e+AzgrepkO9ad0=
 		</data>
 		<key>Headers/SPXConnection.h</key>
 		<data>
-		Nq1cdxvsI6xsyMMVmNyVeFhU258=
+		f6UTqyxoa+xXST6US6U1Z88Zidw=
 		</data>
 		<key>Headers/SPXConnectionEventArgs.h</key>
 		<data>
@@ -92,6 +96,18 @@
 		<data>
 		OXYT9do8vmizzffiYUR67GRxWlk=
 		</data>
+		<key>Headers/SPXEmbeddedSpeechConfiguration.h</key>
+		<data>
+		lF2q+C+sUG95qdbFJA6nwbeddY4=
+		</data>
+		<key>Headers/SPXEventLogger.h</key>
+		<data>
+		QnvSKasgGyActsloZS015W2Mxjo=
+		</data>
+		<key>Headers/SPXFileLogger.h</key>
+		<data>
+		J/yAPveFlvGGx6lsdIvz1heJKqo=
+		</data>
 		<key>Headers/SPXFoundation.h</key>
 		<data>
 		/7PWyBG6O4h5dpFwrex/l1BlXts=
@@ -103,18 +119,6 @@
 		<key>Headers/SPXGrammarPhrase.h</key>
 		<data>
 		C5uSOFunVCchcMwaB5IQVjUYIJI=
-		</data>
-		<key>Headers/SPXIntentRecognitionEventArgs.h</key>
-		<data>
-		FT87XKh7lcYtZGh+uJdShX5ej4w=
-		</data>
-		<key>Headers/SPXIntentRecognitionResult.h</key>
-		<data>
-		6Qn33Bi90ELxEOhHBURqXU5kCgU=
-		</data>
-		<key>Headers/SPXIntentRecognizer.h</key>
-		<data>
-		cJ9S6pc2/3zSWktRsfaO8aUGHNg=
 		</data>
 		<key>Headers/SPXKeywordRecognitionEventArgs.h</key>
 		<data>
@@ -132,10 +136,6 @@
 		<data>
 		5EHbY1zxJe+b5ZzNLIJacipLc6s=
 		</data>
-		<key>Headers/SPXLanguageUnderstandingModel.h</key>
-		<data>
-		qT92ozugykTMOS8/l5geR/i09XY=
-		</data>
 		<key>Headers/SPXMeeting.h</key>
 		<data>
 		+UoXR+B8Q3i/eLIjhP72SsOznYI=
@@ -152,21 +152,25 @@
 		<data>
 		BtfZ1mRw6QSxcoizD+vzPe2HALE=
 		</data>
+		<key>Headers/SPXMemoryLogger.h</key>
+		<data>
+		E+NrcXcYNou58nkHy283qMEjXFE=
+		</data>
 		<key>Headers/SPXParticipant.h</key>
 		<data>
 		1hjFSonn81IMQiRjSoFVy6WnBKI=
 		</data>
 		<key>Headers/SPXPhraseListGrammar.h</key>
 		<data>
-		2JOrfeXBNR6ASqKLUlNCAIPiX1A=
+		wJsqLpWhzpeT3PiS2B+BIqWDz68=
 		</data>
 		<key>Headers/SPXPronunciationAssessmentConfiguration.h</key>
 		<data>
-		VlIR/2NYjkjmKaUBK1nozAL9eao=
+		VzDQirP9qIwpgq4KoKt13wh6lTk=
 		</data>
 		<key>Headers/SPXPronunciationAssessmentResult.h</key>
 		<data>
-		kmVMEATUmfQVAXiZ22xf5B4njWI=
+		9Mwg2T4QKbJrB7oLwIiRheDDAns=
 		</data>
 		<key>Headers/SPXPropertyCollection.h</key>
 		<data>
@@ -178,7 +182,7 @@
 		</data>
 		<key>Headers/SPXRecognitionResult.h</key>
 		<data>
-		eU7GQilz8NrxSRrlNNt+ULF4WXM=
+		4iBpYzL3keM7oyBsMEWUNEpXWuk=
 		</data>
 		<key>Headers/SPXRecognizer.h</key>
 		<data>
@@ -194,19 +198,23 @@
 		</data>
 		<key>Headers/SPXSpeechApi.h</key>
 		<data>
-		+KseLvWVPXdHf0TNaaF2pj9RqtE=
+		+ds8bvl7/a/Xtvxf/yEhvF16C1E=
 		</data>
 		<key>Headers/SPXSpeechConfiguration.h</key>
 		<data>
-		Nzf0PGj59uzcoQbwJzpHUh34c6I=
+		+Ur5TYX9/yYrCUxkWszzoSgVTaE=
 		</data>
 		<key>Headers/SPXSpeechEnums.h</key>
 		<data>
-		Al3vy9Pg8S88kxFbEz6KcltpnM0=
+		35HkqqziA2T49sFtRoR8Jp0Mb2Y=
 		</data>
 		<key>Headers/SPXSpeechRecognitionEventArgs.h</key>
 		<data>
 		XxBHiqJgvasUpaBmSIshuygPf5Y=
+		</data>
+		<key>Headers/SPXSpeechRecognitionModelInfo.h</key>
+		<data>
+		p3Wz+0HvyHCdqCqVPDomDpW7pmQ=
 		</data>
 		<key>Headers/SPXSpeechRecognitionResult.h</key>
 		<data>
@@ -214,7 +222,7 @@
 		</data>
 		<key>Headers/SPXSpeechRecognizer.h</key>
 		<data>
-		OZMvL/oCaD5oR6fq5+V9jqsX1Yw=
+		zfMuYuYqjGpwhBoFFkuEOVKSoZ8=
 		</data>
 		<key>Headers/SPXSpeechSynthesisCancellationDetails.h</key>
 		<data>
@@ -230,11 +238,15 @@
 		</data>
 		<key>Headers/SPXSpeechSynthesizer.h</key>
 		<data>
-		PdQFlAOdViDmDpDL03LTVhT6RX0=
+		F+3NyJwyoz0HCWWGo28xrsvVUbs=
 		</data>
 		<key>Headers/SPXSpeechTranslationConfiguration.h</key>
 		<data>
-		cu8O7/0zhIkkzEfvWecjNwJItx0=
+		fCVC1KSPbFdOHsWWsqE5Pfk3EtY=
+		</data>
+		<key>Headers/SPXSpeechTranslationModelInfo.h</key>
+		<data>
+		KioQmqmKStDbI1DTkIeVaOEupqw=
 		</data>
 		<key>Headers/SPXSynthesisVoicesResult.h</key>
 		<data>
@@ -254,7 +266,7 @@
 		</data>
 		<key>Headers/SPXTranslationRecognizer.h</key>
 		<data>
-		teUGhjn7nAK2Agox6NMXnjPyxWc=
+		2xdQ0Y7mY8kmMX0PBpp+Vyopqcc=
 		</data>
 		<key>Headers/SPXTranslationSynthesisEventArgs.h</key>
 		<data>
@@ -270,39 +282,43 @@
 		</data>
 		<key>Headers/SPXVoiceInfo.h</key>
 		<data>
-		YsseYJi6FWzlfNyETzzFB5c3yVo=
+		Pe0WSh7Be//v7TEF8mDQtdrDUoo=
 		</data>
 		<key>Headers/azac_api_c_common.h</key>
 		<data>
-		oliEDKuf4ca+4MQq6/RW3iC+yY4=
+		Sk55naPt/ZDhKIuboiyYjdYfzMo=
 		</data>
 		<key>Headers/azac_api_c_diagnostics.h</key>
 		<data>
-		L7db3yKDo13Zfsd2VEBzHw9Ysrw=
+		wX9n450moAZ7TUEiwrvFzk/krnw=
 		</data>
 		<key>Headers/azac_api_c_error.h</key>
 		<data>
-		YwP+lKgmU4g6lAEEK60rbmbCROw=
+		lcfe5YLJutLkucLgJDjfD4dQzaU=
 		</data>
 		<key>Headers/azac_api_c_pal.h</key>
 		<data>
-		M+pj0POYcRePFBjQZjRCeTr5j2Y=
+		hcZY5xbb3F384qnljjSMb+TeLGs=
 		</data>
 		<key>Headers/azac_api_cxx_common.h</key>
 		<data>
-		WG938hCFJ0Rks1fehwxcssILUKU=
+		uW+Hnd7yhsh0aC/rqaO9jGUWA1A=
 		</data>
 		<key>Headers/azac_debug.h</key>
 		<data>
-		P9mZtiI0R+XK6KUsZm+g1yntkhE=
+		3rWK5gnSHtQPVsW3GAl0LCyg468=
 		</data>
 		<key>Headers/azac_error.h</key>
 		<data>
-		fn85xSeSypICacvJVwatD5rKBQU=
+		XHU/sfDhD95E2oaG7PXT70ikR5Q=
+		</data>
+		<key>Headers/binding_helpers.h</key>
+		<data>
+		kNEBjakIGnBQHLbtkIYItbmrOLc=
 		</data>
 		<key>Headers/speechapi_c.h</key>
 		<data>
-		y6CRcZoVze9hFCk/2KbqClR4mU4=
+		HaOO84sKftUQxaGNToTVWoFCUI8=
 		</data>
 		<key>Headers/speechapi_c_audio_config.h</key>
 		<data>
@@ -310,15 +326,15 @@
 		</data>
 		<key>Headers/speechapi_c_audio_processing_options.h</key>
 		<data>
-		qtVldtWFfbp06nN07+b1Qy11+NQ=
+		00f2QRwqvLY7+JuX3XvMD7OS9Lg=
 		</data>
 		<key>Headers/speechapi_c_audio_stream.h</key>
 		<data>
-		dH13KIeMmnpoRyfkQ1d7fwfL5js=
+		HghHzqRUO8QXgQQPnA5dQWdK/vY=
 		</data>
 		<key>Headers/speechapi_c_audio_stream_format.h</key>
 		<data>
-		eXQBcwUyrjd2B2rw1x2KIAoumwo=
+		G2O3Ta8DHbTBORJnE/DqYGWFQqk=
 		</data>
 		<key>Headers/speechapi_c_auto_detect_source_lang_config.h</key>
 		<data>
@@ -326,7 +342,7 @@
 		</data>
 		<key>Headers/speechapi_c_common.h</key>
 		<data>
-		1Kb5a0eir9lC1l7GQVwgHQNOwWI=
+		7eHNwcwL8X/iYyObX9+h3jruN18=
 		</data>
 		<key>Headers/speechapi_c_connection.h</key>
 		<data>
@@ -358,7 +374,7 @@
 		</data>
 		<key>Headers/speechapi_c_embedded_speech_config.h</key>
 		<data>
-		kGwaKq082MWdm1UKAgaNYB4BOBs=
+		2TyeoODA693FKHiC1gWSKRmDpfs=
 		</data>
 		<key>Headers/speechapi_c_error.h</key>
 		<data>
@@ -370,39 +386,23 @@
 		</data>
 		<key>Headers/speechapi_c_factory.h</key>
 		<data>
-		hzLExVHlE/XaRiaTyrkGA96Prt0=
+		AWzltmoSQd+VBFxLtpZrE4poYkw=
 		</data>
 		<key>Headers/speechapi_c_grammar.h</key>
 		<data>
-		Dy8Kx+08Rxh4G9xqJ+++sYKWZJA=
+		B5AMAT5JwHmOir3n52rKW5C9C+0=
 		</data>
 		<key>Headers/speechapi_c_hybrid_speech_config.h</key>
 		<data>
 		OCSY2AhZS5lci4PZGY9LprGAbJo=
 		</data>
-		<key>Headers/speechapi_c_intent_recognizer.h</key>
-		<data>
-		FQVQ3zd/9sDMxXDZxRMOhRhIcQQ=
-		</data>
-		<key>Headers/speechapi_c_intent_result.h</key>
-		<data>
-		wKenoDnrJ6ROFJbYbUvfr03NKvI=
-		</data>
-		<key>Headers/speechapi_c_intent_trigger.h</key>
-		<data>
-		88drfBSMqHElEM4O4HHgwgBXIeE=
-		</data>
 		<key>Headers/speechapi_c_json.h</key>
 		<data>
-		lPnBtFQthyxMnB6GZo/VmHn3KMs=
+		MQD2lbTmsZrvWSqM2sVjN4V0PBo=
 		</data>
 		<key>Headers/speechapi_c_keyword_recognition_model.h</key>
 		<data>
-		U4G6/oLJocPZsOE+F+wXwnKynXc=
-		</data>
-		<key>Headers/speechapi_c_language_understanding_model.h</key>
-		<data>
-		LfXI6BBzNk8+Z3KOnme+77yC6X0=
+		hmwamZQHIt4nNVKp0U3qyx/d/t8=
 		</data>
 		<key>Headers/speechapi_c_meeting.h</key>
 		<data>
@@ -420,25 +420,21 @@
 		<data>
 		yj+bvYDko2Sta/XgPtj+yqntIvE=
 		</data>
-		<key>Headers/speechapi_c_pattern_matching_model.h</key>
-		<data>
-		37y2sA2PBa0mx16rrLA7XT+hvX4=
-		</data>
 		<key>Headers/speechapi_c_pronunciation_assessment_config.h</key>
 		<data>
 		MRN5ve7XWhLE8VLNYeh1uqR5iRQ=
 		</data>
 		<key>Headers/speechapi_c_property_bag.h</key>
 		<data>
-		ypYKWZWJeTGkSevdVQ5J5NpgTMw=
+		GLB4UQ2vmEfETY8jDRma7NI90nU=
 		</data>
 		<key>Headers/speechapi_c_recognizer.h</key>
 		<data>
-		i2bpBfelN897KxGrmLF9RZcqKUg=
+		Jgr5BpmRoaqvOfQOiYNmysRM/FY=
 		</data>
 		<key>Headers/speechapi_c_result.h</key>
 		<data>
-		/UGa1/wt1O5TWhidN9LUs/dcltw=
+		/QPorQGXoWLvz2Rmzml8C0anEUw=
 		</data>
 		<key>Headers/speechapi_c_session.h</key>
 		<data>
@@ -448,13 +444,9 @@
 		<data>
 		Kec3ouscLqZei975yrWvtbMNylY=
 		</data>
-		<key>Headers/speechapi_c_speaker_recognition.h</key>
-		<data>
-		IL8EY0+ayR7uKoda6UGnC9oav/k=
-		</data>
 		<key>Headers/speechapi_c_speech_config.h</key>
 		<data>
-		SSlthSqF/mgHmevoMa0WqznpoLo=
+		T7RPpWgkrppAwyfIlOSRIE5MuiE=
 		</data>
 		<key>Headers/speechapi_c_speech_recognition_model.h</key>
 		<data>
@@ -462,15 +454,19 @@
 		</data>
 		<key>Headers/speechapi_c_speech_translation_config.h</key>
 		<data>
-		P8OIRCwdlGoGv+BljrRBC5Lv8Bc=
+		Ao8oiHM2k/oHDo85zYQO77bl5wI=
 		</data>
 		<key>Headers/speechapi_c_speech_translation_model.h</key>
 		<data>
 		uivfHgzrNnf6DOy6mjadr94TU/0=
 		</data>
+		<key>Headers/speechapi_c_synthesis_request.h</key>
+		<data>
+		0UkGHWoRf6UPeGaquy84ZdfpnIw=
+		</data>
 		<key>Headers/speechapi_c_synthesizer.h</key>
 		<data>
-		iMXfSU9C2L4UIZsjzkmls5sqxeY=
+		6R/1sicTBzRAFFhdCRs4K1gL39o=
 		</data>
 		<key>Headers/speechapi_c_translation_recognizer.h</key>
 		<data>
@@ -486,7 +482,7 @@
 		</data>
 		<key>Headers/speechapi_cxx.h</key>
 		<data>
-		qdmQRnabTCbPkAJoS6ve0QFXiAs=
+		F7DTvfTzaXUq9O6L4dyvERTcgPE=
 		</data>
 		<key>Headers/speechapi_cxx_audio_config.h</key>
 		<data>
@@ -494,11 +490,11 @@
 		</data>
 		<key>Headers/speechapi_cxx_audio_data_stream.h</key>
 		<data>
-		++a1tKdKnecfjC6rIVs5igmzAJA=
+		zMxdbtuNPhk3mpQUApq89qpZaf4=
 		</data>
 		<key>Headers/speechapi_cxx_audio_processing_options.h</key>
 		<data>
-		HKHNZam2vJP+sq1Th+efUCZNy5s=
+		A+M1Yge0AXXZkoRiTukBtP3AJNI=
 		</data>
 		<key>Headers/speechapi_cxx_audio_stream.h</key>
 		<data>
@@ -506,15 +502,15 @@
 		</data>
 		<key>Headers/speechapi_cxx_audio_stream_format.h</key>
 		<data>
-		BqS6lDCFz748WfXWkqrGb5rCOyE=
+		ozVlqls4PTkDI+mcQsDA18u27UA=
 		</data>
 		<key>Headers/speechapi_cxx_auto_detect_source_lang_config.h</key>
 		<data>
-		I600CU489cIjW0WxQGpMfNQ2Xb0=
+		inIur8JeA7WTWcZ4sn/eBl+umSw=
 		</data>
 		<key>Headers/speechapi_cxx_auto_detect_source_lang_result.h</key>
 		<data>
-		om0bOLMnTM+7e894I56Yfv+DDkg=
+		nlzU3n2ZoW7e//mmYa95qTORiWY=
 		</data>
 		<key>Headers/speechapi_cxx_class_language_model.h</key>
 		<data>
@@ -526,7 +522,7 @@
 		</data>
 		<key>Headers/speechapi_cxx_connection.h</key>
 		<data>
-		nTWCUHJmXIfpfQVtFMLNgl8E8mw=
+		aHju4Jh4AyxU4mu6OQCOhxkUoww=
 		</data>
 		<key>Headers/speechapi_cxx_connection_eventargs.h</key>
 		<data>
@@ -564,17 +560,13 @@
 		<data>
 		COzsBczyj9jbxU3O/qKI1nH6D+I=
 		</data>
-		<key>Headers/speechapi_cxx_conversational_language_understanding_model.h</key>
-		<data>
-		foaTYuQ7L8r85lW5UxSmiHkgDgY=
-		</data>
 		<key>Headers/speechapi_cxx_dialog_service_config.h</key>
 		<data>
 		wWpBHI31AbNhoX2Pw2vqWgIfS0s=
 		</data>
 		<key>Headers/speechapi_cxx_dialog_service_connector.h</key>
 		<data>
-		d3YEGaQ0FnyfZyeIRcUiDk57MBg=
+		KNU96ZmlzlbDqAt+rrOfEfR97U4=
 		</data>
 		<key>Headers/speechapi_cxx_dialog_service_connector_eventargs.h</key>
 		<data>
@@ -582,11 +574,11 @@
 		</data>
 		<key>Headers/speechapi_cxx_embedded_speech_config.h</key>
 		<data>
-		sUSGFAmRFMqoOjOw80GT7QSQpzo=
+		XCtrnoB6CCInWCD3Es1agN9+gr0=
 		</data>
 		<key>Headers/speechapi_cxx_enums.h</key>
 		<data>
-		k22V2gcab8fipm4CGY8B4TTBJf4=
+		6TiLq0r0oQLoJ7rOheB4NLOZ5qk=
 		</data>
 		<key>Headers/speechapi_cxx_event_logger.h</key>
 		<data>
@@ -598,11 +590,11 @@
 		</data>
 		<key>Headers/speechapi_cxx_eventsignal.h</key>
 		<data>
-		HRaQs+yIoOqgcqchHPc9V/I+pJ8=
+		xge+g/WsmbNmJSZqtz4ggdoF57Y=
 		</data>
 		<key>Headers/speechapi_cxx_eventsignalbase.h</key>
 		<data>
-		jc2QPI8gmpqATS5iQ2enHkLcMvc=
+		91gXjlEpkL0Yuc3zAVYm+rkhRaE=
 		</data>
 		<key>Headers/speechapi_cxx_file_logger.h</key>
 		<data>
@@ -624,29 +616,13 @@
 		<data>
 		Px50U4AEFRlUwdIBsyx+ht+V0po=
 		</data>
-		<key>Headers/speechapi_cxx_intent_recognition_eventargs.h</key>
-		<data>
-		b3JSFlhaYf9TUIo9UJ2lLyhpGto=
-		</data>
-		<key>Headers/speechapi_cxx_intent_recognition_result.h</key>
-		<data>
-		p2+qxOxuWssRBkiEGAmv+I8UD0Q=
-		</data>
-		<key>Headers/speechapi_cxx_intent_recognizer.h</key>
-		<data>
-		eCl81T5U/Z+W2N+g3MFKzRTN8+s=
-		</data>
-		<key>Headers/speechapi_cxx_intent_trigger.h</key>
-		<data>
-		iFeUcsTKI6wfwez+SAvvcGdiz14=
-		</data>
 		<key>Headers/speechapi_cxx_keyword_recognition_eventargs.h</key>
 		<data>
 		cXoXEb27LTZRbxy7DJf+2Reu50w=
 		</data>
 		<key>Headers/speechapi_cxx_keyword_recognition_model.h</key>
 		<data>
-		2TvkkbQY8f+22dRtFVxy9xpfgic=
+		irZHbjloAG1zfYT5HJrvM/Nxriw=
 		</data>
 		<key>Headers/speechapi_cxx_keyword_recognition_result.h</key>
 		<data>
@@ -656,13 +632,9 @@
 		<data>
 		gqaxfQ+AjsPpMyDe3orCRgNImtM=
 		</data>
-		<key>Headers/speechapi_cxx_language_understanding_model.h</key>
-		<data>
-		NKjoyGm9Dgvr5oxMECLVuxnwWKI=
-		</data>
 		<key>Headers/speechapi_cxx_log_level.h</key>
 		<data>
-		twKSm0Gm/GLMqqBTu2NKmKZos68=
+		UyxKC19hyVE14vW2y5GJqSHP4so=
 		</data>
 		<key>Headers/speechapi_cxx_meeting.h</key>
 		<data>
@@ -688,29 +660,17 @@
 		<data>
 		NOF1x1zcy6Llh7eQPiA06Xrqxos=
 		</data>
-		<key>Headers/speechapi_cxx_pattern_matching_entity.h</key>
-		<data>
-		pFETH0nQ9sbOfbjb9FfhRAzlQrU=
-		</data>
-		<key>Headers/speechapi_cxx_pattern_matching_intent.h</key>
-		<data>
-		+vYQJ4LzZuMVp3S9tIuCl8Hkzeo=
-		</data>
-		<key>Headers/speechapi_cxx_pattern_matching_model.h</key>
-		<data>
-		529v1SyrAMzCHoaAsQfggLXeSJI=
-		</data>
 		<key>Headers/speechapi_cxx_phrase_list_grammar.h</key>
 		<data>
-		AOswho4qTomi5vt8GVAQkOI5Ots=
+		DLCUkcZ7sn7yyC+LHI4zGgMQHMQ=
 		</data>
 		<key>Headers/speechapi_cxx_pronunciation_assessment_config.h</key>
 		<data>
-		hoB8GwCCV128dcd6FEAjRXlH2e8=
+		XdgRZRALhJ0DCDHw9i9K+rP0Rvw=
 		</data>
 		<key>Headers/speechapi_cxx_pronunciation_assessment_result.h</key>
 		<data>
-		5CqA22h7lMfQ0M+OiN3EZh3Ulms=
+		OAZfKX33prcAmP2olEYZHZdxw94=
 		</data>
 		<key>Headers/speechapi_cxx_properties.h</key>
 		<data>
@@ -730,7 +690,7 @@
 		</data>
 		<key>Headers/speechapi_cxx_recognition_result.h</key>
 		<data>
-		f2gK9CgEuZYL+5HnrhLkmzw5KQI=
+		ccdhAPYlOOz/91cG54mlNnDN2T0=
 		</data>
 		<key>Headers/speechapi_cxx_recognizer.h</key>
 		<data>
@@ -754,27 +714,11 @@
 		</data>
 		<key>Headers/speechapi_cxx_source_language_recognizer.h</key>
 		<data>
-		TmPIBym5pYu+bppdY4sWBoJ9kHo=
-		</data>
-		<key>Headers/speechapi_cxx_speaker_identification_model.h</key>
-		<data>
-		pH1P3tTw2j5/gAFRdNB5TXSjMKE=
-		</data>
-		<key>Headers/speechapi_cxx_speaker_recognition_result.h</key>
-		<data>
-		UL9DkH87y2FMVMs/MT8++irJJIk=
-		</data>
-		<key>Headers/speechapi_cxx_speaker_recognizer.h</key>
-		<data>
-		rjdBU/zef/+wIzJIpynWInJPaVs=
-		</data>
-		<key>Headers/speechapi_cxx_speaker_verification_model.h</key>
-		<data>
-		ruzoJWlyemeRUw8/zUyv+0lF39A=
+		2LIpegBPJ2H71S/DYWpxfZ6nCJs=
 		</data>
 		<key>Headers/speechapi_cxx_speech_config.h</key>
 		<data>
-		RQspWsCtr/EsPTwt5aw/xAmpQUM=
+		ZRRFNSu9ULNfbKrclyR3jRBcuNc=
 		</data>
 		<key>Headers/speechapi_cxx_speech_recognition_eventargs.h</key>
 		<data>
@@ -790,7 +734,7 @@
 		</data>
 		<key>Headers/speechapi_cxx_speech_recognizer.h</key>
 		<data>
-		/7ZUMvY4VXQC2MBCksMZZ3gC1aI=
+		l2GJma0kDCFa0iNCNWqBiHG9ffw=
 		</data>
 		<key>Headers/speechapi_cxx_speech_synthesis_bookmark_eventargs.h</key>
 		<data>
@@ -799,6 +743,10 @@
 		<key>Headers/speechapi_cxx_speech_synthesis_eventargs.h</key>
 		<data>
 		anY6UUBmF8tTfRssPH0XFHP9NqA=
+		</data>
+		<key>Headers/speechapi_cxx_speech_synthesis_request.h</key>
+		<data>
+		9XLsbFDbzJqdjMEIsI0OdcS7ZI4=
 		</data>
 		<key>Headers/speechapi_cxx_speech_synthesis_result.h</key>
 		<data>
@@ -814,11 +762,11 @@
 		</data>
 		<key>Headers/speechapi_cxx_speech_synthesizer.h</key>
 		<data>
-		B7GHIcENW5tFtup2BsKybxMfqzI=
+		z1cqj03BwmavO0oUSxdbeiI1mzw=
 		</data>
 		<key>Headers/speechapi_cxx_speech_translation_config.h</key>
 		<data>
-		76JYNGb8uQsqSFU4CUWHISytgh4=
+		BsVH06HHCMIJ+LzthNf0PkbshJc=
 		</data>
 		<key>Headers/speechapi_cxx_speech_translation_model.h</key>
 		<data>
@@ -838,7 +786,7 @@
 		</data>
 		<key>Headers/speechapi_cxx_translation_recognizer.h</key>
 		<data>
-		dy44X2rJNflOl8WZPSOEkoJXFZg=
+		i9MTXGTZZpxZl5H46nWwWbOw8OA=
 		</data>
 		<key>Headers/speechapi_cxx_translation_result.h</key>
 		<data>
@@ -854,27 +802,7 @@
 		</data>
 		<key>Headers/speechapi_cxx_voice_info.h</key>
 		<data>
-		wM/acKiIthemSBZHoTfYbsdnuQY=
-		</data>
-		<key>Headers/speechapi_cxx_voice_profile.h</key>
-		<data>
-		98zSVU0j2Tc2zBgQ1bKkXTNyNzg=
-		</data>
-		<key>Headers/speechapi_cxx_voice_profile_client.h</key>
-		<data>
-		g7tvSgbKte9eXQ4I6PmX65aXZdk=
-		</data>
-		<key>Headers/speechapi_cxx_voice_profile_enrollment_result.h</key>
-		<data>
-		8n3ZPdZKp/iWh+5EPI+dQPo2bKE=
-		</data>
-		<key>Headers/speechapi_cxx_voice_profile_phrase_result.h</key>
-		<data>
-		Ma8BmAKYdE3pXLKaQU1rfS44Slc=
-		</data>
-		<key>Headers/speechapi_cxx_voice_profile_result.h</key>
-		<data>
-		Wz66IRB9iTgk+xl2fzy3FKvs8d0=
+		OzORjU/JhjsbL6hvMH/1wnpg7CY=
 		</data>
 		<key>Headers/spxdebug.h</key>
 		<data>
@@ -882,15 +810,15 @@
 		</data>
 		<key>Headers/spxerror.h</key>
 		<data>
-		ym97iGPlh7O+ENz/qhmiqNqhsBQ=
+		LeCxNfppiwwjNa2P0D7UdabD8lY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rN/l+VFM3ed17a4jXiIAC+qiqvM=
+		7PN9ychdHtsacgP+oIO9eV7MLSk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		o9D5pPVEZATudWJf8Kxndceykxo=
+		DWoDXoVN/xDLUUgNCj9N/jgBvAc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -899,7 +827,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WNwcvLNNzu1oGIyVDUZMWuYLw1PkfBxoa1muD6d/Anc=
+			aO+4IBA104tIzJNr9iC3UjI2gsMPyumWfb4DbrsYOf8=
 			</data>
 		</dict>
 		<key>Headers/SPXAudioDataStream.h</key>
@@ -907,6 +835,13 @@
 			<key>hash2</key>
 			<data>
 			CUBl62gcyRiaLlr1vopVu9XjDm5mgxOnyoiaiz7Tz7A=
+			</data>
+		</dict>
+		<key>Headers/SPXAudioProcessingOptions.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Iv6czytjllzIrXz8Ibn/Mt8GbYM39SbHtIabBjeRKfM=
 			</data>
 		</dict>
 		<key>Headers/SPXAudioStream.h</key>
@@ -927,21 +862,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Add4LG3Uh7rLb+UkERIhTu4LMafOCWNH+Hl0J590PSU=
+			zD7ZufQpHpKG2DDVkS515v1IfBxnrKHcFUNGnKLQYbo=
 			</data>
 		</dict>
 		<key>Headers/SPXAutoDetectSourceLanguageResult.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R5l9dqYuq6SfEa1hk/GPyWOUIBXu3seUXj/PndcmvIc=
+			DxGG6NvgSS7dzDw8/wVwzgti1O1sfdTM1eHPbpva17I=
 			</data>
 		</dict>
 		<key>Headers/SPXConnection.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AHHemI3MyXTxghiJqUORDJAYtzteDVpj0mMRAvlGaMQ=
+			ZtrxlhYB0HD7qWZv1Hvr8WWPSpr3WKswKxc/W4Hb/JQ=
 			</data>
 		</dict>
 		<key>Headers/SPXConnectionEventArgs.h</key>
@@ -1049,6 +984,27 @@
 			yiWgm6ZWondt7oOh5IxJQa+UBxsBiWd8Q/z5fG9uh/s=
 			</data>
 		</dict>
+		<key>Headers/SPXEmbeddedSpeechConfiguration.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5C7YYmemYTOzc/mKxaTjTqrzqrGGOcGjQJSMUiQeYSE=
+			</data>
+		</dict>
+		<key>Headers/SPXEventLogger.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6mmbDhDVtKyp+2/7UKfKSqvAtj0maN6QliUAggBD5kQ=
+			</data>
+		</dict>
+		<key>Headers/SPXFileLogger.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Fsg2NGwYq+Ub8ks+7wZEsEMb20sQW4xpY+G8Lfj3G+c=
+			</data>
+		</dict>
 		<key>Headers/SPXFoundation.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1068,27 +1024,6 @@
 			<key>hash2</key>
 			<data>
 			6ucb77E/no2I4pJBfK5hh3XAXth+BSsMssD29ycGIho=
-			</data>
-		</dict>
-		<key>Headers/SPXIntentRecognitionEventArgs.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NCthtPTrRutLktsd4JpOMoQfeuTeaHqrkLx1PzZPfMA=
-			</data>
-		</dict>
-		<key>Headers/SPXIntentRecognitionResult.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iYxk4lgd7lMs2IccTDMSfH47JNad40h9rTCouqXUglI=
-			</data>
-		</dict>
-		<key>Headers/SPXIntentRecognizer.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			q8gus+Xg33+64zMCOf8hQHxn5sk/W74lerOyq52RDrE=
 			</data>
 		</dict>
 		<key>Headers/SPXKeywordRecognitionEventArgs.h</key>
@@ -1119,13 +1054,6 @@
 			DKtKvKR5x0PUh7hzQTjFjLFla/W4h0abcXnC9/FEJrA=
 			</data>
 		</dict>
-		<key>Headers/SPXLanguageUnderstandingModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yW8bbJ6wpXlar4dWqLj80G8MGn8wkBFNLHg5ETJiNiQ=
-			</data>
-		</dict>
 		<key>Headers/SPXMeeting.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1154,6 +1082,13 @@
 			lZNrJHM9cV9FESRPC0I7aMY4pSkkZbBqyFvj7qZ1MQM=
 			</data>
 		</dict>
+		<key>Headers/SPXMemoryLogger.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2arVM+h1TlTSVvwlhRJonvNJW/K4OSVNQq6/6oecw8Y=
+			</data>
+		</dict>
 		<key>Headers/SPXParticipant.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1165,21 +1100,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1fjFqVNoQ5ITdOSe9+QCvOqfA/PdNSxkRcexgX+ww7Y=
+			5OoCudjidw1t3VYILDYCv58d5xbH79hDuiGsemZFJ8w=
 			</data>
 		</dict>
 		<key>Headers/SPXPronunciationAssessmentConfiguration.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LFKyfewr07y14tnjdWse13fTlvjrFC8LB6dMbiI45cg=
+			K48PknoVmigpvUlhUlvbZ8m7Qeg2bFC3/a2r/eyjOAQ=
 			</data>
 		</dict>
 		<key>Headers/SPXPronunciationAssessmentResult.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WXv9c/ek6saZmuLOlpN/d8mISUySLX6fRy28iH3hkps=
+			DZP7nFLmL4/ZlFEt239CFoJ78rMEh2QcqfBWphR8Fbo=
 			</data>
 		</dict>
 		<key>Headers/SPXPropertyCollection.h</key>
@@ -1200,7 +1135,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wcppzyu7A4OOUOaiMlmorMzEgHeDiXLFazMQzemBYpY=
+			dKBOvVhsN8Er2EYTFms1EFJlFUGPQvYKtZENQbdwJbA=
 			</data>
 		</dict>
 		<key>Headers/SPXRecognizer.h</key>
@@ -1228,21 +1163,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BYDP4SBU5pklyCA1ZDAOkGU1aQh+X4gjHMI4157Bkyw=
+			bQgR3n0Mx0q/WLA4xmiKsP6TrxAVWOKVDlht4wZM44U=
 			</data>
 		</dict>
 		<key>Headers/SPXSpeechConfiguration.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tst5J811UwV9lmHD766Pn/9rKbrOB1KZJoz0+ExKmH0=
+			KhhrGNOXBxELqLrDnjhJhfmO4Mc6xHTsN0/EmRtwN6o=
 			</data>
 		</dict>
 		<key>Headers/SPXSpeechEnums.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TsCuQ/fn9rKFlwpUxZlihok0N+Y0VEynnV+h2wSO0n4=
+			zB5TOvmP0k/Kpz79/i1sHTPvVjvvkEc2fhprQ14D0J0=
 			</data>
 		</dict>
 		<key>Headers/SPXSpeechRecognitionEventArgs.h</key>
@@ -1250,6 +1185,13 @@
 			<key>hash2</key>
 			<data>
 			y8pXPzO26kpzy7FihJJTTiMSABrFMnK/bfWF4NvivZc=
+			</data>
+		</dict>
+		<key>Headers/SPXSpeechRecognitionModelInfo.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ql3HM8fXw0xW4w7ZvBP9kQxoCeoeTMxnldBBGTfWJL4=
 			</data>
 		</dict>
 		<key>Headers/SPXSpeechRecognitionResult.h</key>
@@ -1263,7 +1205,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J17iJgxUaHu/Z3FjjgE7jzABkkcNzKfa7vc8Ly4HMLM=
+			XXZSwHdX+ZDhgVOxMU6YuDduIBCRWYuNyWXL4+ptLvw=
 			</data>
 		</dict>
 		<key>Headers/SPXSpeechSynthesisCancellationDetails.h</key>
@@ -1291,14 +1233,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YX+Mgl+/3vIuU1+awAr/iAgKWlci4Hfs7VJzxkKw8AQ=
+			jdFZ/z0wp3BQODs1lzvLVxk+GrGn3DP9/64ixjngoZo=
 			</data>
 		</dict>
 		<key>Headers/SPXSpeechTranslationConfiguration.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IPsjpnyPBRhf5SfKr6qhtS/nO/m6W/2/Cze3VwQ2TP8=
+			6L31mI+EtgNdmLJzLpzMBnO2NcAi9AKIa/krb139V1U=
+			</data>
+		</dict>
+		<key>Headers/SPXSpeechTranslationModelInfo.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lipu5Y84l0oVaU7g+4SJEAP6rthv5VB+nhOW1ro25+o=
 			</data>
 		</dict>
 		<key>Headers/SPXSynthesisVoicesResult.h</key>
@@ -1333,7 +1282,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q+gBYTCR46VgQQCzHJgjbcaum4qh9c+qzEemw3z1QyM=
+			Ij1jmraXTFD2eovHvMnqAoLo+/PHkrAVCvF1I+jUEf4=
 			</data>
 		</dict>
 		<key>Headers/SPXTranslationSynthesisEventArgs.h</key>
@@ -1361,63 +1310,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FUTCriSHWYDBwTRgtLELf5fYHGPkuWpswi+H4vIS4EE=
+			+/8rV76nzRvlcv0qfj3u3lVWLcayCPNF4R6PXsTCdwA=
 			</data>
 		</dict>
 		<key>Headers/azac_api_c_common.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fegNEhhqX8GVr9qVA3cDSjtxdstfku714sddxpFYhl4=
+			9tKWHj0lYcVU00YR5Koy7XnTHpyJtN/+V+CuO+MQClo=
 			</data>
 		</dict>
 		<key>Headers/azac_api_c_diagnostics.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w3pBBOnJ69YH7wDGmnaujlmjvMUivyBKQxu87LixCmE=
+			t4jzJA7e0Og/WD81avho63WOhdKQcJnmDp9ym3i1GIk=
 			</data>
 		</dict>
 		<key>Headers/azac_api_c_error.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0VVIf3t5JQW5Vzt6u/NefIObPMlv1vST4t47hIwBtVg=
+			76xYsjj3wzvkGlC1Fj4OHBwaWC7K5Tz7t18P1YqgDZY=
 			</data>
 		</dict>
 		<key>Headers/azac_api_c_pal.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			juFcaEWq2dh0iQwt/tf8n5+cvdWy2JNf+bk4XjoFEPQ=
+			3WHmODpAvIwFC93flUzwhynNNaqLHARt0o+1IbqIM+A=
 			</data>
 		</dict>
 		<key>Headers/azac_api_cxx_common.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zssDQ1AgfJEfN0bgmyX+0uhjRtJdQEmDxCWiI3FIkyE=
+			K3Y0OepZ0WQmgGZnIqzv+pWa1GwT5q3yw6CZGBOuwUo=
 			</data>
 		</dict>
 		<key>Headers/azac_debug.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tc6gbVqzVUqTj+cp9T5gz3y5lzb9HQnvHbRzCEfGYM4=
+			XJwQGYVRm9S08zawWjBcosYX/VhOY4Hwj4CZhI7/Z0g=
 			</data>
 		</dict>
 		<key>Headers/azac_error.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pkz0iew028xFTNI+u+x33lcOQ4zofq8trh+7nvaVlrc=
+			lJec5SIXcvWlvcgzf+85c2RYnNxoaYFq335bDMTs6+A=
+			</data>
+		</dict>
+		<key>Headers/binding_helpers.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fKM8wTijWOKwIhGccBXXclP6whm17U/7ysXhqPit3Kk=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FrpH6P4p72DQmEKlTcq1rtvX9RvVpcRdVPETzkA0xLs=
+			2/dZmWPpcJ/pssGdIYIG/8/jbReIsdM5jORqZpSERRE=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_audio_config.h</key>
@@ -1431,21 +1387,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nj5tIl+yKB7pHjG3HoikWHHuo0VD7L1e2L/qo9M86vw=
+			Gf4FCReb1/UrET1905CcXwzhkh8SnUkyK01fgZLuXOQ=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_audio_stream.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qmE/UqUcKKN2EsV0tKOZgXF6kQC5VuvA8wS/Qdoh+NE=
+			EY0DxJXJu980QBY9X9HvGA2gbWcz4iZbAlu3sQ6TY3o=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_audio_stream_format.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/b6V81Wi0dxtl2unxPPU42YWaUCY4ll1DUjmQnw/HkA=
+			cDBJK02CBatMZ61XmN6EbtgZuKbRn4VvqLIDeKNtnPs=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_auto_detect_source_lang_config.h</key>
@@ -1459,7 +1415,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BDQIopdmeejZClM0CpcF85BVuxE5P2G9NW47AZkd500=
+			ib0LX2SXYo0eXTkgS3u7K3ka0McCaFxX+nnCFaiXPus=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_connection.h</key>
@@ -1515,7 +1471,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IxcTo7rfmVonKtFnt1r7Bll5f/g+0wZ5anzLvJAsGD4=
+			SnfPv7mUYn3QEg1kFwWUlWzP7F5i857dC48AXgttcH0=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_error.h</key>
@@ -1536,14 +1492,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5cVfUXh+rFKOO8bagHE78APAHTZv9meH/aq9nX4RsZ4=
+			An2ElLtxrlROjYuFjRibN3h9+/W1Zm9lCe+djQea3CA=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_grammar.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JighY9V5urqj6MEse36XVH4zXXvCQgSAhKIdYMekS0Y=
+			Kob6rzhSeJlX4ObEzxxqEGsoJC3Jau5vIMmIIEWMzww=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_hybrid_speech_config.h</key>
@@ -1553,46 +1509,18 @@
 			mUIxsBLK4YKKn8sAWjpMaoWbTK+rpZwK39RsW4Femy0=
 			</data>
 		</dict>
-		<key>Headers/speechapi_c_intent_recognizer.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lSTmBJ2vHe5K6P1jBGda748Z5El/XLRzorRBpN4YErw=
-			</data>
-		</dict>
-		<key>Headers/speechapi_c_intent_result.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8W8jQpvL2UY3BVtpKysRfPj3qp6gIffx3IxhJzUiDis=
-			</data>
-		</dict>
-		<key>Headers/speechapi_c_intent_trigger.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			3hUUhvVKq3U7dOvzDaLnNQK9/ZaLG6nalVeaEKtSK6g=
-			</data>
-		</dict>
 		<key>Headers/speechapi_c_json.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w0ZrANUyKR9uZjI7WXaDWqLdGpSEuqTGaTFUpz3ja60=
+			2PGudGYQULGRp+mFAFiHi3YlY2HiZKIxvDb5JKLq9XU=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_keyword_recognition_model.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wsbnQU5ZFAZsr9T6dev1Vsso8WCryn8svY5RUdpMQWw=
-			</data>
-		</dict>
-		<key>Headers/speechapi_c_language_understanding_model.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GqJ1OTLm5ZDjxcyK8sa7RjBaxNLjxZnYsWc1oyvub80=
+			uRgW+erCQRFQO2++x6q0jIuVblUTi9RXuQQWk8QJMLs=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_meeting.h</key>
@@ -1623,13 +1551,6 @@
 			TB5Q9CYtt+uKy5Z78XxaVOq7WyEvNFDjC0GKMPZUylI=
 			</data>
 		</dict>
-		<key>Headers/speechapi_c_pattern_matching_model.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nKE2ADGqoR16dNrrnUhY1mFImypbUdxyVjleeFqSTHY=
-			</data>
-		</dict>
 		<key>Headers/speechapi_c_pronunciation_assessment_config.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1641,21 +1562,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HoU3AgnxeFHuqK1eAiuJo4Po1jZ/PotKS3PW6tgc9io=
+			Ng8uwpMy+KU2EzMxz/VrYOIPkzDp70Kb7V/pxJWeMCk=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_recognizer.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/rZgiXYG0o9+ahiuZBxGTHbIU6R+NR0fmS4dcVjE/9M=
+			E9iZjj0kbwAkPClta0AK+oKyFhU74iqXjvKjIEiSYDI=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_result.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ZKh5EFAzspw6DF4r5yFY+ds9Xj0XcHOfMCrG0/aQrM=
+			bmeVx72rt1E5MqVGZKxbWP5OMgbbeDEFZL4o5Z9tFHk=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_session.h</key>
@@ -1672,18 +1593,11 @@
 			nwhykQe6Aa800fNAED3gS6FYuODiAFlSrQwYjxjv5qw=
 			</data>
 		</dict>
-		<key>Headers/speechapi_c_speaker_recognition.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/E04mDiB6taUQqwH856K0ZCNpIixllDxRtDMzyabd40=
-			</data>
-		</dict>
 		<key>Headers/speechapi_c_speech_config.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fDWFUU6Yx5/5DskM0MXAXN4noluKixDMTsTX362Biv8=
+			mTJosyle6QY2yX/rimAmSzzrBbKIrZ1vS1ZtO8XB9cE=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_speech_recognition_model.h</key>
@@ -1697,7 +1611,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z/rhCzA5IdjZKrPsfv7c1eiP4cIaxyVlJkYyYe4QNkA=
+			8xdsp31WwbkE9vxJ5kE4Coi+z5deFvppLm+Axv7AFfs=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_speech_translation_model.h</key>
@@ -1707,11 +1621,18 @@
 			HsFyT9JhZC3oGl8vQoDzOzuIPYZfK7XhFv9M6+v+NdA=
 			</data>
 		</dict>
+		<key>Headers/speechapi_c_synthesis_request.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0YtDbFA/4q37eG0x7PgO9bmmM9hVT60WyWf4ARnuGNc=
+			</data>
+		</dict>
 		<key>Headers/speechapi_c_synthesizer.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ozrsAcH29nxjovfwR9kl1D2sAk7184Hag0SwOVr0PAg=
+			mp4TeKHkm/qe5/ElB5lFETMfA2TsS9hO1/nX2MWLybI=
 			</data>
 		</dict>
 		<key>Headers/speechapi_c_translation_recognizer.h</key>
@@ -1739,7 +1660,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DqlzzRhI+T58qEQ5czLyRSizmNj3syrDoMUh1VAEmVo=
+			TfYv2j8lkNmPxLIsahyjml5dNtjxFstSb/96pKvl06Q=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_audio_config.h</key>
@@ -1753,14 +1674,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z1u+cTugpYi26r/cz32AoPlELbVDFoA0f12Nfxo1OKk=
+			OdihoCKvDSG4C0s2Q0FPSnA0/cwHulh2YiGrlWrXQ/Y=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_audio_processing_options.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XGKlXZTF/sJucuNYrUu03yeQMmTZxdw8Las2d1jrXsU=
+			kwquObXL48qP9wS2VkuFRRZmjWIcgNixK0WxusKlRDU=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_audio_stream.h</key>
@@ -1774,21 +1695,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AjBvosmHuVyh9dk9uFcI72QUTelN32UvmbQKMoovMj0=
+			+xN9GZdP0ca3wTRoO2l+84PTl9Gd3DnUYuYLyIhlep4=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_auto_detect_source_lang_config.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Dxxpp/pu0L+ORrXpR30FvZbSEkoHgkQ9Pa+FRejDzA=
+			NMEGYQKZVNntP6Lf0i6t8gUasu5Tc0VwRD/X5JnL3Hw=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_auto_detect_source_lang_result.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e3JK2fR5T6GDiRYJ0G2jzro8EuHewyVJnAEIsCJAVPY=
+			qd2R4J15B4LRn/MudoT8lDawHiRj5uzTsMeVJCwKQUk=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_class_language_model.h</key>
@@ -1809,7 +1730,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zy9HG/hvnSibtgBuoqkC2gshbsxX/gDOexmDkxU78Vs=
+			Jzvx/BPs7J1KhDjdqjMtXSGG3kkKjlZLtpyWnif/cUM=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_connection_eventargs.h</key>
@@ -1875,13 +1796,6 @@
 			j9QrSNV5bQA1xotxR4hePMrrIVxA/gOu9kL+IlvoVU4=
 			</data>
 		</dict>
-		<key>Headers/speechapi_cxx_conversational_language_understanding_model.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7vhQJd6ncuD593A2NfwvByvNfyZnNFN5fT7EzcRr9U0=
-			</data>
-		</dict>
 		<key>Headers/speechapi_cxx_dialog_service_config.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1893,7 +1807,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U1mIXaQ0xEaC4ZdrvIsN/HmhaVgGR3o3ESPw/nJUOis=
+			0SAr3tUQRGAi8fLlyEK4WztKoWaXrbWKa3MO4K4e3mw=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_dialog_service_connector_eventargs.h</key>
@@ -1907,14 +1821,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PfwcMTTHDPCyYSOIdXe3SlZ2Tcna9qGWz7CB6h+/IHo=
+			ptgE7kXV0j2Sf/t2RCsUqTsj/oro5tITRDGw+teDRRY=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_enums.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uWaow2jOOM15o3SwGqzJdFipxE6xjfMo4RurhE4LIGI=
+			+Mcriyk1gPOZLp3wc8y4DdZZfPttKwgzfAw7T1TA3Kw=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_event_logger.h</key>
@@ -1935,14 +1849,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qLZBF7mUOJQOaLYXICrn9JlxJRGoqnXSFQhiR3yibJ4=
+			2Tdfca6EhqEC/nsKosV7wu5Aa+Clnn6zJRj/mbtThMc=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_eventsignalbase.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WYMtcd/5mX4ELskwWUQy7SLY9Hu45EVcRCbHcN8xn78=
+			Aaw+VbLwokF0vgIZkO9CMggKk8oEm5IrrZOCvD8Dtig=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_file_logger.h</key>
@@ -1980,34 +1894,6 @@
 			iqGxLeXmvoia3uDOx74feBG52cD5Ai1JL2PePh8jndA=
 			</data>
 		</dict>
-		<key>Headers/speechapi_cxx_intent_recognition_eventargs.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			w/f6OfdFF8UTZdau5eauKJYrT/Szf47cZrUhg+X2OSE=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_intent_recognition_result.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ZSwJ7jlQ2YPkaiOEF2IxHyVEXlzplLvtiUX27nN/+A8=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_intent_recognizer.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			szQHVsEL0MvN72wyjMTmNCTVYorLS0HzR97NbiANr2E=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_intent_trigger.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jYa5GVsUptKYqqG/uZm0LDxNovolpOehtycWVhbPQLY=
-			</data>
-		</dict>
 		<key>Headers/speechapi_cxx_keyword_recognition_eventargs.h</key>
 		<dict>
 			<key>hash2</key>
@@ -2019,7 +1905,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			caEd1TKo5A8WCgzv8RVUwA7ec0MkqJfBZZa4qf7J9kA=
+			8WRx/gRLqYgZ+EMynNbfxgyq2OMVw30/YBmPPp7Upms=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_keyword_recognition_result.h</key>
@@ -2036,18 +1922,11 @@
 			egP3N77XRt/D3p7X2o99DSYy7mE4EbBq+ydet0MsgQE=
 			</data>
 		</dict>
-		<key>Headers/speechapi_cxx_language_understanding_model.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			K0Zj36Uu9WKRZGVlRU7hXMgPnEUO2Yt8PBw9GVOHdno=
-			</data>
-		</dict>
 		<key>Headers/speechapi_cxx_log_level.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lNu3Rl/1eS8q2drbtcZnp2B72D8oM1Sd8ilnO5fEPjo=
+			RPi25jA1KT6xwGS02ilDZHUgquAWbEuJ9lPjfPYzUyc=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_meeting.h</key>
@@ -2092,46 +1971,25 @@
 			Mnmsm2htRlMF1bXmzYmxCZc3kMx8O2q9M6kEKZj0mEk=
 			</data>
 		</dict>
-		<key>Headers/speechapi_cxx_pattern_matching_entity.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			55kDNFXK41lUfEnoAaB5IV8EE9qPEeBXS+xDxJindRg=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_pattern_matching_intent.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1kiMTE1EUkQLWSTz6dz2aGBX+FWDK4SbHVBdnqrJIms=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_pattern_matching_model.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			O0TyyZaQ6p6msiSW9HEJBuJUVFCC/yiE7L91gTpFLEQ=
-			</data>
-		</dict>
 		<key>Headers/speechapi_cxx_phrase_list_grammar.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MfidplXWJ6ZpV2J3pRBd9XRsqcSzXgX1TH3o7q7Sx94=
+			SgVpIJka0w8888OM/GDdiOyaEahmxYaVhTwVJdk66KE=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_pronunciation_assessment_config.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SV6IFc/ZCLGCJtCl8Tj41kYvzHKtG3s4VEBUDshAGWE=
+			UG0tHs1HejN2mVbKZu+sks3YtxuBcCyPCrMuHTkqtJs=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_pronunciation_assessment_result.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t29CioaNuR7xDh6uEZSQ8wtTgfGNnxiVJhexA0aBB9Y=
+			4319APzyqH24HfDlgK/3hYAQLbDaJIiKjlTymdjA/a4=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_properties.h</key>
@@ -2166,7 +2024,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BNIzASLGhmkEU9ZfhdvefNz8KHhnorwTLkalSEdzCCU=
+			BjShnvrCw+1u/lQtWrw3hfLXi8FbWJQjQjftpwjNSvo=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_recognizer.h</key>
@@ -2208,42 +2066,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ogZEU7f6dqGZTWZK8TkotMyd+g3v+VSOZzszzr/aYd4=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_speaker_identification_model.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			J4NN+iPebG3xBGMsanp5WP4W5nCNQyb1yI1GtJ59+rg=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_speaker_recognition_result.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PyR+xPp419mOpVMskBtqmcr+zQERTA1LNnqfnSWh2YQ=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_speaker_recognizer.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mEyDrk0yButn0NG8RaqWT33fr5t4uiSeAG6vfuVK4xo=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_speaker_verification_model.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GXbE94/1Vu/BaR5415obgq8Prt3WwOwMeUD7mLdsCcg=
+			vOXE8vyYXiw7OALjhAD2ilk8lDJtKtU2p1rHSZo3PUU=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_speech_config.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jftxjOWWHM/S5X4fwn6L+a5M3VUnFAHdIdJV54mGw5M=
+			31hDnNHJYfFEfht0nB2Tw9QY+sC7z/jvgnAztNc32/Y=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_speech_recognition_eventargs.h</key>
@@ -2271,7 +2101,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RGM8gMKqnthzYBtPn17BNfZLsy9V3n4H4TQMeCL/8Ok=
+			bNbvgVp17TPwmr7aVO2vhpV3MNymVkeLUilgQFWARD4=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_speech_synthesis_bookmark_eventargs.h</key>
@@ -2286,6 +2116,13 @@
 			<key>hash2</key>
 			<data>
 			wmK9hSgUp6ARxoUKlFZv2UqhJGDiMX5fdH2RiP+u9/8=
+			</data>
+		</dict>
+		<key>Headers/speechapi_cxx_speech_synthesis_request.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Yb4+WGO+GDH2uqm9ogvELBRazce8x61rHs/gNtTPCNs=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_speech_synthesis_result.h</key>
@@ -2313,14 +2150,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WWnNb0H74+XXKO+u43I3QpAHGK0AAI5ALMn8UMsXc8c=
+			O+HSvX2cqT8pa9J5qH8NqAIgBLwQX0LZ2iWaHXQ1O3M=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_speech_translation_config.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bSTn4GNrYQiDCj5fPaJmhP5gxlNwfk1Uiip67utaQwQ=
+			CCrNiiLupgkqjEAPjW8XlsWYvyHfpRuIBKaKiH0jNSs=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_speech_translation_model.h</key>
@@ -2355,7 +2192,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pez01RvtnZ36ZiDz7Cch1QFa/yZwblaznnsUT0ZcPYY=
+			yyGdeMEp7u0zuDH8laoybSugAymKrm3hsRPqo+qyAIE=
 			</data>
 		</dict>
 		<key>Headers/speechapi_cxx_translation_result.h</key>
@@ -2383,42 +2220,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gaNLOI54ENmCLcJrn/X68EESvwUaXyzcbyt30xPhD9U=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_voice_profile.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lIIfEPbrfH2WNE0cGC90MyD5b0g73GPJs9Y3pX3ES18=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_voice_profile_client.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RDxS6PxeH+mWrbqqCNo9gc/+tA+ITNSzXEsey1dQzdw=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_voice_profile_enrollment_result.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0ydcSGQPrXwAQZ3UZ6LTkn+l4m1jBF3GyxfvV2ATk+Y=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_voice_profile_phrase_result.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MVofPzFmuZOb5cAxVDX6teEOdG/1/m3zzVNzMJf4Sww=
-			</data>
-		</dict>
-		<key>Headers/speechapi_cxx_voice_profile_result.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iqdJZSRMrUAusXiwnTc4W0fbh9WzAgkiNBqaKAWR6i4=
+			h3uSTtS1XN8axZ2TgWyvyrx3+34VvxlO3ExVSEH3HVI=
 			</data>
 		</dict>
 		<key>Headers/spxdebug.h</key>
@@ -2432,14 +2234,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H5AgWNBdFIsVwDNN/XGtPHIzurD6+v6Tb+a+uZMSexk=
+			0lpfiAaNGJgGvo4vv965/z8L92cWQzzpkruwgeQJrn8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U6cXbyrXPV+JQsF8+wqcQeX9Y0RJA93YWRY2ZgtU5vw=
+			XhYBRbJirD/tWo15ehDIzE+Su9j1Yc/Bd6+7+ecFBKQ=
 			</data>
 		</dict>
 	</dict>

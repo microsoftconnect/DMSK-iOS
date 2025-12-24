@@ -374,7 +374,7 @@ currentTimeAsDefaultValue:(BOOL) currentTimeAsDefaultValue
     }
 }
 
-- (void)getFormattedDateTime:(NSArray *) conceptDict {
+- (void)getFormattedDateTime:(NSObject *) conceptDict {
     /*
      Objective: Handles absolute and relative date-time
      */

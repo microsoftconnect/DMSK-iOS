@@ -8,7 +8,7 @@
 #import "LoginViewController.h"
 #import "Constants.h"
 #import "VAManager.h"
-#import "AppDelegate.h"
+#import "SceneDelegate.h"
 
 @interface LoginViewController ()
 
@@ -42,7 +42,8 @@
 }
 
 - (void)showHomeScreen {
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    = self.view.window?.windowScene?.delegate as? SceneDelegate
+    SceneDelegate *appDelegate = (SceneDelegate *)[[[self.view window] windowScene] delegate];
     [appDelegate loadHomeScreen];
 }
 

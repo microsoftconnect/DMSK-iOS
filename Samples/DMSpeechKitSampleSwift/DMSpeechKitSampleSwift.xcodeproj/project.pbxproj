@@ -410,7 +410,7 @@
 			repositoryURL = "https://github.com/microsoftconnect/DMSK-iOS.git";
 			requirement = {
 				kind = exactVersion;
-				version = 7.0.16;
+				version = 7.1.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

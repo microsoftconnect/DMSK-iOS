@@ -8,6 +8,6 @@ See the following pages for more information:
 
 [Set up Dragon Medical SpeechKit](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/ios-sdk/setup)
 
-[Release notes for 2025.4](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/ios-2025.4)
+[Release notes for version 2026.1](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/ios-2026.1)
 
-Version 2025.4 (7.0 R1)
+Version 2026.1 (7.1 R1)

@@ -6,47 +6,47 @@
 	<dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/DragonMedicalSpeechKit</key>
 		<data>
-		zYMeITdNWoARm5dqXDQ1G80FFsI=
+		toFty0WPWqfcvWnBOQ7MfnWFeWI=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/DragonMedicalSpeechKit.h</key>
 		<data>
-		WRHXiz+I+cY3ncY75dycyuFGVVI=
+		Qt8M+NVwOj8mr+kC8mNE+Dkdq74=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSACommandPlaceholder.h</key>
 		<data>
-		I0dID4aByb/Onc1t5TbHX/l2t/Q=
+		y7ci7OIU6oJJUZTAO11cE1xUB0o=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSACommandSet.h</key>
 		<data>
-		0mpRu9HTz5nCuB50/QUOv38PcC0=
+		ekMVTrmWiWdUTY2ZntYbszQvMU0=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSACustomVuiController.h</key>
 		<data>
-		VOcN4tsQ06KCWYpAKvW3Tyz0aoA=
+		JJYTDPDnqqwKOP4A55l8Akn1bkU=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSACustomVuiControllerDelegate.h</key>
 		<data>
-		SBw6uTEFSYssSF5AyX6dOK6lbJU=
+		Ju8G6EuqqPhu2G7xenSlBwIqyoE=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSASession.h</key>
 		<data>
-		90eGOJyThjt0/sziADO+wU5Kqoo=
+		NuLRATe3zxIzK6B1TIeBRvbNNFI=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSASessionDelegate.h</key>
 		<data>
-		9C6lenyl6pD3ismR27TfKQKLcn0=
+		kMiXpx9Kw8JHsdUcW1tmx5YN308=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSASpeechView.h</key>
 		<data>
-		JvWiJ56xs20X2RqBgThNcmJzF5I=
+		3g793mTiI6yOei6Y4kp94wmEJZo=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSATextControl.h</key>
 		<data>
-		juXJOeRIxgNanDiU3u4sQ8GGnCU=
+		FF36P3QoECP75B+M2OMqVjH9bfE=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSATypes.h</key>
 		<data>
-		NLquR1QJYlX3IcS1+LswtMZ34FM=
+		E4TsTbqQsuGL8woKnJI4mEAYOp0=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSAVirtualAssistantController.h</key>
 		<data>
@@ -74,23 +74,23 @@
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSAVuiController.h</key>
 		<data>
-		lvcPyx1uuzxZNiH4fk/m657VCPY=
+		VLhe/OJFq7ouRz13zrOD+adJXls=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSAVuiControllerDelegate.h</key>
 		<data>
-		/0OxfQ9/hbcZchynLbFUB4VLtMk=
+		QPz2BY+a0mSVKeIxzlzVU1HOxkE=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/UIView+NUSAConceptName.h</key>
 		<data>
-		3dcF4h64m1Qz+txesldkvy+myRA=
+		Jc6p4bBa16lt9xOtvC/JA8rwmDc=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/UIView+NUSADocumentFieldId.h</key>
 		<data>
-		paiy21ceEx9XHaK6p0VKSVh9mmU=
+		NBHGppTZUyEHiehUc/qFNpxxQKw=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/UIView+NUSAEnabled.h</key>
 		<data>
-		ovFFIrNxvko4NEJPrDHDw7Zk+yU=
+		nUUeIBdw+Pbn46L3DmvjLB8r4Yo=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Info.plist</key>
 		<data>
@@ -102,11 +102,11 @@
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		GRRwqLXcQsnIFMAMDE70tnFSU5w=
+		M6oJLw6EtmgRdCl7yVCp0ebbzqk=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		uFonOCslGw2wqGl0c78O7EUsQew=
+		ttnHYh1nrylf3KkiGWgdHntS9xI=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -114,59 +114,59 @@
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		mszTSGKV2Tm+VOSb3mj6bKT/ljY=
+		13DGmHHTsTsHKSUai244t3xBCag=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeResources</key>
 		<data>
-		+RHjdNUwrrhj2h5aq8tttNco2zo=
+		zMNGISqUUSdemwfU6PlE97fsQU0=
 		</data>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeSignature</key>
 		<data>
-		chAf7hRhZ5pPaTdVul5RNYAEwlU=
+		f2Y1cn9nFF2QKuSf4BNjk87iO5M=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/DragonMedicalSpeechKit</key>
 		<data>
-		5z8tJ0SZCPo9lelTKqyzamm2sCE=
+		uelqswyCe2CYIvHKqCsQT2fB9uU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/DragonMedicalSpeechKit.h</key>
 		<data>
-		WRHXiz+I+cY3ncY75dycyuFGVVI=
+		Qt8M+NVwOj8mr+kC8mNE+Dkdq74=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSACommandPlaceholder.h</key>
 		<data>
-		I0dID4aByb/Onc1t5TbHX/l2t/Q=
+		y7ci7OIU6oJJUZTAO11cE1xUB0o=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSACommandSet.h</key>
 		<data>
-		0mpRu9HTz5nCuB50/QUOv38PcC0=
+		ekMVTrmWiWdUTY2ZntYbszQvMU0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSACustomVuiController.h</key>
 		<data>
-		VOcN4tsQ06KCWYpAKvW3Tyz0aoA=
+		JJYTDPDnqqwKOP4A55l8Akn1bkU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSACustomVuiControllerDelegate.h</key>
 		<data>
-		SBw6uTEFSYssSF5AyX6dOK6lbJU=
+		Ju8G6EuqqPhu2G7xenSlBwIqyoE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSASession.h</key>
 		<data>
-		90eGOJyThjt0/sziADO+wU5Kqoo=
+		NuLRATe3zxIzK6B1TIeBRvbNNFI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSASessionDelegate.h</key>
 		<data>
-		9C6lenyl6pD3ismR27TfKQKLcn0=
+		kMiXpx9Kw8JHsdUcW1tmx5YN308=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSASpeechView.h</key>
 		<data>
-		JvWiJ56xs20X2RqBgThNcmJzF5I=
+		3g793mTiI6yOei6Y4kp94wmEJZo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSATextControl.h</key>
 		<data>
-		juXJOeRIxgNanDiU3u4sQ8GGnCU=
+		FF36P3QoECP75B+M2OMqVjH9bfE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSATypes.h</key>
 		<data>
-		NLquR1QJYlX3IcS1+LswtMZ34FM=
+		E4TsTbqQsuGL8woKnJI4mEAYOp0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSAVirtualAssistantController.h</key>
 		<data>
@@ -194,23 +194,23 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSAVuiController.h</key>
 		<data>
-		lvcPyx1uuzxZNiH4fk/m657VCPY=
+		VLhe/OJFq7ouRz13zrOD+adJXls=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSAVuiControllerDelegate.h</key>
 		<data>
-		/0OxfQ9/hbcZchynLbFUB4VLtMk=
+		QPz2BY+a0mSVKeIxzlzVU1HOxkE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/UIView+NUSAConceptName.h</key>
 		<data>
-		3dcF4h64m1Qz+txesldkvy+myRA=
+		Jc6p4bBa16lt9xOtvC/JA8rwmDc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/UIView+NUSADocumentFieldId.h</key>
 		<data>
-		paiy21ceEx9XHaK6p0VKSVh9mmU=
+		NBHGppTZUyEHiehUc/qFNpxxQKw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/UIView+NUSAEnabled.h</key>
 		<data>
-		ovFFIrNxvko4NEJPrDHDw7Zk+yU=
+		nUUeIBdw+Pbn46L3DmvjLB8r4Yo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Info.plist</key>
 		<data>
@@ -222,11 +222,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		GRRwqLXcQsnIFMAMDE70tnFSU5w=
+		M6oJLw6EtmgRdCl7yVCp0ebbzqk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		2vyYFT6v6R8VjuQQHcupYRpCKdE=
+		fh4WjJQT3Ro1lnUEnmZwea9uSLU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -234,11 +234,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		ZY9FvRBl/Ckh3I0QFkKt1UHoLbU=
+		bey6Qtq4uBclv/+sDiXNTpEMZOI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeResources</key>
 		<data>
-		biIC1VFgfC7uDLdKAtQvBz6663g=
+		+yChHUR5bLjkLzTMNpIYW9xntvY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -251,121 +251,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zYMeITdNWoARm5dqXDQ1G80FFsI=
+			toFty0WPWqfcvWnBOQ7MfnWFeWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			BaDjUtpLlQWBydKlJxrQ8/w0nJTxfezt49/aDdjemNk=
+			1bpaMGVR73FtcPKyNi6+gFfy4fulmYluPLYqOXxWR8Y=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/DragonMedicalSpeechKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WRHXiz+I+cY3ncY75dycyuFGVVI=
+			Qt8M+NVwOj8mr+kC8mNE+Dkdq74=
 			</data>
 			<key>hash2</key>
 			<data>
-			AM72J/zs1PLjdRicC4OXdriFw7DDTSPM3InGiXK30GU=
+			2EFmg8KCKCvQ3oqMVbP4zrwzozHxhmDdrh6/Jy9KHVg=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSACommandPlaceholder.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I0dID4aByb/Onc1t5TbHX/l2t/Q=
+			y7ci7OIU6oJJUZTAO11cE1xUB0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			9+SGIqyryi/+jtZKbPDJr5GZkKNGqDuDORSQauEVKHY=
+			4f0hYArCLJFBmmQG15Ct2PHt0ITLMqvTqr1hPtDwfMo=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSACommandSet.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0mpRu9HTz5nCuB50/QUOv38PcC0=
+			ekMVTrmWiWdUTY2ZntYbszQvMU0=
 			</data>
 			<key>hash2</key>
 			<data>
-			5pnmvkCO8Z7nI33Kj60sZoiCidPDdx3ZypH9Dkn63Kk=
+			aZsRmXIyEpVnD4uintUU0IOCldbo3KS+y4OIChcQ+TA=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSACustomVuiController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VOcN4tsQ06KCWYpAKvW3Tyz0aoA=
+			JJYTDPDnqqwKOP4A55l8Akn1bkU=
 			</data>
 			<key>hash2</key>
 			<data>
-			POggVmYXDa+dWq57EOIxCA1ahcMmU2VuAaPFV08L+v8=
+			l1ul+SFbSF1ZdSyWtAV4+lDN/NFpZtB1ibZhK490Phc=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSACustomVuiControllerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SBw6uTEFSYssSF5AyX6dOK6lbJU=
+			Ju8G6EuqqPhu2G7xenSlBwIqyoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			B2Qx6d0a24C3Ct0l1gIxbOlFoRY2jOf6dm5/Tq+ECDE=
+			pr3cu1ONRKz3KlMSzY+bOgHcAVBZHadj4F7rGazk7Jw=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSASession.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			90eGOJyThjt0/sziADO+wU5Kqoo=
+			NuLRATe3zxIzK6B1TIeBRvbNNFI=
 			</data>
 			<key>hash2</key>
 			<data>
-			DnP05FVYqDWgWmJKz+y6RK3lZ3irnYEfDh0kmCQ4G5M=
+			dXs2WDyVNLx8W5exMZtHVAIAmBgmqkVdfYl/nH3tv8I=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSASessionDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9C6lenyl6pD3ismR27TfKQKLcn0=
+			kMiXpx9Kw8JHsdUcW1tmx5YN308=
 			</data>
 			<key>hash2</key>
 			<data>
-			SAHeHpQ7ieUAEmn6AmJiuZW3vgJnsFoZ3hRFM6jpo7o=
+			SWtwf1Y05DkE7pAl0hB5mUX8Gw213dQwTNOPgG1A5PQ=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSASpeechView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JvWiJ56xs20X2RqBgThNcmJzF5I=
+			3g793mTiI6yOei6Y4kp94wmEJZo=
 			</data>
 			<key>hash2</key>
 			<data>
-			gUK9g7anGLQS6mm8OtSJqwasiyIMR2Vk9DLDvHe5Ttg=
+			4OCrVqcUE7CvG8yp1fdhYxq7UsY/9n0WrHckqW9e7U4=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSATextControl.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			juXJOeRIxgNanDiU3u4sQ8GGnCU=
+			FF36P3QoECP75B+M2OMqVjH9bfE=
 			</data>
 			<key>hash2</key>
 			<data>
-			0QEM7iKSIR+vrM52w82DWr8uwtZQ5lL4Tdw9w0dTjEM=
+			q6lQdjYeea1eoGLuHylQORFMu2Hx92O6gv/iRwUXKxM=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSATypes.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NLquR1QJYlX3IcS1+LswtMZ34FM=
+			E4TsTbqQsuGL8woKnJI4mEAYOp0=
 			</data>
 			<key>hash2</key>
 			<data>
-			IPrYW3TOCx5CcUag7KzUv3sUchszaiAcTmuJ3cIwQZk=
+			AMGaRbS+pL0d3XRQbDGGD/wR9Up03c3bKLstAUdpdyM=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSAVirtualAssistantController.h</key>
@@ -438,55 +438,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lvcPyx1uuzxZNiH4fk/m657VCPY=
+			VLhe/OJFq7ouRz13zrOD+adJXls=
 			</data>
 			<key>hash2</key>
 			<data>
-			tg0MVdKRKY+YX8Db0ymkRMansGUi0k5REO+D2uCir5E=
+			zFjZV6K3VrpSyZ9+wxZqaP85/CnyNsBwUI6SITN2gJo=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/NUSAVuiControllerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/0OxfQ9/hbcZchynLbFUB4VLtMk=
+			QPz2BY+a0mSVKeIxzlzVU1HOxkE=
 			</data>
 			<key>hash2</key>
 			<data>
-			lOiMy651MSFnXdNVtIFXZagP0zFqSOBRXIxlI0OSNSs=
+			22H4VXPmO53uhgS+4USO0LBIxi/oZymDZhmqB3c36zM=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/UIView+NUSAConceptName.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3dcF4h64m1Qz+txesldkvy+myRA=
+			Jc6p4bBa16lt9xOtvC/JA8rwmDc=
 			</data>
 			<key>hash2</key>
 			<data>
-			EqOiPu9PIwBjnm8R6JdYDk6kFwfYqx03OHT7bH9hNjY=
+			YHFAUrC2o7HcVZYdIyVSA+JnRw4Yh4i8+fGAtMxQ/Xc=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/UIView+NUSADocumentFieldId.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			paiy21ceEx9XHaK6p0VKSVh9mmU=
+			NBHGppTZUyEHiehUc/qFNpxxQKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			IJxHcGa1tMy+dnti1c4NVVTR+Uh2SOH7Y1YAUdzqnIY=
+			ANZPIiu+oIeKnXOSOl5XrAYAwOxEjc/WBqYtfb53kwk=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Headers/UIView+NUSAEnabled.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ovFFIrNxvko4NEJPrDHDw7Zk+yU=
+			nUUeIBdw+Pbn46L3DmvjLB8r4Yo=
 			</data>
 			<key>hash2</key>
 			<data>
-			NQtAwHfNdH2sTBDIA3zg7NsUkXA6bq/26AMkxwYUjQs=
+			YgcuNfhx7Wj7A9tmi2nRifIBL+j83h93uV0ctIlwIQc=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/Info.plist</key>
@@ -515,22 +515,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GRRwqLXcQsnIFMAMDE70tnFSU5w=
+			M6oJLw6EtmgRdCl7yVCp0ebbzqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			tW5sQu5ObLYNQjFBnPDCJN/XCj3hkKeBysd58PWAEYY=
+			e0QgvyTkoLgAWZlTbUvfIGlG/DvYsufsB2PoDkyRkPM=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uFonOCslGw2wqGl0c78O7EUsQew=
+			ttnHYh1nrylf3KkiGWgdHntS9xI=
 			</data>
 			<key>hash2</key>
 			<data>
-			YN1HxIUFnWHJgkI7LdNQecnBLezTuMm09VOrETXYp0A=
+			TxLeIlDPP5XrIY7ZM3mlKO8c39zgIbNPklMuKIF43ug=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeRequirements</key>
@@ -548,154 +548,154 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mszTSGKV2Tm+VOSb3mj6bKT/ljY=
+			13DGmHHTsTsHKSUai244t3xBCag=
 			</data>
 			<key>hash2</key>
 			<data>
-			C3MK+VuABXAljKRbTD065jRNd+L1iF7XyQFnIsVTLc8=
+			HQT2GEDb5xEEuIuimvTUQAZbsmwAD471OR5vVGHM6Ic=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+RHjdNUwrrhj2h5aq8tttNco2zo=
+			zMNGISqUUSdemwfU6PlE97fsQU0=
 			</data>
 			<key>hash2</key>
 			<data>
-			3qDygWEVplqB7HeTUg6rCX/mlsyZNA+sH3fCMX3HPmk=
+			wTzh8FgxsxJ30BzzvUvCgvBeGStmugitQ5TmvsABMeA=
 			</data>
 		</dict>
 		<key>ios-arm64/DragonMedicalSpeechKit.framework/_CodeSignature/CodeSignature</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			chAf7hRhZ5pPaTdVul5RNYAEwlU=
+			f2Y1cn9nFF2QKuSf4BNjk87iO5M=
 			</data>
 			<key>hash2</key>
 			<data>
-			OmQi3nUARipev9OdmlFMDf4gvUe/A7Xt67QhOhNgQJc=
+			2n55j921qEVoxwz3K2txmpJyhKTEOtN1ydHMXnGU5TA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/DragonMedicalSpeechKit</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5z8tJ0SZCPo9lelTKqyzamm2sCE=
+			uelqswyCe2CYIvHKqCsQT2fB9uU=
 			</data>
 			<key>hash2</key>
 			<data>
-			/CfOAFQmkV/jveLHaTzLzZ8+kk+dSAq3L194BmXoGAQ=
+			eoPgqplI5yw+W2tliwqnU17rSmzU5Htv3gnhRf+KaNo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/DragonMedicalSpeechKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WRHXiz+I+cY3ncY75dycyuFGVVI=
+			Qt8M+NVwOj8mr+kC8mNE+Dkdq74=
 			</data>
 			<key>hash2</key>
 			<data>
-			AM72J/zs1PLjdRicC4OXdriFw7DDTSPM3InGiXK30GU=
+			2EFmg8KCKCvQ3oqMVbP4zrwzozHxhmDdrh6/Jy9KHVg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSACommandPlaceholder.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I0dID4aByb/Onc1t5TbHX/l2t/Q=
+			y7ci7OIU6oJJUZTAO11cE1xUB0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			9+SGIqyryi/+jtZKbPDJr5GZkKNGqDuDORSQauEVKHY=
+			4f0hYArCLJFBmmQG15Ct2PHt0ITLMqvTqr1hPtDwfMo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSACommandSet.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0mpRu9HTz5nCuB50/QUOv38PcC0=
+			ekMVTrmWiWdUTY2ZntYbszQvMU0=
 			</data>
 			<key>hash2</key>
 			<data>
-			5pnmvkCO8Z7nI33Kj60sZoiCidPDdx3ZypH9Dkn63Kk=
+			aZsRmXIyEpVnD4uintUU0IOCldbo3KS+y4OIChcQ+TA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSACustomVuiController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VOcN4tsQ06KCWYpAKvW3Tyz0aoA=
+			JJYTDPDnqqwKOP4A55l8Akn1bkU=
 			</data>
 			<key>hash2</key>
 			<data>
-			POggVmYXDa+dWq57EOIxCA1ahcMmU2VuAaPFV08L+v8=
+			l1ul+SFbSF1ZdSyWtAV4+lDN/NFpZtB1ibZhK490Phc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSACustomVuiControllerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SBw6uTEFSYssSF5AyX6dOK6lbJU=
+			Ju8G6EuqqPhu2G7xenSlBwIqyoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			B2Qx6d0a24C3Ct0l1gIxbOlFoRY2jOf6dm5/Tq+ECDE=
+			pr3cu1ONRKz3KlMSzY+bOgHcAVBZHadj4F7rGazk7Jw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSASession.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			90eGOJyThjt0/sziADO+wU5Kqoo=
+			NuLRATe3zxIzK6B1TIeBRvbNNFI=
 			</data>
 			<key>hash2</key>
 			<data>
-			DnP05FVYqDWgWmJKz+y6RK3lZ3irnYEfDh0kmCQ4G5M=
+			dXs2WDyVNLx8W5exMZtHVAIAmBgmqkVdfYl/nH3tv8I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSASessionDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9C6lenyl6pD3ismR27TfKQKLcn0=
+			kMiXpx9Kw8JHsdUcW1tmx5YN308=
 			</data>
 			<key>hash2</key>
 			<data>
-			SAHeHpQ7ieUAEmn6AmJiuZW3vgJnsFoZ3hRFM6jpo7o=
+			SWtwf1Y05DkE7pAl0hB5mUX8Gw213dQwTNOPgG1A5PQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSASpeechView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JvWiJ56xs20X2RqBgThNcmJzF5I=
+			3g793mTiI6yOei6Y4kp94wmEJZo=
 			</data>
 			<key>hash2</key>
 			<data>
-			gUK9g7anGLQS6mm8OtSJqwasiyIMR2Vk9DLDvHe5Ttg=
+			4OCrVqcUE7CvG8yp1fdhYxq7UsY/9n0WrHckqW9e7U4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSATextControl.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			juXJOeRIxgNanDiU3u4sQ8GGnCU=
+			FF36P3QoECP75B+M2OMqVjH9bfE=
 			</data>
 			<key>hash2</key>
 			<data>
-			0QEM7iKSIR+vrM52w82DWr8uwtZQ5lL4Tdw9w0dTjEM=
+			q6lQdjYeea1eoGLuHylQORFMu2Hx92O6gv/iRwUXKxM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSATypes.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NLquR1QJYlX3IcS1+LswtMZ34FM=
+			E4TsTbqQsuGL8woKnJI4mEAYOp0=
 			</data>
 			<key>hash2</key>
 			<data>
-			IPrYW3TOCx5CcUag7KzUv3sUchszaiAcTmuJ3cIwQZk=
+			AMGaRbS+pL0d3XRQbDGGD/wR9Up03c3bKLstAUdpdyM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSAVirtualAssistantController.h</key>
@@ -768,55 +768,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lvcPyx1uuzxZNiH4fk/m657VCPY=
+			VLhe/OJFq7ouRz13zrOD+adJXls=
 			</data>
 			<key>hash2</key>
 			<data>
-			tg0MVdKRKY+YX8Db0ymkRMansGUi0k5REO+D2uCir5E=
+			zFjZV6K3VrpSyZ9+wxZqaP85/CnyNsBwUI6SITN2gJo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/NUSAVuiControllerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/0OxfQ9/hbcZchynLbFUB4VLtMk=
+			QPz2BY+a0mSVKeIxzlzVU1HOxkE=
 			</data>
 			<key>hash2</key>
 			<data>
-			lOiMy651MSFnXdNVtIFXZagP0zFqSOBRXIxlI0OSNSs=
+			22H4VXPmO53uhgS+4USO0LBIxi/oZymDZhmqB3c36zM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/UIView+NUSAConceptName.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3dcF4h64m1Qz+txesldkvy+myRA=
+			Jc6p4bBa16lt9xOtvC/JA8rwmDc=
 			</data>
 			<key>hash2</key>
 			<data>
-			EqOiPu9PIwBjnm8R6JdYDk6kFwfYqx03OHT7bH9hNjY=
+			YHFAUrC2o7HcVZYdIyVSA+JnRw4Yh4i8+fGAtMxQ/Xc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/UIView+NUSADocumentFieldId.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			paiy21ceEx9XHaK6p0VKSVh9mmU=
+			NBHGppTZUyEHiehUc/qFNpxxQKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			IJxHcGa1tMy+dnti1c4NVVTR+Uh2SOH7Y1YAUdzqnIY=
+			ANZPIiu+oIeKnXOSOl5XrAYAwOxEjc/WBqYtfb53kwk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Headers/UIView+NUSAEnabled.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ovFFIrNxvko4NEJPrDHDw7Zk+yU=
+			nUUeIBdw+Pbn46L3DmvjLB8r4Yo=
 			</data>
 			<key>hash2</key>
 			<data>
-			NQtAwHfNdH2sTBDIA3zg7NsUkXA6bq/26AMkxwYUjQs=
+			YgcuNfhx7Wj7A9tmi2nRifIBL+j83h93uV0ctIlwIQc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/Info.plist</key>
@@ -845,22 +845,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GRRwqLXcQsnIFMAMDE70tnFSU5w=
+			M6oJLw6EtmgRdCl7yVCp0ebbzqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			tW5sQu5ObLYNQjFBnPDCJN/XCj3hkKeBysd58PWAEYY=
+			e0QgvyTkoLgAWZlTbUvfIGlG/DvYsufsB2PoDkyRkPM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2vyYFT6v6R8VjuQQHcupYRpCKdE=
+			fh4WjJQT3Ro1lnUEnmZwea9uSLU=
 			</data>
 			<key>hash2</key>
 			<data>
-			LR+yMTTrtFN6MCrNebD9EiV0nj6OdM5cN2z1PKFrRfk=
+			KT43EaXIt91XgeuCW+wIfWQDcb9FQpGqIAdLkFt08Yk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeRequirements</key>
@@ -878,22 +878,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZY9FvRBl/Ckh3I0QFkKt1UHoLbU=
+			bey6Qtq4uBclv/+sDiXNTpEMZOI=
 			</data>
 			<key>hash2</key>
 			<data>
-			VVBHHBfbgrDTMkKyqvCEUgo3T9rL1yt95JOwW2Jh4MM=
+			SJyaWuq+golqwJARcGYSS9wB0yNnwB4yZi6WBiPk5FM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			biIC1VFgfC7uDLdKAtQvBz6663g=
+			+yChHUR5bLjkLzTMNpIYW9xntvY=
 			</data>
 			<key>hash2</key>
 			<data>
-			tEgSWxs5uEo2Vbiv+KkOrGtzBuHJONqDg8AdP6Pjhws=
+			k3EI+2PRqqMf5hoKoBxSHI2poNv17PgxH2qvQdgFwr8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/DragonMedicalSpeechKit.framework/_CodeSignature/CodeSignature</key>

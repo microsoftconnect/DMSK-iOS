@@ -8,9 +8,6 @@ import PackageDescription
 let package = Package(
     name: "Dragon-Medical-SpeechKit-iOS",
     defaultLocalization: "en",
-    platforms: [
-        .iOS(.v17)
-        ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(

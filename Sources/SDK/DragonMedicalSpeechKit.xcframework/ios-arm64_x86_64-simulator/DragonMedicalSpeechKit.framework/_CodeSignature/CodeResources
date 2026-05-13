@@ -6,43 +6,43 @@
 	<dict>
 		<key>Headers/DragonMedicalSpeechKit.h</key>
 		<data>
-		Qt8M+NVwOj8mr+kC8mNE+Dkdq74=
+		gMRkjmz5p1BVCy5MBDWOU/paz+k=
 		</data>
 		<key>Headers/NUSACommandPlaceholder.h</key>
 		<data>
-		y7ci7OIU6oJJUZTAO11cE1xUB0o=
+		uVesrBJsiUbqg+V3mppqyxbgK18=
 		</data>
 		<key>Headers/NUSACommandSet.h</key>
 		<data>
-		ekMVTrmWiWdUTY2ZntYbszQvMU0=
+		PiwsJAG5X98oFToaIVChrE6evio=
 		</data>
 		<key>Headers/NUSACustomVuiController.h</key>
 		<data>
-		JJYTDPDnqqwKOP4A55l8Akn1bkU=
+		Hg9xfzFzZWc6DpIEYJ4sYSB5Wrw=
 		</data>
 		<key>Headers/NUSACustomVuiControllerDelegate.h</key>
 		<data>
-		Ju8G6EuqqPhu2G7xenSlBwIqyoE=
+		YgitkJu+wY2JMommHdwokx7Z2+o=
 		</data>
 		<key>Headers/NUSASession.h</key>
 		<data>
-		NuLRATe3zxIzK6B1TIeBRvbNNFI=
+		y7CSCjooOFrTSQuMTXCri4xxV28=
 		</data>
 		<key>Headers/NUSASessionDelegate.h</key>
 		<data>
-		kMiXpx9Kw8JHsdUcW1tmx5YN308=
+		mi9OIFGa2rUIqQlbm9VZWv2u/0I=
 		</data>
 		<key>Headers/NUSASpeechView.h</key>
 		<data>
-		3g793mTiI6yOei6Y4kp94wmEJZo=
+		nMyRWRRsGrZcSP/M7jymdqnpWII=
 		</data>
 		<key>Headers/NUSATextControl.h</key>
 		<data>
-		FF36P3QoECP75B+M2OMqVjH9bfE=
+		kwbZowi++hkQ9i1Ghp2nZmGpF10=
 		</data>
 		<key>Headers/NUSATypes.h</key>
 		<data>
-		E4TsTbqQsuGL8woKnJI4mEAYOp0=
+		dJ1SVHF3VqAmw3fn9MZ5aY5ptj8=
 		</data>
 		<key>Headers/NUSAVirtualAssistantController.h</key>
 		<data>
@@ -70,27 +70,27 @@
 		</data>
 		<key>Headers/NUSAVuiController.h</key>
 		<data>
-		VLhe/OJFq7ouRz13zrOD+adJXls=
+		8ZELG86NZdbEvHZCW3ZQgaycXHk=
 		</data>
 		<key>Headers/NUSAVuiControllerDelegate.h</key>
 		<data>
-		QPz2BY+a0mSVKeIxzlzVU1HOxkE=
+		SCFwxFhEXyFs3iQNIkSqqco8H+w=
 		</data>
 		<key>Headers/UIView+NUSAConceptName.h</key>
 		<data>
-		Jc6p4bBa16lt9xOtvC/JA8rwmDc=
+		MYTbuSuAA/+aUwAgMjXS7hkKK4M=
 		</data>
 		<key>Headers/UIView+NUSADocumentFieldId.h</key>
 		<data>
-		NBHGppTZUyEHiehUc/qFNpxxQKw=
+		XceKEuYxd1yWbjgwygeKrID/GXg=
 		</data>
 		<key>Headers/UIView+NUSAEnabled.h</key>
 		<data>
-		nUUeIBdw+Pbn46L3DmvjLB8r4Yo=
+		PuuZl/ub0Ak8Ib6xlM4LsjHnkEM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		979f787WTeOofy62Kj1ZXB+C0Pk=
+		4LXr55mZezQJB97UsPBqG2MifeM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -147,110 +147,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Qt8M+NVwOj8mr+kC8mNE+Dkdq74=
+			gMRkjmz5p1BVCy5MBDWOU/paz+k=
 			</data>
 			<key>hash2</key>
 			<data>
-			2EFmg8KCKCvQ3oqMVbP4zrwzozHxhmDdrh6/Jy9KHVg=
+			XS+kO2HVaZ0kG+VeN/G/HGCFfW5iXb6LEz25ObzBEMg=
 			</data>
 		</dict>
 		<key>Headers/NUSACommandPlaceholder.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			y7ci7OIU6oJJUZTAO11cE1xUB0o=
+			uVesrBJsiUbqg+V3mppqyxbgK18=
 			</data>
 			<key>hash2</key>
 			<data>
-			4f0hYArCLJFBmmQG15Ct2PHt0ITLMqvTqr1hPtDwfMo=
+			j7dzzKIuhn3qT85ds7aqJFX/Z5DNf2vnjhD0rTMge7M=
 			</data>
 		</dict>
 		<key>Headers/NUSACommandSet.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ekMVTrmWiWdUTY2ZntYbszQvMU0=
+			PiwsJAG5X98oFToaIVChrE6evio=
 			</data>
 			<key>hash2</key>
 			<data>
-			aZsRmXIyEpVnD4uintUU0IOCldbo3KS+y4OIChcQ+TA=
+			/Rn4mqEr5OE2NaNgVDW6P0SgnSta/Y8FVFIg7SKrbEw=
 			</data>
 		</dict>
 		<key>Headers/NUSACustomVuiController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JJYTDPDnqqwKOP4A55l8Akn1bkU=
+			Hg9xfzFzZWc6DpIEYJ4sYSB5Wrw=
 			</data>
 			<key>hash2</key>
 			<data>
-			l1ul+SFbSF1ZdSyWtAV4+lDN/NFpZtB1ibZhK490Phc=
+			VIuAXxoEoKAMxBWv8e54pRA6A+MmbLTP55uZMRsd2QY=
 			</data>
 		</dict>
 		<key>Headers/NUSACustomVuiControllerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ju8G6EuqqPhu2G7xenSlBwIqyoE=
+			YgitkJu+wY2JMommHdwokx7Z2+o=
 			</data>
 			<key>hash2</key>
 			<data>
-			pr3cu1ONRKz3KlMSzY+bOgHcAVBZHadj4F7rGazk7Jw=
+			ZNRlutDbqlLfyVY6CeytJHBkzfaEb7boM6bTx6yZG78=
 			</data>
 		</dict>
 		<key>Headers/NUSASession.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NuLRATe3zxIzK6B1TIeBRvbNNFI=
+			y7CSCjooOFrTSQuMTXCri4xxV28=
 			</data>
 			<key>hash2</key>
 			<data>
-			dXs2WDyVNLx8W5exMZtHVAIAmBgmqkVdfYl/nH3tv8I=
+			AfTDuUAFfKfWZRSYVid6zVzHuCN0yGt+DC/WgSguTr0=
 			</data>
 		</dict>
 		<key>Headers/NUSASessionDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kMiXpx9Kw8JHsdUcW1tmx5YN308=
+			mi9OIFGa2rUIqQlbm9VZWv2u/0I=
 			</data>
 			<key>hash2</key>
 			<data>
-			SWtwf1Y05DkE7pAl0hB5mUX8Gw213dQwTNOPgG1A5PQ=
+			Bu/zBVUeyORVmE6965ltwbQMHDf+MSygZb2ZFtioXhI=
 			</data>
 		</dict>
 		<key>Headers/NUSASpeechView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3g793mTiI6yOei6Y4kp94wmEJZo=
+			nMyRWRRsGrZcSP/M7jymdqnpWII=
 			</data>
 			<key>hash2</key>
 			<data>
-			4OCrVqcUE7CvG8yp1fdhYxq7UsY/9n0WrHckqW9e7U4=
+			Di+8vaffMowbviQWygYenEpaXCejY+zvA1KeD2VAYeM=
 			</data>
 		</dict>
 		<key>Headers/NUSATextControl.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FF36P3QoECP75B+M2OMqVjH9bfE=
+			kwbZowi++hkQ9i1Ghp2nZmGpF10=
 			</data>
 			<key>hash2</key>
 			<data>
-			q6lQdjYeea1eoGLuHylQORFMu2Hx92O6gv/iRwUXKxM=
+			/vd5W66IUbq1BMv+G306MTTjqBgp+ZPh60QOue5w3ZE=
 			</data>
 		</dict>
 		<key>Headers/NUSATypes.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E4TsTbqQsuGL8woKnJI4mEAYOp0=
+			dJ1SVHF3VqAmw3fn9MZ5aY5ptj8=
 			</data>
 			<key>hash2</key>
 			<data>
-			AMGaRbS+pL0d3XRQbDGGD/wR9Up03c3bKLstAUdpdyM=
+			ajmBQy3oFaQGFPQt/+lwMmPfruYp5s/WLRstFmbd3SQ=
 			</data>
 		</dict>
 		<key>Headers/NUSAVirtualAssistantController.h</key>
@@ -323,55 +323,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VLhe/OJFq7ouRz13zrOD+adJXls=
+			8ZELG86NZdbEvHZCW3ZQgaycXHk=
 			</data>
 			<key>hash2</key>
 			<data>
-			zFjZV6K3VrpSyZ9+wxZqaP85/CnyNsBwUI6SITN2gJo=
+			8Po80YL3DxDnPYpx4siXXv68L89BdfipN20etnQzDQQ=
 			</data>
 		</dict>
 		<key>Headers/NUSAVuiControllerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QPz2BY+a0mSVKeIxzlzVU1HOxkE=
+			SCFwxFhEXyFs3iQNIkSqqco8H+w=
 			</data>
 			<key>hash2</key>
 			<data>
-			22H4VXPmO53uhgS+4USO0LBIxi/oZymDZhmqB3c36zM=
+			CDebvea+Zy3TLjrFu8TO+gBwIB1pozT+ysn/NmBGm9A=
 			</data>
 		</dict>
 		<key>Headers/UIView+NUSAConceptName.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Jc6p4bBa16lt9xOtvC/JA8rwmDc=
+			MYTbuSuAA/+aUwAgMjXS7hkKK4M=
 			</data>
 			<key>hash2</key>
 			<data>
-			YHFAUrC2o7HcVZYdIyVSA+JnRw4Yh4i8+fGAtMxQ/Xc=
+			yZNTsjMx+bzk2kPfsoDClkLUQhNzjQft/YHaXoaW1OQ=
 			</data>
 		</dict>
 		<key>Headers/UIView+NUSADocumentFieldId.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NBHGppTZUyEHiehUc/qFNpxxQKw=
+			XceKEuYxd1yWbjgwygeKrID/GXg=
 			</data>
 			<key>hash2</key>
 			<data>
-			ANZPIiu+oIeKnXOSOl5XrAYAwOxEjc/WBqYtfb53kwk=
+			nPSu43juYHIgElIqkIn5k+OZcur1brAluFt1biGR3d4=
 			</data>
 		</dict>
 		<key>Headers/UIView+NUSAEnabled.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nUUeIBdw+Pbn46L3DmvjLB8r4Yo=
+			PuuZl/ub0Ak8Ib6xlM4LsjHnkEM=
 			</data>
 			<key>hash2</key>
 			<data>
-			YgcuNfhx7Wj7A9tmi2nRifIBL+j83h93uV0ctIlwIQc=
+			xi7/aTcryZYbkKh7plBmEEw6+UPtl9kPxiFP4VnmGBs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

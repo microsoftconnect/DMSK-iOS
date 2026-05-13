@@ -4,7 +4,7 @@
 //
 //  Copyright 2011 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 7.1.1.1
+//  SDK version: 7.2.2.1
 //
 
 #import <Foundation/Foundation.h>
@@ -61,10 +61,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**	@brief Dragon Medical SpeechKit application help URL
  @since 1.3
+ @deprecated Support for online help URL is deprecated and will be removed in a future release.
  
 URL where the application help is hosted. If this value is set prior to calling openForApplication, the "What You Can Say" page will contain the application's online help. 
  */
-@property (nonatomic, copy) NSString* onlineHelpURL; 
+@property (nonatomic, copy) NSString* onlineHelpURL DEPRECATED_MSG_ATTRIBUTE("Support for online help URL is deprecated and will be removed in a future release."); 
 
 /** @brief Returns the shared client session instance.
 	@since 1.0

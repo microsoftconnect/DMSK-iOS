@@ -4,7 +4,7 @@
 //
 //  Copyright (c) 2017 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 7.1.1.1
+//  SDK version: 7.2.2.1
 //
 
 #import <DragonMedicalSpeechKit/NUSACommandPlaceholder.h>

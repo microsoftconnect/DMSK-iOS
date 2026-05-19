@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>NUSASessionDelegate Protocol Reference</title><meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../css/iPhoneDanube.css"></link><script type="text/javascript" src="../css/togglemenu.js"></script><meta name="generator" content="NuanceSpeechAnywhereDoc"></meta></head><body><div id="header-wrap"><div id="header-container"><div id="header">
 					Dragon Medical SpeechKit
-				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Recording sessions">Recording sessions</a></li><li><a href="#TTS">TTS</a></li><li><a href="#Standby mode">Standby mode</a></li><li><a href="#Authentication Token">Authentication Token</a></li><li><a href="#Audio Interruption">Audio Interruption</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#protocol_n_u_s_a_session_delegate-p_1a36b1fda7b76b540648b184d6656bcfd1">sessionDidStartRecording</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a951847e1d5d202c97b951e1eac8916bc">sessionDidStopRecording</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a8ad4d082c96151ea716fc81da2a830e7">sessionDidStartSpeaking</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1af982e28fec673d2c084d19bcfde27a8f">sessionDidStopSpeaking</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1af38190477e6c8a279f235c628eb4efdd">sessionDidStartStandby</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1ad2cdb1f593e0972c554d54ed3a05a2d2">sessionDidReceiveInvalidAuthenticationToken</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1aff532818565d0dfbfcac7ff7ebb3eaa0">sessionDidNotifyAuthenticationTokenIsAboutToExpire</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1ad53a0d5a801d5ec8ab290a3817e8bd19">sessionDidReceiveAudioInterruptionState:</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a137109c8921475fc0914737d526a712f">sessionShouldContinueRecordingDuringCallBanners</a></li></ul></li></ul></div><div id="mainContainer">
+				</div></div></div><div id="contentContainer"><div id="mainMenu"><ul class="menu"><li><a href="#Overview">Overview</a></li><li><a href="#">Tasks</a><ul class="topic"><li><a href="#Recording sessions">Recording sessions</a></li><li><a href="#TTS">TTS</a></li><li><a href="#Standby mode">Standby mode</a></li><li><a href="#Authentication Token">Authentication Token</a></li><li><a href="#Audio Interruption">Audio Interruption</a></li><li><a href="#Validation">Validation</a></li></ul></li><li><a href="#">Instance methods</a><ul><li><a href="#protocol_n_u_s_a_session_delegate-p_1a36b1fda7b76b540648b184d6656bcfd1">sessionDidStartRecording</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a951847e1d5d202c97b951e1eac8916bc">sessionDidStopRecording</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a8ad4d082c96151ea716fc81da2a830e7">sessionDidStartSpeaking</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1af982e28fec673d2c084d19bcfde27a8f">sessionDidStopSpeaking</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1af38190477e6c8a279f235c628eb4efdd">sessionDidStartStandby</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1ad2cdb1f593e0972c554d54ed3a05a2d2">sessionDidReceiveInvalidAuthenticationToken</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1aff532818565d0dfbfcac7ff7ebb3eaa0">sessionDidNotifyAuthenticationTokenIsAboutToExpire</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1ad53a0d5a801d5ec8ab290a3817e8bd19">sessionDidReceiveAudioInterruptionState:</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1a137109c8921475fc0914737d526a712f">sessionShouldContinueRecordingDuringCallBanners</a></li><li><a href="#protocol_n_u_s_a_session_delegate-p_1ab0349d0e906f1b4c5fb91a5c5d3b081d">sessionDidReceiveOnIntegrationError:</a></li></ul></li></ul></div><div id="mainContainer">
   <h1 xmlns="" id="pageTitle">NUSASessionDelegate Protocol Reference</h1>
 <table xmlns="" summary="Basic information" id="classInfo">
 <tr>
@@ -71,6 +71,9 @@ Called whenever audio interruption is received and its state changes.
 Configures interrupt handling behavior when system displays incoming calls using a banner. 
         </span></span></li>
 </ul>
+<a xmlns="" name="Validation"><h3 id="taskHeader">Validation</h3></a><ul xmlns="" class="methods"><li><span class="tooltipRegion"><a href="#protocol_n_u_s_a_session_delegate-p_1ab0349d0e906f1b4c5fb91a5c5d3b081d">- <code>sessionDidReceiveOnIntegrationError:</code></a><span class="tooltip">
+Called when an integration error is detected. 
+        </span></span></li></ul>
 <a xmlns="" name="InstanceMethods"><h2 id="pageHeader">Instance methods</h2></a><a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1a36b1fda7b76b540648b184d6656bcfd1"><h3 id="methodHeader">sessionDidStartRecording</h3></a><div xmlns="" class="methodBrief">
 Sent after audio data recording has started. 
         </div>
@@ -180,6 +183,26 @@ Configures interrupt handling behavior when system displays incoming calls using
 </p>
         <h5 xmlns="">Availability</h5> 
 	Available in version 6.2  and later.
+	<a xmlns="" name="protocol_n_u_s_a_session_delegate-p_1ab0349d0e906f1b4c5fb91a5c5d3b081d"><h3 id="methodHeader">sessionDidReceiveOnIntegrationError:</h3></a><div xmlns="" class="methodBrief">
+Called when an integration error is detected. 
+        </div>
+<code xmlns="" class="methodDeclaration">-	
+		(void)
+		sessionDidReceiveOnIntegrationError:
+	(NSString *_Nonnull)<span class="parameter">errorMessage 
+	</span></code><h5 xmlns="">Parameters</h5>
+<dl xmlns="" class="parameterList">
+<dt>errorMessage</dt>
+<dd><p>
+A description of the integration error. 
+</p></dd>
+</dl>
+<h5 xmlns="">Discussion</h5>
+<p xmlns="">
+
+Sent to the delegate whenever a integration error is detected, such as invalid input parameters or authentication information. </p>
+        <h5 xmlns="">Availability</h5> 
+	Available in version 7.0 and later.
 	
 <hr class="footer"></hr>
 				© 2026 Nuance Communications, Inc. All rights reserved.

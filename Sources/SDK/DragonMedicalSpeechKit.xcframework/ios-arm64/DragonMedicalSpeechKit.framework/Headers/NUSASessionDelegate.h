@@ -4,7 +4,7 @@
 //
 //  Copyright 2011 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 7.1.1.1
+//  SDK version: 7.2.2.1
 //
 
 #import <UIKit/UIKit.h>
@@ -112,5 +112,19 @@
     @since 6.2
  */
 - (BOOL) sessionShouldContinueRecordingDuringCallBanners;
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/// @name Validation
+//////////////////////////////////////////////////////////////////////////////////////////
+
+/** @brief Called when an integration error is detected.
+    @param errorMessage A description of the integration error.
+    @since 7.0
+
+    Sent to the delegate whenever a integration error is detected, such as invalid input parameters
+    or authentication information.
+ */
+- (void) sessionDidReceiveOnIntegrationError:(NSString * _Nonnull)errorMessage;
+
 
 @end

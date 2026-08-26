@@ -12,7 +12,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/microsoft/speech-sdk-spm", from: "1.51.0")
+        .package(url: "https://github.com/microsoft/speech-sdk-spm", exact: "1.51.2")
     ],
     targets: [
         .target(

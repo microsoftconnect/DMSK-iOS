@@ -1,5 +1,9 @@
 # Dragon Medical SpeechKit iOS SDK
 
+This repository distributes the Dragon Medical SpeechKit iOS SDK as a Swift Package Manager package.
+
+iOS SDK sample applications are located in [DMSK-iOS-Samples](https://github.com/microsoftconnect/DMSK-iOS-Samples) repository.
+
 See the following pages for more information:
 
 [Dragon Medical SpeechKit documentation](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/)

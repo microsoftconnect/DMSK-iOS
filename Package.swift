@@ -6,18 +6,20 @@ let package = Package(
     name: "Dragon-Medical-SpeechKit-iOS",
     defaultLocalization: "en",
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "Dragon-Medical-SpeechKit-iOS",
             targets: ["Bundle", "DragonMedicalSpeechKit"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/microsoft/speech-sdk-spm", exact: "1.51.2")
+    ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "Bundle",
-            dependencies: ["MicrosoftCognitiveServicesSpeech"],
+            dependencies: [
+                .product(name: "MicrosoftCognitiveServicesSpeechEmbedded-iOS", package: "speech-sdk-spm")
+            ],
             path: "Sources/SDK",
             resources: [
                 .process("Bundle/Resources"),
@@ -25,12 +27,8 @@ let package = Package(
             ]
         ),
         .binaryTarget(
-                    name: "DragonMedicalSpeechKit",
-                    path: "Sources/SDK/DragonMedicalSpeechKit.xcframework"
-                ),
-        .binaryTarget(
-            name: "MicrosoftCognitiveServicesSpeech",
-            path:  "Sources/MicrosoftCognitiveServicesSpeech/MicrosoftCognitiveServicesSpeech.xcframework"
+            name: "DragonMedicalSpeechKit",
+            path: "Sources/SDK/DragonMedicalSpeechKit.xcframework"
         )
     ]
 )
